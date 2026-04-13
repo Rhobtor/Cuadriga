@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target cuadriga[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/cuadriga.dir/src/cuadriga.cpp.o[0m
+[100%] [32m[1mLinking CXX executable cuadriga[0m
+[100%] Built target cuadriga
+-- Install configuration: ""
+-- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga
+-- Set runtime path of "/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga" to ""
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch/cuadriga_launch.py
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/package_run_dependencies/cuadriga
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/parent_prefix_path/cuadriga
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.sh
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.sh
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.dsv
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.bash
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.sh
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.zsh
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.dsv
+-- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.dsv
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/packages/cuadriga
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig.cmake
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig-version.cmake
+-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.xml

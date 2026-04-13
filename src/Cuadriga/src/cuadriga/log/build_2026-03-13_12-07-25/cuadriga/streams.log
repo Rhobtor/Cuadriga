@@ -1,0 +1,90 @@
+[0.016s] Invoking command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga -- -j8 -l8
+[0.046s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.161s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.191s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.193s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.198s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.208s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.221s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.254s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.255s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.274s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.322s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.334s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.353s] -- Found cuadriga_interfaces: 0.0.0 (/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/share/cuadriga_interfaces/cmake)
+[0.370s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.445s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.445s] -- Configured cppcheck include dirs: /home/cuadriga/tfgcuadriga/src/cuadriga/include
+[0.445s] -- Configured cppcheck exclude dirs and/or files: 
+[0.446s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.449s] -- Added test 'lint_cmake' to check CMake code style
+[0.451s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.461s] -- Added test 'uncrustify' to check C / C++ code style
+[0.461s] -- Configured uncrustify additional arguments: 
+[0.463s] -- Added test 'xmllint' to check XML markup files
+[0.464s] -- Configuring done
+[0.474s] -- Generating done
+[0.478s] -- Build files have been written to: /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga
+[0.502s] [35m[1mConsolidate compiler generated dependencies of target cuadriga[0m
+[0.520s] [ 50%] [32mBuilding CXX object CMakeFiles/cuadriga.dir/src/cuadriga.cpp.o[0m
+[0.793s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:508:17:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.793s]   508 |                 /*default:
+[0.793s]       |                  
+[0.793s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:528:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.794s]   528 |     /*for(int i=0; i<segmentos.size(); i++)
+[0.794s]       |      
+[2.897s] In file included from [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1[m[K:
+[2.897s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:[m[K In constructor ‘[01m[KCuadriga::Cuadriga()[m[K’:
+[2.897s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:83:11:[m[K [01;35m[Kwarning: [m[K‘[01m[KCuadriga::Voltaje_controladora[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.897s]    83 |     float [01;35m[KVoltaje_controladora[m[K;
+[2.897s]       |           [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[2.897s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:63:15:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kfloat Cuadriga::v_lineal[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.897s]    63 |         float [01;35m[Kv_lineal[m[K;
+[2.897s]       |               [01;35m[K^~~~~~~~[m[K
+[2.897s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.897s]     5 | [01;35m[KCuadriga[m[K::Cuadriga()
+[2.897s]       | [01;35m[K^~~~~~~~[m[K
+[2.897s] In file included from [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1[m[K:
+[2.897s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:73:40:[m[K [01;35m[Kwarning: [m[K‘[01m[KCuadriga::palabras[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.897s]    73 |     std::vector<std::vector<u_int8_t>> [01;35m[Kpalabras[m[K;
+[2.897s]       |                                        [01;35m[K^~~~~~~~[m[K
+[2.898s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:60:29:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::vector<unsigned char, std::allocator<unsigned char> > Cuadriga::cmd_vel_hex[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.898s]    60 |         std::vector<u_char> [01;35m[Kcmd_vel_hex[m[K; //por ahora no la uso
+[2.898s]       |                             [01;35m[K^~~~~~~~~~~[m[K
+[2.898s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.898s]     5 | [01;35m[KCuadriga[m[K::Cuadriga()
+[2.898s]       | [01;35m[K^~~~~~~~[m[K
+[2.919s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kint Cuadriga::Hex2Dec(std::array<char, 2>)[m[K’:
+[2.919s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:120:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::array<char, 2>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.919s]   120 |     for (int i = 0;[01;35m[Ki<hex_value.size()[m[K;i++) {
+[2.919s]       |                    [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[2.930s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kvoid Cuadriga::process_query(std_msgs::msg::UInt8MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.930s] [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:421:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.931s]   421 | iga::process_query([01;35m[Kconst std_msgs::msg::UInt8MultiArray::SharedPtr msg[m[K)
+[2.931s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.931s] 
+[20.085s] [100%] [32m[1mLinking CXX executable cuadriga[0m
+[21.398s] [100%] Built target cuadriga
+[21.410s] Invoked command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga -- -j8 -l8
+[21.420s] Invoking command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga
+[21.427s] -- Install configuration: ""
+[21.427s] -- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga
+[21.438s] -- Set runtime path of "/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga" to ""
+[21.439s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch
+[21.439s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch/cuadriga_launch.py
+[21.439s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/package_run_dependencies/cuadriga
+[21.439s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/parent_prefix_path/cuadriga
+[21.439s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.sh
+[21.440s] -- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.dsv
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.sh
+[21.440s] -- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.dsv
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.bash
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.sh
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.zsh
+[21.440s] -- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.dsv
+[21.440s] -- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.dsv
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/packages/cuadriga
+[21.440s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig.cmake
+[21.441s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig-version.cmake
+[21.441s] -- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.xml
+[21.442s] Invoked command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga

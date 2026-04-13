@@ -1,0 +1,36 @@
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:508:17:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  508 |                 /*default:
+      |                  
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:528:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  528 |     /*for(int i=0; i<segmentos.size(); i++)
+      |      
+In file included from [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1[m[K:
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:[m[K In constructor ‘[01m[KCuadriga::Cuadriga()[m[K’:
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:83:11:[m[K [01;35m[Kwarning: [m[K‘[01m[KCuadriga::Voltaje_controladora[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   83 |     float [01;35m[KVoltaje_controladora[m[K;
+      |           [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:63:15:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kfloat Cuadriga::v_lineal[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   63 |         float [01;35m[Kv_lineal[m[K;
+      |               [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+    5 | [01;35m[KCuadriga[m[K::Cuadriga()
+      | [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1[m[K:
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:73:40:[m[K [01;35m[Kwarning: [m[K‘[01m[KCuadriga::palabras[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   73 |     std::vector<std::vector<u_int8_t>> [01;35m[Kpalabras[m[K;
+      |                                        [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:60:29:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::vector<unsigned char, std::allocator<unsigned char> > Cuadriga::cmd_vel_hex[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   60 |         std::vector<u_char> [01;35m[Kcmd_vel_hex[m[K; //por ahora no la uso
+      |                             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+    5 | [01;35m[KCuadriga[m[K::Cuadriga()
+      | [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kint Cuadriga::Hex2Dec(std::array<char, 2>)[m[K’:
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:120:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::array<char, 2>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  120 |     for (int i = 0;[01;35m[Ki<hex_value.size()[m[K;i++) {
+      |                    [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kvoid Cuadriga::process_query(std_msgs::msg::UInt8MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:421:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  421 | iga::process_query([01;35m[Kconst std_msgs::msg::UInt8MultiArray::SharedPtr msg[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+

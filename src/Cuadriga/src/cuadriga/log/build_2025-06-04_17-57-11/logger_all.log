@@ -1,0 +1,106 @@
+[0.088s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.088s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7955a101fb20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7955a101ece0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7955a101ece0>>)
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.235s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cuadriga/tfgcuadriga/src/cuadriga'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'cuadriga'
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.267s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 12 installed packages in /home/cuadriga/tfgcuadriga/install
+[0.268s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 273 installed packages in /opt/ros/humble
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_target' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'cuadriga' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'cuadriga' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga', 'merge_install': False, 'path': '/home/cuadriga/tfgcuadriga/src/cuadriga', 'symlink_install': False, 'test_result_base': None}
+[0.318s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.320s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cuadriga/tfgcuadriga/src/cuadriga' with build type 'ament_cmake'
+[0.320s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cuadriga/tfgcuadriga/src/cuadriga'
+[0.323s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.323s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.323s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.334s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/tfgcuadriga/src/cuadriga -DCMAKE_INSTALL_PREFIX=/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga
+[1.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/tfgcuadriga/src/cuadriga -DCMAKE_INSTALL_PREFIX=/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga
+[1.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga -- -j8 -l8
+[24.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga -- -j8 -l8
+[24.055s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga
+[24.077s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cuadriga)
+[24.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga
+[24.079s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga' for CMake module files
+[24.079s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga' for CMake config files
+[24.080s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuadriga', 'cmake_prefix_path')
+[24.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.ps1'
+[24.080s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.dsv'
+[24.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.sh'
+[24.081s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib'
+[24.081s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/bin'
+[24.081s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/pkgconfig/cuadriga.pc'
+[24.082s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/python3.10/site-packages'
+[24.082s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/bin'
+[24.082s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.ps1'
+[24.083s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.dsv'
+[24.083s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.sh'
+[24.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.bash'
+[24.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.zsh'
+[24.085s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/colcon-core/packages/cuadriga)
+[24.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cuadriga)
+[24.086s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga' for CMake module files
+[24.086s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga' for CMake config files
+[24.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuadriga', 'cmake_prefix_path')
+[24.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.ps1'
+[24.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.dsv'
+[24.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/hook/cmake_prefix_path.sh'
+[24.088s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib'
+[24.088s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/bin'
+[24.088s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/pkgconfig/cuadriga.pc'
+[24.088s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/python3.10/site-packages'
+[24.089s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/bin'
+[24.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.ps1'
+[24.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.dsv'
+[24.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.sh'
+[24.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.bash'
+[24.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.zsh'
+[24.091s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/colcon-core/packages/cuadriga)
+[24.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[24.092s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[24.092s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[24.092s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[24.097s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[24.097s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[24.097s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[24.111s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[24.112s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/local_setup.ps1'
+[24.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cuadriga/tfgcuadriga/src/cuadriga/install/_local_setup_util_ps1.py'
+[24.114s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/setup.ps1'
+[24.115s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/local_setup.sh'
+[24.116s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cuadriga/tfgcuadriga/src/cuadriga/install/_local_setup_util_sh.py'
+[24.117s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/setup.sh'
+[24.118s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/local_setup.bash'
+[24.118s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/setup.bash'
+[24.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/local_setup.zsh'
+[24.120s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/tfgcuadriga/src/cuadriga/install/setup.zsh'

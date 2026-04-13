@@ -1,0 +1,10 @@
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/uninstall.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/cuadriga_uninstall.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/cuadriga.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/test.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/edit_cache.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/rebuild_cache.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/list_install_components.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/install.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/install/local.dir
+/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga/CMakeFiles/install/strip.dir

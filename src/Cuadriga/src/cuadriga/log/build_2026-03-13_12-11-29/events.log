@@ -1,0 +1,286 @@
+[0.000000] (-) TimerEvent: {}
+[0.000427] (cuadriga) JobQueued: {'identifier': 'cuadriga', 'dependencies': OrderedDict()}
+[0.000543] (cuadriga) JobStarted: {'identifier': 'cuadriga'}
+[0.008087] (cuadriga) JobProgress: {'identifier': 'cuadriga', 'progress': 'cmake'}
+[0.008916] (cuadriga) JobProgress: {'identifier': 'cuadriga', 'progress': 'build'}
+[0.009836] (cuadriga) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga', '--', '-j8', '-l8'], 'cwd': '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuadriga'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver/lib:/home/cuadriga/tfgcuadriga/install/serial_driver/lib:/home/cuadriga/tfgcuadriga/install/joy/lib:/home/cuadriga/tfgcuadriga/install/io_context/lib:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cuadriga'), ('CYCLONEDDS_URI', 'file:///home/cuadriga/.dds/cyclone_dds.xml'), ('OLDPWD', '/home/cuadriga/tfgcuadriga/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1341'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuadriga'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cuadriga'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cuadriga-NUC8i7BEH:@/tmp/.ICE-unix/1309,unix/cuadriga-NUC8i7BEH:/tmp/.ICE-unix/1309'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85fe1320_2761_4f68_8227_f1e93cde2071'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.115'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/gpx_loader:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cuadriga/tfgcuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble')]), 'shell': False}
+[0.051941] (cuadriga) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cuadriga\x1b[0m\n'}
+[0.071345] (cuadriga) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/cuadriga.dir/src/cuadriga.cpp.o\x1b[0m\n'}
+[0.099360] (-) TimerEvent: {}
+[0.199619] (-) TimerEvent: {}
+[0.299952] (-) TimerEvent: {}
+[0.324157] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:508:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K"/*" within comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.324346] (cuadriga) StderrLine: {'line': b'  508 |                 /*default:\n'}
+[0.324403] (cuadriga) StderrLine: {'line': b'      |                  \n'}
+[0.324453] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:528:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K"/*" within comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.324534] (cuadriga) StderrLine: {'line': b'  528 |     /*for(int i=0; i<segmentos.size(); i++)\n'}
+[0.324599] (cuadriga) StderrLine: {'line': b'      |      \n'}
+[0.400082] (-) TimerEvent: {}
+[0.500381] (-) TimerEvent: {}
+[0.600634] (-) TimerEvent: {}
+[0.700935] (-) TimerEvent: {}
+[0.801336] (-) TimerEvent: {}
+[0.901617] (-) TimerEvent: {}
+[1.001912] (-) TimerEvent: {}
+[1.102228] (-) TimerEvent: {}
+[1.202515] (-) TimerEvent: {}
+[1.302828] (-) TimerEvent: {}
+[1.403129] (-) TimerEvent: {}
+[1.503417] (-) TimerEvent: {}
+[1.603737] (-) TimerEvent: {}
+[1.704078] (-) TimerEvent: {}
+[1.804361] (-) TimerEvent: {}
+[1.904596] (-) TimerEvent: {}
+[2.004808] (-) TimerEvent: {}
+[2.105067] (-) TimerEvent: {}
+[2.205348] (-) TimerEvent: {}
+[2.305666] (-) TimerEvent: {}
+[2.362226] (cuadriga) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1\x1b[m\x1b[K:\n'}
+[2.362354] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KCuadriga::Cuadriga()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.362406] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:83:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCuadriga::Voltaje_controladora\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.362456] (cuadriga) StderrLine: {'line': b'   83 |     float \x1b[01;35m\x1b[KVoltaje_controladora\x1b[m\x1b[K;\n'}
+[2.362549] (cuadriga) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.362596] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:63:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kfloat Cuadriga::v_lineal\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.362644] (cuadriga) StderrLine: {'line': b'   63 |         float \x1b[01;35m\x1b[Kv_lineal\x1b[m\x1b[K;\n'}
+[2.362687] (cuadriga) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.362730] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.362774] (cuadriga) StderrLine: {'line': b'    5 | \x1b[01;35m\x1b[KCuadriga\x1b[m\x1b[K::Cuadriga()\n'}
+[2.362817] (cuadriga) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.362860] (cuadriga) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:1\x1b[m\x1b[K:\n'}
+[2.362902] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:73:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCuadriga::palabras\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.362948] (cuadriga) StderrLine: {'line': b'   73 |     std::vector<std::vector<u_int8_t>> \x1b[01;35m\x1b[Kpalabras\x1b[m\x1b[K;\n'}
+[2.362991] (cuadriga) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.363048] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/include/cuadriga/cuadriga.hpp:60:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<unsigned char, std::allocator<unsigned char> > Cuadriga::cmd_vel_hex\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.363104] (cuadriga) StderrLine: {'line': b'   60 |         std::vector<u_char> \x1b[01;35m\x1b[Kcmd_vel_hex\x1b[m\x1b[K; //por ahora no la uso\n'}
+[2.363147] (cuadriga) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.363190] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:5:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.363233] (cuadriga) StderrLine: {'line': b'    5 | \x1b[01;35m\x1b[KCuadriga\x1b[m\x1b[K::Cuadriga()\n'}
+[2.363276] (cuadriga) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.387279] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint Cuadriga::Hex2Dec(std::array<char, 2>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.387545] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:120:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::array<char, 2>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.387697] (cuadriga) StderrLine: {'line': b'  120 |     for (int i = 0;\x1b[01;35m\x1b[Ki<hex_value.size()\x1b[m\x1b[K;i++) {\n'}
+[2.387814] (cuadriga) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.398854] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Cuadriga::process_query(std_msgs::msg::UInt8MultiArray_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.399003] (cuadriga) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cuadriga/tfgcuadriga/src/cuadriga/src/cuadriga.cpp:421:78:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.399059] (cuadriga) StderrLine: {'line': b'  421 | iga::process_query(\x1b[01;35m\x1b[Kconst std_msgs::msg::UInt8MultiArray::SharedPtr msg\x1b[m\x1b[K)\n'}
+[2.399108] (cuadriga) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.399153] (cuadriga) StderrLine: {'line': b'\n'}
+[2.405765] (-) TimerEvent: {}
+[2.506003] (-) TimerEvent: {}
+[2.606278] (-) TimerEvent: {}
+[2.706572] (-) TimerEvent: {}
+[2.806808] (-) TimerEvent: {}
+[2.907074] (-) TimerEvent: {}
+[3.007364] (-) TimerEvent: {}
+[3.107614] (-) TimerEvent: {}
+[3.207903] (-) TimerEvent: {}
+[3.308214] (-) TimerEvent: {}
+[3.408492] (-) TimerEvent: {}
+[3.508714] (-) TimerEvent: {}
+[3.608989] (-) TimerEvent: {}
+[3.709248] (-) TimerEvent: {}
+[3.809563] (-) TimerEvent: {}
+[3.909842] (-) TimerEvent: {}
+[4.010121] (-) TimerEvent: {}
+[4.110407] (-) TimerEvent: {}
+[4.210701] (-) TimerEvent: {}
+[4.311023] (-) TimerEvent: {}
+[4.411306] (-) TimerEvent: {}
+[4.511600] (-) TimerEvent: {}
+[4.611874] (-) TimerEvent: {}
+[4.712156] (-) TimerEvent: {}
+[4.812444] (-) TimerEvent: {}
+[4.912695] (-) TimerEvent: {}
+[5.012963] (-) TimerEvent: {}
+[5.113234] (-) TimerEvent: {}
+[5.213547] (-) TimerEvent: {}
+[5.313811] (-) TimerEvent: {}
+[5.414083] (-) TimerEvent: {}
+[5.514471] (-) TimerEvent: {}
+[5.614767] (-) TimerEvent: {}
+[5.715040] (-) TimerEvent: {}
+[5.815356] (-) TimerEvent: {}
+[5.915649] (-) TimerEvent: {}
+[6.015904] (-) TimerEvent: {}
+[6.116153] (-) TimerEvent: {}
+[6.216427] (-) TimerEvent: {}
+[6.316703] (-) TimerEvent: {}
+[6.417032] (-) TimerEvent: {}
+[6.517303] (-) TimerEvent: {}
+[6.617565] (-) TimerEvent: {}
+[6.717828] (-) TimerEvent: {}
+[6.818102] (-) TimerEvent: {}
+[6.918356] (-) TimerEvent: {}
+[7.018603] (-) TimerEvent: {}
+[7.118861] (-) TimerEvent: {}
+[7.219171] (-) TimerEvent: {}
+[7.319443] (-) TimerEvent: {}
+[7.419679] (-) TimerEvent: {}
+[7.519962] (-) TimerEvent: {}
+[7.620218] (-) TimerEvent: {}
+[7.720517] (-) TimerEvent: {}
+[7.820814] (-) TimerEvent: {}
+[7.921089] (-) TimerEvent: {}
+[8.021411] (-) TimerEvent: {}
+[8.121647] (-) TimerEvent: {}
+[8.221882] (-) TimerEvent: {}
+[8.322121] (-) TimerEvent: {}
+[8.422366] (-) TimerEvent: {}
+[8.522607] (-) TimerEvent: {}
+[8.622885] (-) TimerEvent: {}
+[8.723153] (-) TimerEvent: {}
+[8.823537] (-) TimerEvent: {}
+[8.923812] (-) TimerEvent: {}
+[9.024211] (-) TimerEvent: {}
+[9.124495] (-) TimerEvent: {}
+[9.224744] (-) TimerEvent: {}
+[9.325008] (-) TimerEvent: {}
+[9.425265] (-) TimerEvent: {}
+[9.525548] (-) TimerEvent: {}
+[9.625799] (-) TimerEvent: {}
+[9.726057] (-) TimerEvent: {}
+[9.826331] (-) TimerEvent: {}
+[9.926624] (-) TimerEvent: {}
+[10.026995] (-) TimerEvent: {}
+[10.127276] (-) TimerEvent: {}
+[10.227566] (-) TimerEvent: {}
+[10.327869] (-) TimerEvent: {}
+[10.428139] (-) TimerEvent: {}
+[10.528401] (-) TimerEvent: {}
+[10.628678] (-) TimerEvent: {}
+[10.728944] (-) TimerEvent: {}
+[10.829204] (-) TimerEvent: {}
+[10.929572] (-) TimerEvent: {}
+[11.029863] (-) TimerEvent: {}
+[11.130182] (-) TimerEvent: {}
+[11.230510] (-) TimerEvent: {}
+[11.330848] (-) TimerEvent: {}
+[11.431162] (-) TimerEvent: {}
+[11.531463] (-) TimerEvent: {}
+[11.631907] (-) TimerEvent: {}
+[11.732172] (-) TimerEvent: {}
+[11.832400] (-) TimerEvent: {}
+[11.932695] (-) TimerEvent: {}
+[12.032995] (-) TimerEvent: {}
+[12.133282] (-) TimerEvent: {}
+[12.233583] (-) TimerEvent: {}
+[12.333880] (-) TimerEvent: {}
+[12.434156] (-) TimerEvent: {}
+[12.534454] (-) TimerEvent: {}
+[12.634717] (-) TimerEvent: {}
+[12.734987] (-) TimerEvent: {}
+[12.835256] (-) TimerEvent: {}
+[12.935601] (-) TimerEvent: {}
+[13.035837] (-) TimerEvent: {}
+[13.136143] (-) TimerEvent: {}
+[13.236424] (-) TimerEvent: {}
+[13.336749] (-) TimerEvent: {}
+[13.437039] (-) TimerEvent: {}
+[13.537275] (-) TimerEvent: {}
+[13.637576] (-) TimerEvent: {}
+[13.737877] (-) TimerEvent: {}
+[13.838205] (-) TimerEvent: {}
+[13.938471] (-) TimerEvent: {}
+[14.038801] (-) TimerEvent: {}
+[14.139089] (-) TimerEvent: {}
+[14.239371] (-) TimerEvent: {}
+[14.339565] (-) TimerEvent: {}
+[14.439854] (-) TimerEvent: {}
+[14.540122] (-) TimerEvent: {}
+[14.640404] (-) TimerEvent: {}
+[14.740666] (-) TimerEvent: {}
+[14.840971] (-) TimerEvent: {}
+[14.941240] (-) TimerEvent: {}
+[15.041570] (-) TimerEvent: {}
+[15.141868] (-) TimerEvent: {}
+[15.242168] (-) TimerEvent: {}
+[15.342499] (-) TimerEvent: {}
+[15.442805] (-) TimerEvent: {}
+[15.543098] (-) TimerEvent: {}
+[15.643401] (-) TimerEvent: {}
+[15.743735] (-) TimerEvent: {}
+[15.844201] (-) TimerEvent: {}
+[15.944521] (-) TimerEvent: {}
+[16.044800] (-) TimerEvent: {}
+[16.145087] (-) TimerEvent: {}
+[16.245368] (-) TimerEvent: {}
+[16.345637] (-) TimerEvent: {}
+[16.445906] (-) TimerEvent: {}
+[16.546298] (-) TimerEvent: {}
+[16.646635] (-) TimerEvent: {}
+[16.746897] (-) TimerEvent: {}
+[16.847218] (-) TimerEvent: {}
+[16.947582] (-) TimerEvent: {}
+[17.047859] (-) TimerEvent: {}
+[17.148154] (-) TimerEvent: {}
+[17.248437] (-) TimerEvent: {}
+[17.348768] (-) TimerEvent: {}
+[17.449052] (-) TimerEvent: {}
+[17.549332] (-) TimerEvent: {}
+[17.649575] (-) TimerEvent: {}
+[17.749847] (-) TimerEvent: {}
+[17.850143] (-) TimerEvent: {}
+[17.950420] (-) TimerEvent: {}
+[18.050723] (-) TimerEvent: {}
+[18.151033] (-) TimerEvent: {}
+[18.251327] (-) TimerEvent: {}
+[18.351720] (-) TimerEvent: {}
+[18.452153] (-) TimerEvent: {}
+[18.552440] (-) TimerEvent: {}
+[18.652767] (-) TimerEvent: {}
+[18.753066] (-) TimerEvent: {}
+[18.853366] (-) TimerEvent: {}
+[18.953665] (-) TimerEvent: {}
+[19.053982] (-) TimerEvent: {}
+[19.154296] (-) TimerEvent: {}
+[19.254573] (-) TimerEvent: {}
+[19.354894] (-) TimerEvent: {}
+[19.455209] (-) TimerEvent: {}
+[19.555502] (-) TimerEvent: {}
+[19.655747] (-) TimerEvent: {}
+[19.756010] (-) TimerEvent: {}
+[19.856307] (-) TimerEvent: {}
+[19.956564] (-) TimerEvent: {}
+[20.056825] (-) TimerEvent: {}
+[20.140126] (cuadriga) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cuadriga\x1b[0m\n'}
+[20.156916] (-) TimerEvent: {}
+[20.257241] (-) TimerEvent: {}
+[20.357497] (-) TimerEvent: {}
+[20.457746] (-) TimerEvent: {}
+[20.557989] (-) TimerEvent: {}
+[20.658249] (-) TimerEvent: {}
+[20.758503] (-) TimerEvent: {}
+[20.858732] (-) TimerEvent: {}
+[20.959056] (-) TimerEvent: {}
+[21.059311] (-) TimerEvent: {}
+[21.159556] (-) TimerEvent: {}
+[21.259786] (-) TimerEvent: {}
+[21.360058] (-) TimerEvent: {}
+[21.460320] (-) TimerEvent: {}
+[21.481328] (cuadriga) StdoutLine: {'line': b'[100%] Built target cuadriga\n'}
+[21.493225] (cuadriga) CommandEnded: {'returncode': 0}
+[21.493929] (cuadriga) JobProgress: {'identifier': 'cuadriga', 'progress': 'install'}
+[21.502535] (cuadriga) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga'], 'cwd': '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuadriga'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver/lib:/home/cuadriga/tfgcuadriga/install/serial_driver/lib:/home/cuadriga/tfgcuadriga/install/joy/lib:/home/cuadriga/tfgcuadriga/install/io_context/lib:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cuadriga'), ('CYCLONEDDS_URI', 'file:///home/cuadriga/.dds/cyclone_dds.xml'), ('OLDPWD', '/home/cuadriga/tfgcuadriga/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1341'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuadriga'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cuadriga'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cuadriga-NUC8i7BEH:@/tmp/.ICE-unix/1309,unix/cuadriga-NUC8i7BEH:/tmp/.ICE-unix/1309'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85fe1320_2761_4f68_8227_f1e93cde2071'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.115'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/gpx_loader:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cuadriga/tfgcuadriga/src/cuadriga/build/cuadriga'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cuadriga/tfgcuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble')]), 'shell': False}
+[21.510194] (cuadriga) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.510372] (cuadriga) StdoutLine: {'line': b'-- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga\n'}
+[21.521273] (cuadriga) StdoutLine: {'line': b'-- Set runtime path of "/home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/lib/cuadriga/cuadriga" to ""\n'}
+[21.521691] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch\n'}
+[21.521863] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga//launch/cuadriga_launch.py\n'}
+[21.522002] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/package_run_dependencies/cuadriga\n'}
+[21.522114] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/parent_prefix_path/cuadriga\n'}
+[21.522264] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.sh\n'}
+[21.522352] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.dsv\n'}
+[21.522438] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.sh\n'}
+[21.522554] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/environment/path.dsv\n'}
+[21.522657] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.bash\n'}
+[21.522742] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.sh\n'}
+[21.522828] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.zsh\n'}
+[21.522913] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/local_setup.dsv\n'}
+[21.522998] (cuadriga) StdoutLine: {'line': b'-- Installing: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.dsv\n'}
+[21.523083] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/ament_index/resource_index/packages/cuadriga\n'}
+[21.523168] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig.cmake\n'}
+[21.523253] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig-version.cmake\n'}
+[21.523366] (cuadriga) StdoutLine: {'line': b'-- Up-to-date: /home/cuadriga/tfgcuadriga/src/cuadriga/install/cuadriga/share/cuadriga/package.xml\n'}
+[21.524074] (cuadriga) CommandEnded: {'returncode': 0}
+[21.540668] (cuadriga) JobEnded: {'identifier': 'cuadriga', 'rc': 0}
+[21.541741] (-) EventReactorShutdown: {}
