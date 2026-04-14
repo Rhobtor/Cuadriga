@@ -16,17 +16,12 @@
 // }
 
 #include <rclcpp/rclcpp.hpp>
-#include <lifecycle_msgs/msg/transition.hpp>
 #include "ctl_mission/FollowZED.hpp"
 
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
 
   auto node = std::make_shared<FollowZEDNode>("follow_zed_node");
-
-  // Transiciones si no usas lifecycle_manager
-  node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
-  node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE);
 
   rclcpp::executors::SingleThreadedExecutor exec;
   exec.add_node(node->get_node_base_interface());

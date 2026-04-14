@@ -194,14 +194,16 @@ ARGJ801:
     serial_parity: "E"
     serial_stop_bits: 1
     control_rate_hz: 20.0
-    direct_cmd_timeout: 0.25
-    fsm_cmd_timeout: 0.25
-    command_timeout: 0.5
+    direct_cmd_timeout: 1.2
+    fsm_cmd_timeout: 1.2
+    command_timeout: 1.5
     linear_velocity_max: 1.2
     angular_velocity_max: 6.0
     pwm_limit: 127
     allow_reverse_linear: true
-    send_angular_first: true
+    send_angular_first: false
+    inter_command_delay_ms: 5
+    log_serial_commands: false
 
   security_check_node:
     # Nodo de seguridad basado en LiDAR/segmentación: comprueba distancias y
@@ -265,7 +267,7 @@ ARGJ801:
       formats: ["ODOMETRY", "LLH", "RAWIMU", "CORRIMU", "TF"]
       type: "tcp"
       port: "21000"
-      ip: "192.168.1.17"
+      ip: "192.168.2.113"
       rate: 200
       reconnect_delay: 5.0
     customer_input:

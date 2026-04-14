@@ -10,6 +10,7 @@
 #include <cstdio>
 #include <cstring>
 #include <limits>
+#include <thread>
 #include <utility>
 
 namespace cuadriga_actuator
@@ -59,6 +60,8 @@ CuadrigaActuatorNode::CuadrigaActuatorNode()
   declare_parameter("pwm_limit", 127);
   declare_parameter("allow_reverse_linear", true);
   declare_parameter("send_angular_first", true);
+  declare_parameter("inter_command_delay_ms", 5);
+  declare_parameter("log_serial_commands", false);
 
   direct_cmd_vel_topic_ = get_parameter("direct_cmd_vel_topic").as_string();
   fsm_cmd_vel_topic_ = get_parameter("fsm_cmd_vel_topic").as_string();
@@ -77,6 +80,8 @@ CuadrigaActuatorNode::CuadrigaActuatorNode()
   pwm_limit_ = static_cast<int>(get_parameter("pwm_limit").as_int());
   allow_reverse_linear_ = get_parameter("allow_reverse_linear").as_bool();
   send_angular_first_ = get_parameter("send_angular_first").as_bool();
+  inter_command_delay_ms_ = static_cast<int>(get_parameter("inter_command_delay_ms").as_int());
+  log_serial_commands_ = get_parameter("log_serial_commands").as_bool();
 
   const std::string parity = get_parameter("serial_parity").as_string();
   if (!parity.empty()) {
@@ -89,9 +94,9 @@ CuadrigaActuatorNode::CuadrigaActuatorNode()
   direct_command_.stamp = now();
   fsm_command_.stamp = now();
 
-  if (output_mode_ == OutputMode::Topic) {
-    serial_write_publisher_ = create_publisher<std_msgs::msg::UInt8MultiArray>(serial_write_topic_, 10);
-  } else {
+  serial_write_publisher_ = create_publisher<std_msgs::msg::UInt8MultiArray>(serial_write_topic_, 10);
+
+  if (output_mode_ == OutputMode::Serial) {
     openSerialIfNeeded();
   }
 
@@ -235,12 +240,13 @@ bool CuadrigaActuatorNode::sendMotion(double linear_velocity, double angular_vel
     ? std::array<std::vector<uint8_t>, 2>{angular_command, linear_command}
     : std::array<std::vector<uint8_t>, 2>{linear_command, angular_command};
 
+  for (const auto & command : commands) {
+    std_msgs::msg::UInt8MultiArray msg;
+    msg.data = command;
+    serial_write_publisher_->publish(msg);
+  }
+
   if (output_mode_ == OutputMode::Topic) {
-    for (const auto & command : commands) {
-      std_msgs::msg::UInt8MultiArray msg;
-      msg.data = command;
-      serial_write_publisher_->publish(msg);
-    }
     return true;
   }
 
@@ -251,6 +257,14 @@ bool CuadrigaActuatorNode::sendMotion(double linear_velocity, double angular_vel
   for (const auto & command : commands) {
     if (!writeCommand(command)) {
       return false;
+    }
+
+    if (tcdrain(serial_fd_) != 0) {
+      RCLCPP_WARN(get_logger(), "Failed to drain Cuadriga serial port %s: %s", serial_port_.c_str(), std::strerror(errno));
+    }
+
+    if (inter_command_delay_ms_ > 0) {
+      std::this_thread::sleep_for(std::chrono::milliseconds(inter_command_delay_ms_));
     }
   }
   return true;
@@ -292,6 +306,26 @@ std::vector<uint8_t> CuadrigaActuatorNode::encodePwmCommand(
   return std::vector<uint8_t>(buffer, buffer + std::strlen(buffer));
 }
 
+std::string CuadrigaActuatorNode::formatCommandForLog(const std::vector<uint8_t> & command) const
+{
+  std::string formatted;
+  formatted.reserve(command.size() * 4);
+
+  for (const auto byte : command) {
+    if (byte == '\r') {
+      formatted += "\\r";
+    } else if (byte >= 32 && byte <= 126) {
+      formatted.push_back(static_cast<char>(byte));
+    } else {
+      char hex_buffer[5] = {0};
+      std::snprintf(hex_buffer, sizeof(hex_buffer), "\\x%02X", byte);
+      formatted += hex_buffer;
+    }
+  }
+
+  return formatted;
+}
+
 bool CuadrigaActuatorNode::openSerialIfNeeded()
 {
   if (serial_fd_ >= 0) {
@@ -315,9 +349,12 @@ bool CuadrigaActuatorNode::openSerialIfNeeded()
   cfsetospeed(&tty, toBaudRate(baud_rate_));
   cfsetispeed(&tty, toBaudRate(baud_rate_));
 
+  cfmakeraw(&tty);
+
   tty.c_cflag &= ~CSIZE;
   tty.c_cflag |= serial_bytesize_ == 8 ? CS8 : CS7;
   tty.c_cflag |= CLOCAL | CREAD;
+  tty.c_cflag &= ~CRTSCTS;
   tty.c_cflag &= ~CSTOPB;
   if (serial_stop_bits_ == 2) {
     tty.c_cflag |= CSTOPB;
@@ -358,6 +395,10 @@ bool CuadrigaActuatorNode::writeCommand(const std::vector<uint8_t> & command)
 {
   if (serial_fd_ < 0) {
     return false;
+  }
+
+  if (log_serial_commands_) {
+    RCLCPP_INFO(get_logger(), "Cuadriga serial TX: %s", formatCommandForLog(command).c_str());
   }
 
   const ssize_t written = ::write(serial_fd_, command.data(), command.size());

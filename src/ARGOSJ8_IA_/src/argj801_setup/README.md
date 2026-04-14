@@ -143,12 +143,29 @@ docker run --rm -it \
   ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
 ```
 
+By default, `use_gui:=true` now launches `j8_gui`. If you explicitly need the old GUI package, use:
+
+```sh
+ros2 launch argj801_setup J8_launch.py use_gui:=true gui_variant:=legacy
+```
+
 To command the robot directly without entering any FSM mode:
 
 ```sh
 ros2 topic pub /Cuadriga/direct_cmd_vel geometry_msgs/msg/Twist \
   '{linear: {x: 0.4}, angular: {z: 0.0}}'
 ```
+
+For diagnostics, the actuator mirrors every generated serial command to `/Cuadriga/serial_write` even while talking to the real serial port, so you can verify the command path with:
+
+```sh
+ros2 topic echo /Cuadriga/command_source
+ros2 topic echo /Cuadriga/serial_write
+```
+
+Very small commands such as `linear.x=0.01` may produce PWM values too small to overcome the robot deadband; start validation with `0.2` to `0.4` and keep enough free space around the platform.
+
+The direct/FSM command timeouts are configured to tolerate low-rate publishers such as `ros2 topic pub` at `1 Hz`. If you override them and set very small values again, the source may flip continuously between `direct` and `fsm`.
 
 If direct commands stop arriving, the actuator falls back automatically to the FSM command topic `/ARGJ801/cmd_vel`.
 

@@ -50,8 +50,27 @@ def load_yaml(file_path):
 def generate_launch_description():
     ld = LaunchDescription()
 
+    # Load the configuration
+    config_path = os.path.join(get_package_share_directory('argj801_setup'), 'config', 'J8_params.yaml')
+    yaml_config = load_yaml(config_path)
+    global_params = yaml_config['ARGJ801']['global_parameters']
+
     # Declare launch arguments
     ld.add_action(DeclareLaunchArgument('robot', default_value='false', description='Launch robot nodes if true'))
+    ld.add_action(
+        DeclareLaunchArgument(
+            'fixposition_ip',
+            default_value=yaml_config['ARGJ801']['fixposition_driver_ros2']['fp_output']['ip'],
+            description='IP address of the Fixposition TCP endpoint.',
+        )
+    )
+    ld.add_action(
+        DeclareLaunchArgument(
+            'fixposition_port',
+            default_value=str(yaml_config['ARGJ801']['fixposition_driver_ros2']['fp_output']['port']),
+            description='TCP port of the Fixposition endpoint.',
+        )
+    )
     ld.add_action(
         DeclareLaunchArgument(
             'local_test',
@@ -72,6 +91,13 @@ def generate_launch_description():
     )
     ld.add_action(DeclareLaunchArgument('simulator', default_value='false', description='Launch simulator nodes if true'))
     ld.add_action(DeclareLaunchArgument('use_gui', default_value='false', description='Launch GUI node if true'))
+    ld.add_action(
+        DeclareLaunchArgument(
+            'gui_variant',
+            default_value='j8_gui',
+            description="GUI implementation to launch: 'j8_gui' or 'legacy'.",
+        )
+    )
     ld.add_action(
         DeclareLaunchArgument(
             'sensors_source',
@@ -110,11 +136,6 @@ def generate_launch_description():
             description='In local_test mode, launch a fake Cuadriga backend that publishes simulated telemetry.',
         )
     )
-
-    # Load the configuration
-    config_path = os.path.join(get_package_share_directory('argj801_setup'), 'config', 'J8_params.yaml')
-    yaml_config = load_yaml(config_path)
-    global_params = yaml_config['ARGJ801']['global_parameters']
 
     robot_condition = IfCondition(LaunchConfiguration('robot'))
     simulator_condition = IfCondition(LaunchConfiguration('simulator'))
@@ -256,7 +277,14 @@ def generate_launch_description():
         condition=simulator_or_local_test_condition)
     fixpositionDriverNode = Node(
         package='fixposition_driver_ros2', executable='fixposition_driver_ros2_exec', name='fixposition_driver_ros2', output='screen',
-        parameters=[global_params, select_params('fixposition_driver_ros2')])
+        parameters=[
+            global_params,
+            select_params('fixposition_driver_ros2'),
+            {
+                'fp_output.ip': LaunchConfiguration('fixposition_ip'),
+                'fp_output.port': LaunchConfiguration('fixposition_port'),
+            },
+        ])
     argj801_sensors = LifecycleNode(
         package='argj801_sensors', executable='ARGJ801_sensors_node', name='ARGJ801_sensors_node', namespace='ARGJ801', output='screen',
         parameters=[global_params, select_params('argj801_sensors')],
@@ -276,9 +304,21 @@ def generate_launch_description():
         package='tf2_ros', executable='static_transform_publisher', name='static_transform_sick', output='screen',
         arguments=['1.86558', '0', '0.37865', '1', '0', '0', '0', yaml_config['ARGJ801']['global_parameters']['robot_frame'], yaml_config['ARGJ801']['global_parameters']['sick_frame']])
     gui_node = Node(
-        package='GUI_pkg', executable='gui_node', name='gui_node', namespace='ARGJ801', output='screen',
+        package='j8_gui', executable='gui', name='gui_node', namespace='ARGJ801', output='screen',
         parameters=[global_params],
-        condition=use_gui_condition)
+        condition=IfCondition(
+            PythonExpression([
+                "'", LaunchConfiguration('use_gui'), "' == 'true' and '", LaunchConfiguration('gui_variant'), "' == 'j8_gui'"
+            ])
+        ))
+    legacy_gui_node = Node(
+        package='GUI_pkg', executable='gui_node', name='legacy_gui_node', namespace='ARGJ801', output='screen',
+        parameters=[global_params],
+        condition=IfCondition(
+            PythonExpression([
+                "'", LaunchConfiguration('use_gui'), "' == 'true' and '", LaunchConfiguration('gui_variant'), "' == 'legacy'"
+            ])
+        ))
     cuadrigaActuatorNode = Node(
         package='cuadriga_actuator', executable='cuadriga_actuator_node', name='cuadriga_actuator_node', output='screen',
         parameters=[
@@ -384,8 +424,9 @@ def generate_launch_description():
     for node in simulator_specific_nodes:
         ld.add_action(node)
 
-    # GUI legacy (GUI_pkg). Nota: el proyecto también contiene `j8_gui`.
+    # GUI. `j8_gui` es la implementación activa; `GUI_pkg` queda como legacy.
     ld.add_action(gui_node)
+    ld.add_action(legacy_gui_node)
 
     # Disparo diferido de lifecycle (configure/activate)
     ld.add_action(TimerAction(period=5.0, actions=config_events))

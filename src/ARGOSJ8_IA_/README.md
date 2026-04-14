@@ -141,6 +141,49 @@ docker run --rm -it \
   ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
 ```
 
+If your Fixposition endpoint is not the default one from `J8_params.yaml`, override it explicitly:
+
+```sh
+docker run --rm -it \
+  --net=host \
+  --ipc=host \
+  --device=/dev/ttyUSB0:/dev/ttyUSB0 \
+  -e DISPLAY=${DISPLAY} \
+  -e XAUTHORITY=${XAUTHORITY} \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v ${XAUTHORITY}:${XAUTHORITY}:ro \
+  cuadriga-j8 \
+  ros2 launch argj801_setup J8_launch.py \
+    robot:=true \
+    use_cuadriga_backend:=true \
+    fixposition_ip:=192.168.2.113 \
+    fixposition_port:=21000
+```
+
+For remote X11 forwarding sessions (for example `DISPLAY=localhost:10.0`), mounting `XAUTHORITY` is required for RViz/GUI applications to open from inside Docker.
+
+You can also use the helper script:
+
+```sh
+./run_robot_docker.sh
+```
+
+To start RViz from the same image once the stack is running:
+
+```sh
+docker run --rm -it \
+  --net=host \
+  --ipc=host \
+  -e DISPLAY=${DISPLAY} \
+  -e XAUTHORITY=${XAUTHORITY} \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v ${XAUTHORITY}:${XAUTHORITY}:ro \
+  cuadriga-j8 \
+  rviz2 -d /ros2_ws/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2/rviz/fixposition_driver_ros2.rviz
+```
+
+If the host cannot reach the Fixposition IP on the robot LAN, Docker will not be able to reach it either even with `--net=host`.
+
 The integrated actuator always exposes direct velocity commands on `/Cuadriga/direct_cmd_vel`:
 
 ```sh

@@ -10,6 +10,7 @@
 #include <cstdint>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace cuadriga_actuator
@@ -55,6 +56,7 @@ private:
   int angularToPwm(double value, double max_value) const;
   int scaleToPwm(double value, double max_value) const;
   std::vector<uint8_t> encodePwmCommand(int pwm_value, char positive_prefix, char negative_prefix) const;
+  std::string formatCommandForLog(const std::vector<uint8_t> & command) const;
 
   bool openSerialIfNeeded();
   void closeSerial();
@@ -88,9 +90,11 @@ private:
   int baud_rate_{9600};
   int serial_bytesize_{7};
   int serial_stop_bits_{1};
+  int inter_command_delay_ms_{5};
   char serial_parity_{'E'};
   bool allow_reverse_linear_{true};
   bool send_angular_first_{true};
+  bool log_serial_commands_{false};
 
   int serial_fd_{-1};
 };
