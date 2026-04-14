@@ -1,0 +1,23 @@
+ARGJ801:
+  global_parameters:
+    robot_frame: 'FP_POI'
+    velodyne_frame: 'velodyne_link'
+    sick_frame: 'sick_link'
+
+  argj801_sensors:
+    lcm_params:
+      lcm_config_file: 'argj801_lcm_config_sensors.yaml'
+    velodyne: False
+    sick: False
+    left_telemetry: False
+    right_telemetry: False
+    odometer: False
+    twist: False
+    camera: True
+    #camera_url: 'rtsp://192.168.0.61/axis-media/media.amp?camera=2&streamprofile=Bandwidth'
+    camera_url: 'http://192.168.0.61/mjpg/video.mjpg?camera=2'
+    camera_topic: 'rear_camera/compressed'
+    camera_frame: 'rear_camera_link'
+    image_compression_ratio: 75
+    resize_image: False
+

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>argj801_sensors</name>
+  <version>0.0.0</version>
+  <description>
+    Drivers/nodo de sensores del rover ARGJ801: lidars, driveline (motor telemetry/odometer/twist)
+    y soporte opcional de cámara RTSP, publicado vía ROS 2 (LifecycleNode).
+  </description>
+  <maintainer email="jage@uma.es">jage</maintainer>
+  <!-- TODO: concretar licencia real del paquete. -->
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>lifecycle_msgs</build_depend>
+  <build_depend>rclcpp_lifecycle</build_depend>
+  <build_depend>lifecycle_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>argj801_sensors_msgs</build_depend>
+  <build_depend>diagnostic_updater</build_depend>
+  <build_depend>diagnostic_msgs</build_depend>
+  <!--<build_depend>image_transport</build_depend>-->
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>OpenCV</build_depend>
+
+  <exec_depend>rclcpp_lifecycle</exec_depend>
+  <exec_depend>argj801_ctl_platform_interfaces</exec_depend>
+  <depend>ament_index_cpp</depend>
+  <exec_depend>lifecycle_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>argj801_sensors_msgs</exec_depend>
+  <exec_depend>diagnostic_updater</exec_depend>
+  <exec_depend>diagnostic_msgs</exec_depend>
+  <!--<exec_depend>image_transport</exec_depend>-->
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>OpenCV</build_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

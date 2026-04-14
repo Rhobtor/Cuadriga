@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/andabata/Desktop/test_sim_pkg/install/wiimote_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/ublox_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/robot_localization/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/microstrain_inertial_rqt/lib/python3.10/site-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/microstrain_inertial_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_ros/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/argj801_ctl_mission_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/andabata/Desktop/test_sim_pkg/install/wiimote_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/ublox_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/robot_localization/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/microstrain_inertial_rqt/lib/python3.10/site-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/microstrain_inertial_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_ros/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/test_sim_pkg/install/argj801_ctl_mission_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

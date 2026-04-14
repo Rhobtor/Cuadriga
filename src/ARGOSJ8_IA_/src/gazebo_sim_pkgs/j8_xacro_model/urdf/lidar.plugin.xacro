@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+ <gazebo reference="Velodyne_link">
+    <sensor type="gpu_ray" name="Lidar">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>0</visualize>
+      <update_rate>20.0</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2048</samples>
+            <resolution>1</resolution>
+            <min_angle>0.6109</min_angle>  <!-- 35° -->
+            <max_angle>2.5307</max_angle>  <!-- 145° -->
+          </horizontal>
+          <vertical>
+            <!-- Ajusta estos valores según tu modelo de Velodyne -->
+            <samples>256</samples>        <!-- Número de canales -->
+            <resolution>1</resolution>   <!-- (opcional) -->
+            <!-- En radianes: convierte grados a radianes -->
+            <min_angle>-0.6109</min_angle>  <!-- –35° -->
+            <max_angle> 0.6109</max_angle>  <!-- +35° -->
+          </vertical>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>20.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin  name="lidar_controller" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+         
+          <argument>use_sim_time:=true</argument>
+          <remapping>~/out:=/ARGJ801/Velodyne/scan_cloud</remapping>
+        </ros>
+        <!--
+          IMPORTANT:
+          Si publicamos la nube con frame_name=base_link, la nube se verá "girada" si
+          el link del sensor (Velodyne_link) tiene una orientación distinta en TF.
+          Publica con el frame del sensor para respetar el yaw/pitch/roll del joint.
+        -->
+        <frame_name>Velodyne_link</frame_name>
+        <output_type>sensor_msgs/PointCloud2</output_type>
+        
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>

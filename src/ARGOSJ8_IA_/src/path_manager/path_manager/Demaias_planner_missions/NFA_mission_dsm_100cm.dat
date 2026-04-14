@@ -1,0 +1,13 @@
+366989 4064369 0
+4
+0 1 4 !barrier emergency !harzard military
+0 0 4 !barrier !emergency !harzard !military
+0 2 4 !barrier emergency !harzard !military
+0 3 4 !barrier !emergency !harzard military
+1 1 3 !barrier !harzard !station
+1 4 3 !barrier !harzard station
+2 1 3 !barrier !harzard military
+2 2 3 !barrier !harzard !military
+3 1 3 !barrier emergency !harzard
+3 3 3 !barrier !emergency !harzard
+4 1 2 !barrier !harzard

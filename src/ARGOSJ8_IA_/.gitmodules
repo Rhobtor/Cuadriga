@@ -1,0 +1,45 @@
+[submodule "src/gazebo_sim_pkgs/j8_xacro_model"]
+	path = src/gazebo_sim_pkgs/j8_xacro_model
+	url = git@github.com:Robotics-Mechatronics-UMA/j8_xacro_model.git
+[submodule "src/gazebo_sim_pkgs/fix_position_pkg"]
+	path = src/gazebo_sim_pkgs/fix_position_pkg
+	url = git@github.com:Robotics-Mechatronics-UMA/fix_position_pkg.git
+[submodule "src/path_manager"]
+	path = src/path_manager
+	url = git@github.com:Robotics-Mechatronics-UMA/path_manager.git
+[submodule "src/security_check"]
+	path = src/security_check
+	url = git@github.com:Robotics-Mechatronics-UMA/security_check.git
+[submodule "src/j8_joystick"]
+	path = src/j8_joystick
+	url = git@github.com:Robotics-Mechatronics-UMA/joystick_j8.git
+[submodule "src/argo_drivers_pkgs/Fixposition_driver_pkg"]
+	path = src/argo_drivers_pkgs/Fixposition_driver_pkg
+	url = git@github.com:Robotics-Mechatronics-UMA/Fixposition_driver_pkg.git
+[submodule "src/argo_drivers_pkgs/ublox"]
+	path = src/argo_drivers_pkgs/ublox
+	url = git@github.com:Robotics-Mechatronics-UMA/ublox.git
+[submodule "src/argo_drivers_pkgs/ntrip_client"]
+	path = src/argo_drivers_pkgs/ntrip_client
+	url = git@github.com:Robotics-Mechatronics-UMA/ntrip_client.git
+[submodule "src/argo_drivers_pkgs/argj801_sensors"]
+	path = src/argo_drivers_pkgs/argj801_sensors
+	url = git@github.com:Robotics-Mechatronics-UMA/argj801_sensors.git
+[submodule "src/android_ros2_server"]
+	path = src/android_ros2_server
+	url = git@github.com:ManuelSanchezMo/Android_ros2_server_pkg.git
+[submodule "src/GUI_pkg"]
+	path = src/GUI_pkg
+	url = git@github.com:Robotics-Mechatronics-UMA/J8_GUI.git
+[submodule "src/lidar_process_pkgs"]
+	path = src/lidar_process_pkgs
+	url = git@github.com:Robotics-Mechatronics-UMA/lidar_process_pkgs.git
+[submodule "src/argj801_setup"]
+	path = src/argj801_setup
+	url = git@github.com:Robotics-Mechatronics-UMA/argj801_setup.git
+[submodule "src/argj801_ctl_platform"]
+	path = src/argj801_ctl_platform
+	url = git@github.com:Robotics-Mechatronics-UMA/argj801_ctl_platform.git
+[submodule "src/ctl_mission"]
+	path = src/ctl_mission
+	url = git@github.com:Robotics-Mechatronics-UMA/argj801_ctl_mission.git

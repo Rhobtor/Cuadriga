@@ -1,0 +1,25 @@
+circuit1:     
+  ros__parameters:
+
+
+    goal_points: [5.0,6.42,0.0,
+                -9.0,-3.0,0.0,
+                7.0,-6.0,0.0,
+                -4.0,-23.0,0.0,
+                -28.0,-16.0,0.0,
+                -44.0,10.40,0.0,
+                -58.0,26.0,0.0,
+                -54.0,-0.0,0.0,
+                -61.0,-22.0,0.0,
+                -54.0,-34.0,0.0,
+                -51.0,-18.0,0.0,
+                -44.0,11.0,0.0
+
+                  ]  # Coordenadas de la meta en Unity
+
+    republish_hz: 2.0      # frecuencia a la que re‑publica la meta activa
+
+    # Importante para que el circuito termine y el supervisor pueda cambiar
+    loop: false
+    signal_done_on_last: true
+    hold_when_done: true

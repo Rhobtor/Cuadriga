@@ -1,0 +1,12 @@
+points_goal:     
+  ros__parameters:
+    goal_points: [  -33.29 , -43.0,
+                    -33.0, 6.0,
+                    -24.0 , 21.0,
+                    -4.0, 22.0,
+                    39.0, -6.0,
+                    44.0,-40.0,
+                    29.0,27.0
+
+                          ]
+    republish_hz: 2.0      # frecuencia a la que re‑publica la meta activa

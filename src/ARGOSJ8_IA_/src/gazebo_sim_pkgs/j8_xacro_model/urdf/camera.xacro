@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="camera" params="name parent origin_xyz origin_rpy ros_topic">
+    <link name="${name}">
+      <inertial>
+        <origin xyz="-0.00012066 0.00029097 -0.105" rpy="0 0 0" />
+        <mass value="0.012566" />
+        <inertia ixx="1.3614E-06" ixy="0" ixz="0" iyy="1.3614E-06" iyz="0" izz="2.5133E-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find j8_xacro_model)/meshes/Back_camera.STL" />
+        </geometry>
+        <!-- The color is predefined -->
+        <material name="">
+          <color rgba="0.79216 0.81961 0.93333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find j8_xacro_model)/meshes/Back_camera.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${name}_joint" type="fixed">
+      <origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+      <parent link="${parent}" />
+      <child link="${name}" />
+      <axis xyz="0 0 0" />
+    </joint>
+
+    <!-- Gazebo Camera Sensor Definition -->
+    <gazebo reference="${name}">
+      <sensor type="camera" name="${name}_camera">
+        <camera>
+          <horizontal_fov>3.10</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>300</far>
+          </clip>
+        </camera>
+        <plugin name="${name}_controller" filename="libgazebo_ros_camera.so">
+         <ros>
+              <namespace>${robot_namespace}/${name}</namespace>
+              <remapping>image:=${ros_topic}</remapping>
+          </ros>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>30.0</updateRate>
+          <cameraName>${name}</cameraName>
+          <imageTopicName>${ros_topic}/image_raw</imageTopicName>
+          <cameraInfoTopicName>${ros_topic}/camera_info</cameraInfoTopicName>
+          <frameName>${name}</frameName>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+</robot>
+

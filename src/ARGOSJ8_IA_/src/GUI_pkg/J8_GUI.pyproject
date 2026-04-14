@@ -1,0 +1,3 @@
+{
+    "files": ["ui_form.py","mainwindow.py","form.ui","resources.qrc","package.xml","ros_classes.py","CMakeLists.txt"]
+}

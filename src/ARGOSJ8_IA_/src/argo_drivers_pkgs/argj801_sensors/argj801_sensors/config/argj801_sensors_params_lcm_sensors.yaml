@@ -1,0 +1,25 @@
+ARGJ801:
+  global_parameters:
+    # Frames base usados en los mensajes publicados.
+    # Nota: por defecto aquí se usa 'FP_POI' (Fixposition) como frame base.
+    robot_frame: 'FP_POI'
+    velodyne_frame: 'velodyne_link'
+    sick_frame: 'sick_link'
+
+  argj801_sensors:
+    lcm_params:
+      # YAML de configuración LCM para los canales de sensores.
+      lcm_config_file: 'argj801_lcm_config_sensors.yaml'
+    # Activación de streams.
+    velodyne: True
+    sick: True
+    left_telemetry: True
+    right_telemetry: True
+    odometer: True
+    twist: True
+    camera: False
+    # Cámara (si se activa): RTSP url, frame y parámetros de compresión.
+    camera_url: ''
+    camera_frame: 'camera_link'
+    image_compression_ratio: 75
+    resize_image: False

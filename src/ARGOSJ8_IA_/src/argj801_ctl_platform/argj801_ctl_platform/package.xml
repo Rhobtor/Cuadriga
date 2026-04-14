@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>argj801_ctl_platform</name>
+  <version>1.0.0</version>
+  <description>Package of platform control of ROVER J8
+
+    The node can be in different modes, but only one at a time. Until now only is implemented the Serial Arduino Mode.
+    This node is developed using Lifecycle of ros2
+
+    - Subcriptors: the node subscribes to the topic /cmd_vel
+    - Publishers: the node have not publishers
+    - Services:
+        - set_velocity: set the velocity of the rover. Recives a integer between 0 and 10 (can be limited between 0 to 2 by safety reasons)
+        - ping: make ping to the arduino to test if it is alive.
+
+    - Params:
+        - operation_mode: indicates the mode in which the node works. Until now only arduino mode.
+        - port: Serial port to comunicate with arduino. This param only works in arduino mode.
+        - self_test_active: Active the self_test services. For safety, the self_test can be disabled when rover are working in a mision. Until now, this param only works in arduino mode.
+        - watchdog_active: Active the watchdog that terminates the node if no message arrives in the topic. It can be deactivated to debug issues. This param only works in arduino mode.
+
+  </description>
+
+  <maintainer email="jesus.morales@uma.es">Jesus Morales Rodriguez</maintainer>
+  <maintainer email="jage@uma.es">Juan Alberto García Esteban</maintainer>
+  <maintainer email="manuel.sanchez.m@uma.es">Manuel Sánchez Montero</maintainer>
+
+  <license>MIT License</license>
+
+  <author email="jage@uma.es">Juan Alberto García Esteban</author>
+  <author email="jesus.morales@uma.es">Jesus Morales Rodriguez</author>
+  <author email="manuel.sanchez.m@uma.es">Manuel Sánchez Montero</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rclcpp</build_depend>
+  <build_depend>lifecycle_msgs</build_depend>
+  <build_depend>rclcpp_lifecycle</build_depend>
+  <build_depend>lifecycle_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>self_test</build_depend>
+  <build_depend>diagnostic_updater</build_depend>
+  <build_depend>diagnostic_msgs</build_depend>
+  <build_depend>argj801_ctl_platform_interfaces</build_depend>
+
+  <exec_depend>rclcpp_lifecycle</exec_depend>
+  <exec_depend>argj801_ctl_platform_interfaces</exec_depend>
+  <depend>ament_index_cpp</depend>
+  <exec_depend>lifecycle_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>self_test</exec_depend>
+  <exec_depend>diagnostic_updater</exec_depend>
+  <exec_depend>diagnostic_msgs</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ros_testing</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

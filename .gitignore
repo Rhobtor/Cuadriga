@@ -1,1 +1,10 @@
-/src/ARGOSJ8_IA_/
+.git-nested-backups/
+
+# ROS2 / colcon generated artifacts
+src/ARGOSJ8_IA_/build/
+src/ARGOSJ8_IA_/install/
+src/ARGOSJ8_IA_/log/
+
+# Python cache artifacts
+__pycache__/
+*.pyc

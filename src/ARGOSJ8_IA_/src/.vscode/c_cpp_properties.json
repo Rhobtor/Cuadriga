@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/a/ARGJ801_simulator/install/wiimote_msgs/include/**",
+        "/home/a/ARGJ801_simulator/install/spacenav/include/**",
+        "/home/a/ARGJ801_simulator/install/joy/include/**",
+        "/home/a/ARGJ801_simulator/install/robot_localization/include/**",
+        "/home/a/ARGJ801_simulator/install/lcm_to_ros_interfaces/include/**",
+        "/home/a/ARGJ801_simulator/install/globlal_path_planner_interfaces/include/**",
+        "/home/a/ARGJ801_simulator/install/gazebo_plugins/include/**",
+        "/home/a/ARGJ801_simulator/install/gazebo_ros/include/**",
+        "/home/a/ARGJ801_simulator/install/gazebo_msgs/include/**",
+        "/home/a/ARGJ801_simulator/install/argj801_ctl_platform_interfaces/include/**",
+        "/home/a/ARGJ801_simulator/install/argj801_ctl_mission_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/a/ARGOJ8_ws/src/argj801_ctl_mission/argj801_ctl_mission/include/**",
+        "/home/a/ARGOJ8_ws/src/argj801_ctl_platform/argj801_ctl_platform/include/**",
+        "/home/a/ARGOJ8_ws/src/gazebo_sim_pkgs/fix_position_pkg/include/**",
+        "/home/a/ARGOJ8_ws/src/gazebo_sim_pkgs/j8_xacro_model/include/**",
+        "/home/a/ARGOJ8_ws/src/j8_joystick/joy/include/**",
+        "/home/a/ARGOJ8_ws/src/j8_joystick/spacenav/include/**",
+        "/home/a/ARGOJ8_ws/src/path_manager/include/**",
+        "/home/a/ARGOJ8_ws/src/security_check/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="argo">
+  <!-- URDF for Argo Robot -->
+  <!-- Automatically created by SolidWorks to URDF Exporter -->
+  <!-- Exporter Version: 1.6.0-4-g7f85cfe, Build: 1.6.7995.38578 -->
+
+  <!-- Properties -->
+  <xacro:property name="M_PI" value="3.14159265358979323846"/>
+  <xacro:property name="robot_namespace" value="ARGJ801"/>
+  <xacro:property name="mesh_path" value="$(find j8_xacro_model)/meshes"/>
+
+  <!-- Included Xacro Files -->
+  <!-- <xacro:include filename="$(find j8_xacro_model)/urdf/wheel.xacro"/> -->
+  <xacro:include filename="$(find j8_xacro_model)/urdf/set_color.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/lidar.plugin.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/panel.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/side_bar.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/gps_holder.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/gps.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/camera.xacro"/>
+  <xacro:include filename="$(find j8_xacro_model)/urdf/sick_lidar.plugin.xacro"/>
+
+  <xacro:include filename="$(find fixposition_sensor_pkg)/urdf/fixposition_main.xacro"/>
+  <!--<xacro:include filename="$(find zed_camera_pkg)/urdf/camera_macro.urdf"/>-->
+
+  <!-- Base Link -->
+ <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.042688 0.0075201 0.060368"
+        rpy="0 0 0" />
+      <mass
+        value="1000.6" />
+      <inertia
+        ixx="162.15"
+        ixy="-2.4702E-05"
+        ixz="-5.0479"
+        iyy="867.35"
+        iyz="-3.1093E-05"
+        izz="5000.46" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <xacro:set_gazebo_color link_name="base_link" r="0.3" g="0.3" b="0.3"/> <!-- Dark Grey -->
+
+  <!-- J8 Top Link -->
+ <link
+    name="J8_top">
+    <inertial>
+      <origin
+        xyz="0.36558 -4.2501E-17 0.10133"
+        rpy="0 0 0" />
+      <mass
+        value="639.03" />
+      <inertia
+        ixx="110.75"
+        ixy="3.1317E-14"
+        ixz="-25.628"
+        iyy="522.18"
+        iyz="6.8087E-15"
+        izz="2000.13" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/J8_top.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.48627 0.24314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/J8_top.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <xacro:set_gazebo_color link_name="J8_top" r="0.2941" g="0.3255" b="0.1255"/> <!-- Military Green -->
+
+  <!-- Joint Between Top and Base -->
+  <joint name="Top_Base_joint" type="fixed">
+    <origin
+      xyz="-0.0093372 0.0075201 0.265"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="J8_top" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <!-- Bridge Link -->
+
+    <link
+    name="Bridge">
+    <inertial>
+      <origin
+        xyz="-4.4409E-16 0.0076101 0.13629"
+        rpy="0 0 0" />
+      <mass
+        value="7.6437" />
+      <inertia
+        ixx="1.3715"
+        ixy="4.0621E-14"
+        ixz="-8.0678E-18"
+        iyy="0.083158"
+        iyz="-4.1934E-15"
+        izz="1.3176" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/Bridge.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.48627 0.24314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find j8_xacro_model)/meshes/Bridge.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <xacro:set_gazebo_color link_name="Bridge" r="0.2941" g="0.3255" b="0.1255"/> <!-- Military Green -->
+
+  <!-- Joint Between Bridge and Top -->
+  <joint name="Top_Bridge_joint" type="fixed">
+    <origin
+      xyz="0.82 0 0.31021"
+      rpy="0 0 0" />
+    <parent
+      link="J8_top" />
+    <child
+      link="Bridge" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <!-- Instance of Bridge Panels -->
+<xacro:panel name="Bridge_panel_1" inertial_xyz="-0.2533 -0.13389 0.21171" joint_xyz="0.2533 0.14912 0.21171" joint_rpy="1.5708 0 0"/>
+<xacro:panel name="Bridge_panel_2" inertial_xyz="-0.2533 -0.13389 0.21171" joint_xyz="-0.2533 0.15172 0.21171" joint_rpy="1.5708 0 -3.1416"/>
+<xacro:panel name="Bridge_panel_3" inertial_xyz="-0.2533 -0.13389 0.21171" joint_xyz="0.2533 -0.1365 0.21171" joint_rpy="1.5708 0 0"/>
+<xacro:panel name="Bridge_panel_4" inertial_xyz="-0.2533 -0.13389 0.21171" joint_xyz="-0.2533 -0.13389 0.21171" joint_rpy="1.5708 0 -3.1416"/>
+
+<!-- Robot side bars -->
+<xacro:bar name="Left_bar" origin_xyz="-0.7165 0.7825 0.185"/>
+<xacro:bar name="Right_bar" origin_xyz="-0.7165 -0.7125 0.185"/>
+
+<!-- GPS Holders -->
+<xacro:gps_holder name="Left_gps_holder" parent="Bridge" origin_xyz="-0.007 0.601 0.21421" origin_rpy="1.5708 0 1.5708" />
+<xacro:gps_holder name="Right_gps_holder" parent="Bridge" origin_xyz="-0.007 -0.51339 0.21421" origin_rpy="1.5708 0 1.5708" />
+
+<!-- GPS with Gazebo Plugin -->
+<xacro:gps side="Left" origin_xyz="-0.066 0.012 -0.066" origin_rpy="1.5708 1.5708 ${M_PI}"  gps_sensor_name="rover_gps" frame_name="rover_gps" fix_topic="/rover/gps/fix" vel_topic="/rover/gps/vel"/>
+<xacro:gps side="Right" origin_xyz="-0.066 0.012 -0.066" origin_rpy="1.5708 1.5708 ${M_PI}"  gps_sensor_name="base_gps" frame_name="base_gps" fix_topic="/base/gps/fix" vel_topic="/base/gps/vel"/>
+
+<!-- Lidar
+<xacro:lidar name="velodyne" parent="J8_top" origin_xyz="1.6279 -0.0022244 0.17" origin_rpy="0 0 0" mass="0.61592" update_rate="10" min_angle="${-M_PI/2}" max_angle="${M_PI/2}" stddev="0.008" num_samples="431" min_range="0.2"  max_range="35.0" />
+<xacro:lidar name="sick" parent="J8_top" origin_xyz="1.50 0.02 0.27732" origin_rpy="0 0 0" mass="0.22144" update_rate="10" min_angle="${-M_PI/2}" max_angle="${M_PI/2}" stddev="0.008" num_samples="181" min_range="0.2"  max_range="8.0"/> -->
+
+
+    <link name="Sick_link">
+      <inertial>
+            <origin rpy="0 0 -1.5707963267948966" xyz="1.50 0.02 0.27732"/>
+            <mass value="0.22144"/>
+            <inertia ixx="0.00069055" ixy="0" ixz="0" iyy="0.0006838" iyz="0" izz="0.00083911"/>
+          </inertial>
+          <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Sick.STL"/>
+            </geometry>
+            <!-- Default color for all lidars -->
+            <material name="">
+              <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+          </visual>
+          <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Sick.STL"/>
+            </geometry>
+          </collision>
+    </link>
+
+    <!-- Joint Definition -->
+    <joint name="Sick_joint" type="fixed">
+      <origin rpy="0 0 -1.5707963267948966" xyz="1.50 0.02 0.27732"/>
+      <parent link="J8_top"/>
+      <child link="Sick_link"/>
+      <axis xyz="0 0 0"/>
+    </joint>
+
+
+
+    <!-- Lidar -->
+  <link name="Velodyne_link">
+    <inertial>
+      <origin rpy="0 0 -1.5707963267948966" xyz="1.6279 -0.0022244 0.17"/>
+      <mass value="0.61592"/>
+      <inertia ixx="0.00069055" ixy="0" ixz="0" iyy="0.0006838" iyz="0" izz="0.00083911"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find j8_xacro_model)/meshes/Velodyne.STL"/>
+      </geometry>
+      <!-- Default color for all lidars -->
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find j8_xacro_model)/meshes/Velodyne.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Velodyne_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="1.6279 -0.0022244 0.17"/>
+    <parent link="J8_top"/>
+    <child link="Velodyne_link"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <gazebo reference="Velodyne_link">
+    <visual>
+      <material>
+        <ambient>0.8 0.8 0.8 1.0</ambient>
+        <diffuse>0.8 0.8 0.8 1.0</diffuse>
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+    </visual>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- Also preserve joint if has a fixed joint -->
+  </gazebo>
+
+
+
+<!-- Front and Back Camera 
+<xacro:camera name="Back_camera" parent="Bridge" origin_xyz="-0.11 0 0.18021" origin_rpy="0 1.5708 0" ros_topic="/back_camera"/>
+<xacro:camera name="Front_camera" parent="Bridge" origin_xyz="0.11 0 0.18021" origin_rpy="0 1.5708 0" ros_topic="/front_camera"/>-->
+
+<!-- Zedd Camera 
+<xacro:zed_camera name="zed_camera" parent="Bridge" origin_xyz="0.11 0 0.23" origin_rpy="0 ${M_PI} 0" ros_topic="/zedd_camera"/>-->
+
+
+<!-- Wheel instances-->
+<!-- <xacro:wheel_with_suspension number="1" parent="base_link" suspension_xyz="-1.0593 -0.45 -0.225" wheel_xyz = "0.0 -0.18 0.0"/>
+<xacro:wheel_with_suspension number="2" parent="base_link" suspension_xyz="-0.36934 -0.45 -0.225" wheel_xyz="0.0 -0.18 0.0"/>
+<xacro:wheel_with_suspension number="3" parent="base_link" suspension_xyz="0.32066 -0.45 -0.225" wheel_xyz="0.0 -0.18 0.0"/>
+<xacro:wheel_with_suspension number="4" parent="base_link" suspension_xyz="1.0107 -0.45 -0.225" wheel_xyz="0.0 -0.18 0.0"/>
+<xacro:wheel_with_suspension number="5" parent="base_link" suspension_xyz="-1.0593 0.45 -0.225" wheel_xyz="0.0 0.18 0.0"/>
+<xacro:wheel_with_suspension number="6" parent="base_link" suspension_xyz="-0.36934 0.45 -0.225" wheel_xyz="0.0 0.18 0.0"/>
+<xacro:wheel_with_suspension number="7" parent="base_link" suspension_xyz="0.32066 0.45 -0.225" wheel_xyz="0.0 0.18 0.0"/>
+<xacro:wheel_with_suspension number="8" parent="base_link" suspension_xyz="1.0107 0.45 -0.225" wheel_xyz="0.0 0.18 0.0"/>  -->
+
+
+
+    <link name="Suspension_1">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_1.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_1.STL"/>
+          </geometry>
+        </collision>
+    </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_1_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="-1.0593 -0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_1"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_1_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+    <link name="Wheel_1">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel1.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+      <gazebo reference="Wheel_1">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_1">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_1_Wheel_1_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 -0.18 0.0"/>
+        <parent link="Suspension_1"/>
+        <child link="Wheel_1"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_1_Wheel_1_joint">
+
+      </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_2">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_2.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_2.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_2_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="-0.36934 -0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_2"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_2_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_2">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel2.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel2.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_2">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_2">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_2_Wheel_2_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 -0.18 0.0"/>
+        <parent link="Suspension_2"/>
+        <child link="Wheel_2"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_2_Wheel_2_joint">
+
+        </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_3">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_3.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_3.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_3_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="0.32066 -0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_3"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_3_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_3">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel3.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel3.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_3">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_3">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_3_Wheel_3_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 -0.18 0.0"/>
+        <parent link="Suspension_3"/>
+        <child link="Wheel_3"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_3_Wheel_3_joint">
+
+        </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_4">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_4.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_4.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_4_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="1.0107 -0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_4"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_4_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_4">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel4.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel4.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_4">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_4">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_4_Wheel_4_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 -0.18 0.0"/>
+        <parent link="Suspension_4"/>
+        <child link="Wheel_4"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_4_Wheel_4_joint">
+
+        </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_5">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_5.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_5.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_5_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="-1.0593 0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_5"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_5_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_5">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel5.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel5.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_5">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_5">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_5_Wheel_5_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 0.18 0.0"/>
+        <parent link="Suspension_5"/>
+        <child link="Wheel_5"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_5_Wheel_5_joint">
+
+        </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_6">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_6.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_6.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_6_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="-0.36934 0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_6"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_6_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_6">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel6.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel6.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_6">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_6">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_6_Wheel_6_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 0.18 0.0"/>
+        <parent link="Suspension_6"/>
+        <child link="Wheel_6"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_6_Wheel_6_joint">
+
+        </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_7">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_7.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_7.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_7_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="0.32066 0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_7"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_7_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_7">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel7.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel7.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_7">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_7">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_7_Wheel_7_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 0.18 0.0"/>
+        <parent link="Suspension_7"/>
+        <child link="Wheel_7"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+
+      <gazebo reference="Suspension_7_Wheel_7_joint">
+
+      </gazebo>
+      <!-- Suspension Link -->
+      <link name="Suspension_8">
+        <inertial>
+          <origin rpy="0 0 0" xyz="4.4409E-16 -0.005 2.2204E-16"/>
+          <mass value="10.0"/>
+          <inertia ixx="5.0" ixy="8.0515E-20" ixz="0" iyy="5.0" iyz="1.9328E-19" izz="5.0"/>
+        </inertial>
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_8.STL"/>
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="file://$(find j8_xacro_model)/meshes/Suspension_8.STL"/>
+          </geometry>
+        </collision>
+      </link>
+      <!-- Prismatic Joint (Base Link to Suspension) -->
+      <joint name="base_Suspension_8_joint" type="prismatic">
+        <origin rpy=" 0 0 0 " xyz="1.0107 0.45 -0.225"/>
+        <parent link="base_link"/>
+        <child link="Suspension_8"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000000000000.0" lower="-10.0" upper="10.0" velocity="0.0"/>
+        <dynamics damping="100.0" friction="1000000000000.0"/>
+      </joint>
+      <gazebo reference="base_Suspension_8_joint">
+        <implicitSpringDamper>true</implicitSpringDamper>
+        <springStiffness>500000000000000</springStiffness>
+        <springReference>0.0</springReference>
+      </gazebo>
+      <link name="Wheel_8">
+        <!-- Inertial, visual, and collision properties -->
+        <inertial>
+          <origin rpy="0 0 0" xyz="0 0.17637 0"/>
+          <mass value="5.205463824313"/>
+          <inertia ixx="3.66317923670982" ixy="0" ixz="0" iyy="3.66317923670982" iyz="0" izz="5.43484629444829"/>
+        </inertial>
+        <visual>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry> <mesh filename="file://$(find j8_xacro_model)/meshes/Wheel8.STL"/>
+            </geometry>
+          <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+          </material>
+        </visual>
+        <collision>
+          <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+          <geometry>
+            <cylinder length="0.30" radius="0.298"/>
+          </geometry>
+          <geometry>
+              <mesh filename="file://$(find j8_xacro_model)/meshes/wWheel8.STL"/>
+            </geometry>
+        </collision>
+      </link>
+      <gazebo reference="Wheel_8">
+        <visual>
+          <material>
+            <ambient>0.0 0.0 0.0 1.0</ambient>
+            <diffuse>0.0 0.0 0.0 1.0</diffuse>
+            <specular>0.0 0.0 0.0 1.0</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <!-- Also preserve joint if has a fixed joint -->
+      </gazebo>
+      <gazebo reference="Wheel_8">
+        <kp>100000000000000.0</kp>
+        <kd>0.8</kd>
+        <mu>0.55</mu>
+        <mu2>0.55</mu2>
+        <fdir1> 1 0 0</fdir1>
+      </gazebo>
+      <joint name="Suspension_8_Wheel_8_joint" type="continuous">
+        <origin rpy="0 0 0" xyz="0.0 0.18 0.0"/>
+        <parent link="Suspension_8"/>
+        <child link="Wheel_8"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+      <gazebo reference="Suspension_8_Wheel_8_joint">
+      </gazebo>
+
+
+<!-- Fixposition holder
+<xacro:bridge_joint xyz="-0.0028148 -0.11697 0.21171" rpy="1.5708 0 1.5708"/>-->
+<!-- Fixposition sensor-->
+  <xacro:fixposition_full_setup parent="Bridge" xyz="-0.0028148 -0.11697 0.21171" rpy="1.5708 0 1.5708"/>
+  
+ <gazebo>
+  <!-- Diff drive plugin configuration -->
+  <plugin name='diff_drive' filename='libgazebo_ros_j8_wheels_plugin.so'>
+    <ros>
+      <namespace>/ARGJ801</namespace>
+      <remapping>odom:=odom_demo</remapping>
+    </ros>
+    <max_throttle_acceleration>1.86</max_throttle_acceleration>
+    <max_steer_acceleration>1.23</max_steer_acceleration>
+    <update_rate>200</update_rate>
+
+    <!-- Wheels configuration -->
+    <num_wheel_pairs>4</num_wheel_pairs>
+    <left_joint>Suspension_1_Wheel_1_joint</left_joint>
+    <left_joint>Suspension_2_Wheel_2_joint</left_joint>
+    <left_joint>Suspension_3_Wheel_3_joint</left_joint>
+    <left_joint>Suspension_4_Wheel_4_joint</left_joint>
+    <right_joint>Suspension_5_Wheel_5_joint</right_joint>
+    <right_joint>Suspension_6_Wheel_6_joint</right_joint>
+    <right_joint>Suspension_7_Wheel_7_joint</right_joint>
+    <right_joint>Suspension_8_Wheel_8_joint</right_joint>
+    <!-- Kinematics -->
+    <wheel_separation>1.26</wheel_separation>   <!-- repítelo 4 veces -->
+    <wheel_separation>1.26</wheel_separation>
+    <wheel_separation>1.26</wheel_separation>
+    <wheel_separation>1.26</wheel_separation>
+
+    <wheel_diameter>0.596</wheel_diameter>      <!-- idem -->
+    <wheel_diameter>0.596</wheel_diameter>
+    <wheel_diameter>0.596</wheel_diameter>
+    <wheel_diameter>0.596</wheel_diameter>
+    <!-- Limits -->
+    <max_wheel_torque>100000000000</max_wheel_torque>
+    <max_wheel_acceleration>100.0</max_wheel_acceleration>
+    <!-- Output -->
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>true</publish_wheel_tf>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
+  </plugin>
+</gazebo>
+
+ <gazebo reference="base_link">
+    <sensor name="br_imu" type="imu">
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.01</mean>
+                <stddev>0.001</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+          
+        </imu>
+        <plugin name="bytes_imu" filename="libgazebo_ros_imu_sensor.so">
+            <ros>
+                <namespace>/ARGJ801</namespace>
+                <remapping>~/out:=data</remapping>
+            </ros>
+            <initial_orientation_as_reference>false</initial_orientation_as_reference>
+        </plugin>
+    </sensor>
+</gazebo>
+
+
+
+<gazebo>
+  <plugin name="joint_state_publisher_plugin" filename="libjoints_plugin.so">
+    <robotNamespace>argo</robotNamespace>
+    <updateRate>50.0</updateRate>
+  </plugin>
+</gazebo>
+
+
+</robot>
+
+ 

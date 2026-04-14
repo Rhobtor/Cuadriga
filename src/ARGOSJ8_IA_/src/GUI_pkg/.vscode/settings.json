@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/andabata/Desktop/ARGJ801_simulator//install/wiimote_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/ublox_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/robot_localization/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/microstrain_inertial_rqt/lib/python3.10/site-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/microstrain_inertial_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/gazebo_ros/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/gazebo_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/argj801_ctl_mission_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/andabata/Desktop/ARGJ801_simulator//install/wiimote_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/ublox_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/robot_localization/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/microstrain_inertial_rqt/lib/python3.10/site-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/microstrain_inertial_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/gazebo_ros/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/gazebo_msgs/local/lib/python3.10/dist-packages",
+        "/home/andabata/Desktop/ARGJ801_simulator//install/argj801_ctl_mission_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

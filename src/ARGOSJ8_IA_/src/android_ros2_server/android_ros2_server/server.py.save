@@ -1,0 +1,182 @@
+ximport rclpy
+from rclpy.lifecycle import LifecycleNode
+from rclpy.lifecycle import State
+from rclpy.lifecycle import TransitionCallbackReturn
+import socket
+import threading
+import select
+from argj801_ctl_mission_interfaces.srv import ChangeMode, GetMode
+
+# Server configuration
+HOST = '0.0.0.0'  # Listen on all network interfaces
+PORT = 5001
+
+class TcpServerLifecycleNode(LifecycleNode):
+    def __init__(self):
+        super().__init__('tcp_server_node')
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server_socket.bind((HOST, PORT))
+        self.server_socket.listen(5)
+        self.server_socket.setblocking(False)  # Set the server socket to non-blocking
+        self.change_J8_FSM = self.create_client(ChangeMode, '/ARGJ801/change_fsm_mode')
+        self.get_J8_FSM = self.create_client(GetMode, '/ARGJ801/get_fsm_mode')
+        self.J8_state = 0
+        self.latitude = 0.0
+        self.longitude = 0.0
+        self.get_logger().info(f'Server listening on {HOST}:{PORT}')
+
+        self.client_threads = []
+        self.timer_ = None  # Initialize the timer attribute
+
+    def on_configure(self, state: State):
+        self.get_logger().info('Configuring...')
+        return TransitionCallbackReturn.SUCCESS
+
+    def on_activate(self, state: State):
+        self.get_logger().info('Activating...')
+        self.timer_ = self.create_timer(1.0, self.timer_callback)  # Create a timer with a 1-second interval
+        self.create_thread()
+        return TransitionCallbackReturn.SUCCESS
+
+    def on_deactivate(self, state: State):
+        self.get_logger().info('Deactivating...')
+        if self.timer_ is not None:
+            self.timer_.cancel()
+        # Close all client connections
+        for thread in self.client_threads:
+            if thread.is_alive():
+                thread.join()
+
+        self.server_socket.close()
+        return TransitionCallbackReturn.SUCCESS
+
+    def on_cleanup(self, state: State):
+        self.get_logger().info('Cleaning up...')
+        self.server_socket.close()
+        return TransitionCallbackReturn.SUCCESS
+
+    def on_shutdown(self, state: State):
+        self.get_logger().info('Shutting down...')
+        self.server_socket.close()
+        return TransitionCallbackReturn.SUCCESS
+
+    def timer_callback(self):
+        try:
+            self.get_J8_FSM_mode()
+        except Exception as e:
+            self.get_logger().error(f'Error in timer_callback: {e}')
+
+    def send_FSM_change_request(self, transition):
+        request = ChangeMode.Request()
+        request.transition = transition
+        future = self.change_J8_FSM.call_async(request)
+        future.add_done_callback(self.FSM_change_request_callback)
+
+    def FSM_change_request_callback(self, future):
+        try:
+            response = future.result()
+            if response is None:
+                self.get_logger().warn('Failed to change FSM mode')
+            else:
+                self.get_logger().info(f'FSM mode changed to: {response.mode}')
+        except Exception as e:
+            self.get_logger().error(f'Exception in FSM change request: {e}')
+
+    def get_J8_FSM_mode(self):
+        request = GetMode.Request()
+        self.get_logger().info('Sending GetMode request...')
+        future = self.get_J8_FSM.call_async(request)
+        future.add_done_callback(self.get_J8_FSM_mode_callback)
+
+    def get_J8_FSM_mode_callback(self, future):
+        try:
+            response = future.result()
+            if response is None:
+                self.get_logger().warn('Failed to get FSM mode')
+                self.J8_state = -1
+            else:
+                self.J8_state = int(response.mode)
+                self.get_logger().info(f'Received FSM mode: {response.mode}')
+        except Exception as e:
+            self.get_logger().error(f'Exception in GetMode request: {e}')
+
+    def create_thread(self):
+        server_thread = threading.Thread(target=self.start_server)
+        server_thread.start()
+
+    def start_server(self):
+        while rclpy.ok():
+            try:
+                # Use select to handle socket operations with a timeout
+                readable, _, _ = select.select([self.server_socket], [], [], 1.0)
+                if self.server_socket in readable:
+                    client_socket, addr = self.server_socket.accept()
+                    self.get_logger().info(f'Accepted connection from {addr}')
+                    client_handler = threading.Thread(target=self.handle_client, args=(client_socket,))
+                    self.client_threads.append(client_handler)
+                    client_handler.start()
+            except Exception as e:
+                self.get_logger().error(f'Error in start_server: {e}')
+                break
+
+    def handle_client(self, client_socket):
+        try:
+            print('State: ' + str(self.J8_state))
+            while rclpy.ok():
+                data = client_socket.recv(1024).decode('utf-8').strip()
+                if not data:
+                    break
+
+                self.get_logger().info(f'Received data: {data}')
+                
+                if data == "HEARTBEAT":
+                    response = "ACK"
+                elif data == "STOP":
+                    self.send_FSM_change_request(9)  # 9 is the transition number for Estop
+                    response = "ACK"
+                    self.get_logger().info("Emergency STOP signal received")
+                elif data == "GET_STATE":
+                    response = f"STATE;{self.J8_state}"
+                elif data.startswith("GPS;"):
+                    parts = data.split(";")
+                    if len(parts) == 3:
+                        self.latitude = float(parts[1])
+                        self.longitude = float(parts[2])
+                        self.get_logger().info(f'Received GPS coordinates: Latitude={self.latitude}, Longitude={self.longitude}')
+                        response = "ACK"
+                    else:
+                        response = "INVALID GPS DATA"
+                elif data.startswith("REQUEST;"):
+                    parts = data.split(";")
+                    if len(parts) == 3:
+                        request_latitude = float(parts[1])
+                        request_longitude = float(parts[2])
+                        self.get_logger().info(f'Received request for robot to move to: Latitude={request_latitude}, Longitude={request_longitude}')
+                        # Implement logic to calculate a free path from the robot to the phone's coordinates
+                        # For example, you might call a ROS2 service or some other function here
+                        response = "ACK"
+                    else:
+                        response = "INVALID REQUEST DATA"
+                else:
+                    response = "UNKNOWN COMMAND"
+                
+                client_socket.send(response.encode('utf-8'))
+        except Exception as e:
+            self.get_logger().error(f'Exception: {e}')
+        finally:
+            client_socket.close()
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = TcpServerLifecycleNode()
+    executor = rclpy.executors.SingleThreadedExecutor()
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

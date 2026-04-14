@@ -1,0 +1,30 @@
+gnss_goal_circuit:
+  ros__parameters:
+    # Lista plana: [lat, lon, alt, lat, lon, alt, ...]
+    waypoints: [
+      36.7155118, -4.4902888, 96.0,
+      36.7154817, -4.4902566, 96.0,
+      36.7154473, -4.4902512, 96.0,
+      36.7154151, -4.4902459, 96.0,
+      36.7153893, -4.4902405, 96.0,
+    ]
+    waypoint_dim: 3
+
+    output_topic: /goal_gnss
+    goal_reached_topic: goal_reached
+
+    republish_hz: 2.0
+    loop: false
+    hold_when_done: true
+    start_index: 0
+    frame_id: gps
+
+check_goal_gnss:
+  ros__parameters:
+    goal_topic: /goal_gnss
+    fix_topic: /fixposition/navsatfix
+    goal_reached_topic: goal_reached
+
+    goal_threshold_m: 3.0
+    use_altitude: false
+    alt_threshold_m: 6.0

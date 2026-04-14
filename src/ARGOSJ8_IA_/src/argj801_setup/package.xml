@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>argj801_setup</name>
+  <version>0.0.0</version>
+  <description>
+    Paquete de configuración y launch del sistema ROS 2 del rover ARGJ801.
+
+    Este paquete instala ficheros de launch/config (no compila nodos propios) y define
+    el arranque coordinado del stack (ctl_mission, path_manager, security_check, drivers...).
+  </description>
+  <maintainer email="061949764x@uma.es">andabata</maintainer>
+  <!-- Licencia: si este paquete es interno del proyecto, definid la licencia real.
+       Se deja como TODO para no inventar una licencia inexacta. -->
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencias en runtime: el launch usa launch_ros y lifecycle. -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>lifecycle_msgs</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>cuadriga_actuator</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/andabata/Desktop/test_sim_pkg/install/wiimote_msgs/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/ublox_gps/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_plugins/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/ublox_msgs/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/ublox_serialization/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/spacenav/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/joy/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/robot_localization/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/microstrain_inertial_msgs/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_ros/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/gazebo_msgs/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/install/argj801_ctl_mission_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/argj801_ctl_mission/argj801_ctl_mission/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/gazebo_ros2_pkgs/gazebo_plugins/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/gazebo_ros2_pkgs/gazebo_ros/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/joystick_j8/joy/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/joystick_j8/spacenav/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/microstrain_inertial_3dmgx5/microstrain_inertial_driver/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/robot_localization_j8/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/ublox/ublox_gps/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/ublox/ublox_msgs/include/**",
+        "/home/andabata/Desktop/test_sim_pkg/src/ublox/ublox_serialization/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

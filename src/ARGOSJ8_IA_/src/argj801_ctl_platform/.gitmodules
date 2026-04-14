@@ -1,0 +1,3 @@
+[submodule "argj801_ctl_platform/src/argj801_lcm"]
+	path = argj801_ctl_platform/src/argj801_lcm
+	url = git@github.com:Robotics-Mechatronics-UMA/argj801_lcm.git
