@@ -150,6 +150,12 @@ def generate_launch_description():
             "'", LaunchConfiguration('simulator'), "' == 'true' or '", LaunchConfiguration('local_test'), "' == 'true'",
         ])
     )
+    joystick_condition = IfCondition(
+        PythonExpression([
+            "'", LaunchConfiguration('robot'), "' == 'true' or '", LaunchConfiguration('simulator'), "' == 'true' or '",
+            LaunchConfiguration('local_test'), "' == 'true'",
+        ])
+    )
     cuadriga_backend_robot_condition = IfCondition(
         PythonExpression([
             "'", LaunchConfiguration('robot'), "' == 'true' and '", LaunchConfiguration('use_cuadriga_backend'), "' == 'true'",
@@ -274,7 +280,7 @@ def generate_launch_description():
     joystickNode = LifecycleNode(
         package='joy', executable='joy_node', name='joy_node', namespace='ARGJ801', output='screen',
         parameters=[global_params, select_params('argj801_ctrl_platform_node')],
-        condition=simulator_or_local_test_condition)
+        condition=joystick_condition)
     fixpositionDriverNode = Node(
         package='fixposition_driver_ros2', executable='fixposition_driver_ros2_exec', name='fixposition_driver_ros2', output='screen',
         parameters=[

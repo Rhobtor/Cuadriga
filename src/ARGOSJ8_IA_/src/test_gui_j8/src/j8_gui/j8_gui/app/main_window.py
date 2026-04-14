@@ -513,15 +513,22 @@ class RosSide(Node):
         srv_receive_ll_path = namespaced(namespace, self.get_parameter(p.receive_ll_path_srv_name).value)
 
         # clients (equivalentes a GUI_pkg/ros_classes.py)
-        from ctl_mission_interfaces.srv import ChangeMode
-        from lifecycle_msgs.srv import GetState
+        from ctl_mission_interfaces.srv import ChangeMode, GetMode, GetPossibleTransitions
         from path_manager_interfaces.srv import RobotPath
 
         self._srv_ChangeMode = ChangeMode
+        self._srv_GetMode = GetMode
+        self._srv_GetPossibleTransitions = GetPossibleTransitions
         self._srv_RobotPath = RobotPath
+        self._fsm_mode_emit = None
+        self._possible_transitions_emit = None
 
         self.cli_change_fsm = self.create_client(ChangeMode, srv_change_fsm)
-        self.cli_get_state = self.create_client(GetState, srv_get_state)
+        self.cli_get_state = self.create_client(GetMode, srv_get_state)
+        self.cli_get_possible_transitions = self.create_client(
+            GetPossibleTransitions,
+            namespaced(namespace, self.get_parameter(p.fsm_get_possible_transition_srv_name).value),
+        )
         self.cli_send_draw_path = self.create_client(RobotPath, srv_receive_ll_path)
 
         # Controller config services (ctl_mission CtrlNode)
@@ -551,6 +558,10 @@ class RosSide(Node):
 
     # NOTE: no /gui/* publishers. We talk to J8 via services (legacy GUI_pkg contract).
 
+    def set_fsm_feedback_callbacks(self, fsm_mode_emit=None, possible_transitions_emit=None):
+        self._fsm_mode_emit = fsm_mode_emit
+        self._possible_transitions_emit = possible_transitions_emit
+
     def send_state(self, key: str):
         # Intentar traducir a transición FSM real (GUI_pkg usa servicio ChangeMode)
         # Aquí asumimos que key llega como string numérica o 'int-like'.
@@ -579,8 +590,40 @@ class RosSide(Node):
 
         if getattr(response, 'success', False):
             self.get_logger().info(f"FSM transition {transition_id} accepted")
+            self._refresh_fsm_feedback()
         else:
             self.get_logger().warn(f"FSM transition {transition_id} rejected by ctl_mission")
+
+    def _refresh_fsm_feedback(self):
+        if self._fsm_mode_emit is not None and self.cli_get_state.service_is_ready():
+            try:
+                future = self.cli_get_state.call_async(self._srv_GetMode.Request())
+                future.add_done_callback(self._on_get_mode_done)
+            except Exception as exc:
+                self.get_logger().warn(f"GetMode refresh failed: {exc}")
+
+        if self._possible_transitions_emit is not None and self.cli_get_possible_transitions.service_is_ready():
+            try:
+                future = self.cli_get_possible_transitions.call_async(self._srv_GetPossibleTransitions.Request())
+                future.add_done_callback(self._on_get_possible_transitions_done)
+            except Exception as exc:
+                self.get_logger().warn(f"GetPossibleTransitions refresh failed: {exc}")
+
+    def _on_get_mode_done(self, future):
+        try:
+            response = future.result()
+            if self._fsm_mode_emit is not None:
+                self._fsm_mode_emit(int(response.mode))
+        except Exception as exc:
+            self.get_logger().warn(f"GetMode result failed: {exc}")
+
+    def _on_get_possible_transitions_done(self, future):
+        try:
+            response = future.result()
+            if self._possible_transitions_emit is not None:
+                self._possible_transitions_emit([int(x) for x in response.possible_transitions])
+        except Exception as exc:
+            self.get_logger().warn(f"GetPossibleTransitions result failed: {exc}")
 
     def send_guided(self, lat: float, lon: float):
         # Legacy GUI_pkg doesn't have a guided-target API.
@@ -928,6 +971,10 @@ class MainWindow(QMainWindow):
         self._build_tab_follow()
         self.mission_tab.set_ros(self._ros)
         self.mission_tab.attach_ros(self._exec)  # puedes pasar topics={'imu':'/mavros/imu/data', ...}
+        self._ros.set_fsm_feedback_callbacks(
+            self.mission_tab.state._signals.fsm_mode.emit,
+            self.mission_tab.state._signals.possible_transitions.emit,
+        )
         self.control_tab.set_ros(self._ros)
 
     # ===== GUI slots =====

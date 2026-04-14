@@ -3,6 +3,7 @@ import math
 import json
 import os
 import re
+import time
 from dataclasses import dataclass
 from typing import Optional, Dict, Callable, List, Tuple
 
@@ -461,6 +462,8 @@ class TopicMap:
     # Defaults are namespaced as in the legacy GUI: /ARGJ801/<name>
     fsm_mode: str = '/ARGJ801/fsm_mode'
     possible_transitions: str = '/ARGJ801/possible_transitions'
+    fsm_get_mode_service: str = '/ARGJ801/get_fsm_mode'
+    fsm_get_possible_transitions_service: str = '/ARGJ801/get_possible_transitions'
 
     # --- Path-following metrics (J8) ---
     cte: Optional[str] = '/ARGJ801/cte'
@@ -483,6 +486,20 @@ class TelemetryNode(Node):
         self._cached_hdop = None
         self._cached_sats = None
         self._cached_gps_speed = None
+        self._last_fsm_mode_msg_ts = 0.0
+        self._last_possible_transitions_msg_ts = 0.0
+        self._fsm_mode_future = None
+        self._possible_transitions_future = None
+
+        from ctl_mission_interfaces.srv import GetMode, GetPossibleTransitions
+
+        self._srv_GetMode = GetMode
+        self._srv_GetPossibleTransitions = GetPossibleTransitions
+        self.cli_get_fsm_mode = self.create_client(GetMode, topics.fsm_get_mode_service)
+        self.cli_get_possible_transitions = self.create_client(
+            GetPossibleTransitions,
+            topics.fsm_get_possible_transitions_service,
+        )
 
         self._defer_subscription(Imu, topics.imu, self._on_imu, 10)
         self._defer_subscription(Odometry, topics.odom, self._on_odom, 10)
@@ -515,6 +532,7 @@ class TelemetryNode(Node):
             self._defer_subscription(Float32, topics.min_distance_to_path, self._on_min_dist_path, 10)
 
         self._subscription_probe_timer = self.create_timer(1.0, self._refresh_subscriptions)
+        self._fsm_poll_timer = self.create_timer(1.0, self._poll_fsm_services)
         self._refresh_subscriptions()
 
     def _ros_type_name(self, msg_type) -> str:
@@ -576,6 +594,53 @@ class TelemetryNode(Node):
                 remaining.append(spec)
 
         self._pending_subscriptions = remaining
+
+    def _poll_fsm_services(self):
+        now = time.monotonic()
+
+        if now - self._last_fsm_mode_msg_ts > 2.0:
+            if self.cli_get_fsm_mode.service_is_ready() and self._fsm_mode_future is None:
+                req = self._srv_GetMode.Request()
+                self._fsm_mode_future = self.cli_get_fsm_mode.call_async(req)
+                self._fsm_mode_future.add_done_callback(self._on_fsm_mode_service_done)
+
+        if now - self._last_possible_transitions_msg_ts > 2.0:
+            if self.cli_get_possible_transitions.service_is_ready() and self._possible_transitions_future is None:
+                req = self._srv_GetPossibleTransitions.Request()
+                self._possible_transitions_future = self.cli_get_possible_transitions.call_async(req)
+                self._possible_transitions_future.add_done_callback(self._on_possible_transitions_service_done)
+
+    def _on_fsm_mode_service_done(self, future):
+        self._fsm_mode_future = None
+        try:
+            response = future.result()
+        except Exception as exc:
+            self.get_logger().warning(f'GetMode service call failed: {exc}')
+            return
+
+        try:
+            mode = int(response.mode)
+        except Exception:
+            return
+
+        self._last_fsm_mode_msg_ts = time.monotonic()
+        self._sig.fsm_mode.emit(mode)
+
+    def _on_possible_transitions_service_done(self, future):
+        self._possible_transitions_future = None
+        try:
+            response = future.result()
+        except Exception as exc:
+            self.get_logger().warning(f'GetPossibleTransitions service call failed: {exc}')
+            return
+
+        try:
+            transitions = [int(x) for x in response.possible_transitions]
+        except Exception:
+            return
+
+        self._last_possible_transitions_msg_ts = time.monotonic()
+        self._sig.possible_transitions.emit(transitions)
 
     def _on_imu(self, msg: Imu):
         q = msg.orientation
@@ -702,6 +767,7 @@ class TelemetryNode(Node):
 
     def _on_fsm_mode(self, msg):
         try:
+            self._last_fsm_mode_msg_ts = time.monotonic()
             self._sig.fsm_mode.emit(int(msg.data))
         except Exception:
             pass
@@ -714,6 +780,7 @@ class TelemetryNode(Node):
                 lst = list(arr)
             except Exception:
                 lst = []
+            self._last_possible_transitions_msg_ts = time.monotonic()
             self._sig.possible_transitions.emit(lst)
         except Exception:
             pass
