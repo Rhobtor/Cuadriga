@@ -1,0 +1,47 @@
+[100%] Built target path_manager_node
+-- Install configuration: ""
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/lib/path_manager/path_manager_node
+-- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/lib/path_manager/path_manager_node" to ""
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include/path_manager
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include/path_manager/path_manager.hpp
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include/path_manager/DEMAIAS_directives.hpp
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include/path_manager/DEMAIAS_class.hpp
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/include/path_manager/DEMAIAS.hpp
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/sarfis_2.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/gpx_path3.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/lef.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/legion2.gpx
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/sarfis_4.gpx
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/spin.gpx
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/sarfis_3.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/path_4_june_26.gpx
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/sarfis_1.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/gpx_path2.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/path_1_june_26.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/path_3_june_26.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/paths/path_2_june_26.gpx
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/LTL_mission_test.dat
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/LTL_mission_legion.dat
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/UMA_SEG_24_dsm_150cm.xyz
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/LAENTIEC100cm.xyz
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/NFA_mission_dsm_100cm.dat
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/Demaias_planner_missions/mapping_dsm_100cm.dat
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/ament_index/resource_index/package_run_dependencies/path_manager
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/ament_index/resource_index/parent_prefix_path/path_manager
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/environment/path.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/environment/path.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/local_setup.bash
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/local_setup.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/local_setup.zsh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/local_setup.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/package.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/ament_index/resource_index/packages/path_manager
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/cmake/path_managerConfig.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/cmake/path_managerConfig-version.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/path_manager/share/path_manager/package.xml

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cuadriga_ctl_platform_interfaces/srv/GetVelocity.srv
+// generated code does not contain a copyright notice
+
+
+module cuadriga_ctl_platform_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "GetVelocity.srv" "\n"
+      "" "\n"
+      "Devuelve la velocidad actual (modo Arduino). No tiene request." "\n"
+      "" "\n"
+      "Response:" "\n"
+      "- actual_velocity: entero con la velocidad medida/estimada.")
+    struct GetVelocity_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetVelocity_Response {
+      int8 actual_velocity;
+    };
+  };
+};

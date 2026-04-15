@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from security_check_interfaces/srv/GetSecurityCheckStatus.srv
+// generated code does not contain a copyright notice
+
+
+module security_check_interfaces {
+  module srv {
+    struct GetSecurityCheckStatus_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetSecurityCheckStatus_Response {
+      boolean status;
+    };
+  };
+};

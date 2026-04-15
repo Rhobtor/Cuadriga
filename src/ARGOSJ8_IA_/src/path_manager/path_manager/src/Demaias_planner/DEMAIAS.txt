@@ -440,7 +440,7 @@ outfile.close();
 // --------------------------------------------------------------------------------------------------------------------
 std::function <std::vector <std::vector <REAL_TYPE>>()> create_LUT = []() {
 
-//// OJO: Falta incluir fichero externo de caractersticas del vehculo; eliminando las directivas del compilador UMA_CUADRIGA, ARGOS_J8
+//// OJO: Falta incluir fichero externo de caractersticas del vehculo; eliminando las directivas del compilador UMA_CUADRIGA, ARGOS_cuadriga
 // Parameter initialization.
 #ifdef UMA_CUADRIGA
 // UGV parameters for simulated experiments (as UMA CUADRIGA)
@@ -451,10 +451,10 @@ std::function <std::vector <std::vector <REAL_TYPE>>()> create_LUT = []() {
 	REAL_TYPE				W				= 0.62;
 	REAL_TYPE				rho_tol			= 0.29;					// 0.29 in DEMAIA paper
 #else
-// UGV parameters for real-world experiments (as ARGOS J8)
+// UGV parameters for real-world experiments (as ARGOS cuadriga)
 	REAL_TYPE				nominalSpeed	= 3;
 	std::vector <REAL_TYPE>	kv_anisotropic	= {150,50};				// (120/150,90/50) down- and up-slope anisotropic coefficients, respectively; (300,100) in DEMAIA paper for real-world DEM
-	std::vector <REAL_TYPE>	COG				= {0.00, 0.3, 0.97};	// equivalent to military UGV (Argos J8)
+	std::vector <REAL_TYPE>	COG				= {0.00, 0.3, 0.97};	// equivalent to military UGV (Argos cuadriga)
 	REAL_TYPE				L				= 2.025;
 	REAL_TYPE				W				= 1.21;
 	REAL_TYPE				rho_tol			= 0.20;					// 0.7; 0.8 in DEMAIA paper

@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_controller__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_controller__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_mode__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_mode__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_speed__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/change_speed__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_la_pure_ctrl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_la_pure_ctrl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_pure_ctrl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_pure_ctrl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_pure_pursuit_ctrl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_pure_pursuit_ctrl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_regulated_pure_ctrl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_regulated_pure_ctrl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_simple_ctl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_simple_ctl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_stanley_ctrl__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/config_stanley_ctrl__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/get_mode__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/get_mode__type_support.cpp.o.d"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/get_possible_transitions__type_support.cpp.o"
+  "CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ctl_mission_interfaces/srv/get_possible_transitions__type_support.cpp.o.d"
+  "libctl_mission_interfaces__rosidl_typesupport_c.pdb"
+  "libctl_mission_interfaces__rosidl_typesupport_c.so"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/change_controller__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/change_mode__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/change_speed__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_la_pure_ctrl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_dynamic_pure_ctrl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_pure_pursuit_ctrl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_regulated_pure_ctrl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_simple_ctl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/config_stanley_ctrl__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/get_mode__type_support.cpp"
+  "rosidl_typesupport_c/ctl_mission_interfaces/srv/get_possible_transitions__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ctl_mission_interfaces__rosidl_typesupport_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

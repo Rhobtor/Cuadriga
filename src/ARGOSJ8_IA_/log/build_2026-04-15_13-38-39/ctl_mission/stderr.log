@@ -1,0 +1,25 @@
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::sendLifecycleStateRequest(const SharedPtr&, uint8_t)[m[K’:
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:128:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Client<ServiceT>::FutureAndRequestId::operator rclcpp::Client<ServiceT>::SharedFuture() [with ServiceT = lifecycle_msgs::srv::ChangeState; rclcpp::Client<ServiceT>::SharedFuture = std::shared_future<std::shared_ptr<lifecycle_msgs::srv::ChangeState_Response_<std::allocator<void> > > >][m[K’ is deprecated: FutureAndRequestId: use .future.share() instead of an implicit conversion [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  128 |     service_future_ = client->async_send_request(request[01;35m[K)[m[K;
+      |                                                         [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:50[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:415:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  415 |     [01;36m[Koperator[m[K SharedFuture() {return this->future.share();}
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::getMode(std::shared_ptr<ctl_mission_interfaces::srv::GetMode_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::GetMode_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:327:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  327 | void CtlMissionNode::getMode([01;35m[Kconst std::shared_ptr<ctl_mission_interfaces::srv::GetMode::Request> req[m[K,
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::handle_get_possible_transitions(std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:333:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  333 |     [01;35m[Kconst std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K

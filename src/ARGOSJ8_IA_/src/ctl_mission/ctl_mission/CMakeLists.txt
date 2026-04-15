@@ -34,7 +34,7 @@ find_package(GeographicLib REQUIRED)
 
 # Executable: ctl_mission
 add_executable(ctl_mission
-  src/J8_FSM.cpp
+  src/cuadriga_FSM.cpp
   src/argj08_ctl_node.cpp)
 
 target_include_directories(ctl_mission

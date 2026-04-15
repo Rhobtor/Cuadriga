@@ -2,9 +2,9 @@
  * @file estop_node.cpp
  * @brief Lifecycle state node that enforces an emergency stop by publishing zero cmd_vel.
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * This is the global safety "E-STOP" state. The mission/orchestrator can transition to this
- * state from anywhere (see `J8_FSM::AlltoEstop`).
+ * state from anywhere (see `cuadriga_FSM::AlltoEstop`).
  *
  * When **active**, the node publishes a zero Twist at `publish_rate` Hz.
  * The intended effect is to override motion by constantly commanding zero velocity.

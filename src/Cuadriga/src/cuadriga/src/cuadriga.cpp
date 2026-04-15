@@ -43,7 +43,7 @@ Cuadriga::Cuadriga() : Node("cuadriga")
     sub2_ = this -> create_subscription<sensor_msgs::msg::NavSatFix>("Cuadriga/fixposition/navsatfix",1, std::bind(&Cuadriga::process_GPS_data,this,_1));
     sub3_ = this -> create_subscription<geometry_msgs::msg::Vector3>("Cuadriga/fixposition/ypr",1, std::bind(&Cuadriga::process_orientation_data,this,_1));
     sub4_ = this -> create_subscription<cuadriga_interfaces::msg::GPXPath>("Cuadriga/trayectoria_gpx",10,std::bind(&Cuadriga::process_trayectoria_archivo,this,_1));
-    sub5_ = this -> create_subscription<sensor_msgs::msg::Joy>("ARGJ801/joy",1, std::bind(&Cuadriga::process_joystick_data,this,_1));
+    sub5_ = this -> create_subscription<sensor_msgs::msg::Joy>("cuadriga/joy",1, std::bind(&Cuadriga::process_joystick_data,this,_1));
     sub6_ = this -> create_subscription<std_msgs::msg::Float32MultiArray>("Cuadriga/waypoints",1,std::bind(&Cuadriga::process_trayectoria_planificacion,this,_1));
 
     this -> declare_parameter<bool>("flag_origen",false);

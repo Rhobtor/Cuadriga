@@ -1,0 +1,2 @@
+[console_scripts]
+gui = cuadriga_gui.gui_node:main

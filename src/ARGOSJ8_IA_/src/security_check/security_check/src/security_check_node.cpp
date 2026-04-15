@@ -5,6 +5,7 @@ SecurityCheckNode::SecurityCheckNode(const std::string & node_name, bool intra_p
   message_age_threshold_(1.0), th1(0.5), th2(1.0)
 {
     this->declare_parameter("cmd_vel_topic_name", "cmd_vel_test");
+    this->declare_parameter("external_cmd_vel_topic_name", "external_cmd_vel");
     this->declare_parameter("secured_cmd_vel_topic_name", "secure_cmd_vel_test");
     this->declare_parameter("lidar_topic", "weighted_scan");
     this->declare_parameter("lidar_frame", "Velodyne_link");
@@ -35,13 +36,28 @@ SecurityCheckNode::SecurityCheckNode(const std::string & node_name, bool intra_p
 
 void SecurityCheckNode::cmdvelCallbak(const geometry_msgs::msg::Twist::SharedPtr msg)
 {
+    if (current_mode_ == Mode::MppiSac) {
+        return;
+    }
     last_msg_time_ = this->get_clock()->now();
     received_cmd_vel = msg;
+}
+
+void SecurityCheckNode::externalCmdvelCallbak(const geometry_msgs::msg::Twist::SharedPtr msg)
+{
+    (void)msg;
 }
 
 void SecurityCheckNode::perform_security_check() {
     auto now = this->get_clock()->now();
     check_futures();
+
+    // In MPPI mode the dedicated relay node is the only owner of secured_cmd_vel.
+    // If security_check keeps publishing here as well, stale commands race against
+    // relay timeouts and the platform receives contradictory inputs.
+    if (current_mode_ == Mode::MppiSac) {
+        return;
+    }
 
     // Ensure the publisher is activated
     if (!pub_cmd_vel->is_activated()) {
@@ -264,6 +280,7 @@ SecurityCheckNode::on_configure(const rclcpp_lifecycle::State &)
 {
     RCLCPP_INFO(get_logger(), "on_configure() is called.");
     this->get_parameter("cmd_vel_topic_name", input_cmd_vel_topic);
+    this->get_parameter("external_cmd_vel_topic_name", external_cmd_vel_topic);
     this->get_parameter("secured_cmd_vel_topic_name", output_cmd_vel_topic);
     this->get_parameter("lidar_topic", lidar_topic);
     this->get_parameter("threshold_1", th1);
@@ -289,6 +306,8 @@ SecurityCheckNode::on_configure(const rclcpp_lifecycle::State &)
 
     sub_cmd_vel = this->create_subscription<geometry_msgs::msg::Twist>(
     input_cmd_vel_topic, 10, std::bind(&SecurityCheckNode::cmdvelCallbak, this, std::placeholders::_1));
+    sub_external_cmd_vel = this->create_subscription<geometry_msgs::msg::Twist>(
+    external_cmd_vel_topic, 10, std::bind(&SecurityCheckNode::externalCmdvelCallbak, this, std::placeholders::_1));
     tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
     tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
     // Initialize the service server
@@ -332,6 +351,7 @@ SecurityCheckNode::on_cleanup(const rclcpp_lifecycle::State &)
     RCLCPP_INFO(get_logger(), "on_cleanup() is called.");
     pub_cmd_vel.reset();
     sub_cmd_vel.reset();
+    sub_external_cmd_vel.reset();
     lidar_subs_.clear();
     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
 }

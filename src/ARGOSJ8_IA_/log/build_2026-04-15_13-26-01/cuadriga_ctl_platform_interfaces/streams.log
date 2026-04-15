@@ -1,0 +1,413 @@
+[0.043s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/argj801_ctl_platform/argj801_ctl_platform_interfaces -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces
+[0.599s] -- The C compiler identification is GNU 11.4.0
+[0.600s] -- The CXX compiler identification is GNU 11.4.0
+[0.601s] -- Detecting C compiler ABI info
+[0.601s] -- Detecting C compiler ABI info - done
+[0.601s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.601s] -- Detecting C compile features
+[0.601s] -- Detecting C compile features - done
+[0.601s] -- Detecting CXX compiler ABI info
+[0.601s] -- Detecting CXX compiler ABI info - done
+[0.601s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.602s] -- Detecting CXX compile features
+[0.602s] -- Detecting CXX compile features - done
+[0.602s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.693s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.876s] -- Found rosidl_default_runtime: 1.2.1 (/opt/ros/humble/share/rosidl_default_runtime/cmake)
+[0.934s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.954s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.038s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.110s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.834s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.541s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.524s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.532s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[3.532s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.532s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.532s]   the cmake_policy command to set the policy and suppress this warning.
+[3.532s] 
+[3.532s] Call Stack (most recent call first):
+[3.532s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.533s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.533s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[3.533s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.533s] [0m
+[3.590s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.591s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.593s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[3.593s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.593s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.594s]   the cmake_policy command to set the policy and suppress this warning.
+[3.594s] 
+[3.594s] Call Stack (most recent call first):
+[3.594s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[3.594s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.594s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.594s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[3.594s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.594s] [0m
+[3.636s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[3.636s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.636s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.637s]   the cmake_policy command to set the policy and suppress this warning.
+[3.637s] 
+[3.637s] Call Stack (most recent call first):
+[3.637s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[3.637s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.637s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.638s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[3.638s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.638s] [0m
+[3.655s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.656s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.656s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.656s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[3.701s] -- Found PythonExtra: .so  
+[4.272s] -- Configuring done (4.2s)
+[4.445s] -- Generating done (0.1s)
+[4.488s] -- Build files have been written to: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces
+[4.499s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/argj801_ctl_platform/argj801_ctl_platform_interfaces -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces
+[4.500s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces -- -j16 -l16
+[4.558s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.563s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[4.572s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.580s] [  4%] Built target ament_cmake_python_copy_cuadriga_ctl_platform_interfaces
+[5.580s] running egg_info
+[5.597s] [  4%] Built target cuadriga_ctl_platform_interfaces__rs
+[5.653s] creating cuadriga_ctl_platform_interfaces.egg-info
+[5.653s] writing cuadriga_ctl_platform_interfaces.egg-info/PKG-INFO
+[5.658s] writing dependency_links to cuadriga_ctl_platform_interfaces.egg-info/dependency_links.txt
+[5.659s] writing top-level names to cuadriga_ctl_platform_interfaces.egg-info/top_level.txt
+[5.659s] writing manifest file 'cuadriga_ctl_platform_interfaces.egg-info/SOURCES.txt'
+[5.903s] reading manifest file 'cuadriga_ctl_platform_interfaces.egg-info/SOURCES.txt'
+[5.908s] writing manifest file 'cuadriga_ctl_platform_interfaces.egg-info/SOURCES.txt'
+[6.013s] [  4%] Built target ament_cmake_python_build_cuadriga_ctl_platform_interfaces_egg
+[6.340s] [  4%] Built target cuadriga_ctl_platform_interfaces__cpp
+[6.355s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.355s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.356s] [  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.208s] [ 10%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__functions.c.o[0m
+[7.220s] [ 12%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__functions.c.o[0m
+[7.229s] [ 14%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__functions.c.o[0m
+[7.239s] [ 15%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__functions.c.o[0m
+[7.243s] [ 17%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__functions.c.o[0m
+[7.616s] [ 18%] [32m[1mLinking C shared library libcuadriga_ctl_platform_interfaces__rosidl_generator_c.so[0m
+[7.765s] [ 18%] Built target cuadriga_ctl_platform_interfaces__rosidl_generator_c
+[7.773s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.782s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.783s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.309s] [ 25%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/set_velocity__type_support.cpp.o[0m
+[8.316s] [ 28%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/emergency_stop__type_support.cpp.o[0m
+[8.316s] [ 28%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/get_velocity__type_support.cpp.o[0m
+[8.319s] [ 29%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg__type_support.cpp.o[0m
+[8.338s] [ 31%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg__type_support.cpp.o[0m
+[8.926s] [ 32%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cuadriga_ctl_platform_interfaces/srv/detail/dds_fastrtps/set_velocity__type_support.cpp.o[0m
+[8.926s] [ 34%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cuadriga_ctl_platform_interfaces/srv/detail/dds_fastrtps/get_velocity__type_support.cpp.o[0m
+[8.927s] [ 35%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cuadriga_ctl_platform_interfaces/srv/detail/dds_fastrtps/emergency_stop__type_support.cpp.o[0m
+[8.933s] [ 37%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cuadriga_ctl_platform_interfaces/msg/detail/dds_fastrtps/cmd_throttle_msg__type_support.cpp.o[0m
+[8.958s] [ 39%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cuadriga_ctl_platform_interfaces/msg/detail/dds_fastrtps/kinematic_debug_msg__type_support.cpp.o[0m
+[9.450s] [ 40%] [32m[1mLinking CXX shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.so[0m
+[9.553s] [ 43%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.c.o[0m
+[9.555s] [ 45%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.c.o[0m
+[9.556s] [ 46%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.c.o[0m
+[9.556s] [ 46%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.c.o[0m
+[9.559s] [ 46%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp
+[9.562s] [ 48%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.c.o[0m
+[9.684s] [ 50%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.cpp.o[0m
+[9.688s] [ 51%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.cpp.o[0m
+[9.689s] [ 56%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.cpp.o[0m
+[9.691s] [ 53%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.cpp.o[0m
+[9.693s] [ 57%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.cpp.o[0m
+[9.701s] [ 54%] [32m[1mLinking C shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.so[0m
+[9.784s] [ 57%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c
+[9.806s] [ 59%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cuadriga_ctl_platform_interfaces/srv/set_velocity__type_support.cpp.o[0m
+[9.817s] [ 60%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cuadriga_ctl_platform_interfaces/srv/get_velocity__type_support.cpp.o[0m
+[9.817s] [ 62%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cuadriga_ctl_platform_interfaces/srv/emergency_stop__type_support.cpp.o[0m
+[9.843s] [ 64%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg__type_support.cpp.o[0m
+[9.845s] [ 65%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg__type_support.cpp.o[0m
+[9.913s] [ 67%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support_c.cpp.o[0m
+[9.916s] [ 68%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support_c.cpp.o[0m
+[9.933s] [ 70%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support_c.cpp.o[0m
+[9.954s] [ 71%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support_c.cpp.o[0m
+[9.958s] [ 73%] [32mBuilding CXX object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support_c.cpp.o[0m
+[9.974s] [ 75%] [32m[1mLinking CXX shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_c.so[0m
+[10.064s] [ 75%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_c
+[11.007s] [ 76%] [32m[1mLinking CXX shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[11.292s] [ 76%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp
+[11.362s] [ 78%] [32m[1mLinking CXX shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[11.399s] [ 79%] [32m[1mLinking CXX shared library libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[11.468s] [ 79%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp
+[11.637s] [ 79%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c
+[11.667s] [ 79%] Built target cuadriga_ctl_platform_interfaces
+[11.707s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.928s] [ 81%] Built target cuadriga_ctl_platform_interfaces__py
+[13.963s] [ 82%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/srv/_set_velocity_s.c.o[0m
+[13.976s] [ 84%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/srv/_get_velocity_s.c.o[0m
+[13.999s] [ 85%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/srv/_emergency_stop_s.c.o[0m
+[14.017s] [ 87%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/msg/_cmd_throttle_msg_s.c.o[0m
+[14.023s] [ 89%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/msg/_kinematic_debug_msg_s.c.o[0m
+[14.887s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/cuadriga_ctl_platform_interfaces/libcuadriga_ctl_platform_interfaces__rosidl_generator_py.so[0m
+[14.997s] [ 90%] Built target cuadriga_ctl_platform_interfaces__rosidl_generator_py
+[15.044s] [ 92%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[15.045s] [ 93%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.053s] [ 95%] [32mBuilding C object CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[15.279s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.426s] [ 96%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c__pyext
+[15.843s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.964s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[16.002s] [100%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_c__pyext
+[16.116s] [100%] Built target cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[16.138s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces -- -j16 -l16
+[16.150s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --install /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces
+[16.160s] -- Install configuration: ""
+[16.160s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/ament_index/resource_index/rosidl_interfaces/cuadriga_ctl_platform_interfaces
+[16.160s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.161s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.169s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.169s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.h
+[16.169s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.h
+[16.170s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__functions.h
+[16.172s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__functions.c
+[16.172s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__struct.h
+[16.172s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__functions.c
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.h
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__struct.h
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__functions.h
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__functions.h
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__functions.c
+[16.173s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__struct.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/set_velocity.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/emergency_stop.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/get_velocity.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/rosidl_generator_c__visibility_control.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg.h
+[16.174s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.175s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__struct.h
+[16.175s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.h
+[16.177s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__functions.h
+[16.177s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__functions.h
+[16.177s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.h
+[16.180s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__struct.h
+[16.181s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__functions.c
+[16.181s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__functions.c
+[16.181s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/library_path.sh
+[16.181s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/library_path.dsv
+[16.181s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_generator_c.so
+[16.182s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_generator_c.so" to ""
+[16.182s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.182s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.183s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.183s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__rosidl_typesupport_fastrtps_c.h
+[16.183s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__rosidl_typesupport_fastrtps_c.h
+[16.183s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__rosidl_typesupport_fastrtps_c.h
+[16.183s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.183s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.183s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__rosidl_typesupport_fastrtps_c.h
+[16.184s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__rosidl_typesupport_fastrtps_c.h
+[16.184s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[16.189s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.so
+[16.190s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[16.190s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.190s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.191s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.191s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__rosidl_typesupport_introspection_c.h
+[16.191s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.c
+[16.191s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__rosidl_typesupport_introspection_c.h
+[16.191s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.c
+[16.191s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.c
+[16.192s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__rosidl_typesupport_introspection_c.h
+[16.192s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.194s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[16.196s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.197s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.c
+[16.197s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__rosidl_typesupport_introspection_c.h
+[16.197s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__rosidl_typesupport_introspection_c.h
+[16.197s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.c
+[16.197s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.so
+[16.201s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[16.201s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_c.so
+[16.201s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_c.so" to ""
+[16.202s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.202s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.202s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/get_velocity.hpp
+[16.204s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.204s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__struct.hpp
+[16.204s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__builder.hpp
+[16.204s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__builder.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__traits.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__struct.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__traits.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__builder.hpp
+[16.205s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.hpp
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__struct.hpp
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__traits.hpp
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/emergency_stop.hpp
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/set_velocity.hpp
+[16.207s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[16.207s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.207s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__struct.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__builder.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__builder.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__struct.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__traits.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__traits.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg.hpp
+[16.208s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg.hpp
+[16.209s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.209s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.209s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.209s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+[16.209s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+[16.215s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/dds_fastrtps
+[16.215s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__rosidl_typesupport_fastrtps_cpp.hpp
+[16.217s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.217s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[16.217s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.217s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[16.217s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/dds_fastrtps
+[16.217s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[16.218s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[16.220s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[16.222s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces
+[16.222s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv
+[16.222s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail
+[16.222s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__rosidl_typesupport_introspection_cpp.hpp
+[16.222s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__type_support.cpp
+[16.223s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/set_velocity__rosidl_typesupport_introspection_cpp.hpp
+[16.226s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__type_support.cpp
+[16.226s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/emergency_stop__type_support.cpp
+[16.227s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/srv/detail/get_velocity__rosidl_typesupport_introspection_cpp.hpp
+[16.227s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg
+[16.227s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail
+[16.227s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__rosidl_typesupport_introspection_cpp.hpp
+[16.227s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__type_support.cpp
+[16.228s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/kinematic_debug_msg__type_support.cpp
+[16.228s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/include/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces/msg/detail/cmd_throttle_msg__rosidl_typesupport_introspection_cpp.hpp
+[16.228s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.so
+[16.228s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[16.228s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.so
+[16.228s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.so" to ""
+[16.228s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/pythonpath.sh
+[16.229s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/pythonpath.dsv
+[16.229s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces-0.0.0-py3.10.egg-info
+[16.229s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[16.231s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[16.232s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[16.233s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[16.233s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_emergency_stop_s.c
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_get_velocity.py
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_emergency_stop.py
+[16.234s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_set_velocity.py
+[16.236s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_set_velocity_s.c
+[16.236s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/__init__.py
+[16.236s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_get_velocity_s.c
+[16.236s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/libcuadriga_ctl_platform_interfaces__rosidl_generator_py.so
+[16.237s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[16.237s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_c.c
+[16.237s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/_cuadriga_ctl_platform_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[16.237s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[16.237s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/__init__.py
+[16.238s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg
+[16.238s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_cmd_throttle_msg.py
+[16.238s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_kinematic_debug_msg_s.c
+[16.239s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/__init__.py
+[16.239s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_kinematic_debug_msg.py
+[16.239s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_cmd_throttle_msg_s.c
+[16.239s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[16.410s] Listing '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces'...
+[16.410s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/__init__.py'...
+[16.410s] Listing '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg'...
+[16.410s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/__init__.py'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_cmd_throttle_msg.py'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/msg/_kinematic_debug_msg.py'...
+[16.411s] Listing '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/__init__.py'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_emergency_stop.py'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_get_velocity.py'...
+[16.411s] Compiling '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/srv/_set_velocity.py'...
+[16.437s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[16.437s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[16.437s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[16.449s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[16.449s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[16.449s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/local/lib/python3.10/dist-packages/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[16.449s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_generator_py.so
+[16.449s] -- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/lib/libcuadriga_ctl_platform_interfaces__rosidl_generator_py.so" to ""
+[16.452s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/ament_index/resource_index/rust_packages/cuadriga_ctl_platform_interfaces
+[16.453s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust
+[16.453s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src
+[16.453s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/lib.rs
+[16.453s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/srv
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/srv/rmw.rs
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/srv.rs
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/msg.rs
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/msg
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/src/msg/rmw.rs
+[16.461s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/Cargo.toml
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/rust/build.rs
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/SetVelocity.idl
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/GetVelocity.idl
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/EmergencyStop.idl
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/msg/CmdThrottleMsg.idl
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/msg/KinematicDebugMsg.idl
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/SetVelocity.srv
+[16.462s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/SetVelocity_Request.msg
+[16.463s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/SetVelocity_Response.msg
+[16.463s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/GetVelocity.srv
+[16.469s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/GetVelocity_Request.msg
+[16.469s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/GetVelocity_Response.msg
+[16.469s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/EmergencyStop.srv
+[16.469s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/EmergencyStop_Request.msg
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/srv/EmergencyStop_Response.msg
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/msg/CmdThrottleMsg.msg
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/msg/KinematicDebugMsg.msg
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/ament_index/resource_index/package_run_dependencies/cuadriga_ctl_platform_interfaces
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/ament_index/resource_index/parent_prefix_path/cuadriga_ctl_platform_interfaces
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/ament_prefix_path.sh
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/ament_prefix_path.dsv
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/path.sh
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/environment/path.dsv
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/local_setup.bash
+[16.470s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/local_setup.sh
+[16.475s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/local_setup.zsh
+[16.476s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/local_setup.dsv
+[16.476s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/package.dsv
+[16.476s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/ament_index/resource_index/packages/cuadriga_ctl_platform_interfaces
+[16.481s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_generator_cExport.cmake
+[16.481s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_generator_cExport-noconfig.cmake
+[16.481s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[16.481s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[16.482s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[16.482s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[16.484s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cExport.cmake
+[16.485s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[16.485s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_generator_cppExport.cmake
+[16.485s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[16.486s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[16.487s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[16.490s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[16.490s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cppExport.cmake
+[16.490s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[16.493s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_generator_pyExport.cmake
+[16.494s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/export_cuadriga_ctl_platform_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[16.494s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/rosidl_cmake-extras.cmake
+[16.498s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.499s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[16.499s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[16.499s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[16.499s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.501s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[16.502s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfacesConfig.cmake
+[16.502s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/cmake/cuadriga_ctl_platform_interfacesConfig-version.cmake
+[16.503s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_ctl_platform_interfaces/share/cuadriga_ctl_platform_interfaces/package.xml
+[16.513s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --install /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces

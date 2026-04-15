@@ -1,0 +1,16 @@
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/lib/joy_linux/joy_linux_node
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/package_run_dependencies/joy_linux
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/parent_prefix_path/joy_linux
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/ament_prefix_path.sh
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/ament_prefix_path.dsv
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/path.sh
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/path.dsv
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.bash
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.sh
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.zsh
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.dsv
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/package.dsv
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/packages/joy_linux
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/cmake/joy_linuxConfig.cmake
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/cmake/joy_linuxConfig-version.cmake
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/package.xml

@@ -17,7 +17,7 @@
  */
 PathManager::PathManager(const std::string & node_name, bool intra_process_comms)
 : rclcpp_lifecycle::LifecycleNode(node_name, rclcpp::NodeOptions().use_intra_process_comms(intra_process_comms)) {
-    // Parámetros (ver también `argj801_setup/config/J8_params.yaml`):
+    // Parámetros (ver también `cuadriga_setup/config/cuadriga_params.yaml`):
     // - localization_method: nombre del método/driver de localización en uso.
     // - *_service / *_topic: nombres ROS (normalmente relativos al namespace del nodo).
     this->declare_parameter("localization_method", "Fixposition");
@@ -140,7 +140,7 @@ void PathManager::receivePath(const std::shared_ptr<path_manager_interfaces::srv
     // Servicio para inyectar directamente una ruta en memoria.
     robot_path.poses.clear();
     robot_path = req->path;
-    
+    res->ack = true;
 }
 
 void PathManager::assistEmergency(const std::shared_ptr<path_manager_interfaces::srv::AssistEmergency::Request> req,

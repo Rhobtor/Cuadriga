@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-IMAGE_NAME="${CUADRIGA_IMAGE:-cuadriga-j8}"
+IMAGE_NAME="${CUADRIGA_IMAGE:-cuadriga-cuadriga}"
 SERIAL_DEVICE="${SERIAL_DEVICE:-/dev/ttyUSB0}"
 FIXPOSITION_IP="${FIXPOSITION_IP:-192.168.2.113}"
 FIXPOSITION_PORT="${FIXPOSITION_PORT:-21000}"
@@ -42,7 +42,7 @@ fi
 
 exec docker "${docker_args[@]}" \
   "${IMAGE_NAME}" \
-  ros2 launch argj801_setup J8_launch.py \
+  ros2 launch cuadriga_setup cuadriga_launch.py \
     robot:=true \
     use_cuadriga_backend:=true \
     use_gui:="${USE_GUI}" \

@@ -1,0 +1,45 @@
+[0.852s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/test_gui_j8/src/cuadriga_gui': PYTHONPATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/cuadriga_gui build --build-base /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build install --record /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/install.log --single-version-externally-managed install_data
+[0.972s] /home/rhobtor/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.973s]   warnings.warn(msg)
+[1.035s] running egg_info
+[1.048s] writing ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/PKG-INFO
+[1.048s] writing dependency_links to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/dependency_links.txt
+[1.048s] writing entry points to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/entry_points.txt
+[1.049s] writing requirements to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/requires.txt
+[1.049s] writing top-level names to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/top_level.txt
+[1.074s] reading manifest file '../../../../build/cuadriga_gui/cuadriga_gui.egg-info/SOURCES.txt'
+[1.075s] writing manifest file '../../../../build/cuadriga_gui/cuadriga_gui.egg-info/SOURCES.txt'
+[1.075s] running build
+[1.075s] running build_py
+[1.075s] copying cuadriga_gui/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui
+[1.075s] copying cuadriga_gui/ros_api.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui
+[1.075s] copying cuadriga_gui/gui_node.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui
+[1.076s] copying cuadriga_gui/app/state_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/followzed_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/person_manager_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/map_bridge.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/geo_local.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/control_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.076s] copying cuadriga_gui/app/main_window.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/cuadriga_gui/app
+[1.077s] running install
+[1.081s] running install_lib
+[1.095s] running install_data
+[1.095s] copying resource/cuadriga_gui -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/ament_index/resource_index/packages
+[1.095s] copying package.xml -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui
+[1.095s] copying cuadriga_gui/resources/map.html -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources
+[1.095s] copying resource/cuadriga_gui -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/ament_index/resource_index/packages
+[1.095s] copying package.xml -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui
+[1.095s] copying cuadriga_gui/resources/map.html -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources
+[1.096s] copying cuadriga_gui/resources/vendor/leaflet/leaflet.js -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources/vendor/leaflet
+[1.096s] copying cuadriga_gui/resources/vendor/leaflet/leaflet.css -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources/vendor/leaflet
+[1.096s] copying cuadriga_gui/resources/vendor/leaflet/images/marker-icon.png -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources/vendor/leaflet/images
+[1.096s] copying cuadriga_gui/resources/vendor/leaflet/images/marker-icon-2x.png -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources/vendor/leaflet/images
+[1.096s] copying cuadriga_gui/resources/vendor/leaflet/images/marker-shadow.png -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/share/cuadriga_gui/resources/vendor/leaflet/images
+[1.096s] running install_egg_info
+[1.108s] removing '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/lib/python3.10/site-packages/cuadriga_gui-0.1.0-py3.10.egg-info' (and everything under it)
+[1.108s] Copying ../../../../build/cuadriga_gui/cuadriga_gui.egg-info to /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/lib/python3.10/site-packages/cuadriga_gui-0.1.0-py3.10.egg-info
+[1.109s] running install_scripts
+[1.131s] Installing gui script to /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/lib/cuadriga_gui
+[1.132s] writing list of installed files to '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/install.log'
+[1.149s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/test_gui_j8/src/cuadriga_gui' returned '0': PYTHONPATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/cuadriga_gui build --build-base /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build install --record /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/install.log --single-version-externally-managed install_data

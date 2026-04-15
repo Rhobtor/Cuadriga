@@ -1,0 +1,70 @@
+[1.795s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/GUI_pkg': PYTHONPATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/GUI_pkg build --build-base /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build install --record /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/install.log --single-version-externally-managed
+[2.090s] /home/rhobtor/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[2.090s]   warnings.warn(msg)
+[2.287s] running egg_info
+[2.324s] creating ../../build/GUI_pkg/GUI_pkg.egg-info
+[2.325s] writing ../../build/GUI_pkg/GUI_pkg.egg-info/PKG-INFO
+[2.326s] writing dependency_links to ../../build/GUI_pkg/GUI_pkg.egg-info/dependency_links.txt
+[2.327s] writing entry points to ../../build/GUI_pkg/GUI_pkg.egg-info/entry_points.txt
+[2.327s] writing requirements to ../../build/GUI_pkg/GUI_pkg.egg-info/requires.txt
+[2.328s] writing top-level names to ../../build/GUI_pkg/GUI_pkg.egg-info/top_level.txt
+[2.328s] writing manifest file '../../build/GUI_pkg/GUI_pkg.egg-info/SOURCES.txt'
+[2.409s] reading manifest file '../../build/GUI_pkg/GUI_pkg.egg-info/SOURCES.txt'
+[2.414s] writing manifest file '../../build/GUI_pkg/GUI_pkg.egg-info/SOURCES.txt'
+[2.414s] running build
+[2.414s] running build_py
+[2.414s] creating /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.414s] copying GUI_pkg/tabs.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.414s] copying GUI_pkg/profiler.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.414s] copying GUI_pkg/profile_analisys.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/ui_form.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/path_utils.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/ros_classes.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/mainwindow.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.416s] copying GUI_pkg/ui_tabs.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.417s] copying GUI_pkg/geonav_conversions.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.417s] copying GUI_pkg/zoom_image_handler.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.426s] copying GUI_pkg/gui_node.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg
+[2.426s] creating /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/cythonized_code
+[2.426s] copying GUI_pkg/cythonized_code/setup.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/cythonized_code
+[2.426s] copying GUI_pkg/cythonized_code/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/cythonized_code
+[2.426s] running install
+[2.428s] running install_lib
+[2.467s] creating /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.468s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/tabs.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.468s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/profiler.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.468s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/profile_analisys.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.469s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/ui_form.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.469s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/path_utils.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.469s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.470s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/ros_classes.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.470s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/mainwindow.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.470s] creating /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/cythonized_code
+[2.470s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/cythonized_code/setup.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/cythonized_code
+[2.471s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/cythonized_code/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/cythonized_code
+[2.471s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/ui_tabs.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.471s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/geonav_conversions.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.472s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/zoom_image_handler.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.472s] copying /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build/lib/GUI_pkg/gui_node.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg
+[2.473s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/tabs.py to tabs.cpython-310.pyc
+[2.485s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/profiler.py to profiler.cpython-310.pyc
+[2.486s] Sorry: IndentationError: unexpected indent (tabs.py, line 415)
+[2.486s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/profile_analisys.py to profile_analisys.cpython-310.pyc
+[2.486s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/ui_form.py to ui_form.cpython-310.pyc
+[2.493s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/path_utils.py to path_utils.cpython-310.pyc
+[2.494s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/__init__.py to __init__.cpython-310.pyc
+[2.495s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/ros_classes.py to ros_classes.cpython-310.pyc
+[2.501s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/mainwindow.py to mainwindow.cpython-310.pyc
+[2.516s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/cythonized_code/setup.py to setup.cpython-310.pyc
+[2.516s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/cythonized_code/__init__.py to __init__.cpython-310.pyc
+[2.517s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/ui_tabs.py to ui_tabs.cpython-310.pyc
+[2.525s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/geonav_conversions.py to geonav_conversions.cpython-310.pyc
+[2.527s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/zoom_image_handler.py to zoom_image_handler.cpython-310.pyc
+[2.528s] byte-compiling /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg/gui_node.py to gui_node.cpython-310.pyc
+[2.529s] running install_egg_info
+[2.570s] Copying ../../build/GUI_pkg/GUI_pkg.egg-info to /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages/GUI_pkg-0.0.0-py3.10.egg-info
+[2.572s] running install_scripts
+[2.655s] Installing gui_node script to /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/GUI_pkg
+[2.656s] writing list of installed files to '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/install.log'
+[2.703s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/GUI_pkg' returned '0': PYTHONPATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/GUI_pkg build --build-base /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/build install --record /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/GUI_pkg/install.log --single-version-externally-managed

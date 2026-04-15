@@ -3,7 +3,7 @@
  * @brief Lifecycle state node that bridges "Follow a person" behavior driven by a Jetson/ZED.
  *
  * ## Why this exists
- * The J8 stack can run a vision-based follower on a Jetson (ZED camera). This ROS 2
+ * The cuadriga stack can run a vision-based follower on a Jetson (ZED camera). This ROS 2
  * LifecycleNode plays two roles:
  * 1) A simple TCP client to send start/stop/ping commands to the Jetson process.
  * 2) A bridge between Jetson outputs (leader distance, emergency, enable, leader id) and the

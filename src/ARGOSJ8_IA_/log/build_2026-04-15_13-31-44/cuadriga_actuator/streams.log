@@ -1,0 +1,25 @@
+[0.256s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator -- -j16 -l16
+[0.470s] [100%] Built target cuadriga_actuator_node
+[0.475s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator -- -j16 -l16
+[0.476s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --install /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator
+[0.494s] -- Install configuration: ""
+[0.494s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/lib/cuadriga_actuator/cuadriga_actuator_node
+[0.494s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/include
+[0.494s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/include/cuadriga_actuator
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/include/cuadriga_actuator/cuadriga_actuator_node.hpp
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/ament_index/resource_index/package_run_dependencies/cuadriga_actuator
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/ament_index/resource_index/parent_prefix_path/cuadriga_actuator
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/ament_prefix_path.sh
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/ament_prefix_path.dsv
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/path.sh
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/path.dsv
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.bash
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.sh
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.zsh
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.dsv
+[0.495s] -- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/package.dsv
+[0.495s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/ament_index/resource_index/packages/cuadriga_actuator
+[0.496s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/cmake/cuadriga_actuatorConfig.cmake
+[0.496s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/cmake/cuadriga_actuatorConfig-version.cmake
+[0.496s] -- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_actuator/share/cuadriga_actuator/package.xml
+[0.567s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/cuadriga_gui:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/GUI_pkg:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --install /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_actuator

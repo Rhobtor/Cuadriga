@@ -1,3 +1,0 @@
-[submodule "argj801_sensors/src/argj801_lcm"]
-	path = argj801_sensors/src/argj801_lcm
-	url = git@github.com:Robotics-Mechatronics-UMA/argj801_lcm.git

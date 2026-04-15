@@ -1,9 +1,9 @@
 .git-nested-backups/
 
 # ROS2 / colcon generated artifacts
-src/ARGOSJ8_IA_/build/
-src/ARGOSJ8_IA_/install/
-src/ARGOSJ8_IA_/log/
+src/ARGOScuadriga_IA_/build/
+src/ARGOScuadriga_IA_/install/
+src/ARGOScuadriga_IA_/log/
 
 # Python cache artifacts
 __pycache__/

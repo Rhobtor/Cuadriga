@@ -1,0 +1,11 @@
+## SetVelocity.srv
+##
+## Servicio simple para fijar una consigna de velocidad en modo Arduino.
+##
+## Request:
+## - new_velocity: entero (según el comentario histórico: 0..10, aunque puede limitarse
+##   por seguridad en el firmware/controlador).
+## Response:
+## - actual_velocity: velocidad realmente aplicada/aceptada.
+
+int8 new_velocity

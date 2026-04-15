@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/GetPossibleTransitions.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct GetPossibleTransitions_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetPossibleTransitions_Response {
+      sequence<int32> possible_transitions;
+    };
+  };
+};

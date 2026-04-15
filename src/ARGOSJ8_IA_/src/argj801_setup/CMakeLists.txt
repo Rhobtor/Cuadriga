@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.8)
-project(argj801_setup)
+project(cuadriga_setup)
 
 # Este paquete es principalmente un "package de lanzamiento":
 # - No compila nodos propios.
 # - Instala ficheros de `launch/` y `config/` en share/<package>.
-# Su objetivo es orquestar el arranque del stack del rover (ver `launch/J8_launch.py`).
+# Su objetivo es orquestar el arranque del stack del rover (ver `launch/cuadriga_launch.py`).
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -32,10 +32,6 @@ install(DIRECTORY
   launch
   config
   DESTINATION share/${PROJECT_NAME}/)
-
-install(PROGRAMS
-  scripts/cuadriga_mock_backend.py
-  DESTINATION lib/${PROJECT_NAME})
 
 # No hay targets/ejecutables que instalar: sólo recursos.
 

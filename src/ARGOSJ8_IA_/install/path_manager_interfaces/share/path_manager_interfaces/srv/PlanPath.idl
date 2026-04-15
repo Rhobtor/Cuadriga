@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from path_manager_interfaces/srv/PlanPath.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "nav_msgs/msg/Path.idl"
+
+module path_manager_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "PlanPath.srv" "\n"
+      "" "\n"
+      "Solicita una planificación de ruta desde un punto de inicio a un punto objetivo." "\n"
+      "" "\n"
+      "Importante: la semántica de los puntos depende de la implementación. En el" "\n"
+      "código actual se interpretan como coordenadas tipo UTM (x/y) y luego se" "\n"
+      "convierten a lat/lon para devolver un nav_msgs/Path." "\n"
+      "" "\n"
+      "Request:" "\n"
+      "  - start: punto inicio (x,y,z)" "\n"
+      "  - goal:  punto objetivo (x,y,z)" "\n"
+      "Response:" "\n"
+      "  - ack:  indica que se aceptó la petición." "\n"
+      "  - path: ruta planificada.")
+    struct PlanPath_Request {
+      geometry_msgs::msg::Point start;
+
+      geometry_msgs::msg::Point goal;
+    };
+    struct PlanPath_Response {
+      boolean ack;
+
+      nav_msgs::msg::Path path;
+    };
+  };
+};

@@ -2,7 +2,7 @@
  * @file Ctrl_node.cpp
  * @brief Lifecycle state node that turns a local trajectory into velocity commands (cmd_vel).
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * `CtrlNode` is the "controller" state node. It consumes a local path/trajectory (typically
  * produced by `PathFollowingNode` or other planners) and produces `geometry_msgs/Twist` commands
  * for the platform.

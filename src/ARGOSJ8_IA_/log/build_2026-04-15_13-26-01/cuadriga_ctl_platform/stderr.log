@@ -1,0 +1,5 @@
+[31mCMake Error at CMakeLists.txt:26 (add_subdirectory):
+  add_subdirectory given source "src/cuadriga_lcm" which is not an existing
+  directory.
+
+[0m

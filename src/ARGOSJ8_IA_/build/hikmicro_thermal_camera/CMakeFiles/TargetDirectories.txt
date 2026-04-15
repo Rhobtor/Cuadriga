@@ -1,0 +1,11 @@
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/uninstall.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/hikmicro_thermal_camera_uninstall.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/termical_camera.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/termical_camera_ffmpeg_pipe.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/test.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/edit_cache.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/rebuild_cache.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/list_install_components.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/install.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/install/local.dir
+/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/hikmicro_thermal_camera/CMakeFiles/install/strip.dir

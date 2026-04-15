@@ -2,7 +2,7 @@
  * @file teleoperation_node.cpp
  * @brief Lifecycle state node that provides manual drive (teleop) using a joystick.
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * This node is one of the FSM "states" managed by the mission/orchestrator node
  * (see `argj08_ctl_node.cpp`). The orchestrator activates/deactivates this node
  * via ROS 2 Lifecycle transitions depending on the current FSM mode.

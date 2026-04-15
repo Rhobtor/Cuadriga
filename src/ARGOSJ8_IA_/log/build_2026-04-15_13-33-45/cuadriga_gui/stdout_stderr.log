@@ -1,0 +1,27 @@
+/home/rhobtor/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/dependency_links.txt
+writing entry points to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/entry_points.txt
+writing requirements to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/requires.txt
+writing top-level names to ../../../../build/cuadriga_gui/cuadriga_gui.egg-info/top_level.txt
+reading manifest file '../../../../build/cuadriga_gui/cuadriga_gui.egg-info/SOURCES.txt'
+writing manifest file '../../../../build/cuadriga_gui/cuadriga_gui.egg-info/SOURCES.txt'
+running build
+running build_py
+copying j8_gui/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui
+copying j8_gui/ros_api.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui
+copying j8_gui/gui_node.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui
+copying j8_gui/app/state_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/followzed_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/__init__.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/person_manager_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/map_bridge.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/geo_local.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/control_widget.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+copying j8_gui/app/main_window.py -> /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_gui/build/lib/j8_gui/app
+running install
+running install_lib
+running install_data
+error: can't copy 'resource/cuadriga_gui': doesn't exist or not a regular file

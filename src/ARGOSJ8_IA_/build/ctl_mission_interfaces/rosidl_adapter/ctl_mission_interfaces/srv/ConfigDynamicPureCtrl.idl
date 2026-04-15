@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct ConfigDynamicPureCtrl_Request {
+      float look_ahead_dis;
+
+      float max_v_forward;
+
+      float max_ang_acc;
+
+      float max_ang_dec;
+
+      float max_lin_acc;
+
+      float max_lin_dec;
+    };
+    struct ConfigDynamicPureCtrl_Response {
+      boolean ack;
+    };
+  };
+};

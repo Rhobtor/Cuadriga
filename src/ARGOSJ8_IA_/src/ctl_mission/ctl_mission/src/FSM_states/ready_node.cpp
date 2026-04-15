@@ -2,7 +2,7 @@
  * @file ready_node.cpp
  * @brief Lifecycle state node that keeps the platform stopped (publishes zero cmd_vel).
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * The "READY" state is a safe idle state: the rover is not executing an autonomous mission,
  * but the system is up and responsive.
  *

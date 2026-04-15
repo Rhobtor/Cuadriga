@@ -2,10 +2,10 @@
 //
 // What this node is
 // -----------------
-// This is the *mission orchestrator* node for the J8.
+// This is the *mission orchestrator* node for the cuadriga.
 //
 // Responsibilities:
-//   1) Own the FSM state (`J8_FSM`) and apply requested transitions.
+//   1) Own the FSM state (`cuadriga_FSM`) and apply requested transitions.
 //   2) Expose a small ROS API so external tools can:
 //      - request a transition (service: ChangeMode)
 //      - read current mode (service: GetMode, topic: fsm_mode)
@@ -18,7 +18,7 @@
 //   - The mission orchestrator can activate/deactivate them deterministically,
 //     ensuring publishers and timers are only running in the right mode.
 //
-// Parameters (relative names; commonly namespaced under /ARGJ801):
+// Parameters (relative names; commonly namespaced under /cuadriga):
 //   - fsm.change_fsm_mode_srv_name (default: change_fsm_mode)
 //   - fsm.get_fsm_srv_name         (default: get_fsm_mode)
 //   - fsm.get_fsm_topic_name       (default: fsm_mode)
@@ -53,7 +53,7 @@
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/int32.hpp"
 #include "std_msgs/msg/int32_multi_array.hpp"
-#include "ctl_mission/J8_FSM.h"
+#include "ctl_mission/cuadriga_FSM.h"
 #include "ctl_mission_interfaces/srv/change_mode.hpp"
 #include "ctl_mission_interfaces/srv/get_mode.hpp"
 #include "ctl_mission_interfaces/srv/get_possible_transitions.hpp"
@@ -97,7 +97,7 @@ CtlMissionNode::CtlMissionNode(const std::string & node_name, bool intra_process
     this->declare_parameter("fsm.get_possible_transition_srv_name", "get_possible_transitions");
     this->declare_parameter("fsm.get_possible_transition_topic_name", "possible_transitions");
 
-    j8_fsm.init_FSM();
+    cuadriga_fsm.init_FSM();
 }
 
 void CtlMissionNode::sendLifecycleStateRequest(
@@ -295,9 +295,9 @@ void CtlMissionNode::changeMode(const std::shared_ptr<ctl_mission_interfaces::sr
     // - Convert requested transition id
     // - Ask FSM to compute new mode
     // - If mode changed, execute lifecycle handler
-    Mode old_mode = j8_fsm.get_FSM_mode();            
+    Mode old_mode = cuadriga_fsm.get_FSM_mode();            
     Transition transition = static_cast<Transition>(req->transition);
-    Mode newMode = j8_fsm.Finite_Machine_State(transition);
+    Mode newMode = cuadriga_fsm.Finite_Machine_State(transition);
 
     // Special case for Estop transition
     if (transition == Transition::AlltoEstop) {
@@ -307,9 +307,9 @@ void CtlMissionNode::changeMode(const std::shared_ptr<ctl_mission_interfaces::sr
         return;
     }
     
-    // RCLCPP_INFO(this->get_logger(), "current state %i", j8_fsm.get_FSM_mode() );
+    // RCLCPP_INFO(this->get_logger(), "current state %i", cuadriga_fsm.get_FSM_mode() );
     // RCLCPP_INFO(this->get_logger(), "new state %i", newMode );
-    RCLCPP_INFO(this->get_logger(), "current state %d", static_cast<int>(j8_fsm.get_FSM_mode()));
+    RCLCPP_INFO(this->get_logger(), "current state %d", static_cast<int>(cuadriga_fsm.get_FSM_mode()));
     RCLCPP_INFO(this->get_logger(), "new state %d", static_cast<int>(newMode));
     RCLCPP_INFO(this->get_logger(), "asked transition %i", req->transition );
     
@@ -326,7 +326,7 @@ void CtlMissionNode::changeMode(const std::shared_ptr<ctl_mission_interfaces::sr
 
 void CtlMissionNode::getMode(const std::shared_ptr<ctl_mission_interfaces::srv::GetMode::Request> req,
              const std::shared_ptr<ctl_mission_interfaces::srv::GetMode::Response> res) {
-    res->mode = static_cast<int>(j8_fsm.get_FSM_mode());
+    res->mode = static_cast<int>(cuadriga_fsm.get_FSM_mode());
 }
 
 void CtlMissionNode::handle_get_possible_transitions(
@@ -335,7 +335,7 @@ void CtlMissionNode::handle_get_possible_transitions(
 {
     // Service endpoint for tools that prefer request/response.
     // This mirrors what we publish periodically in the topic.
-    response->possible_transitions = j8_fsm.get_possible_transitions();
+    response->possible_transitions = cuadriga_fsm.get_possible_transitions();
 }
 
 rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtlMissionNode::on_configure(const rclcpp_lifecycle::State &) {
@@ -412,12 +412,12 @@ void CtlMissionNode::publishFsmStateAndTransitions() {
     // - all transitions currently valid
     // Publish FSM mode
     std_msgs::msg::Int32 mode_msg;
-    mode_msg.data = static_cast<int>(j8_fsm.get_FSM_mode());
+    mode_msg.data = static_cast<int>(cuadriga_fsm.get_FSM_mode());
     fsm_mode_pub_->publish(mode_msg);
 
     // Publish possible transitions
     std_msgs::msg::Int32MultiArray transitions_msg;
-    transitions_msg.data = j8_fsm.get_possible_transitions();
+    transitions_msg.data = cuadriga_fsm.get_possible_transitions();
     possible_transitions_pub_->publish(transitions_msg);
 }
 

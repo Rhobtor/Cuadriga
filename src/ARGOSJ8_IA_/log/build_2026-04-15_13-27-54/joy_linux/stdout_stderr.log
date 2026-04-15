@@ -1,0 +1,19 @@
+[100%] Built target joy_linux_node
+-- Install configuration: ""
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/lib/joy_linux/joy_linux_node
+-- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/lib/joy_linux/joy_linux_node" to ""
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/package_run_dependencies/joy_linux
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/parent_prefix_path/joy_linux
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/ament_prefix_path.sh
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/ament_prefix_path.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/path.sh
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/environment/path.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.bash
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.sh
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.zsh
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/local_setup.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/package.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/ament_index/resource_index/packages/joy_linux
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/cmake/joy_linuxConfig.cmake
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/cmake/joy_linuxConfig-version.cmake
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy_linux/share/joy_linux/package.xml

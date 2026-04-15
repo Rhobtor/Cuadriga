@@ -43,12 +43,12 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel packagi
 WORKDIR /ros2_ws
 
 # MUY IMPORTANTE: no pongas barra inicial aquí:
-# copia tu src/ al workspace; la estructura debe ser /ros2_ws/src/j8_gui/...
+# copia tu src/ al workspace; la estructura debe ser /ros2_ws/src/cuadriga_gui/...
 COPY src/ /ros2_ws/src/
 
 # Vendor Leaflet si está el recurso (ajusta ruta si tu paquete se llama distinto)
 RUN bash -lc 'set -eux; \
-  RESDIR=/ros2_ws/src/j8_gui/j8_gui/resources; \
+  RESDIR=/ros2_ws/src/cuadriga_gui/cuadriga_gui/resources; \
   if [ -d "$RESDIR" ]; then \
     mkdir -p "$RESDIR/vendor/leaflet/images"; \
     LVER=1.9.4; \
@@ -58,7 +58,7 @@ RUN bash -lc 'set -eux; \
     wget -q https://unpkg.com/leaflet@${LVER}/dist/images/marker-icon-2x.png  -O "$RESDIR/vendor/leaflet/images/marker-icon-2x.png"; \
     wget -q https://unpkg.com/leaflet@${LVER}/dist/images/marker-shadow.png   -O "$RESDIR/vendor/leaflet/images/marker-shadow.png"; \
   else \
-    echo "WARNING: no j8_gui/j8_gui/resources; skipping Leaflet"; \
+    echo "WARNING: no cuadriga_gui/cuadriga_gui/resources; skipping Leaflet"; \
   fi'
 
 # ---- Compilar ----

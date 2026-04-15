@@ -1,0 +1,25 @@
+{
+  "package_name": "cuadriga_ctl_platform_interfaces",
+  "output_dir": "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces",
+  "template_dir": "/opt/ros/humble/share/rosidl_typesupport_cpp/resource",
+  "idl_tuples": [
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/SetVelocity.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/GetVelocity.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/EmergencyStop.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:msg/CmdThrottleMsg.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:msg/KinematicDebugMsg.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py",
+    "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces/srv/SetVelocity.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces/srv/GetVelocity.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces/srv/EmergencyStop.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces/msg/CmdThrottleMsg.idl",
+    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces/msg/KinematicDebugMsg.idl"
+  ]
+}

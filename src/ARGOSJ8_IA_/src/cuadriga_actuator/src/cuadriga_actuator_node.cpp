@@ -42,7 +42,7 @@ CuadrigaActuatorNode::CuadrigaActuatorNode()
 : Node("cuadriga_actuator_node")
 {
   declare_parameter("direct_cmd_vel_topic", "/Cuadriga/direct_cmd_vel");
-  declare_parameter("fsm_cmd_vel_topic", "/ARGJ801/cmd_vel");
+  declare_parameter("fsm_cmd_vel_topic", "/cuadriga/cmd_vel");
   declare_parameter("serial_write_topic", "/Cuadriga/serial_write");
   declare_parameter("active_source_topic", "/Cuadriga/command_source");
   declare_parameter("output_mode", "serial");

@@ -1,0 +1,68 @@
+[0.029s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/joy': AMENT_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:/home/rhobtor/zed/install/zed_ros2:/home/rhobtor/zed/install/zed_wrapper:/home/rhobtor/zed/install/zed_components:/home/rhobtor/zed/install/zed_interfaces:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy
+[0.107s] -- The C compiler identification is GNU 11.4.0
+[0.201s] -- The CXX compiler identification is GNU 11.4.0
+[0.228s] -- Detecting C compiler ABI info
+[0.305s] -- Detecting C compiler ABI info - done
+[0.321s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.321s] -- Detecting C compile features
+[0.322s] -- Detecting C compile features - done
+[0.334s] -- Detecting CXX compiler ABI info
+[0.427s] -- Detecting CXX compiler ABI info - done
+[0.440s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.441s] -- Detecting CXX compile features
+[0.442s] -- Detecting CXX compile features - done
+[0.446s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.696s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.848s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.941s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.956s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.976s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.008s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.055s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.182s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.189s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.364s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.430s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.528s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.555s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.643s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.646s] -- Found Threads: TRUE  
+[1.763s] -- Found rclcpp_components: 16.0.18 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.810s] -- Found sdl2_vendor: 3.1.0 (/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor/share/sdl2_vendor/cmake)
+[1.818s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.905s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.109s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.109s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy/include>
+[2.109s] -- Configured cppcheck exclude dirs and/or files: 
+[2.113s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.113s] -- Configured cpplint exclude dirs and/or files: 
+[2.114s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.115s] -- Added test 'lint_cmake' to check CMake code style
+[2.117s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.120s] -- Added test 'uncrustify' to check C / C++ code style
+[2.120s] -- Configured uncrustify additional arguments: 
+[2.122s] -- Added test 'xmllint' to check XML markup files
+[2.127s] -- Configuring done (2.1s)
+[2.162s] -- Generating done (0.0s)
+[2.170s] -- Build files have been written to: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/joy
+[2.182s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/joy' returned '0': AMENT_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:/home/rhobtor/zed/install/zed_ros2:/home/rhobtor/zed/install/zed_wrapper:/home/rhobtor/zed/install/zed_components:/home/rhobtor/zed/install/zed_interfaces:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/joy
+[2.184s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/joy': AMENT_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/sdl2_vendor:/home/rhobtor/zed/install/zed_ros2:/home/rhobtor/zed/install/zed_wrapper:/home/rhobtor/zed/install/zed_components:/home/rhobtor/zed/install/zed_interfaces:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/joy -- -j16 -l16
+[2.223s] [ 16%] [32mBuilding CXX object CMakeFiles/joy.dir/src/joy.cpp.o[0m
+[2.224s] [ 33%] [32mBuilding CXX object CMakeFiles/joy_node.dir/rclcpp_components/node_main_joy_node.cpp.o[0m
+[2.228s] [ 50%] [32mBuilding CXX object CMakeFiles/joy_enumerate_devices.dir/src/joy_enumerate_devices.cpp.o[0m
+[3.317s] [ 66%] [32m[1mLinking CXX executable joy_enumerate_devices[0m
+[3.575s] [ 66%] Built target joy_enumerate_devices
+[7.983s] [01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy/src/joy.cpp:[m[K In member function ‘[01m[Kvoid joy::Joy::eventThread()[m[K’:
+[7.984s] [01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy/src/joy.cpp:489:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kwheel_separation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.984s]   489 |       float [01;35m[Kwheel_separation[m[K = 1.35;
+[7.984s]       |             [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[7.984s] [01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy/src/joy.cpp:512:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kthrottle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.984s]   512 |       float [01;35m[Kthrottle[m[K = rad2per_throttle*(left_wheels + rigth_wheels)/wheels_radius;
+[7.984s]       |             [01;35m[K^~~~~~~~[m[K
+[7.984s] [01m[K/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/joy/src/joy.cpp:513:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksteer[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.984s]   513 |       float [01;35m[Ksteer[m[K = rad2per_steer*(-rigth_wheels + left_wheels)/wheels_radius;
+[7.984s]       |             [01;35m[K^~~~~[m[K
+[10.937s] [ 83%] [32m[1mLinking CXX executable joy_node[0m
+[11.554s] [ 83%] Built target joy_node
+[22.660s] [100%] [32m[1mLinking CXX shared library libjoy.so[0m
+[22.946s] [100%] Built target joy

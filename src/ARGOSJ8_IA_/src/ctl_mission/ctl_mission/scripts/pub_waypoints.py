@@ -9,12 +9,12 @@ class MinimalPublisher(Node):
 
 	def __init__(self):
 		super().__init__('minimal_publisher')
-		self.publisher_ = self.create_publisher(Float32MultiArray, '/RoverJ8/waypoints', 10)
+		self.publisher_ = self.create_publisher(Float32MultiArray, '/Rovercuadriga/waypoints', 10)
 		timer_period = 0.5  # seconds
 		self.timer = self.create_timer(timer_period, self.timer_callback)
 		self.i = 0
 		cwd = os.getcwd()
-		file_path = os.path.join(get_package_share_directory('argj801_ctl_mission'),'waypoints_UTM.txt')
+		file_path = os.path.join(get_package_share_directory('cuadriga_ctl_mission'),'waypoints_UTM.txt')
 		print(file_path)
 		file1 = open(file_path, 'r')
 		Lines = file1.readlines()

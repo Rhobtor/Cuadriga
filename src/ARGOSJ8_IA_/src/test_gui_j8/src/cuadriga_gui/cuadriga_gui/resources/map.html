@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>UGV Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Leaflet local -->
+  <link rel="stylesheet" href="./vendor/leaflet/leaflet.css" />
+
+  <style>
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden; }
+    #map { position: absolute; inset: 0; }
+    .debug {
+      position: absolute; bottom: 8px; left: 8px; z-index: 1000;
+      background: rgba(0,0,0,.65); color: #fff; padding: 6px 8px; border-radius: 6px;
+      font: 12px/1.3 system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="debug" id="dbg">tiles ok: 0 | tiles error: 0</div>
+
+  <!-- QWebChannel -->
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <!-- Leaflet local -->
+  <script src="./vendor/leaflet/leaflet.js"></script>
+  <script>
+    if (typeof L === 'undefined') {
+      console.error('Leaflet no está disponible (L undefined). Revisa que ./vendor/leaflet/* exista en install/share.');
+    }
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof L === 'undefined') return;
+
+    // ===== Default view
+    // The map used to start at hard-coded coordinates.
+    // We keep a fallback default but allow overwriting from the URL hash:
+    //   #lat=37.0&lon=-3.0&zoom=16
+    // This is convenient for field deployments where the default operating area
+    // isn't the same as the developer's.
+    function getHashParam(name) {
+      try {
+        var h = (location.hash || '').replace(/^#/, '');
+        if (!h) return null;
+        var parts = h.split('&');
+        for (var i = 0; i < parts.length; i++) {
+          var kv = parts[i].split('=');
+          if (kv.length === 2 && kv[0] === name) return decodeURIComponent(kv[1]);
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    var defaultLat = parseFloat(getHashParam('lat'));
+    var defaultLon = parseFloat(getHashParam('lon'));
+    var defaultZoom = parseInt(getHashParam('zoom'), 10);
+    if (isNaN(defaultLat)) defaultLat = 37.0;
+    if (isNaN(defaultLon)) defaultLon = -3.0;
+    if (isNaN(defaultZoom)) defaultZoom = 16;
+
+    var dbg = document.getElementById('dbg');
+    var okCount = 0, errCount = 0;
+    function bump() { dbg.textContent = 'tiles ok: ' + okCount + ' | tiles error: ' + errCount; }
+
+  var map = L.map('map', { zoomControl: true, preferCanvas: true })
+         .setView([defaultLat, defaultLon], defaultZoom);
+
+    // Detectar puerto de proxy local: #tileport=12345
+    var m = location.hash && location.hash.match(/tileport=(\d+)/);
+    var tileBase = m ? ('http://127.0.0.1:' + m[1]) : null;
+
+    // URLs: si hay proxy, usar localhost; si no, ir directos
+    var OSM_URL  = tileBase ? (tileBase + '/osm/{z}/{x}/{y}.png')
+                            : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var ESRI_URL = tileBase ? (tileBase + '/esri/{z}/{y}/{x}')
+                            : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+
+    // Capas base (sin crossOrigin para evitar CORS en Qt antiguo)
+    var osm = L.tileLayer(OSM_URL, {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    });
+
+    var esriSat = L.tileLayer(ESRI_URL, {
+      maxZoom: 19,
+      attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics'
+    });
+
+    // Diagnóstico de tiles (sin optional chaining)
+    function bindDiag(layer, name){
+      layer.on('tileload', function (e) {
+        okCount++; bump();
+        var src = (e && e.tile && e.tile.src) ? e.tile.src :
+                  (typeof layer.getTileUrl === 'function' ? layer.getTileUrl(e.coords) : '');
+        console.log('[tile OK] ' + name, src);
+      });
+      layer.on('tileerror', function (e) {
+        errCount++; bump();
+        var src = (e && e.tile && e.tile.src) ? e.tile.src :
+                  (typeof layer.getTileUrl === 'function' ? layer.getTileUrl(e.coords) : '');
+        console.error('[tile ERROR] ' + name, src);
+      });
+    }
+    bindDiag(osm, 'OSM');
+    bindDiag(esriSat, 'Esri');
+
+    // Base por defecto: OSM
+    osm.addTo(map);
+
+    // Selector de capas
+    var baseMaps = {
+      'OSM': osm,
+      'Satélite (Esri)': esriSat
+    };
+    L.control.layers(baseMaps, {}, { position: 'topright', collapsed: false }).addTo(map);
+
+    // Ajuste de tamaño tras pintar
+    setTimeout(function () { map.invalidateSize(true); }, 0);
+
+    // ===== Bridge Qt (opcional, con logs)
+    var bridge = null;
+    try {
+      if (typeof qt !== 'undefined' && qt.webChannelTransport && typeof QWebChannel !== 'undefined') {
+        new QWebChannel(qt.webChannelTransport, function (channel) {
+          bridge = channel.objects.bridge;
+          console.log('QWebChannel listo:', !!bridge);
+        });
+      } else {
+        console.log('QWebChannel no disponible (qt:', typeof qt, 'QWebChannel:', typeof QWebChannel, ')');
+      }
+    } catch (e) { console.error('Fallo inicializando QWebChannel:', e); }
+
+    // ===== Estado misión + estado del vehículo
+    // vehMarker: muestra la posición del UGV y (si se aporta) su heading.
+    var vehMarker = null, planned = [], plannedLine = null, plannedMarkers = [], detectedPersonsMarkers = [];
+
+    function redrawDetectedPersons() {
+      for (var i = 0; i < detectedPersonsMarkers.length; i++) {
+        map.removeLayer(detectedPersonsMarkers[i]);
+      }
+      detectedPersonsMarkers = [];
+
+      for (var j = 0; j < window.__detectedPersons.length; j++) {
+        var pt = window.__detectedPersons[j];
+        var lat = Array.isArray(pt) ? pt[0] : pt.lat;
+        var lon = Array.isArray(pt) ? pt[1] : pt.lon;
+        var status = Array.isArray(pt) ? 'detected' : (pt.status || 'detected');
+        var personId = Array.isArray(pt) ? 0 : (pt.id || 0);
+        var assignedRobot = Array.isArray(pt) ? '' : (pt.assigned_robot || '');
+        var distanceM = Array.isArray(pt) ? null : pt.distance_m;
+        var fillColor = '#dc2626';
+        var strokeColor = '#7f1d1d';
+
+        if (status === 'pending') {
+          fillColor = '#facc15';
+          strokeColor = '#a16207';
+        }
+
+        var marker = L.circleMarker([lat, lon], {
+          radius: 7,
+          color: strokeColor,
+          weight: 2,
+          fillColor: fillColor,
+          fillOpacity: 0.92
+        }).addTo(map);
+        if (personId) {
+          var tooltip = 'Persona ' + personId + ' · ' + status;
+          if (assignedRobot) tooltip += ' · ' + assignedRobot;
+          if (distanceM !== null && distanceM !== undefined && !isNaN(distanceM)) {
+            tooltip += ' · ' + Number(distanceM).toFixed(1) + ' m';
+          }
+          marker.bindTooltip(tooltip, {direction: 'top'});
+        }
+        detectedPersonsMarkers.push(marker);
+      }
+    }
+
+    function makeVehicleIcon(headingDeg, opts) {
+      // Arrow marker built with pure HTML/CSS (no external assets).
+      // Improvements vs. the simple triangle:
+      //  - black outline for contrast
+      //  - small tail notch so you can tell which vertex is the "front"
+      //  - optional status badge (e.g. "NO GPS")
+      opts = opts || {};
+      var hdg = (typeof headingDeg === 'number' && !isNaN(headingDeg)) ? headingDeg : 0;
+      var color = opts.color || '#e53e3e';
+      var outline = opts.outline || '#111';
+      var badge = opts.badge || '';
+
+      var badgeHtml = '';
+      if (badge) {
+        badgeHtml = '<div style="' +
+          'position:absolute; left:50%; top:-16px; transform:translateX(-50%);' +
+          'background:rgba(0,0,0,.75); color:#fff; border-radius:10px;' +
+          'padding:2px 6px; font:11px/1 system-ui,sans-serif; white-space:nowrap;' +
+          'border:1px solid rgba(255,255,255,.15);' +
+        '">' + badge + '</div>';
+      }
+
+      var html = '' +
+        '<div style="position:relative; width:28px; height:28px;">' +
+          badgeHtml +
+          '<div style="' +
+            'position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(' + hdg + 'deg);' +
+            'transform-origin: 50% 55%;' +
+            'filter: drop-shadow(0 1px 2px rgba(0,0,0,.45));' +
+          '">' +
+            // Outer triangle (outline)
+            '<div style="width:0;height:0;' +
+              'border-left:11px solid transparent;' +
+              'border-right:11px solid transparent;' +
+              'border-bottom:20px solid ' + outline + ';' +
+            '"></div>' +
+            // Inner triangle (fill)
+            '<div style="width:0;height:0; position:absolute; left:50%; top:2px; transform:translateX(-50%);' +
+              'border-left:9px solid transparent;' +
+              'border-right:9px solid transparent;' +
+              'border-bottom:16px solid ' + color + ';' +
+            '"></div>' +
+            // Tail notch (a small cut on the base, to disambiguate front/back)
+            '<div style="width:0;height:0; position:absolute; left:50%; top:16px; transform:translateX(-50%);' +
+              'border-left:4px solid transparent;' +
+              'border-right:4px solid transparent;' +
+              'border-top:6px solid rgba(0,0,0,.55);' +
+            '"></div>' +
+          '</div>' +
+        '</div>';
+
+      return L.divIcon({
+        className: 'veh-icon',
+        html: html,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+    }
+    function redrawPlanned() {
+      if (plannedLine) { map.removeLayer(plannedLine); plannedLine = null; }
+      if (planned.length) plannedLine = L.polyline(planned, { weight: 4 }).addTo(map);
+      for (var i=0;i<plannedMarkers.length;i++) map.removeLayer(plannedMarkers[i]);
+      plannedMarkers = [];
+      // planned.forEach(function (pt, idx) {
+      //   var marker = L.marker(pt, {
+      //     icon: L.divIcon({
+      //       className: 'wp-icon',
+      //       html: '<div style="background:#2b6cb0;color:#fff;border-radius:12px;width:24px;height:24px;line-height:24px;text-align:center;font-weight:700;font-family:system-ui;box-shadow:0 1px 4px rgba(0,0,0,.3);">' + (idx+1) + '</div>',
+      //       iconSize: [24,24], iconAnchor: [12,12],
+      //     }), draggable: true
+      //   })
+      //   .on('dragend', function (ev) {
+      //     var latlng = ev.target.getLatLng();
+      //     planned[idx] = [latlng.lat, latlng.lng];
+      //     redrawPlanned();
+      //     if (bridge && bridge.onPlannedWaypoint) bridge.onPlannedWaypoint(latlng.lat, latlng.lng);
+      //   })
+      //   .addTo(map);
+      //   plannedMarkers.push(marker);
+      // });
+      planned.forEach(function (pt, idx) {
+        var marker = L.marker(pt, {
+          icon: L.divIcon({
+            className: 'wp-icon',
+            html: '<div style="background:#2b6cb0;color:#fff;border-radius:12px;width:24px;height:24px;line-height:24px;text-align:center;font-weight:700;font-family:system-ui;box-shadow:0 1px 4px rgba(0,0,0,.3);">' + (idx+1) + '</div>',
+            iconSize: [24,24], iconAnchor: [12,12],
+          }),
+          draggable: true
+        })
+        .on('dragend', function (ev) {
+          var latlng = ev.target.getLatLng();
+          planned[idx] = [latlng.lat, latlng.lng];
+          redrawPlanned();
+          if (bridge && bridge.onPlannedWaypoint) bridge.onPlannedWaypoint(latlng.lat, latlng.lng);
+        });
+
+        // >>> NUEVO: guarda el índice actual en el marcador
+        marker.__wpIndex = idx;
+
+        // >>> NUEVO: borrar con clic derecho
+        marker.on('contextmenu', function (e) {
+          if (bridge && bridge.onRemoveWaypointIndex) {
+            bridge.onRemoveWaypointIndex(this.__wpIndex);
+          }
+        });
+
+        // >>> NUEVO: borrar con Alt + click izquierdo
+        marker.on('click', function (e) {
+          var oe = e.originalEvent || {};
+          if (oe.altKey && bridge && bridge.onRemoveWaypointIndex) {
+            bridge.onRemoveWaypointIndex(this.__wpIndex);
+          }
+        });
+
+        marker.addTo(map);
+        plannedMarkers.push(marker);
+      });
+    }
+    function addPlanned(lat, lon){ planned.push([lat, lon]); redrawPlanned(); }
+    function popPlanned(){ if (planned.length){ planned.pop(); redrawPlanned(); } }
+
+    map.on('click', function (e) {
+      var lat = e.latlng.lat, lon = e.latlng.lng;
+      if (e.originalEvent && e.originalEvent.shiftKey) {
+        addPlanned(lat, lon); if (bridge && bridge.onPlannedWaypoint) bridge.onPlannedWaypoint(lat, lon);
+      } else {
+        if (bridge && bridge.onGuidedTarget) bridge.onGuidedTarget(lat, lon);
+      }
+    });
+    map.on('contextmenu', function () { popPlanned(); });
+    window.addEventListener('keydown', function (ev) {
+      if ((ev.ctrlKey||ev.metaKey) && String(ev.key).toLowerCase() === 'z') popPlanned();
+    });
+
+    // API para Python
+    // API para Python
+    // Backwards compatible:
+    //   updateVehicle(lat, lon)
+    // Extended:
+    //   updateVehicle(lat, lon, heading_deg)
+    // Extended signature:
+    //   updateVehicle(lat, lon, headingDeg, opts)
+    // opts:
+    //   { color: '#rrggbb', badge: 'NO GPS' }
+    window.__detectedPersons = [];
+
+    window.updateVehicle = function(lat, lon, headingDeg, opts) {
+      // If headingDeg is omitted, keep current rotation (if any).
+      var icon = null;
+      if (typeof headingDeg === 'number' && !isNaN(headingDeg)) {
+        icon = makeVehicleIcon(headingDeg, opts);
+      } else if (vehMarker === null) {
+        icon = makeVehicleIcon(0, opts);
+      }
+
+      if (vehMarker === null) {
+        var opts = {};
+        if (icon) opts.icon = icon;
+        vehMarker = L.marker([lat, lon], opts).addTo(map);
+        map.panTo([lat, lon]);
+      } else {
+        vehMarker.setLatLng([lat, lon]);
+        if (icon) vehMarker.setIcon(icon);
+      }
+    };
+    window.setMission = function(points){ planned = points || []; redrawPlanned(); };
+    window.clearMission = function(){ planned = []; redrawPlanned(); };
+    window.setDetectedPersons = function(points){ window.__detectedPersons = points || []; redrawDetectedPersons(); };
+    window.panTo = function(lat, lon){ map.panTo([lat, lon]); };
+  });
+  </script>
+</body>
+</html>

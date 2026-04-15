@@ -17,17 +17,17 @@ root
 │   ├── android_ros2_server
 │   ├── argo_drivers_pkgs/
 │   │   ├── Fixposition_driver_pkg
-│   │   ├── argj801_sensors
+│   │   ├── cuadriga_sensors
 │   │   ├── ntrip_client
 │   │   └── ublox
-│   ├── argj801_ctl_platform
-│   ├── argj801_setup
+│   ├── cuadriga_ctl_platform
+│   ├── cuadriga_setup
 │   ├── ctl_mission
 │   ├── gazebo_sim_pkgs/
 │   │   ├── fix_position_pkg
-│   │   └── j8_xacro_model
+│   │   └── cuadriga_xacro_model
 │   ├── GUI_pkg
-│   ├── j8_joystick
+│   ├── cuadriga_joystick
 │   ├── lidar_process_pkgs
 │   ├── path_manager
 │   └── security_check
@@ -44,7 +44,7 @@ root
 ### Building the Workspace
 ```sh
 # Clone the repository with submodules
-git clone --recurse-submodules git@github.com:Robotics-Mechatronics-UMA/ARGOJ8_ws.git
+git clone --recurse-submodules git@github.com:Robotics-Mechatronics-UMA/ARGOcuadriga_ws.git
 cd ARGO_ws/
 
 # Install dependencies
@@ -56,7 +56,7 @@ colcon build --symlink-install
 
 ## Usage
 
-Launch and configuraiton to run all the nodes can be found in a [dedicated package](https://github.com/Robotics-Mechatronics-UMA/argj801_setup).
+Launch and configuraiton to run all the nodes can be found in a [dedicated package](https://github.com/Robotics-Mechatronics-UMA/cuadriga_setup).
 
 ### Quick start (local)
 
@@ -71,7 +71,7 @@ source install/setup.bash
 This is the most robust way to start the stack when you don't have the external control center sending LCM heartbeats.
 
 ```sh
-ros2 launch argj801_setup J8_launch.py \
+ros2 launch cuadriga_setup cuadriga_launch.py \
   robot:=true \
   platform_mode:=2 \
   sensors_source:=lcm_sensors \
@@ -80,8 +80,8 @@ ros2 launch argj801_setup J8_launch.py \
 
 Notes:
 
-- `platform_mode:=2` forces `argj801_ctrl_platform_node` to run in Gazebo mode (no LCM). Values: `0` Arduino, `1` LCM, `2` Gazebo.
-- `sensors_source` is a required CLI argument for `ARGJ801_sensors_node`. Valid values are `lcm_sensors` and `camera`.
+- `platform_mode:=2` forces `cuadriga_ctrl_platform_node` to run in Gazebo mode (no LCM). Values: `0` Arduino, `1` LCM, `2` Gazebo.
+- `sensors_source` is a required CLI argument for `cuadriga_sensors_node`. Valid values are `lcm_sensors` and `camera`.
 - `enable_mpc:=true` requires Python dependency `cvxpy`.
 
 #### Bringup with control center (LCM)
@@ -89,7 +89,7 @@ Notes:
 If you want the rover to accept commands from the control center via LCM multicast:
 
 ```sh
-ros2 launch argj801_setup J8_launch.py robot:=true platform_mode:=1
+ros2 launch cuadriga_setup cuadriga_launch.py robot:=true platform_mode:=1
 ```
 
 On the rover host, you must have a multicast route for `224.0.0.0/4` on the NIC connected to the rover network:
@@ -113,7 +113,7 @@ The workspace `dockerfile` already installs dependencies and runs `colcon build`
 Build the image from the workspace root:
 
 ```sh
-docker build -t cuadriga-j8 -f dockerfile .
+docker build -t cuadriga-cuadriga -f dockerfile .
 ```
 
 Run a local integration test without hardware:
@@ -124,8 +124,8 @@ docker run --rm -it \
   --ipc=host \
   -e DISPLAY=${DISPLAY} \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
-  cuadriga-j8 \
-  ros2 launch argj801_setup J8_launch.py local_test:=true use_gui:=false
+  cuadriga-cuadriga \
+  ros2 launch cuadriga_setup cuadriga_launch.py local_test:=true use_gui:=false
 ```
 
 Run on the real robot with Cuadriga serial access:
@@ -137,8 +137,8 @@ docker run --rm -it \
   --device=/dev/ttyUSB0:/dev/ttyUSB0 \
   -e DISPLAY=${DISPLAY} \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
-  cuadriga-j8 \
-  ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
+  cuadriga-cuadriga \
+  ros2 launch cuadriga_setup cuadriga_launch.py robot:=true use_cuadriga_backend:=true
 ```
 
 If you want to pass a host-side DDS XML through `CYCLONEDDS_URI`, you must mount that path into the container. Otherwise the entrypoint will ignore it and fall back to the internal generated config:
@@ -150,13 +150,13 @@ docker run --rm -it \
   --device=/dev/ttyUSB0:/dev/ttyUSB0 \
   -v /home/cuadriga/.dds:/home/cuadriga/.dds:ro \
   -e CYCLONEDDS_URI=file:///home/cuadriga/.dds/cyclone_dds.xml \
-  cuadriga-j8 \
-  ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
+  cuadriga-cuadriga \
+  ros2 launch cuadriga_setup cuadriga_launch.py robot:=true use_cuadriga_backend:=true
 ```
 
 If the ZeroTier interface name is different on your host, override it with `ZT_INTERFACE=<iface>`. If the interface comes up late, increase `ZT_WAIT_SECONDS`. You can also bypass auto-detection entirely with `ZT_IP=<ipv4>`.
 
-If your Fixposition endpoint is not the default one from `J8_params.yaml`, override it explicitly:
+If your Fixposition endpoint is not the default one from `cuadriga_params.yaml`, override it explicitly:
 
 ```sh
 docker run --rm -it \
@@ -167,8 +167,8 @@ docker run --rm -it \
   -e XAUTHORITY=${XAUTHORITY} \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v ${XAUTHORITY}:${XAUTHORITY}:ro \
-  cuadriga-j8 \
-  ros2 launch argj801_setup J8_launch.py \
+  cuadriga-cuadriga \
+  ros2 launch cuadriga_setup cuadriga_launch.py \
     robot:=true \
     use_cuadriga_backend:=true \
     fixposition_ip:=192.168.2.113 \
@@ -193,7 +193,7 @@ docker run --rm -it \
   -e XAUTHORITY=${XAUTHORITY} \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v ${XAUTHORITY}:${XAUTHORITY}:ro \
-  cuadriga-j8 \
+  cuadriga-cuadriga \
   rviz2 -d /ros2_ws/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2/rviz/fixposition_driver_ros2.rviz
 ```
 
@@ -225,17 +225,17 @@ We would like to thank the contributors and the open-source community for their 
 - **[android_ros2_server](https://github.com/Robotics-Mechatronics-UMA/Android_ros2_server_pkg.git)**: Provides an interface for ROS2 communication with Android devices.
 - **argo_drivers_pkgs**: Contains drivers for various sensors including Fixposition and Ublox.
   - **[Fixposition_driver_pkg](https://github.com/Robotics-Mechatronics-UMA/Fixposition_driver_pkg.git)**: Driver package for Fixposition sensor integration.
-  - **[argj801_sensors](https://github.com/Robotics-Mechatronics-UMA/argj801_sensors.git)**: Drivers for ArgJ801 robot sensors.
+  - **[cuadriga_sensors](https://github.com/Robotics-Mechatronics-UMA/cuadriga_sensors.git)**: Drivers for cuadriga robot sensors.
   - **[ntrip_client](https://github.com/Robotics-Mechatronics-UMA/ntrip_client.git)**: NTRIP client package for RTCM data streaming.
   - **[ublox](https://github.com/Robotics-Mechatronics-UMA/ublox.git)**: Driver package for Ublox GPS modules.
-- **[argj801_ctl_platform](https://github.com/Robotics-Mechatronics-UMA/argj801_ctl_platform.git)**: Platform control algorithms for the ArgJ801 robot.
-- **[argj801_setup](https://github.com/Robotics-Mechatronics-UMA/argj801_setup.git)**: Setup configurations for the ArgJ801 robot.
-- **[ctl_mission](https://github.com/Robotics-Mechatronics-UMA/argj801_ctl_mission.git)**: Mission control algorithms for autonomous operations.
+- **[cuadriga_ctl_platform](https://github.com/Robotics-Mechatronics-UMA/cuadriga_ctl_platform.git)**: Platform control algorithms for the cuadriga robot.
+- **[cuadriga_setup](https://github.com/Robotics-Mechatronics-UMA/cuadriga_setup.git)**: Setup configurations for the cuadriga robot.
+- **[ctl_mission](https://github.com/Robotics-Mechatronics-UMA/cuadriga_ctl_mission.git)**: Mission control algorithms for autonomous operations.
 - **gazebo_sim_pkgs**: Gazebo simulation models and related packages.
   - **[fix_position_pkg](https://github.com/Robotics-Mechatronics-UMA/fix_position_pkg.git)**: Gazebo plugin for fixing positions in simulation.
-  - **[j8_xacro_model](https://github.com/Robotics-Mechatronics-UMA/j8_xacro_model.git)**: Xacro models for J8 robot configurations in Gazebo.
-- **[GUI_pkg](https://github.com/Robotics-Mechatronics-UMA/J8_GUI.git)**: Graphical User Interface for controlling and monitoring robots.
-- **[j8_joystick](https://github.com/Robotics-Mechatronics-UMA/joystick_j8.git)**: Joystick driver for manual robot control.
+  - **[cuadriga_xacro_model](https://github.com/Robotics-Mechatronics-UMA/cuadriga_xacro_model.git)**: Xacro models for cuadriga robot configurations in Gazebo.
+- **[GUI_pkg](https://github.com/Robotics-Mechatronics-UMA/cuadriga_GUI.git)**: Graphical User Interface for controlling and monitoring robots.
+- **[cuadriga_joystick](https://github.com/Robotics-Mechatronics-UMA/joystick_cuadriga.git)**: Joystick driver for manual robot control.
 - **[lidar_process_pkgs](https://github.com/Robotics-Mechatronics-UMA/lidar_process_pkgs.git)**: Packages for processing Lidar data.
 - **[path_manager](https://github.com/Robotics-Mechatronics-UMA/path_manager.git)**: Path management algorithms for navigation.
 - **[security_check](https://github.com/Robotics-Mechatronics-UMA/security_check.git)**: Modules to ensure safe and secure operation of robots.

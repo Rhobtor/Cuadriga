@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/ChangeController.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct ChangeController_Request {
+      string controller_type;
+    };
+    struct ChangeController_Response {
+      boolean success;
+    };
+  };
+};

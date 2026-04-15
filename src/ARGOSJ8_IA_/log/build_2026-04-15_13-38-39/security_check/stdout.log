@@ -1,0 +1,26 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/security_check_node.dir/src/security_check_node.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/security_check_node.dir/src/security_check_node_main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable security_check_node[0m
+[100%] Built target security_check_node
+-- Install configuration: ""
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/lib/security_check/security_check_node
+-- Set non-toolchain portion of runtime path of "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/lib/security_check/security_check_node" to ""
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/include
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/include/security_check
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/include/security_check/SecurityCheckNode.hpp
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/ament_index/resource_index/package_run_dependencies/security_check
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/ament_index/resource_index/parent_prefix_path/security_check
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/environment/path.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/environment/path.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/local_setup.bash
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/local_setup.sh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/local_setup.zsh
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/local_setup.dsv
+-- Installing: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/package.dsv
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/ament_index/resource_index/packages/security_check
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/cmake/security_checkConfig.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/cmake/security_checkConfig-version.cmake
+-- Up-to-date: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/security_check/share/security_check/package.xml

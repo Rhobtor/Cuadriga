@@ -2,7 +2,7 @@
  * @file path_record_node.cpp
  * @brief Lifecycle state node that records a driven trajectory into a simple lat/lon path.
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * This node is activated by the mission/orchestrator when the operator wants to
  * *drive and record* a path (typically to later reuse it for path following).
  *

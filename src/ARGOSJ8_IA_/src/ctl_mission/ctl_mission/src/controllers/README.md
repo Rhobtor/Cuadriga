@@ -1,6 +1,6 @@
 # Controllers
 
-This directory contains the implementation of various controllers used in the `Ctrl_node.cpp` for the ARGJ801 rover. Each controller is responsible for a specific control algorithm to manage the rover's path following and other behaviors.
+This directory contains the implementation of various controllers used in the `Ctrl_node.cpp` for the cuadriga rover. Each controller is responsible for a specific control algorithm to manage the rover's path following and other behaviors.
 
 ## Introduction
 

@@ -18,6 +18,7 @@
  *
  * ### Parameters
  * - `queue_size` (default: 10)
+ * - `controller_handshake_enabled` (default: false)
  *
  * ## Lifecycle behavior
  * - on_configure(): create subscription + lifecycle publisher.
@@ -42,9 +43,11 @@ MppiSacRelayNode::MppiSacRelayNode(const std::string & node_name, bool intra_pro
   this->declare_parameter("ai_cmd_topic_name", "external_cmd_vel");
   this->declare_parameter("secured_cmd_vel_topic_name", "secured_cmd_vel");
   this->declare_parameter("queue_size", 10);
-  this->declare_parameter("start_controller_on_activate", false);
+  this->declare_parameter("cmd_timeout_sec", 1.0);
+  this->declare_parameter("publisher_disconnect_timeout_sec", 0.2);
 
-  // External AI controller start handshake (simple TCP message).
+  // Optional external AI controller start handshake (simple TCP message).
+  this->declare_parameter("controller_handshake_enabled", false);
   this->declare_parameter("controller_ip", "192.168.1.116");
   this->declare_parameter("controller_port", 5555);
 }
@@ -55,7 +58,9 @@ MppiSacRelayNode::on_configure(const rclcpp_lifecycle::State &)
   this->get_parameter("ai_cmd_topic_name", ai_cmd_topic_);
   this->get_parameter("secured_cmd_vel_topic_name", secured_cmd_topic_);
   this->get_parameter("queue_size", queue_size_);
-  this->get_parameter("start_controller_on_activate", start_controller_on_activate_);
+  this->get_parameter("cmd_timeout_sec", cmd_timeout_sec_);
+  this->get_parameter("publisher_disconnect_timeout_sec", publisher_disconnect_timeout_sec_);
+  this->get_parameter("controller_handshake_enabled", controller_handshake_enabled_);
   this->get_parameter("controller_ip", controller_ip_);
   this->get_parameter("controller_port", controller_port_);
 
@@ -78,11 +83,20 @@ MppiSacRelayNode::on_activate(const rclcpp_lifecycle::State & state)
   if (pub_secured_cmd_vel_) {
     pub_secured_cmd_vel_->on_activate();
   }
+  last_ai_cmd_time_ = this->now();
+  latest_ai_cmd_ = geometry_msgs::msg::Twist();
+  have_ai_cmd_ = false;
+  timeout_active_ = false;
+  relay_timer_ = this->create_wall_timer(
+    std::chrono::milliseconds(20), std::bind(&MppiSacRelayNode::publish_relay_cmd, this));
 
-  if (start_controller_on_activate_) {
+  if (controller_handshake_enabled_) {
     (void)send_start_to_controller();
   } else {
-    RCLCPP_INFO(this->get_logger(), "Controller TCP start handshake disabled; relay will use ROS topics only");
+    RCLCPP_INFO(
+      this->get_logger(),
+      "MPPI/SAC relay running in topic-only mode. Listening on '%s' without controller IP handshake",
+      ai_cmd_topic_.c_str());
   }
 
   RCLCPP_INFO(this->get_logger(), "MPPI/SAC relay activated");
@@ -92,6 +106,12 @@ MppiSacRelayNode::on_activate(const rclcpp_lifecycle::State & state)
 rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
 MppiSacRelayNode::on_deactivate(const rclcpp_lifecycle::State & state)
 {
+  if (pub_secured_cmd_vel_ && pub_secured_cmd_vel_->is_activated()) {
+    publish_stop();
+  }
+  have_ai_cmd_ = false;
+  timeout_active_ = false;
+  relay_timer_.reset();
   if (pub_secured_cmd_vel_) {
     pub_secured_cmd_vel_->on_deactivate();
   }
@@ -103,6 +123,7 @@ MppiSacRelayNode::on_deactivate(const rclcpp_lifecycle::State & state)
 rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
 MppiSacRelayNode::on_cleanup(const rclcpp_lifecycle::State &)
 {
+  relay_timer_.reset();
   sub_ai_cmd_.reset();
   pub_secured_cmd_vel_.reset();
   RCLCPP_INFO(this->get_logger(), "MPPI/SAC relay cleaned up");
@@ -112,6 +133,7 @@ MppiSacRelayNode::on_cleanup(const rclcpp_lifecycle::State &)
 rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
 MppiSacRelayNode::on_shutdown(const rclcpp_lifecycle::State & state)
 {
+  relay_timer_.reset();
   sub_ai_cmd_.reset();
   pub_secured_cmd_vel_.reset();
   RCLCPP_INFO(this->get_logger(), "MPPI/SAC relay shutdown from state %s", state.label().c_str());
@@ -120,11 +142,60 @@ MppiSacRelayNode::on_shutdown(const rclcpp_lifecycle::State & state)
 
 void MppiSacRelayNode::on_ai_cmd(const geometry_msgs::msg::Twist::SharedPtr msg)
 {
-  // Only publish if active.
-  // LifecyclePublisher internally checks activation state when calling publish().
-  if (pub_secured_cmd_vel_) {
-    pub_secured_cmd_vel_->publish(*msg);
+  last_ai_cmd_time_ = this->now();
+  latest_ai_cmd_ = *msg;
+  have_ai_cmd_ = true;
+  timeout_active_ = false;
+}
+
+void MppiSacRelayNode::publish_relay_cmd()
+{
+  if (!pub_secured_cmd_vel_ || !pub_secured_cmd_vel_->is_activated()) {
+    return;
   }
+
+  const double elapsed_sec = (this->now() - last_ai_cmd_time_).seconds();
+  const size_t publisher_count = sub_ai_cmd_ ? sub_ai_cmd_->get_publisher_count() : 0;
+  const bool ai_publisher_connected = publisher_count > 0;
+  const double active_timeout_sec = ai_publisher_connected ? cmd_timeout_sec_ : publisher_disconnect_timeout_sec_;
+
+  if (have_ai_cmd_ && elapsed_sec <= active_timeout_sec) {
+    pub_secured_cmd_vel_->publish(latest_ai_cmd_);
+    timeout_active_ = false;
+    return;
+  }
+
+  publish_stop();
+  if (!timeout_active_) {
+    if (ai_publisher_connected) {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "No fresh command received on '%s' for %.2f s while publisher is still connected. Holding stopped output.",
+        ai_cmd_topic_.c_str(), elapsed_sec);
+    } else {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "Publisher on '%s' disappeared and no command arrived for %.2f s. Publishing zero Twist continuously to stop the robot.",
+        ai_cmd_topic_.c_str(), elapsed_sec);
+    }
+  }
+  timeout_active_ = true;
+}
+
+void MppiSacRelayNode::publish_stop()
+{
+  if (!pub_secured_cmd_vel_) {
+    return;
+  }
+
+  geometry_msgs::msg::Twist stop_msg;
+  stop_msg.linear.x = 0.0;
+  stop_msg.linear.y = 0.0;
+  stop_msg.linear.z = 0.0;
+  stop_msg.angular.x = 0.0;
+  stop_msg.angular.y = 0.0;
+  stop_msg.angular.z = 0.0;
+  pub_secured_cmd_vel_->publish(stop_msg);
 }
 
 bool MppiSacRelayNode::send_start_to_controller()

@@ -1,0 +1,148 @@
+[0.580s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/wiimote_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/wiimote_msgs -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/wiimote_msgs
+[0.970s] -- The C compiler identification is GNU 11.4.0
+[0.970s] -- The CXX compiler identification is GNU 11.4.0
+[0.970s] -- Detecting C compiler ABI info
+[0.971s] -- Detecting C compiler ABI info - done
+[0.972s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.972s] -- Detecting C compile features
+[0.972s] -- Detecting C compile features - done
+[0.972s] -- Detecting CXX compiler ABI info
+[1.039s] -- Detecting CXX compiler ABI info - done
+[1.064s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.065s] -- Detecting CXX compile features
+[1.066s] -- Detecting CXX compile features - done
+[1.072s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.293s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.479s] -- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[1.634s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.644s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.662s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.690s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.719s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.831s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.616s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[4.403s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.358s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.377s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[5.377s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[5.378s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[5.378s]   the cmake_policy command to set the policy and suppress this warning.
+[5.378s] 
+[5.378s] Call Stack (most recent call first):
+[5.378s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[5.378s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[5.382s]   CMakeLists.txt:36 (rosidl_generate_interfaces)
+[5.382s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.382s] [0m
+[5.467s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[5.475s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[5.477s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[5.477s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[5.477s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[5.477s]   the cmake_policy command to set the policy and suppress this warning.
+[5.477s] 
+[5.477s] Call Stack (most recent call first):
+[5.478s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[5.481s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[5.481s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[5.481s]   CMakeLists.txt:36 (rosidl_generate_interfaces)
+[5.481s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.482s] [0m
+[5.532s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[5.532s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[5.532s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[5.533s]   the cmake_policy command to set the policy and suppress this warning.
+[5.533s] 
+[5.533s] Call Stack (most recent call first):
+[5.533s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[5.533s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[5.533s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[5.533s]   CMakeLists.txt:36 (rosidl_generate_interfaces)
+[5.533s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.533s] [0m
+[5.558s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[5.558s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.558s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[5.558s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[5.643s] -- Found PythonExtra: .so  
+[6.462s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.475s] -- Added test 'lint_cmake' to check CMake code style
+[6.476s] -- Added test 'xmllint' to check XML markup files
+[6.498s] -- Configuring done (5.9s)
+[6.700s] -- Generating done (0.2s)
+[6.776s] -- Build files have been written to: /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/wiimote_msgs
+[6.820s] Invoked command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/wiimote_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/wiimote_msgs -DCMAKE_INSTALL_PREFIX=/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/install/wiimote_msgs
+[6.823s] Invoking command in '/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/wiimote_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --build /home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/wiimote_msgs -- -j16 -l16
+[6.904s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[6.934s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.955s] [  6%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[6.961s] [  6%] Built target ament_cmake_python_copy_wiimote_msgs
+[8.539s] running egg_info
+[8.626s] creating wiimote_msgs.egg-info
+[8.627s] writing wiimote_msgs.egg-info/PKG-INFO
+[8.627s] writing dependency_links to wiimote_msgs.egg-info/dependency_links.txt
+[8.627s] writing top-level names to wiimote_msgs.egg-info/top_level.txt
+[8.627s] writing manifest file 'wiimote_msgs.egg-info/SOURCES.txt'
+[8.743s] [  6%] Built target wiimote_msgs__rs
+[8.759s] reading manifest file 'wiimote_msgs.egg-info/SOURCES.txt'
+[8.761s] writing manifest file 'wiimote_msgs.egg-info/SOURCES.txt'
+[8.813s] [  6%] Built target ament_cmake_python_build_wiimote_msgs_egg
+[10.759s] [  6%] Built target wiimote_msgs__cpp
+[10.780s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.782s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[10.783s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.863s] [ 14%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_c.dir/rosidl_generator_c/wiimote_msgs/msg/detail/ir_source_info__functions.c.o[0m
+[10.871s] [ 16%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_c.dir/rosidl_generator_c/wiimote_msgs/msg/detail/state__functions.c.o[0m
+[10.871s] [ 18%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_c.dir/rosidl_generator_c/wiimote_msgs/msg/detail/timed_switch__functions.c.o[0m
+[11.112s] [ 20%] [32m[1mLinking C shared library libwiimote_msgs__rosidl_generator_c.so[0m
+[11.205s] [ 20%] Built target wiimote_msgs__rosidl_generator_c
+[11.218s] [ 22%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.228s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[11.231s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[14.640s] [ 29%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wiimote_msgs/msg/detail/ir_source_info__type_support.c.o[0m
+[14.640s] [ 31%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wiimote_msgs/msg/detail/timed_switch__type_support.c.o[0m
+[14.641s] [ 33%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wiimote_msgs/msg/detail/state__type_support.c.o[0m
+[14.976s] [ 35%] [32m[1mLinking C shared library libwiimote_msgs__rosidl_typesupport_introspection_c.so[0m
+[15.070s] [ 35%] Built target wiimote_msgs__rosidl_typesupport_introspection_c
+[15.375s] [ 37%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wiimote_msgs/msg/ir_source_info__type_support.cpp.o[0m
+[15.376s] [ 39%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wiimote_msgs/msg/state__type_support.cpp.o[0m
+[15.385s] [ 41%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wiimote_msgs/msg/timed_switch__type_support.cpp.o[0m
+[15.404s] [ 43%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wiimote_msgs/msg/detail/ir_source_info__type_support.cpp.o[0m
+[15.417s] [ 45%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wiimote_msgs/msg/detail/dds_fastrtps/ir_source_info__type_support.cpp.o[0m
+[15.422s] [ 47%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wiimote_msgs/msg/detail/timed_switch__type_support.cpp.o[0m
+[15.434s] [ 50%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wiimote_msgs/msg/detail/dds_fastrtps/state__type_support.cpp.o[0m
+[15.437s] [ 52%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wiimote_msgs/msg/detail/state__type_support.cpp.o[0m
+[15.448s] [ 54%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wiimote_msgs/msg/detail/dds_fastrtps/timed_switch__type_support.cpp.o[0m
+[15.483s] [ 56%] [32m[1mLinking CXX shared library libwiimote_msgs__rosidl_typesupport_c.so[0m
+[15.606s] [ 58%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wiimote_msgs/msg/ir_source_info__type_support.cpp.o[0m
+[15.614s] [ 60%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wiimote_msgs/msg/state__type_support.cpp.o[0m
+[15.621s] [ 62%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wiimote_msgs/msg/timed_switch__type_support.cpp.o[0m
+[15.711s] [ 62%] Built target wiimote_msgs__rosidl_typesupport_c
+[16.505s] [ 64%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wiimote_msgs/msg/detail/ir_source_info__type_support_c.cpp.o[0m
+[16.508s] [ 66%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wiimote_msgs/msg/detail/state__type_support_c.cpp.o[0m
+[16.512s] [ 68%] [32mBuilding CXX object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wiimote_msgs/msg/detail/timed_switch__type_support_c.cpp.o[0m
+[17.435s] [ 70%] [32m[1mLinking CXX shared library libwiimote_msgs__rosidl_typesupport_cpp.so[0m
+[17.550s] [ 70%] Built target wiimote_msgs__rosidl_typesupport_cpp
+[18.026s] [ 72%] [32m[1mLinking CXX shared library libwiimote_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[18.077s] [ 75%] [32m[1mLinking CXX shared library libwiimote_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[18.220s] [ 75%] Built target wiimote_msgs__rosidl_typesupport_fastrtps_cpp
+[18.295s] [ 75%] Built target wiimote_msgs__rosidl_typesupport_introspection_cpp
+[18.388s] [ 77%] [32m[1mLinking CXX shared library libwiimote_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[18.524s] [ 77%] Built target wiimote_msgs__rosidl_typesupport_fastrtps_c
+[18.546s] [ 77%] Built target wiimote_msgs
+[18.591s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[21.048s] [ 79%] Built target wiimote_msgs__py
+[21.062s] [ 83%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_py.dir/rosidl_generator_py/wiimote_msgs/msg/_ir_source_info_s.c.o[0m
+[21.062s] [ 83%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_py.dir/rosidl_generator_py/wiimote_msgs/msg/_state_s.c.o[0m
+[21.062s] [ 85%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_generator_py.dir/rosidl_generator_py/wiimote_msgs/msg/_timed_switch_s.c.o[0m
+[21.262s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/wiimote_msgs/libwiimote_msgs__rosidl_generator_py.so[0m
+[21.293s] [ 87%] Built target wiimote_msgs__rosidl_generator_py
+[21.302s] [ 89%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/wiimote_msgs/_wiimote_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[21.304s] [ 91%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/wiimote_msgs/_wiimote_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[21.306s] [ 93%] [32mBuilding C object CMakeFiles/wiimote_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/wiimote_msgs/_wiimote_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[21.406s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/wiimote_msgs/wiimote_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.410s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/wiimote_msgs/wiimote_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.440s] [ 97%] Built target wiimote_msgs__rosidl_typesupport_c__pyext
+[21.457s] [ 97%] Built target wiimote_msgs__rosidl_typesupport_fastrtps_c__pyext
+[21.475s] [100%] [32m[1mLinking C shared library rosidl_generator_py/wiimote_msgs/wiimote_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.539s] [100%] Built target wiimote_msgs__rosidl_typesupport_introspection_c__pyext

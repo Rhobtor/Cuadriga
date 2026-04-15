@@ -108,7 +108,7 @@ Joy::Joy(const rclcpp::NodeOptions & options)
   last_z_right = 0;
   last_z_left = 0;
 
-  pub_ = create_publisher<sensor_msgs::msg::Joy>("/ARGJ801/joy", 10);
+  pub_ = create_publisher<sensor_msgs::msg::Joy>("/cuadriga/joy", 10);
   pub_cmd = create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
 
 

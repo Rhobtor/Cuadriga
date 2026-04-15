@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from path_manager_interfaces/srv/ReadPathFromFile.srv
+// generated code does not contain a copyright notice
+
+
+module path_manager_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "ReadPathFromFile.srv" "\n"
+      "" "\n"
+      "Solicita cargar una ruta desde un fichero en disco." "\n"
+      "" "\n"
+      "- filename: nombre del fichero (puede ser relativo a una carpeta de rutas del" "\n"
+      "  paquete o absoluto, según implementación)." "\n"
+      "" "\n"
+      "Response:" "\n"
+      "- success: true si el fichero se encontró y se cargó.")
+    struct ReadPathFromFile_Request {
+      string filename;
+    };
+    struct ReadPathFromFile_Response {
+      boolean success;
+    };
+  };
+};

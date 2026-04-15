@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-30cc632a6ee139d0b1cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "cuadriga_ctl_platform_interfaces__py",
+					"jsonFile" : "directory-cuadriga_ctl_platform_interfaces__py-ab3e300479fba50dc4be.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "cuadriga_ctl_platform_interfaces__rs",
+					"jsonFile" : "directory-cuadriga_ctl_platform_interfaces__rs-bea0011e82dcc78562d3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/cuadriga_ctl_platform_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "cuadriga_ctl_platform_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_cuadriga_ctl_platform_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_cuadriga_ctl_platform_interfaces_egg-468afacc45be194a9179.json",
+					"name" : "ament_cmake_python_build_cuadriga_ctl_platform_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_cuadriga_ctl_platform_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_cuadriga_ctl_platform_interfaces-244ca76d0e30a3458252.json",
+					"name" : "ament_cmake_python_copy_cuadriga_ctl_platform_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces-6bb45a777d12a45265c1.json",
+					"name" : "cuadriga_ctl_platform_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__cpp-82e11239f377b0504885.json",
+					"name" : "cuadriga_ctl_platform_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cuadriga_ctl_platform_interfaces__py::@87ddeb5f5a3ea759348e",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__py-af8609205b03b3542d9d.json",
+					"name" : "cuadriga_ctl_platform_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_generator_c-629ca6c081291c995d8e.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_generator_py-c46e8b9c186727ed88b0.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_c-9a225e919b9385edcaa1.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_c__pyext-eeed7ee504f1a3a6f5c7.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp-0d663083dbd097cd49ca.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c-39a13c2f056dec285279.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c__pyext-9ee385a0d822b1f252f0.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp-8d99cac43bb98443cb25.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c-eeb4c8c5b9eb603dc574.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c__pyext-16d532b556f6cdb64a1a.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp-3b7a0bc78a8e4ba58785.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "cuadriga_ctl_platform_interfaces__rs::@1c8c86eb4b61cce0d3ca",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces__rs-a9b26d1c104b8509b3c8.json",
+					"name" : "cuadriga_ctl_platform_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_ctl_platform_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_ctl_platform_interfaces_uninstall-0f2fa600e37e888ef9f5.json",
+					"name" : "cuadriga_ctl_platform_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-319d68f12b7090d428e9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces",
+		"source" : "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/argj801_ctl_platform/argj801_ctl_platform_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

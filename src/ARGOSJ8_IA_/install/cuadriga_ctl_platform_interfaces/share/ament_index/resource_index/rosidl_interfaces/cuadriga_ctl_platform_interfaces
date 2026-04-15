@@ -1,0 +1,16 @@
+msg/CmdThrottleMsg.idl
+msg/CmdThrottleMsg.msg
+msg/KinematicDebugMsg.idl
+msg/KinematicDebugMsg.msg
+srv/EmergencyStop.idl
+srv/EmergencyStop.srv
+srv/EmergencyStop_Request.msg
+srv/EmergencyStop_Response.msg
+srv/GetVelocity.idl
+srv/GetVelocity.srv
+srv/GetVelocity_Request.msg
+srv/GetVelocity_Response.msg
+srv/SetVelocity.idl
+srv/SetVelocity.srv
+srv/SetVelocity_Request.msg
+srv/SetVelocity_Response.msg

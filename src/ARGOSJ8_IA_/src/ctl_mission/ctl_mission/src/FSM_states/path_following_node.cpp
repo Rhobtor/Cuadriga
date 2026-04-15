@@ -2,7 +2,7 @@
  * @file path_following_node.cpp
  * @brief Lifecycle state node that computes / publishes a local path segment to follow.
  *
- * ## Role in the J8 mission FSM
+ * ## Role in the cuadriga mission FSM
  * This node represents the "PathFollowing" state/capability. The mission/orchestrator
  * activates it when the FSM enters the corresponding mode.
  *

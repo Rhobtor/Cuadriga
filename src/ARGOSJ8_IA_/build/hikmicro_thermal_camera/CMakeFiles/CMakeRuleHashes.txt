@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+b49b9cfe0b197bc5a75c41c5dabc043a CMakeFiles/hikmicro_thermal_camera_uninstall

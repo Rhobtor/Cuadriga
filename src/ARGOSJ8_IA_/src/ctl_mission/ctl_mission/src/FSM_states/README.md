@@ -1,7 +1,7 @@
 
 # FSM States
 
-This directory contains the implementation of the various states for the Finite State Machine (FSM) controlling the ARGJ801 rover. Each state is responsible for a specific functionality of the robot.
+This directory contains the implementation of the various states for the Finite State Machine (FSM) controlling the cuadriga rover. Each state is responsible for a specific functionality of the robot.
 
 ## States
 
@@ -41,12 +41,12 @@ The `Ctrl_node.cpp` file contains  implementation for the path tracking algorith
       - `dist_last_obj` (`std_msgs/msg/Float32`): Distance to the last object detected.
       - `odometry` (`nav_msgs/msg/Odometry`): Odometry information for the rover.
 - **Services:**
-      - `config_controller` (`argj801_ctl_mission_interfaces/srv/ConfigController`): Service to configure the controller parameters.
-      - `change_controller_type` (`argj801_ctl_mission_interfaces/srv/ChangeController`): Service to change the controller type.
-      - `config_pure_pursuit` (`argj801_ctl_mission_interfaces/srv/ConfigPurePursuitCtrl`): Service to configure the pure pursuit controller.
-      - `config_dynamic_pure` (`argj801_ctl_mission_interfaces/srv/ConfigDynamicPureCtrl`): Service to configure the dynamic pure pursuit controller.
-      - `config_dynamic_la_pure` (`argj801_ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl`): Service to configure the dynamic look-ahead pure pursuit controller.
-      - `config_regulated_pure` (`argj801_ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl`): Service to configure the regulated pure pursuit controller.
+      - `config_controller` (`cuadriga_ctl_mission_interfaces/srv/ConfigController`): Service to configure the controller parameters.
+      - `change_controller_type` (`cuadriga_ctl_mission_interfaces/srv/ChangeController`): Service to change the controller type.
+      - `config_pure_pursuit` (`cuadriga_ctl_mission_interfaces/srv/ConfigPurePursuitCtrl`): Service to configure the pure pursuit controller.
+      - `config_dynamic_pure` (`cuadriga_ctl_mission_interfaces/srv/ConfigDynamicPureCtrl`): Service to configure the dynamic pure pursuit controller.
+      - `config_dynamic_la_pure` (`cuadriga_ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl`): Service to configure the dynamic look-ahead pure pursuit controller.
+      - `config_regulated_pure` (`cuadriga_ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl`): Service to configure the regulated pure pursuit controller.
     
 - ** Parameters**:
     - `local_trajectory_topic`: The topic name for the local trajectory.
@@ -110,7 +110,7 @@ The `path_following_node.cpp` file, along with `mpc_node.py` from the `scripts` 
       - `fixposition/navsatfix` (`sensor_msgs/msg/NavSatFix`): GPS fix information.
 - **Services:**
       - `path_manager_interfaces/srv/GetFixFramePath`: Service to get the fixed frame path from the path_manage package.
-      - `argj801_ctl_mission_interfaces/srv/ChangeMode`: Service to change the FSM mode.
+      - `cuadriga_ctl_mission_interfaces/srv/ChangeMode`: Service to change the FSM mode.
 
 - **Parameters**:
     - `namespace.robot_name`: The name of the robot namespace.

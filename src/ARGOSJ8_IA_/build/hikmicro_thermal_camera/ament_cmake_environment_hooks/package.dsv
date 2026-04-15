@@ -1,0 +1,4 @@
+source;share/hikmicro_thermal_camera/local_setup.bash
+source;share/hikmicro_thermal_camera/local_setup.dsv
+source;share/hikmicro_thermal_camera/local_setup.sh
+source;share/hikmicro_thermal_camera/local_setup.zsh

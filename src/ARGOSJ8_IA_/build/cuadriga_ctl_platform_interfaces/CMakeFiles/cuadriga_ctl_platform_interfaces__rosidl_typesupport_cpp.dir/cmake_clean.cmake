@@ -1,0 +1,24 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg__type_support.cpp.o"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg__type_support.cpp.o.d"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg__type_support.cpp.o"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg__type_support.cpp.o.d"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/emergency_stop__type_support.cpp.o"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/emergency_stop__type_support.cpp.o.d"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/get_velocity__type_support.cpp.o"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/get_velocity__type_support.cpp.o.d"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/set_velocity__type_support.cpp.o"
+  "CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/set_velocity__type_support.cpp.o.d"
+  "libcuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.pdb"
+  "libcuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.so"
+  "rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/cmd_throttle_msg__type_support.cpp"
+  "rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/msg/kinematic_debug_msg__type_support.cpp"
+  "rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/emergency_stop__type_support.cpp"
+  "rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/get_velocity__type_support.cpp"
+  "rosidl_typesupport_cpp/cuadriga_ctl_platform_interfaces/srv/set_velocity__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cuadriga_ctl_platform_interfaces__rosidl_typesupport_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

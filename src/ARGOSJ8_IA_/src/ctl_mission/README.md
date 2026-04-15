@@ -1,5 +1,5 @@
 
-# ARGJ801 CONTROL MISSION ROS2 Package
+# cuadriga CONTROL MISSION ROS2 Package
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -15,13 +15,13 @@
 
 ## Introduction
 
-The mission control for the ARGJ801 rover is implemented through a Finite State Machine (FSM). The FSM controls the transitions between different operational states, each corresponding to specific robot behaviors such as teleoperation, autonomous path following, and emergency stop (E-stop). When a transition is called, the FSM deactivates the node(s) associated with the current state and activates the node(s) associated with the next state. The [Lifecycle Nodes](https://design.ros2.org/articles/node_lifecycle) mechanism in ROS2 is used to manage the activation and deactivation of nodes.
+The mission control for the cuadriga rover is implemented through a Finite State Machine (FSM). The FSM controls the transitions between different operational states, each corresponding to specific robot behaviors such as teleoperation, autonomous path following, and emergency stop (E-stop). When a transition is called, the FSM deactivates the node(s) associated with the current state and activates the node(s) associated with the next state. The [Lifecycle Nodes](https://design.ros2.org/articles/node_lifecycle) mechanism in ROS2 is used to manage the activation and deactivation of nodes.
 
 ## Package Structure
 
 ```
-argj801_ctl_mission
-├── argj801_ctl_mission_interfaces/  # Service definitions
+cuadriga_ctl_mission
+├── cuadriga_ctl_mission_interfaces/  # Service definitions
 │   ├── srv/  # Service files
 │   ├── CMakeLists.txt
 │   ├── LICENSE
@@ -33,7 +33,7 @@ argj801_ctl_mission
 ├── src/  # Source code
 │   ├── FSM_states/  # State implementations for the FSM
 │   ├── controllers/  # Controllers for path following
-│   ├── J8_FSM.cpp
+│   ├── cuadriga_FSM.cpp
 │   ├── README.md
 │   └── argj08_ctl_node.cpp
 ├── test/  # Test files
@@ -47,8 +47,8 @@ argj801_ctl_mission
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/arj801_ctl_mission.git
-    cd arj801_ctl_mission
+    git clone https://github.com/yourusername/arcuadriga01_ctl_mission.git
+    cd arcuadriga01_ctl_mission
     ```
 
 2. Install dependencies:
@@ -68,7 +68,7 @@ argj801_ctl_mission
 
 ## Finite State Machine
 
-A Finite State Machine, implemented in the file `J8_FSM.cpp`, manages the transitions between various states. These states define the different functionalities of the robot. The FSM ensures that only the nodes relevant to the current state are active, thus optimizing resource usage and ensuring predictable robot behavior.
+A Finite State Machine, implemented in the file `cuadriga_FSM.cpp`, manages the transitions between various states. These states define the different functionalities of the robot. The FSM ensures that only the nodes relevant to the current state are active, thus optimizing resource usage and ensuring predictable robot behavior.
 
 ![image_FSM](./images/FSM.png)
 
@@ -125,10 +125,10 @@ The FSM uses the lifecycle management capabilities of ROS2 to control the states
 
 ## Usage
 
-The [argoj8_setup package](https://github.com/Robotics-Mechatronics-UMA/argj801_setup), contains the launch and config files to correctly use this pacakge.
+The [argocuadriga_setup package](https://github.com/Robotics-Mechatronics-UMA/cuadriga_setup), contains the launch and config files to correctly use this pacakge.
 ## Contributing
 
-We welcome contributions to the ARGJ801 ROS2 package. To contribute, please follow these steps:
+We welcome contributions to the cuadriga ROS2 package. To contribute, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch from `main`.
