@@ -141,6 +141,21 @@ docker run --rm -it \
   ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
 ```
 
+If you want to pass a host-side DDS XML through `CYCLONEDDS_URI`, you must mount that path into the container. Otherwise the entrypoint will ignore it and fall back to the internal generated config:
+
+```sh
+docker run --rm -it \
+  --net=host \
+  --ipc=host \
+  --device=/dev/ttyUSB0:/dev/ttyUSB0 \
+  -v /home/cuadriga/.dds:/home/cuadriga/.dds:ro \
+  -e CYCLONEDDS_URI=file:///home/cuadriga/.dds/cyclone_dds.xml \
+  cuadriga-j8 \
+  ros2 launch argj801_setup J8_launch.py robot:=true use_cuadriga_backend:=true
+```
+
+If the ZeroTier interface name is different on your host, override it with `ZT_INTERFACE=<iface>`. If the interface comes up late, increase `ZT_WAIT_SECONDS`. You can also bypass auto-detection entirely with `ZT_IP=<ipv4>`.
+
 If your Fixposition endpoint is not the default one from `J8_params.yaml`, override it explicitly:
 
 ```sh

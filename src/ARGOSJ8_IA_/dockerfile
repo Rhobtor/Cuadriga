@@ -19,6 +19,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     SETUPTOOLS_USE_DISTUTILS=stdlib \
   ROS_DOMAIN_ID=0 \
   RMW_IMPLEMENTATION=rmw_cyclonedds_cpp \
+  CYCLONEDDS_URI=file:///etc/cyclonedds/local_cyclonedds.xml \
     QT_X11_NO_MITSHM=1 \
     # Para QtWebEngine dentro de contenedor (si ejecutas como root)
     QTWEBENGINE_DISABLE_SANDBOX=1 \
@@ -109,14 +110,26 @@ RUN python3 -m pip install --no-cache-dir --upgrade \
   utm pyproj \
   cvxpy
 
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      iproute2 \
+      iputils-ping \
+      net-tools \
+      gettext-base \
+      procps \
+      vim \
+    && rm -rf /var/lib/apt/lists/*
+
 # 7) Copiar código y compilar el workspace -------------------------------------
 WORKDIR /ros2_ws
 COPY src ./src
-COPY local_cyclonedds.xml /etc/cyclonedds/local_cyclonedds.xml
+RUN mkdir -p /etc/cyclonedds
+COPY local_cyclonedds.xml /etc/cyclonedds/local_cyclonedds.template.xml
 
-RUN mkdir -p /root/.dds && \
-  cp /etc/cyclonedds/local_cyclonedds.xml /root/.dds/local_cyclonedds.xml && \
-  printf '\n# ROS 2 Configuration\nexport ROS_DOMAIN_ID=0\nexport RMW_IMPLEMENTATION=rmw_cyclonedds_cpp\n' >> /root/.bashrc
+# RUN mkdir -p /root/.dds && \
+#   cp /etc/cyclonedds/local_cyclonedds.xml /root/.dds/local_cyclonedds.xml && \
+#   printf '\n# ROS 2 Multi-PC Configuration\nexport ROS_DOMAIN_ID=0\nexport RMW_IMPLEMENTATION=rmw_cyclonedds_cpp\nexport CYCLONEDDS_URI=file:///etc/cyclonedds/local_cyclonedds.xml\n' >> /root/.bashrc
 
 RUN apt-get update && \
     bash -c "set -e \
