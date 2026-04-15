@@ -1,8 +1,0 @@
-{
-  "package_name": "wiimote_msgs",
-  "non_idl_tuples": [
-    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/wiimote_msgs:msg/IrSourceInfo.msg",
-    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/wiimote_msgs:msg/State.msg",
-    "/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/src/j8_joystick/wiimote_msgs:msg/TimedSwitch.msg"
-  ]
-}

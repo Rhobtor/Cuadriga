@@ -1,4 +1,0 @@
-float32 v_forward
-float32 l_ahead_dist
-float32 k_error_lineal
-float32 k_error_angular

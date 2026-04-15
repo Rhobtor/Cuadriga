@@ -1,0 +1,136 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found GeographicLib: /usr/lib/x86_64-linux-gnu  
+-- Found cuadriga_interfaces: 0.0.0 (/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces/share/cuadriga_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/cuadriga
+[ 50%] [32mBuilding CXX object CMakeFiles/cuadriga.dir/src/cuadriga.cpp.o[0m
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In constructor ‘[01m[KCuadriga::Cuadriga()[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:8:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KLatitud[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+    8 |     float [01;35m[KLatitud[m[K=0;
+      |           [01;35m[K^~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:9:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KLongitud[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+    9 |     float [01;35m[KLongitud[m[K=0;
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:10:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KAltitud[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   10 |     float [01;35m[KAltitud[m[K=0;
+      |           [01;35m[K^~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:11:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KLatitud0[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   11 |     float [01;35m[KLatitud0[m[K=0;
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:12:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KLongitud0[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   12 |     float [01;35m[KLongitud0[m[K=0;
+      |           [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:13:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KAltitud0[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   13 |     float [01;35m[KAltitud0[m[K=0;
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:14:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_origen[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   14 |     bool [01;35m[Kflag_origen[m[K=false;
+      |          [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:16:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   16 |     bool [01;35m[Kflag[m[K = 0;
+      |          [01;35m[K^~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:17:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_rafaga_activa[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   17 |     bool [01;35m[Kflag_rafaga_activa[m[K =false;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:18:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcontador_rafaga[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |     int [01;35m[Kcontador_rafaga[m[K = 0;
+      |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:19:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktemporizador[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   19 |     int [01;35m[Ktemporizador[m[K = 0;
+      |         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:20:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KCaracter[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   20 |     std::array <char,2> [01;35m[KCaracter[m[K = {0,0};
+      |                         [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:21:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KVoltaje_bateria[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   21 |     float [01;35m[KVoltaje_bateria[m[K = 0;
+      |           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:22:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KVoltaje_controladora[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   22 |     float [01;35m[KVoltaje_controladora[m[K = 0;
+      |           [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:24:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kw[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   24 |     float [01;35m[Kw[m[K = 0;
+      |           [01;35m[K^[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:29:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcmd_vel_hex[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   29 |     std::array<char,2> [01;35m[Kcmd_vel_hex[m[K = {0,0};
+      |                        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kint Cuadriga::Hex2Dec(std::array<char, 2>)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:238:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::array<char, 2>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  238 |     for (int i = 0;[01;35m[Ki<hex_value.size()[m[K;i++) {
+      |                    [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kvoid Cuadriga::FollowTheCarrot()[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:344:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kk[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  344 |         float [01;35m[Kk[m[K = 1; //Ganancia que le da peso a la distancia en el calculo
+      |               [01;35m[K^[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:353:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KL[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  353 |         float [01;35m[KL[m[K = 0.5;
+      |               [01;35m[K^[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kvoid Cuadriga::process_query(std_msgs::msg::UInt8MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:494:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  494 | void Cuadriga::process_query([01;35m[Kconst std_msgs::msg::UInt8MultiArray::SharedPtr msg[m[K)
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:[m[K In member function ‘[01m[Kvoid Cuadriga::process_GPS_data(sensor_msgs::msg::NavSatFix_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga/src/cuadriga.cpp:537:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KL[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  537 |         float [01;35m[KL[m[K = 0.5f;
+      |               [01;35m[K^[m[K
+[100%] [32m[1mLinking CXX executable cuadriga[0m
+[100%] Built target cuadriga
+-- Install configuration: ""
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/lib/cuadriga/cuadriga
+-- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/lib/cuadriga/cuadriga" to ""
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga//launch
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga//launch/cuadriga_launch.py
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/package_run_dependencies/cuadriga
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/parent_prefix_path/cuadriga
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.sh
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.dsv
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/path.sh
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/path.dsv
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.bash
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.sh
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.zsh
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.dsv
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/package.dsv
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/packages/cuadriga
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig.cmake
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig-version.cmake
+-- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/package.xml

@@ -1,6 +1,0 @@
-float32 k_angle
-int16 points_in_window
-float32 k_position
-float32 v_forward
-float32 l_ahead_dist
-

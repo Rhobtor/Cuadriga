@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/gpx_loader/gpx_loader.egg-info
+writing ../../build/gpx_loader/gpx_loader.egg-info/PKG-INFO
+writing dependency_links to ../../build/gpx_loader/gpx_loader.egg-info/dependency_links.txt
+writing entry points to ../../build/gpx_loader/gpx_loader.egg-info/entry_points.txt
+writing requirements to ../../build/gpx_loader/gpx_loader.egg-info/requires.txt
+writing top-level names to ../../build/gpx_loader/gpx_loader.egg-info/top_level.txt
+writing manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+reading manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+writing manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+copying gpx_loader/gpx_loader_node.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+copying gpx_loader/__init__.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+running install
+running install_lib
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+copying /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader/gpx_loader_node.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+copying /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader/__init__.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+byte-compiling /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader/gpx_loader_node.py to gpx_loader_node.cpython-310.pyc
+byte-compiling /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index
+creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index/packages
+copying resource/gpx_loader -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index/packages
+copying package.xml -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/gpx_loader
+running install_egg_info
+Copying ../../build/gpx_loader/gpx_loader.egg-info to /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gpx_loader_node script to /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/gpx_loader
+writing list of installed files to '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/install.log'

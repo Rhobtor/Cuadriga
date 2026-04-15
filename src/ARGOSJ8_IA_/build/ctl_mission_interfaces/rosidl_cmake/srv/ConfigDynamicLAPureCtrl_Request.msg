@@ -1,8 +1,0 @@
-float32 look_ahead_v_gain
-float32 max_v_forward
-float32 max_ang_acc
-float32 max_ang_dec
-float32 max_lin_acc
-float32 max_lin_dec
-float32 speed_pow
-float32 min_look_ahead_d

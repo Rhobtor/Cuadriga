@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "cuadriga_interfaces__py",
+		"source" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/cuadriga_interfaces/cuadriga_interfaces__py"
+	}
+}

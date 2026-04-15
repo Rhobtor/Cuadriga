@@ -1,0 +1,17 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/lib/cuadriga/cuadriga
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga//launch/cuadriga_launch.py
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/package_run_dependencies/cuadriga
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/parent_prefix_path/cuadriga
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.sh
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/ament_prefix_path.dsv
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/path.sh
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/environment/path.dsv
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.bash
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.sh
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.zsh
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/local_setup.dsv
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/package.dsv
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/ament_index/resource_index/packages/cuadriga
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig.cmake
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/cmake/cuadrigaConfig-version.cmake
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga/share/cuadriga/package.xml

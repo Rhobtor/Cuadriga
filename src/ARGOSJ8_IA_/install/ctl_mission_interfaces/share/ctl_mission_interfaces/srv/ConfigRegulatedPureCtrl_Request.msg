@@ -1,3 +1,0 @@
-float32 look_ahead_dis
-float32 v_forward
-float32 r_min

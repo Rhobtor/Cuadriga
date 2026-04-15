@@ -1,1 +1,0 @@
-from cuadriga_launch import generate_launch_description

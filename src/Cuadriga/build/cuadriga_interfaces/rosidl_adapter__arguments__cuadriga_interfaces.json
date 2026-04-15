@@ -1,0 +1,6 @@
+{
+  "package_name": "cuadriga_interfaces",
+  "non_idl_tuples": [
+    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga_interfaces:msg/GPXPath.msg"
+  ]
+}

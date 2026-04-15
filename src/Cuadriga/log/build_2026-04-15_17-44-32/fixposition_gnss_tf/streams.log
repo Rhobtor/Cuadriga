@@ -1,0 +1,31 @@
+[0.019s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/Fixposition_driver_pkg-main/fixposition_gnss_tf-main -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf
+[0.331s] -- The CXX compiler identification is GNU 11.4.0
+[0.344s] -- Detecting CXX compiler ABI info
+[0.439s] -- Detecting CXX compiler ABI info - done
+[0.447s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.447s] -- Detecting CXX compile features
+[0.448s] -- Detecting CXX compile features - done
+[0.464s] -- Configuring done
+[0.467s] -- Generating done
+[0.468s] -- Build files have been written to: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf
+[0.471s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/Fixposition_driver_pkg-main/fixposition_gnss_tf-main -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf
+[0.473s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf -- -j8 -l8
+[0.517s] [ 50%] [32mBuilding CXX object CMakeFiles/fixposition_gnss_tf.dir/src/gnss_tf.cpp.o[0m
+[2.077s] [100%] [32m[1mLinking CXX shared library libfixposition_gnss_tf.so[0m
+[2.130s] [100%] Built target fixposition_gnss_tf
+[2.145s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf -- -j8 -l8
+[2.158s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf
+[2.165s] -- Install configuration: "Release"
+[2.166s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/./include
+[2.166s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/./include/fixposition_gnss_tf
+[2.166s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/./include/fixposition_gnss_tf/gnss_tf.hpp
+[2.166s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/libfixposition_gnss_tf.so
+[2.167s] -- Up-to-date: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/libfixposition_gnss_tf.so
+[2.167s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/cmake/fixposition_gnss_tf/fixposition_gnss_tf-targets.cmake
+[2.167s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/cmake/fixposition_gnss_tf/fixposition_gnss_tf-targets-release.cmake
+[2.167s] -- Up-to-date: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/include/fixposition_gnss_tf
+[2.167s] -- Up-to-date: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/include/fixposition_gnss_tf/gnss_tf.hpp
+[2.167s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/share/fixposition_gnss_tf/package.xml
+[2.167s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/cmake/fixposition_gnss_tf/fixposition_gnss_tf-config.cmake
+[2.167s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/fixposition_gnss_tf/lib/cmake/fixposition_gnss_tf/fixposition_gnss_tf-config-version.cmake
+[2.169s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_gnss_tf

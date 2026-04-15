@@ -1,9 +1,0 @@
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/uninstall.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/sdl2_vendor_uninstall.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/test.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/edit_cache.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/rebuild_cache.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/list_install_components.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/install.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/install/local.dir
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/sdl2_vendor/CMakeFiles/install/strip.dir

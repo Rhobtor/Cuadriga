@@ -1,5 +1,0 @@
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/SetVelocity.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/GetVelocity.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:srv/EmergencyStop.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:msg/CmdThrottleMsg.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/cuadriga_ctl_platform_interfaces/rosidl_adapter/cuadriga_ctl_platform_interfaces:msg/KinematicDebugMsg.idl

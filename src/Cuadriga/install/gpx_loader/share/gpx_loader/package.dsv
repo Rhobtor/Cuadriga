@@ -1,0 +1,6 @@
+source;share/gpx_loader/hook/pythonpath.ps1
+source;share/gpx_loader/hook/pythonpath.dsv
+source;share/gpx_loader/hook/pythonpath.sh
+source;share/gpx_loader/hook/ament_prefix_path.ps1
+source;share/gpx_loader/hook/ament_prefix_path.dsv
+source;share/gpx_loader/hook/ament_prefix_path.sh

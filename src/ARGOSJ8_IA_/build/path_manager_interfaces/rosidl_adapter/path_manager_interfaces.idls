@@ -1,8 +1,0 @@
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/WritePathToFile.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/ReadPathFromFile.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/ReturnRobotPath.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/RobotPath.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/GetFixFramePath.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/GetLLPath.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/PlanPath.idl
-/home/rhobtor/PHD/Cuadriga_j8/src/Cuadriga/src/ARGOSJ8_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/AssistEmergency.idl

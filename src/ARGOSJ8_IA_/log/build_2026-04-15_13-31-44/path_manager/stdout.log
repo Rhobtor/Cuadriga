@@ -1,4 +1,0 @@
-[ 33%] [32mBuilding CXX object CMakeFiles/path_manager_node.dir/src/path_manager.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/path_manager_node.dir/src/Demaias_planner/DEMAIAS.cpp.o[0m
-[100%] [32m[1mLinking CXX executable path_manager_node[0m
-[100%] Built target path_manager_node

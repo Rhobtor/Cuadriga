@@ -1,0 +1,105 @@
+[0.013s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy
+[0.306s] -- The C compiler identification is GNU 11.4.0
+[0.363s] -- The CXX compiler identification is GNU 11.4.0
+[0.372s] -- Detecting C compiler ABI info
+[0.442s] -- Detecting C compiler ABI info - done
+[0.450s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.450s] -- Detecting C compile features
+[0.450s] -- Detecting C compile features - done
+[0.453s] -- Detecting CXX compiler ABI info
+[0.528s] -- Detecting CXX compiler ABI info - done
+[0.536s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.536s] -- Detecting CXX compile features
+[0.536s] -- Detecting CXX compile features - done
+[0.540s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.705s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.834s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.900s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.906s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.917s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.936s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.954s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.034s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.040s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.088s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.104s] -- Looking for pthread.h
+[1.177s] -- Looking for pthread.h - found
+[1.177s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.251s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.252s] -- Found Threads: TRUE  
+[1.322s] -- Found rclcpp_components: 16.0.16 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.368s] -- Found sdl2_vendor: 3.3.0 (/opt/ros/humble/share/sdl2_vendor/cmake)
+[1.377s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.411s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.501s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.502s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy/include>
+[1.502s] -- Configured cppcheck exclude dirs and/or files: 
+[1.503s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.503s] -- Configured cpplint exclude dirs and/or files: 
+[1.504s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.505s] -- Added test 'lint_cmake' to check CMake code style
+[1.506s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.508s] -- Added test 'uncrustify' to check C / C++ code style
+[1.508s] -- Configured uncrustify additional arguments: 
+[1.509s] -- Added test 'xmllint' to check XML markup files
+[1.512s] -- Configuring done
+[1.529s] -- Generating done
+[1.534s] -- Build files have been written to: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy
+[1.543s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy
+[1.545s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy -- -j8 -l8
+[1.595s] [ 16%] [32mBuilding CXX object CMakeFiles/joy.dir/src/joy.cpp.o[0m
+[1.595s] [ 33%] [32mBuilding CXX object CMakeFiles/joy_node.dir/rclcpp_components/node_main_joy_node.cpp.o[0m
+[1.602s] [ 50%] [32mBuilding CXX object CMakeFiles/joy_enumerate_devices.dir/src/joy_enumerate_devices.cpp.o[0m
+[2.235s] [ 66%] [32m[1mLinking CXX executable joy_enumerate_devices[0m
+[2.343s] [ 66%] Built target joy_enumerate_devices
+[7.974s] [01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy/src/joy.cpp:[m[K In member function ‘[01m[Kvoid joy::Joy::eventThread()[m[K’:
+[7.974s] [01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy/src/joy.cpp:489:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kwheel_separation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.974s]   489 |       float [01;35m[Kwheel_separation[m[K = 1.35;
+[7.974s]       |             [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[7.975s] [01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy/src/joy.cpp:512:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kthrottle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.975s]   512 |       float [01;35m[Kthrottle[m[K = rad2per_throttle*(left_wheels + rigth_wheels)/wheels_radius;
+[7.975s]       |             [01;35m[K^~~~~~~~[m[K
+[7.976s] [01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/joy/src/joy.cpp:513:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksteer[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.976s]   513 |       float [01;35m[Ksteer[m[K = rad2per_steer*(-rigth_wheels + left_wheels)/wheels_radius;
+[7.977s]       |             [01;35m[K^~~~~[m[K
+[8.289s] [ 83%] [32m[1mLinking CXX executable joy_node[0m
+[8.677s] [ 83%] Built target joy_node
+[17.571s] [100%] [32m[1mLinking CXX shared library libjoy.so[0m
+[18.333s] [100%] Built target joy
+[18.351s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy -- -j8 -l8
+[18.353s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy
+[18.365s] -- Install configuration: ""
+[18.365s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/lib/libjoy.so
+[18.374s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/lib/libjoy.so" to ""
+[18.374s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/lib/joy/joy_node
+[18.375s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/lib/joy/joy_node" to ""
+[18.375s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/lib/joy/joy_enumerate_devices
+[18.375s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/include/joy
+[18.375s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/include/joy/joy
+[18.375s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/include/joy/joy/joy.hpp
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/config
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/config/joy-params.yaml
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/launch
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/launch/joy-launch_test.py
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/launch/joy-composed-launch.py
+[18.376s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/ament_index/resource_index/package_run_dependencies/joy
+[18.377s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/ament_index/resource_index/parent_prefix_path/joy
+[18.377s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/environment/ament_prefix_path.sh
+[18.377s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/environment/ament_prefix_path.dsv
+[18.377s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/environment/path.sh
+[18.378s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/environment/path.dsv
+[18.378s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/local_setup.bash
+[18.378s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/local_setup.sh
+[18.378s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/local_setup.zsh
+[18.379s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/local_setup.dsv
+[18.379s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/package.dsv
+[18.379s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/ament_index/resource_index/packages/joy
+[18.380s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/ament_index/resource_index/rclcpp_components/joy
+[18.380s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/export_joyExport.cmake
+[18.380s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/export_joyExport-noconfig.cmake
+[18.380s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/ament_cmake_export_targets-extras.cmake
+[18.380s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/ament_cmake_export_dependencies-extras.cmake
+[18.381s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/joyConfig.cmake
+[18.381s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/cmake/joyConfig-version.cmake
+[18.381s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/joy/share/joy/package.xml
+[18.384s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy

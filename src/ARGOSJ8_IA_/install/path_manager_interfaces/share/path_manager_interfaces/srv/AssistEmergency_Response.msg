@@ -1,3 +1,0 @@
-
-bool success
-nav_msgs/Path path

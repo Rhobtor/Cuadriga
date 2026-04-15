@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from fixposition_driver_ros2/msg/Speed.msg
+// generated code does not contain a copyright notice
+
+
+module fixposition_driver_ros2 {
+  module msg {
+    @verbatim (language="comment", text=
+      "   Copyright (c) 2023" "\n"
+      "   Fixposition AG" "\n"
+      "" "\n"
+      "Wheel speed input to Fixposition ROS Driver")
+    struct Speed {
+      @verbatim (language="comment", text=
+        "Velocity values in [mm/s] (or [mrad/s]) as integer 32bit" "\n"
+        "2 Options:" "\n"
+        "Option 1: One vehicle speed, of sensor RC" "\n"
+        "Option 2: One vehicle speed, of sensor RC and the yaw rate of the vehicle" "\n"
+        "Option 3: Fill in 4 Values of 4 wheels, in the order of FR, FL, RR, RL")
+      sequence<int32> speeds;
+    };
+  };
+};

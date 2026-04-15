@@ -1,0 +1,139 @@
+[0.000000] (-) TimerEvent: {}
+[0.000157] (-) JobUnselected: {'identifier': 'ctl_mission'}
+[0.000224] (-) JobUnselected: {'identifier': 'ctl_mission_interfaces'}
+[0.000267] (-) JobUnselected: {'identifier': 'cuadriga_gui'}
+[0.000445] (-) JobUnselected: {'identifier': 'cuadriga_setup'}
+[0.000581] (-) JobUnselected: {'identifier': 'hikmicro_thermal_camera'}
+[0.000650] (-) JobUnselected: {'identifier': 'joy'}
+[0.000694] (-) JobUnselected: {'identifier': 'joy_linux'}
+[0.000745] (-) JobUnselected: {'identifier': 'path_manager'}
+[0.000824] (-) JobUnselected: {'identifier': 'path_manager_interfaces'}
+[0.000924] (-) JobUnselected: {'identifier': 'sdl2_vendor'}
+[0.001081] (-) JobUnselected: {'identifier': 'security_check'}
+[0.001129] (-) JobUnselected: {'identifier': 'security_check_interfaces'}
+[0.001157] (-) JobUnselected: {'identifier': 'spacenav'}
+[0.001194] (-) JobUnselected: {'identifier': 'wiimote_msgs'}
+[0.001235] (cuadriga_actuator) JobQueued: {'identifier': 'cuadriga_actuator', 'dependencies': OrderedDict()}
+[0.001363] (cuadriga_actuator) JobStarted: {'identifier': 'cuadriga_actuator'}
+[0.009408] (cuadriga_actuator) JobProgress: {'identifier': 'cuadriga_actuator', 'progress': 'cmake'}
+[0.009823] (cuadriga_actuator) JobProgress: {'identifier': 'cuadriga_actuator', 'progress': 'build'}
+[0.010676] (cuadriga_actuator) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator', '--', '-j8', '-l8'], 'cwd': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuadriga'), ('SSH_CLIENT', '192.168.2.131 32914 22'), ('LC_TIME', 'en_GB.UTF-8'), ('GIT_EDITOR', ':'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver/lib:/home/cuadriga/tfgcuadriga/install/serial_driver/lib:/home/cuadriga/tfgcuadriga/install/joy/lib:/home/cuadriga/tfgcuadriga/install/io_context/lib:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cuadriga'), ('CYCLONEDDS_URI', 'file:///home/cuadriga/.dds/cyclone_dds.xml'), ('OLDPWD', '/home/cuadriga/cuadriga_ws/Cuadriga/src'), ('TERM_PROGRAM_VERSION', '1.115.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-44674947-686d-4746-bce6-c05e2724519f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_GB.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuadriga'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignorespace'), ('PATH', '/home/cuadriga/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cuadriga/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-51313c356a.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/gpx_loader:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator'), ('GIT_MERGE_AUTOEDIT', 'no'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.2.131 32914 192.168.2.115 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cuadriga/tfgcuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble')]), 'shell': False}
+[0.055518] (cuadriga_actuator) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cuadriga_actuator_node\x1b[0m\n'}
+[0.075948] (cuadriga_actuator) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cuadriga_actuator_node.dir/src/cuadriga_actuator_node_main.cpp.o\x1b[0m\n'}
+[0.076165] (cuadriga_actuator) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cuadriga_actuator_node.dir/src/cuadriga_actuator_node.cpp.o\x1b[0m\n'}
+[0.099460] (-) TimerEvent: {}
+[0.199751] (-) TimerEvent: {}
+[0.300057] (-) TimerEvent: {}
+[0.400322] (-) TimerEvent: {}
+[0.500589] (-) TimerEvent: {}
+[0.600872] (-) TimerEvent: {}
+[0.701157] (-) TimerEvent: {}
+[0.801543] (-) TimerEvent: {}
+[0.901862] (-) TimerEvent: {}
+[1.002163] (-) TimerEvent: {}
+[1.102480] (-) TimerEvent: {}
+[1.202759] (-) TimerEvent: {}
+[1.303012] (-) TimerEvent: {}
+[1.403321] (-) TimerEvent: {}
+[1.503602] (-) TimerEvent: {}
+[1.603877] (-) TimerEvent: {}
+[1.704140] (-) TimerEvent: {}
+[1.804507] (-) TimerEvent: {}
+[1.904776] (-) TimerEvent: {}
+[2.005113] (-) TimerEvent: {}
+[2.105380] (-) TimerEvent: {}
+[2.205640] (-) TimerEvent: {}
+[2.305862] (-) TimerEvent: {}
+[2.406193] (-) TimerEvent: {}
+[2.506496] (-) TimerEvent: {}
+[2.606826] (-) TimerEvent: {}
+[2.707122] (-) TimerEvent: {}
+[2.807406] (-) TimerEvent: {}
+[2.907658] (-) TimerEvent: {}
+[3.007928] (-) TimerEvent: {}
+[3.108193] (-) TimerEvent: {}
+[3.208479] (-) TimerEvent: {}
+[3.308754] (-) TimerEvent: {}
+[3.409080] (-) TimerEvent: {}
+[3.509347] (-) TimerEvent: {}
+[3.609616] (-) TimerEvent: {}
+[3.709881] (-) TimerEvent: {}
+[3.810136] (-) TimerEvent: {}
+[3.910381] (-) TimerEvent: {}
+[4.010632] (-) TimerEvent: {}
+[4.110862] (-) TimerEvent: {}
+[4.211140] (-) TimerEvent: {}
+[4.311395] (-) TimerEvent: {}
+[4.411633] (-) TimerEvent: {}
+[4.511832] (-) TimerEvent: {}
+[4.612239] (-) TimerEvent: {}
+[4.712505] (-) TimerEvent: {}
+[4.812781] (-) TimerEvent: {}
+[4.913116] (-) TimerEvent: {}
+[5.013370] (-) TimerEvent: {}
+[5.113623] (-) TimerEvent: {}
+[5.213932] (-) TimerEvent: {}
+[5.314221] (-) TimerEvent: {}
+[5.414535] (-) TimerEvent: {}
+[5.514827] (-) TimerEvent: {}
+[5.615154] (-) TimerEvent: {}
+[5.715485] (-) TimerEvent: {}
+[5.815725] (-) TimerEvent: {}
+[5.916021] (-) TimerEvent: {}
+[6.016386] (-) TimerEvent: {}
+[6.116736] (-) TimerEvent: {}
+[6.217063] (-) TimerEvent: {}
+[6.317355] (-) TimerEvent: {}
+[6.417602] (-) TimerEvent: {}
+[6.517877] (-) TimerEvent: {}
+[6.618206] (-) TimerEvent: {}
+[6.718510] (-) TimerEvent: {}
+[6.818871] (-) TimerEvent: {}
+[6.919181] (-) TimerEvent: {}
+[7.019431] (-) TimerEvent: {}
+[7.119692] (-) TimerEvent: {}
+[7.219974] (-) TimerEvent: {}
+[7.320252] (-) TimerEvent: {}
+[7.420582] (-) TimerEvent: {}
+[7.520913] (-) TimerEvent: {}
+[7.621234] (-) TimerEvent: {}
+[7.721561] (-) TimerEvent: {}
+[7.821852] (-) TimerEvent: {}
+[7.922178] (-) TimerEvent: {}
+[8.022473] (-) TimerEvent: {}
+[8.122848] (-) TimerEvent: {}
+[8.223209] (-) TimerEvent: {}
+[8.323522] (-) TimerEvent: {}
+[8.423819] (-) TimerEvent: {}
+[8.465024] (cuadriga_actuator) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cuadriga_actuator_node\x1b[0m\n'}
+[8.523943] (-) TimerEvent: {}
+[8.624224] (-) TimerEvent: {}
+[8.724495] (-) TimerEvent: {}
+[8.824820] (-) TimerEvent: {}
+[8.868018] (cuadriga_actuator) StdoutLine: {'line': b'[100%] Built target cuadriga_actuator_node\n'}
+[8.880477] (cuadriga_actuator) CommandEnded: {'returncode': 0}
+[8.880815] (cuadriga_actuator) JobProgress: {'identifier': 'cuadriga_actuator', 'progress': 'install'}
+[8.889607] (cuadriga_actuator) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator'], 'cwd': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuadriga'), ('SSH_CLIENT', '192.168.2.131 32914 22'), ('LC_TIME', 'en_GB.UTF-8'), ('GIT_EDITOR', ':'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver/lib:/home/cuadriga/tfgcuadriga/install/serial_driver/lib:/home/cuadriga/tfgcuadriga/install/joy/lib:/home/cuadriga/tfgcuadriga/install/io_context/lib:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/lib:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cuadriga'), ('CYCLONEDDS_URI', 'file:///home/cuadriga/.dds/cyclone_dds.xml'), ('OLDPWD', '/home/cuadriga/cuadriga_ws/Cuadriga/src'), ('TERM_PROGRAM_VERSION', '1.115.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-44674947-686d-4746-bce6-c05e2724519f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_GB.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuadriga'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignorespace'), ('PATH', '/home/cuadriga/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cuadriga/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cuadriga/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-51313c356a.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/gpx_loader:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator'), ('GIT_MERGE_AUTOEDIT', 'no'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.2.131 32914 192.168.2.115 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cuadriga/tfgcuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble')]), 'shell': False}
+[8.898025] (cuadriga_actuator) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.898537] (cuadriga_actuator) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[8.898834] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/lib/cuadriga_actuator/cuadriga_actuator_node\n'}
+[8.899150] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/include/cuadriga_actuator/cuadriga_actuator_node.hpp\n'}
+[8.899362] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/ament_index/resource_index/package_run_dependencies/cuadriga_actuator\n'}
+[8.899546] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/ament_index/resource_index/parent_prefix_path/cuadriga_actuator\n'}
+[8.899686] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/ament_prefix_path.sh\n'}
+[8.899843] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/ament_prefix_path.dsv\n'}
+[8.900070] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/path.sh\n'}
+[8.900204] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/environment/path.dsv\n'}
+[8.900342] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.bash\n'}
+[8.900479] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.sh\n'}
+[8.900616] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.zsh\n'}
+[8.900750] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/local_setup.dsv\n'}
+[8.900991] (cuadriga_actuator) StdoutLine: {'line': b'-- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/package.dsv\n'}
+[8.911035] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/ament_index/resource_index/packages/cuadriga_actuator\n'}
+[8.911247] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/cmake/cuadriga_actuatorConfig.cmake\n'}
+[8.911349] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/cmake/cuadriga_actuatorConfig-version.cmake\n'}
+[8.911507] (cuadriga_actuator) StdoutLine: {'line': b'-- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_actuator/share/cuadriga_actuator/package.xml\n'}
+[8.913181] (cuadriga_actuator) CommandEnded: {'returncode': 0}
+[8.925453] (-) TimerEvent: {}
+[8.927585] (cuadriga_actuator) JobEnded: {'identifier': 'cuadriga_actuator', 'rc': 0}
+[8.927909] (-) EventReactorShutdown: {}

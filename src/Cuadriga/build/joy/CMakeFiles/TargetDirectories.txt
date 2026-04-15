@@ -1,0 +1,12 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/uninstall.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/joy_uninstall.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/joy.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/joy_node.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/joy_enumerate_devices.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/test.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/edit_cache.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/rebuild_cache.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/list_install_components.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/install.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/install/local.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/joy/CMakeFiles/install/strip.dir

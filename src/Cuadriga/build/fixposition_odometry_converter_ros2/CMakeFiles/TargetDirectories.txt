@@ -1,0 +1,11 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/uninstall.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/fixposition_odometry_converter_ros2_uninstall.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/odom_converter.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/odom_converter_node.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/test.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/edit_cache.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/rebuild_cache.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/list_install_components.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/install.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/install/local.dir
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2/CMakeFiles/install/strip.dir

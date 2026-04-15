@@ -1,0 +1,37 @@
+[1.727s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/gpx_loader': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gpx_loader build --build-base /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build install --record /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/install.log --single-version-externally-managed install_data
+[2.156s] running egg_info
+[2.156s] creating ../../build/gpx_loader/gpx_loader.egg-info
+[2.156s] writing ../../build/gpx_loader/gpx_loader.egg-info/PKG-INFO
+[2.156s] writing dependency_links to ../../build/gpx_loader/gpx_loader.egg-info/dependency_links.txt
+[2.156s] writing entry points to ../../build/gpx_loader/gpx_loader.egg-info/entry_points.txt
+[2.157s] writing requirements to ../../build/gpx_loader/gpx_loader.egg-info/requires.txt
+[2.157s] writing top-level names to ../../build/gpx_loader/gpx_loader.egg-info/top_level.txt
+[2.157s] writing manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+[2.159s] reading manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+[2.160s] writing manifest file '../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt'
+[2.160s] running build
+[2.160s] running build_py
+[2.161s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build
+[2.161s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib
+[2.161s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+[2.161s] copying gpx_loader/gpx_loader_node.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+[2.161s] copying gpx_loader/__init__.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader
+[2.161s] running install
+[2.161s] running install_lib
+[2.163s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+[2.163s] copying /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader/gpx_loader_node.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+[2.163s] copying /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build/lib/gpx_loader/__init__.py -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader
+[2.164s] byte-compiling /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader/gpx_loader_node.py to gpx_loader_node.cpython-310.pyc
+[2.166s] byte-compiling /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader/__init__.py to __init__.cpython-310.pyc
+[2.166s] running install_data
+[2.166s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index
+[2.166s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index
+[2.166s] creating /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index/packages
+[2.166s] copying resource/gpx_loader -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/ament_index/resource_index/packages
+[2.167s] copying package.xml -> /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/share/gpx_loader
+[2.167s] running install_egg_info
+[2.169s] Copying ../../build/gpx_loader/gpx_loader.egg-info to /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages/gpx_loader-0.0.0-py3.10.egg-info
+[2.170s] running install_scripts
+[2.206s] Installing gpx_loader_node script to /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/gpx_loader
+[2.206s] writing list of installed files to '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/install.log'
+[2.243s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/gpx_loader' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/gpx_loader/lib/python3.10/site-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/install/cuadriga_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gpx_loader build --build-base /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/build install --record /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/gpx_loader/install.log --single-version-externally-managed install_data

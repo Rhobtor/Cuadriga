@@ -1,0 +1,4 @@
+source;share/cuadriga/local_setup.bash
+source;share/cuadriga/local_setup.dsv
+source;share/cuadriga/local_setup.sh
+source;share/cuadriga/local_setup.zsh

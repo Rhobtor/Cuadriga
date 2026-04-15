@@ -1,8 +1,0 @@
-## ReturnRobotPath.srv
-##
-## Devuelve la ruta interna "robot_path" que el robot pretende seguir en modo
-## autónomo. No tiene request: simplemente responde con el path actual.
-##
-## Response:
-##   - path: nav_msgs/Path (ver frame_id para interpretar coordenadas).
-

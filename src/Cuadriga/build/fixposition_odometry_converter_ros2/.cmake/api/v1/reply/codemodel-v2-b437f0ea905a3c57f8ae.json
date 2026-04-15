@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-7ee9bb0eef282e1b9cf4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fixposition_odometry_converter_ros2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fixposition_odometry_converter_ros2_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fixposition_odometry_converter_ros2_uninstall-Release-289eb038eeb05a1f7319.json",
+					"name" : "fixposition_odometry_converter_ros2_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odom_converter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odom_converter-Release-2f5c5fa5fedf59bb9717.json",
+					"name" : "odom_converter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odom_converter_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odom_converter_node-Release-4a5177e5638507bd18ad.json",
+					"name" : "odom_converter_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-011b9c95f90da5e12119.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/fixposition_odometry_converter_ros2",
+		"source" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/Fixposition_driver_pkg-main/fixposition_driver-main/fixposition_odometry_converter_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

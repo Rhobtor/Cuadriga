@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cuadriga_interfaces/msg/GPXPath.msg
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/NavSatFix.idl"
+
+module cuadriga_interfaces {
+  module msg {
+    struct GPXPath {
+      sequence<sensor_msgs::msg::NavSatFix> waypoints;
+    };
+  };
+};

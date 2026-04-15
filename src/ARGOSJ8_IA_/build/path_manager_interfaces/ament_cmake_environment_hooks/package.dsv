@@ -1,4 +1,0 @@
-source;share/path_manager_interfaces/local_setup.bash
-source;share/path_manager_interfaces/local_setup.dsv
-source;share/path_manager_interfaces/local_setup.sh
-source;share/path_manager_interfaces/local_setup.zsh

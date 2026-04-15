@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator/cuadriga_actuator_node" "TARGETS" "cuadriga_actuator_node" "DESTINATION" "lib/cuadriga_actuator")

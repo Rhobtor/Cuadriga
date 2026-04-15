@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0cc899b0cb67fd8618be.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cuadriga_actuator",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_actuator_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_actuator_node-27ca770086136f19d729.json",
+					"name" : "cuadriga_actuator_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_actuator_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_actuator_uninstall-8dc59a763b32e59bcd4d.json",
+					"name" : "cuadriga_actuator_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-7337e03c0c367bbce28e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator",
+		"source" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/cuadriga_actuator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

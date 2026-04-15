@@ -1,8 +1,0 @@
-float32 look_ahead_dis
-float32 max_v_forward
-float32 max_ang_acc
-float32 max_ang_dec
-float32 max_lin_acc
-float32 max_lin_dec
----
-bool ack

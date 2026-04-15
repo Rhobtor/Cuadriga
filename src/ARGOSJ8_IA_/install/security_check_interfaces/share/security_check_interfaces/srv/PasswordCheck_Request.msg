@@ -1,2 +1,0 @@
-# PasswordCheck.srv
-string password

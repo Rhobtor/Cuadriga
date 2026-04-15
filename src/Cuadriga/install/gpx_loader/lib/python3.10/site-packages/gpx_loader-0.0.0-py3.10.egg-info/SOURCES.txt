@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/gpx_loader/gpx_loader.egg-info/PKG-INFO
+../../build/gpx_loader/gpx_loader.egg-info/SOURCES.txt
+../../build/gpx_loader/gpx_loader.egg-info/dependency_links.txt
+../../build/gpx_loader/gpx_loader.egg-info/entry_points.txt
+../../build/gpx_loader/gpx_loader.egg-info/requires.txt
+../../build/gpx_loader/gpx_loader.egg-info/top_level.txt
+../../build/gpx_loader/gpx_loader.egg-info/zip-safe
+gpx_loader/__init__.py
+gpx_loader/gpx_loader_node.py
+resource/gpx_loader
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

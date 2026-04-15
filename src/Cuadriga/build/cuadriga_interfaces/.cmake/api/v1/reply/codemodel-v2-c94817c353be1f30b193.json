@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-415bc5910db3a4e7d926.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "cuadriga_interfaces__py",
+					"jsonFile" : "directory-cuadriga_interfaces__py-fa018ba51c69db93f38e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/cuadriga_interfaces/cuadriga_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "cuadriga_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_cuadriga_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_cuadriga_interfaces_egg-bf2412d0f00c516d7d1d.json",
+					"name" : "ament_cmake_python_build_cuadriga_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_cuadriga_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_cuadriga_interfaces-50e2cbbccedd7d18790f.json",
+					"name" : "ament_cmake_python_copy_cuadriga_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces-c75aac45e87912522e8b.json",
+					"name" : "cuadriga_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__cpp-28d02eaf659f2245c97b.json",
+					"name" : "cuadriga_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cuadriga_interfaces__py::@74c4b29fe67fbbb9229d",
+					"jsonFile" : "target-cuadriga_interfaces__py-adb8bb85a6f74172dcbd.json",
+					"name" : "cuadriga_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_generator_c-b2bc59ec79547934d360.json",
+					"name" : "cuadriga_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_generator_py-b85b017c4c150f7bfdbf.json",
+					"name" : "cuadriga_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_c-5645ad5bac8a7513cbc2.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_c__pyext-1c2a87658240a686aebe.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_cpp-9740bbdebac919cbb9a3.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_fastrtps_c-c2738f1c07f1ab9ea359.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_fastrtps_c__pyext-1bb7a821932f65f65f1b.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_fastrtps_cpp-f2e691b9d4e013d8425d.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_introspection_c-17a3667fb6640a1e701f.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_introspection_c__pyext-e9c79c1b19d383e02f35.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces__rosidl_typesupport_introspection_cpp-f83c76d4f75496f7eb6e.json",
+					"name" : "cuadriga_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cuadriga_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuadriga_interfaces_uninstall-10fa49ad0af4470ca963.json",
+					"name" : "cuadriga_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-47fb4716b0eb1dc59fb4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/build/cuadriga_interfaces",
+		"source" : "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga/src/cuadriga_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
