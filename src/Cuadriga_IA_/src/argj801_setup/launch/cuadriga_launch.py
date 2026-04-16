@@ -24,12 +24,12 @@ Este archivo *no* contiene lógica de control del rover; únicamente describe el
 
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, EmitEvent, LogInfo, TimerAction, GroupAction
+from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, LogInfo, TimerAction, GroupAction
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import LifecycleNode, Node
 from lifecycle_msgs.msg import Transition
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import PackageNotFoundError, get_package_share_directory
 from launch.events import matches_action
 from launch_ros.events.lifecycle import ChangeState
 import yaml
@@ -83,6 +83,19 @@ def generate_launch_description():
         """
         return yaml_config['cuadriga'].get(node_name, {})
 
+    actuator_params = dict(select_params('cuadriga_actuator_node'))
+    serial_port = actuator_params.get('serial_port', '/dev/ttyUSB0')
+    serial_baud_rate = actuator_params.get('baud_rate', 9600)
+
+    try:
+        get_package_share_directory('serial_driver')
+        use_serial_bridge = True
+    except PackageNotFoundError:
+        use_serial_bridge = False
+
+    actuator_runtime_params = dict(actuator_params)
+    actuator_runtime_params['output_mode'] = 'topic' if use_serial_bridge else 'serial'
+
     # -------------------------------------------------------------------------
     # Definición de nodos
     # -------------------------------------------------------------------------
@@ -131,7 +144,7 @@ def generate_launch_description():
         parameters=[global_params])
     cuadrigaActuatorNode = Node(
         package='cuadriga_actuator', executable='cuadriga_actuator_node', name='cuadriga_actuator_node', namespace=robot_namespace, output='screen',
-        parameters=[global_params, select_params('cuadriga_actuator_node')])
+        parameters=[global_params, actuator_runtime_params])
     tf_node_sick = Node(
         package='tf2_ros', executable='static_transform_publisher', name='static_transform_sick', output='screen',
         arguments=['1.86558', '0', '0.37865', '1', '0', '0', '0', yaml_config['cuadriga']['global_parameters']['robot_frame'], yaml_config['cuadriga']['global_parameters']['sick_frame']])
@@ -182,21 +195,67 @@ def generate_launch_description():
             )
         )
 
+    serialBridgeNode = None
+    serial_config = None
+    serial_bridge_configure = None
+    serial_bridge_activate = None
+    if use_serial_bridge:
+        serialBridgeNode = LifecycleNode(
+            package='serial_driver', executable='serial_bridge', name='serial_bridge', namespace=robot_namespace, output='screen',
+            parameters=[{
+                'device_name': serial_port,
+                'baud_rate': serial_baud_rate,
+                'flow_control': 'none',
+                'parity': 'even',
+                'stop_bits': '1',
+            }])
+
+        # El stack original de Cuadriga escribía al puerto a través de serial_bridge.
+        # Reproducimos esa ruta y preconfiguramos el TTY antes de configurar el bridge.
+        serial_config = ExecuteProcess(
+            cmd=['stty', '-F', serial_port, str(serial_baud_rate), 'cs7', 'parenb', '-parodd', '-cstopb'],
+            output='screen',
+        )
+        serial_bridge_configure = EmitEvent(
+            event=ChangeState(
+                lifecycle_node_matcher=matches_action(serialBridgeNode),
+                transition_id=Transition.TRANSITION_CONFIGURE,
+            )
+        )
+        serial_bridge_activate = EmitEvent(
+            event=ChangeState(
+                lifecycle_node_matcher=matches_action(serialBridgeNode),
+                transition_id=Transition.TRANSITION_ACTIVATE,
+            )
+        )
+
     # -------------------------------------------------------------------------
     # Alta de acciones al LaunchDescription
     # -------------------------------------------------------------------------
     ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('simulator')), msg="Launching simulator nodes"))
     ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="Launching robot nodes"))
     ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('use_gui')), msg="Launching GUI node"))
+    if use_serial_bridge:
+        ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="serial_driver found: using serial_bridge transport"))
+    else:
+        ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="serial_driver not found: falling back to direct serial transport in cuadriga_actuator"))
 
     # Nodos comunes (se lanzan siempre; su activación depende de los eventos)
     for node in [controlmissionNode, controllerNode, pathfollowingNode, teleoperationNode, pathRecordNode, readyNode, followZEDNode, estopNode, backhomeNode, pathManagerNode, securityCheckNode, MPCPlannerNode, mppiSacRelayNode]:
         ld.add_action(node)
 
-    # Nodos exclusivos de robot real. El backend del actuador nuevo es fijo.
+    # Nodos exclusivos de robot real. Si serial_driver está disponible usamos
+    # serial_bridge; en caso contrario el actuador vuelve a la ruta serie directa.
     robot_specific_nodes = [cuadrigaActuatorNode, tf_node_sick]
+    if serialBridgeNode is not None:
+        robot_specific_nodes.insert(0, serialBridgeNode)
     for node in robot_specific_nodes:
         ld.add_action(GroupAction(actions=[node], condition=IfCondition(LaunchConfiguration('robot'))))
+
+    if serial_config is not None and serial_bridge_configure is not None and serial_bridge_activate is not None:
+        ld.add_action(GroupAction(actions=[TimerAction(period=1.0, actions=[serial_config])], condition=IfCondition(LaunchConfiguration('robot'))))
+        ld.add_action(GroupAction(actions=[TimerAction(period=2.0, actions=[serial_bridge_configure])], condition=IfCondition(LaunchConfiguration('robot'))))
+        ld.add_action(GroupAction(actions=[TimerAction(period=3.0, actions=[serial_bridge_activate])], condition=IfCondition(LaunchConfiguration('robot'))))
 
     # Nodos exclusivos de simulación
     simulator_specific_nodes = [joystickNode]

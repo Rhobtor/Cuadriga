@@ -168,7 +168,7 @@ cuadriga:
     fsm_cmd_vel_topic: "secured_cmd_vel"
     serial_write_topic: "serial_write"
     active_source_topic: "command_source"
-    command_mapping: "differential"
+    command_mapping: "twist_channels"
     output_mode: "serial"
     serial_port: "/dev/ttyUSB0"
     baud_rate: 9600
