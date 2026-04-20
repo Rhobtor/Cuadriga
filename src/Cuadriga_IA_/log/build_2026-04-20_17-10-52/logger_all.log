@@ -1,0 +1,750 @@
+[0.100s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-up-to', 'ctl_mission', 'path_manager', 'cuadriga_gui', '--symlink-install', '--cmake-args', '-DBUILD_TESTING=OFF']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['ctl_mission', 'path_manager', 'cuadriga_gui'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DBUILD_TESTING=OFF'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7e615ba27c40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e615ba26e00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e615ba26e00>>)
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.247s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/argj801_setup) by extension 'ros'
+[0.265s] DEBUG:colcon.colcon_core.package_identification:Package 'src/argj801_setup' with type 'ros.ament_cmake' and name 'cuadriga_setup'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'ros'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'ros'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['cmake', 'python']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'cmake'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'python'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extensions ['python_setup_py']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'colcon_meta'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['ros']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'ros'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'python'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extensions ['python_setup_py']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main) by extension 'python_setup_py'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extension 'ignore_ament_install'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib) by extension 'ros'
+[0.276s] DEBUG:colcon.colcon_core.package_identification:Package 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib' with type 'ros.cmake' and name 'fixposition_driver_lib'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros1) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros1) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros1) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2) by extension 'ros'
+[0.279s] DEBUG:colcon.colcon_core.package_identification:Package 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2' with type 'ros.ament_cmake' and name 'fixposition_driver_ros2'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2' with type 'ros.ament_cmake' and name 'fixposition_odometry_converter_ros2'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'ros'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['cmake', 'python']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'cmake'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'python'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extensions ['python_setup_py']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/test/data) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main) by extension 'ros'
+[0.286s] DEBUG:colcon.colcon_core.package_identification:Package 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main' with type 'ros.cmake' and name 'fixposition_gnss_tf'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'ros'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['cmake', 'python']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'cmake'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission) by extension 'python_setup_py'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission) by extension 'ros'
+[0.290s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ctl_mission/ctl_mission' with type 'ros.ament_cmake' and name 'ctl_mission'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/ctl_mission_interfaces) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ctl_mission/ctl_mission_interfaces' with type 'ros.ament_cmake' and name 'ctl_mission_interfaces'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'ros'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['cmake', 'python']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'cmake'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'python'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extensions ['python_setup_py']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/ctl_mission/images) by extension 'python_setup_py'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/cuadriga_actuator) by extension 'ros'
+[0.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cuadriga_actuator' with type 'ros.ament_cmake' and name 'cuadriga_actuator'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/hikmicro_thermal_camera) by extension 'ros'
+[0.295s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hikmicro_thermal_camera' with type 'ros.ament_cmake' and name 'hikmicro_thermal_camera'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy) by extension 'ros'
+[0.299s] DEBUG:colcon.colcon_core.package_identification:Package 'src/j8_joystick/joy' with type 'ros.ament_cmake' and name 'joy'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extension 'colcon_meta'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extensions ['ros']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joy_linux) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/j8_joystick/joy_linux' with type 'ros.ament_cmake' and name 'joy_linux'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) by extension 'ros'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/joystick_drivers) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) by extension 'ros'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/ps3joy) ignored
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/sdl2_vendor) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'src/j8_joystick/sdl2_vendor' with type 'ros.ament_cmake' and name 'sdl2_vendor'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/spacenav) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/j8_joystick/spacenav' with type 'ros.ament_cmake' and name 'spacenav'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/j8_joystick/wiimote_msgs) by extension 'ros'
+[0.307s] DEBUG:colcon.colcon_core.package_identification:Package 'src/j8_joystick/wiimote_msgs' with type 'ros.ament_cmake' and name 'wiimote_msgs'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'ros'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['cmake', 'python']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extension 'ignore_ament_install'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extensions ['colcon_pkg']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extensions ['colcon_meta']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extension 'colcon_meta'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager) by extension 'ros'
+[0.310s] DEBUG:colcon.colcon_core.package_identification:Package 'src/path_manager/path_manager' with type 'ros.ament_cmake' and name 'path_manager'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extension 'ignore'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extension 'ignore_ament_install'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extensions ['colcon_pkg']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extension 'colcon_pkg'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extensions ['colcon_meta']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extension 'colcon_meta'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extensions ['ros']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/path_manager/path_manager_interfaces) by extension 'ros'
+[0.311s] DEBUG:colcon.colcon_core.package_identification:Package 'src/path_manager/path_manager_interfaces' with type 'ros.ament_cmake' and name 'path_manager_interfaces'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['ignore', 'ignore_ament_install']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'ignore'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'ignore_ament_install'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['colcon_pkg']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'colcon_pkg'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['colcon_meta']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'colcon_meta'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['ros']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'ros'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['cmake', 'python']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'cmake'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'python'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extensions ['python_setup_py']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check) by extension 'python_setup_py'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extension 'ignore_ament_install'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extensions ['colcon_pkg']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extension 'colcon_pkg'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extensions ['colcon_meta']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extension 'colcon_meta'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check) by extension 'ros'
+[0.316s] DEBUG:colcon.colcon_core.package_identification:Package 'src/security_check/security_check' with type 'ros.ament_cmake' and name 'security_check'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/security_check/security_check_interfaces) by extension 'ros'
+[0.317s] DEBUG:colcon.colcon_core.package_identification:Package 'src/security_check/security_check_interfaces' with type 'ros.ament_cmake' and name 'security_check_interfaces'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'ros'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['cmake', 'python']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'cmake'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'python'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extensions ['python_setup_py']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'ros'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['cmake', 'python']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'cmake'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'python'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extensions ['python_setup_py']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src) by extension 'python_setup_py'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extension 'ignore_ament_install'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extensions ['colcon_pkg']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extension 'colcon_pkg'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extensions ['colcon_meta']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extension 'colcon_meta'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extensions ['ros']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_gui_j8/src/cuadriga_gui) by extension 'ros'
+[0.321s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_gui_j8/src/cuadriga_gui' with type 'ros.ament_python' and name 'cuadriga_gui'
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.351s] INFO:colcon.colcon_core.package_selection:Skipping package 'fixposition_odometry_converter_ros2' in 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_odometry_converter_ros2'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'security_check' in 'src/security_check/security_check'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'fixposition_driver_ros2' in 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'joy' in 'src/j8_joystick/joy'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'fixposition_driver_lib' in 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_lib'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'wiimote_msgs' in 'src/j8_joystick/wiimote_msgs'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'spacenav' in 'src/j8_joystick/spacenav'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'security_check_interfaces' in 'src/security_check/security_check_interfaces'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'sdl2_vendor' in 'src/j8_joystick/sdl2_vendor'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'joy_linux' in 'src/j8_joystick/joy_linux'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'hikmicro_thermal_camera' in 'src/hikmicro_thermal_camera'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'fixposition_gnss_tf' in 'src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'cuadriga_setup' in 'src/argj801_setup'
+[0.352s] INFO:colcon.colcon_core.package_selection:Skipping package 'cuadriga_actuator' in 'src/cuadriga_actuator'
+[0.353s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.353s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.355s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 12 installed packages in /home/cuadriga/tfgcuadriga/install
+[0.357s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 273 installed packages in /opt/ros/humble
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.397s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.398s] DEBUG:colcon.colcon_core.verb:Building package 'ctl_mission_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces', 'merge_install': False, 'path': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_target' from command line to 'None'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.398s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_clean_first' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'cmake_force_configure' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'ament_cmake_args' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'cuadriga_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.399s] DEBUG:colcon.colcon_core.verb:Building package 'cuadriga_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui', 'merge_install': False, 'path': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/test_gui_j8/src/cuadriga_gui', 'symlink_install': True, 'test_result_base': None}
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'path_manager_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.400s] DEBUG:colcon.colcon_core.verb:Building package 'path_manager_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces', 'merge_install': False, 'path': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_target' from command line to 'None'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_clean_cache' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_clean_first' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'cmake_force_configure' from command line to 'False'
+[0.400s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'ament_cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'catkin_cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'ctl_mission' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.401s] DEBUG:colcon.colcon_core.verb:Building package 'ctl_mission' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission', 'merge_install': False, 'path': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission', 'symlink_install': True, 'test_result_base': None}
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_target' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.401s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.402s] Level 5:colcon.colcon_core.verb:set package 'path_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.402s] DEBUG:colcon.colcon_core.verb:Building package 'path_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager', 'merge_install': False, 'path': '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager', 'symlink_install': True, 'test_result_base': None}
+[0.402s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.403s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.403s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces' with build type 'ament_cmake'
+[0.403s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces'
+[0.406s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.406s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.406s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.410s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces' with build type 'ament_cmake'
+[0.410s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces'
+[0.410s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.410s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.414s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/test_gui_j8/src/cuadriga_gui' with build type 'ament_python'
+[0.414s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuadriga_gui', 'ament_prefix_path')
+[0.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/ament_prefix_path.ps1'
+[0.415s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/ament_prefix_path.dsv'
+[0.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/ament_prefix_path.sh'
+[0.417s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.417s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces -- -j8 -l8
+[0.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces -- -j8 -l8
+[0.784s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/test_gui_j8/src/cuadriga_gui'
+[0.784s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.784s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces -- -j8 -l8
+[0.876s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces
+[0.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces -- -j8 -l8
+[0.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces
+[1.000s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_manager_interfaces)
+[1.004s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces' for CMake module files
+[1.005s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces
+[1.006s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces' for CMake config files
+[1.008s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager_interfaces', 'cmake_prefix_path')
+[1.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.ps1'
+[1.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.dsv'
+[1.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.sh'
+[1.010s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib'
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager_interfaces', 'ld_library_path_lib')
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.ps1'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.dsv'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.sh'
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/bin'
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/pkgconfig/path_manager_interfaces.pc'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/python3.10/site-packages'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/bin'
+[1.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.ps1'
+[1.015s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.dsv'
+[1.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.sh'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.bash'
+[1.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.zsh'
+[1.019s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/colcon-core/packages/path_manager_interfaces)
+[1.020s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_manager_interfaces)
+[1.020s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces' for CMake module files
+[1.022s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces' for CMake config files
+[1.023s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager_interfaces', 'cmake_prefix_path')
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.ps1'
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.dsv'
+[1.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/cmake_prefix_path.sh'
+[1.025s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib'
+[1.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager_interfaces', 'ld_library_path_lib')
+[1.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.ps1'
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.dsv'
+[1.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/hook/ld_library_path_lib.sh'
+[1.028s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/bin'
+[1.028s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/pkgconfig/path_manager_interfaces.pc'
+[1.029s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/python3.10/site-packages'
+[1.029s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/bin'
+[1.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.ps1'
+[1.031s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.dsv'
+[1.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.sh'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.bash'
+[1.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.zsh'
+[1.033s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/share/colcon-core/packages/path_manager_interfaces)
+[1.034s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager' with build type 'ament_cmake'
+[1.034s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager'
+[1.035s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.035s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.039s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ctl_mission_interfaces)
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces' for CMake module files
+[1.040s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces' for CMake config files
+[1.043s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission_interfaces', 'cmake_prefix_path')
+[1.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.ps1'
+[1.044s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.dsv'
+[1.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.sh'
+[1.045s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib'
+[1.045s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission_interfaces', 'ld_library_path_lib')
+[1.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.ps1'
+[1.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.dsv'
+[1.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.sh'
+[1.047s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/bin'
+[1.047s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/pkgconfig/ctl_mission_interfaces.pc'
+[1.047s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/python3.10/site-packages'
+[1.047s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/bin'
+[1.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.ps1'
+[1.048s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.dsv'
+[1.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.sh'
+[1.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.bash'
+[1.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.zsh'
+[1.050s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/colcon-core/packages/ctl_mission_interfaces)
+[1.050s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ctl_mission_interfaces)
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces' for CMake module files
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces' for CMake config files
+[1.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission_interfaces', 'cmake_prefix_path')
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.ps1'
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.dsv'
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/cmake_prefix_path.sh'
+[1.054s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib'
+[1.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission_interfaces', 'ld_library_path_lib')
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.ps1'
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.dsv'
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/hook/ld_library_path_lib.sh'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/bin'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/pkgconfig/ctl_mission_interfaces.pc'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/python3.10/site-packages'
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/bin'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.ps1'
+[1.058s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.dsv'
+[1.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.sh'
+[1.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.bash'
+[1.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/package.zsh'
+[1.059s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/share/colcon-core/packages/ctl_mission_interfaces)
+[1.060s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission' with build type 'ament_cmake'
+[1.061s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission'
+[1.061s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.061s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager
+[1.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission -- -j8 -l8
+[1.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui': PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/build --no-deps symlink_data
+[1.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuadriga_gui', 'pythonpath_develop')
+[1.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/share/cuadriga_gui/hook/pythonpath_develop.ps1'
+[1.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui' returned '0': PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/build --no-deps symlink_data
+[1.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/share/cuadriga_gui/hook/pythonpath_develop.dsv'
+[1.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_gui/share/cuadriga_gui/hook/pythonpath_develop.sh'
+[1.865s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui' for CMake module files
+[1.865s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui' for CMake config files
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/lib'
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/bin'
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/lib/pkgconfig/cuadriga_gui.pc'
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/lib/python3.10/site-packages'
+[1.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuadriga_gui', 'pythonpath')
+[1.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/pythonpath.ps1'
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/pythonpath.dsv'
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/hook/pythonpath.sh'
+[1.869s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/bin'
+[1.869s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cuadriga_gui)
+[1.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/package.ps1'
+[1.871s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/package.dsv'
+[1.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/package.sh'
+[1.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/package.bash'
+[1.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/cuadriga_gui/package.zsh'
+[1.873s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/cuadriga_gui/share/colcon-core/packages/cuadriga_gui)
+[2.365s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager
+[2.366s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager -- -j8 -l8
+[16.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager -- -j8 -l8
+[16.646s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager
+[17.031s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_manager)
+[17.031s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager' for CMake module files
+[17.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager
+[17.032s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager' for CMake config files
+[17.032s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager', 'cmake_prefix_path')
+[17.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.ps1'
+[17.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.dsv'
+[17.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.sh'
+[17.034s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib'
+[17.034s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/bin'
+[17.034s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib/pkgconfig/path_manager.pc'
+[17.034s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib/python3.10/site-packages'
+[17.035s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/bin'
+[17.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.ps1'
+[17.035s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.dsv'
+[17.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.sh'
+[17.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.bash'
+[17.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.zsh'
+[17.037s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/colcon-core/packages/path_manager)
+[17.037s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(path_manager)
+[17.038s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager' for CMake module files
+[17.038s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager' for CMake config files
+[17.039s] Level 1:colcon.colcon_core.shell:create_environment_hook('path_manager', 'cmake_prefix_path')
+[17.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.ps1'
+[17.039s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.dsv'
+[17.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/hook/cmake_prefix_path.sh'
+[17.040s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib'
+[17.040s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/bin'
+[17.040s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib/pkgconfig/path_manager.pc'
+[17.040s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/lib/python3.10/site-packages'
+[17.041s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/bin'
+[17.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.ps1'
+[17.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.dsv'
+[17.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.sh'
+[17.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.bash'
+[17.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/path_manager/package.zsh'
+[17.043s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager/share/colcon-core/packages/path_manager)
+[20.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission -- -j8 -l8
+[20.544s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission
+[20.923s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ctl_mission)
+[20.923s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission' for CMake module files
+[20.924s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission' returned '0': AMENT_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission
+[20.925s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission' for CMake config files
+[20.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission', 'cmake_prefix_path')
+[20.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.ps1'
+[20.926s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.dsv'
+[20.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.sh'
+[20.927s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib'
+[20.927s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/bin'
+[20.927s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib/pkgconfig/ctl_mission.pc'
+[20.927s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib/python3.10/site-packages'
+[20.927s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/bin'
+[20.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.ps1'
+[20.928s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.dsv'
+[20.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.sh'
+[20.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.bash'
+[20.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.zsh'
+[20.930s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/colcon-core/packages/ctl_mission)
+[20.930s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ctl_mission)
+[20.930s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission' for CMake module files
+[20.931s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission' for CMake config files
+[20.931s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctl_mission', 'cmake_prefix_path')
+[20.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.ps1'
+[20.932s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.dsv'
+[20.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/hook/cmake_prefix_path.sh'
+[20.933s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib'
+[20.933s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/bin'
+[20.933s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib/pkgconfig/ctl_mission.pc'
+[20.933s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/lib/python3.10/site-packages'
+[20.934s] Level 1:colcon.colcon_core.environment:checking '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/bin'
+[20.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.ps1'
+[20.934s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.dsv'
+[20.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.sh'
+[20.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.bash'
+[20.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/ctl_mission/package.zsh'
+[20.936s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/share/colcon-core/packages/ctl_mission)
+[20.936s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.936s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.937s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.937s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.942s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.942s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.942s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[20.948s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[20.948s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/local_setup.ps1'
+[20.949s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/_local_setup_util_ps1.py'
+[20.951s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/setup.ps1'
+[20.952s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/local_setup.sh'
+[20.953s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/_local_setup_util_sh.py'
+[20.953s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/setup.sh'
+[20.954s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/local_setup.bash'
+[20.955s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/setup.bash'
+[20.956s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/local_setup.zsh'
+[20.956s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/setup.zsh'

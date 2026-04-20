@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_cmake/srv/ReturnRobotPath_Response.msg

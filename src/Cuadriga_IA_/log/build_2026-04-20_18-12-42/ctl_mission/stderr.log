@@ -1,0 +1,82 @@
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:[m[K In member function ‘[01m[Kvoid DynamicPP::calc_dynamic_pp_actions(const Path&, float)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:139:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmax_ang_dec[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  139 |         double [01;35m[Kmax_ang_dec[m[K = 2.0; //ToDO: CHECK THIS VAR
+      |                [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:141:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kyaw_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  141 |         float [01;35m[Kyaw_error[m[K= tf2::getYaw(look_ahead_pose.pose.orientation);
+      |               [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:146:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kaccelerate[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  146 |         bool [01;35m[Kaccelerate[m[K = true, keep = false, brake = false;
+      |              [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:215:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminSpeed[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  215 |         double [01;35m[KminSpeed[m[K = 0.5;
+      |                [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:216:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KremainingDistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  216 |         double [01;35m[KremainingDistance[m[K  = calculateTotal2DDistance(pose_vector);
+      |                [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:218:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstart_decelerating[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  218 |         bool [01;35m[Kstart_decelerating[m[K, keep_decelerating;
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp:218:34:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kkeep_decelerating[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  218 |         bool start_decelerating, [01;35m[Kkeep_decelerating[m[K;
+      |                                  [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kint RegulatedPurePursuit::find_goal_point(const Path&, int)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:39:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   39 |     if ([01;35m[Klimit > path.poses.size()[m[K) limit = path.poses.size(); // This check is redundant, consider removing it
+      |         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:41:42:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kunsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   41 |     for(unsigned int i = min_dist_idx; [01;35m[Ki < limit[m[K; i++) {
+      |                                        [01;35m[K~~^~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kvoid RegulatedPurePursuit::calc_regulated_pure_pursuit_actions(const Path&, float)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:106:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kyaw_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  106 |         float [01;35m[Kyaw_error[m[K= tf2::getYaw(look_ahead_pose.pose.orientation) ;
+      |               [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:107:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance_to_look_ahead[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  107 |             float [01;35m[Kdistance_to_look_ahead[m[K= sqrt(pow(look_ahead_pose.pose.position.x,2)+pow(look_ahead_pose.pose.position.y,2));
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp:154:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KremainingDistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  154 |         double [01;35m[KremainingDistance[m[K = calculateTotal2DDistance(pose_vector);
+      |                [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:[m[K In member function ‘[01m[Kint DynamicLAPP::find_goal_point(const Path&, const double&)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:66:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   66 |         if([01;35m[Kmax_lim > pose_vector.poses.size()[m[K) max_lim = pose_vector.poses.size();
+      |            [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:68:42:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kunsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   68 |         for(unsigned int i = min_lim ; [01;35m[Ki < max_lim[m[K; i = i+1){
+      |                                        [01;35m[K~~^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> DynamicLAPP::calculateCommands(const PoseStamped&, double, double, double, double, double, double)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:122:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdead_zone_threshold[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  122 |     const double [01;35m[Kdead_zone_threshold[m[K = 0.1; // Define a dead zone threshold for angular speed
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:[m[K In member function ‘[01m[Kvoid DynamicLAPP::calc_dynamic_lapp_actions(const Path&, float, double, double)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:179:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kyaw_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  179 |     float [01;35m[Kyaw_error[m[K = tf2::getYaw(look_ahead_pose.pose.orientation);
+      |           [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:193:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminSpeed[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  193 |     double [01;35m[KminSpeed[m[K = 0.5;
+      |            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:194:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KremainingDistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  194 |     double [01;35m[KremainingDistance[m[K = calculateTotal2DDistance(pose_vector);
+      |            [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:163:113:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kv_x_odom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  163 | void DynamicLAPP::calc_dynamic_lapp_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj, [01;35m[Kdouble v_x_odom[m[K, double w_z_odom) {
+      |                                                                                                          [01;35m[K~~~~~~~^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp:163:130:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kw_z_odom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  163 | void DynamicLAPP::calc_dynamic_lapp_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj, double v_x_odom, [01;35m[Kdouble w_z_odom[m[K) {
+      |                                                                                                                           [01;35m[K~~~~~~~^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configPurePursuit(std::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:263:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  263 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configRegulatedPure(std::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:272:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  272 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configDynamic(std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:281:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  281 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configDynamicLA(std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:290:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  290 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K

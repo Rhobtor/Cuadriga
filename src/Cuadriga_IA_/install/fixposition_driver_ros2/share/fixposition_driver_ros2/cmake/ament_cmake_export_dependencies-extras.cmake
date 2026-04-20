@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

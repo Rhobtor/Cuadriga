@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_cpp/ctl_mission_interfaces/srv/detail/config_stanley_ctrl__rosidl_typesupport_introspection_cpp.hpp

@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/ConfigSimpleCtl.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct ConfigSimpleCtl_Request {
+      float k_angle;
+
+      int16 points_in_window;
+
+      float k_position;
+
+      float v_forward;
+
+      float l_ahead_dist;
+    };
+    struct ConfigSimpleCtl_Response {
+      boolean ack;
+    };
+  };
+};

@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/rosidl_generator_py/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_introspection_c.c

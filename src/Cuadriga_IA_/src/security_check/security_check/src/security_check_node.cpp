@@ -261,8 +261,12 @@ void SecurityCheckNode::minDistanceCallback(const std_msgs::msg::Float32::Shared
     //RCLCPP_INFO(this->get_logger(), "Received minimum distance: %.6f", min_distance);
     //RCLCPP_INFO(this->get_logger(), "Threshold: %.6f", threshold_path);
 
-    if (min_distance > threshold_path) {
-        // Stop the robot because the distance is below the threshold
+    if (security_bypass_enabled_ || !security_enabled_) {
+        return;
+    }
+
+    if (min_distance < threshold_path) {
+        // Stop the robot because the distance to the path is below the threshold
         adjusted_msg->linear.x = 0.0f;
         adjusted_msg->angular.z = 0.0f;
         RCLCPP_WARN(this->get_logger(), "Robot stopped due to minimum distance threshold! Min distance: %.6f", min_distance);
@@ -270,7 +274,7 @@ void SecurityCheckNode::minDistanceCallback(const std_msgs::msg::Float32::Shared
         if (current_mode_ == Mode::PathFollowing) {
             sendChangeModeRequest(change_FSM_mode_srv_, 1);
         }
-    } 
+    }
 }
 
 

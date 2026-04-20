@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct ConfigRegulatedPureCtrl_Request {
+      float look_ahead_dis;
+
+      float v_forward;
+
+      float r_min;
+    };
+    struct ConfigRegulatedPureCtrl_Response {
+      boolean ack;
+    };
+  };
+};

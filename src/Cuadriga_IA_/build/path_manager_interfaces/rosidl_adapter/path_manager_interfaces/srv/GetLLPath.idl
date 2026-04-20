@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from path_manager_interfaces/srv/GetLLPath.srv
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+
+module path_manager_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "GetLLPath.srv" "\n"
+      "" "\n"
+      "Devuelve la ruta actual en formato latitud/longitud (habitualmente se usa un" "\n"
+      "nav_msgs/Path donde pose.position.x=lat y pose.position.y=lon)." "\n"
+      "" "\n"
+      "Response:" "\n"
+      "  - path: ruta en LL." "\n"
+      "  - success: true si se pudo generar/devolver.")
+    struct GetLLPath_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetLLPath_Response {
+      nav_msgs::msg::Path path;
+
+      boolean success;
+    };
+  };
+};

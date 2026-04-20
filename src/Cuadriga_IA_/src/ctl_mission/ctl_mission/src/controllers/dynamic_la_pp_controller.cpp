@@ -15,6 +15,7 @@ DynamicLAPP::DynamicLAPP(){
      min_speed = 0.5;
      speed_power = 1.0;
      min_look_ahead_d  = 2.0;
+    dynamic_lapp_output.goal_idx = 0;
 
 }
  
@@ -102,10 +103,10 @@ double DynamicLAPP::calculateTotal2DDistance(const nav_msgs::msg::Path& path) {
 std::pair<double, double> DynamicLAPP::calculateCommands(const geometry_msgs::msg::PoseStamped& look_ahead_pose, double last_vx_sp, double last_wz_sp, double max_ang_acc, double max_lin_acc, double dt, double max_speed) {
     double la_distance = this->min_look_ahead_d + this->look_ahead_v_gain * pow(this->dynamic_lapp_output.linear_sp, this->speed_power);
     double v_obj = std::min(last_vx_sp + max_lin_acc * dt, max_speed); // Calculate desired linear speed
-    float w_z_sp = -look_ahead_pose.pose.position.y * 2.0 * v_obj / (la_distance * la_distance) ; // Calculate desired angular speed
+    float w_z_sp = look_ahead_pose.pose.position.y * 2.0 * v_obj / (la_distance * la_distance) ; // Calculate desired angular speed
     std::cout << "Initial values:" << std::endl;
     std::cout << "  la_distance: " << la_distance << std::endl;
-    std::cout << "  y_error: " << -look_ahead_pose.pose.position.y << std::endl;
+    std::cout << "  y_error: " << look_ahead_pose.pose.position.y << std::endl;
     std::cout << "  last_vx_sp: " << last_vx_sp << std::endl;
     std::cout << "  last_wz_sp: " << last_wz_sp << std::endl;
     std::cout << "  max_ang_acc: " << max_ang_acc << std::endl;
@@ -148,7 +149,7 @@ std::pair<double, double> DynamicLAPP::calculateCommands(const geometry_msgs::ms
         }
     }
 
-    if (v_command < 0.5) v_command = 0.5; // Ensure minimum command speed
+    if (v_command < this->min_speed) v_command = this->min_speed; // Ensure minimum command speed
 
     std::cout << "Final commands:" << std::endl;
     std::cout << "  v_command: " << v_command << std::endl;
@@ -160,12 +161,25 @@ std::pair<double, double> DynamicLAPP::calculateCommands(const geometry_msgs::ms
 
 
 void DynamicLAPP::calc_dynamic_lapp_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj, double v_x_odom, double w_z_odom) {
+    if (pose_vector.poses.empty()) {
+        this->dynamic_lapp_output.angular_sp = 0.0;
+        this->dynamic_lapp_output.linear_sp = 0.0;
+        this->dynamic_lapp_output.goal_idx = 0;
+        this->dynamic_lapp_output.dist_last_obj = 0.0;
+        this->dynamic_lapp_output.cte = 0.0;
+        return;
+    }
+
     double la_distance = this->min_look_ahead_d + this->look_ahead_v_gain * pow(this->dynamic_lapp_output.linear_sp, this->speed_power);
     int goal = find_goal_point(pose_vector, la_distance);
+    if (goal < 0 || goal >= static_cast<int>(pose_vector.poses.size())) {
+        goal = static_cast<int>(pose_vector.poses.size()) - 1;
+    }
     geometry_msgs::msg::PoseStamped look_ahead_pose = pose_vector.poses[goal];
     float yaw_error = tf2::getYaw(look_ahead_pose.pose.orientation);
     
-    geometry_msgs::msg::PoseStamped last_objective = pose_vector.poses[pose_vector.poses.size() - 10];
+    const std::size_t last_objective_idx = pose_vector.poses.size() > 10 ? pose_vector.poses.size() - 10 : pose_vector.poses.size() - 1;
+    geometry_msgs::msg::PoseStamped last_objective = pose_vector.poses[last_objective_idx];
     float distance_to_last_obj = sqrt(pow(last_objective.pose.position.x, 2) + pow(last_objective.pose.position.y, 2));
 
     auto commands = calculateCommands(look_ahead_pose, last_vx_sp, last_wz_sp, max_ang_acc, max_lin_acc, dt, max_speed);
@@ -178,11 +192,15 @@ void DynamicLAPP::calc_dynamic_lapp_actions(const nav_msgs::msg::Path& pose_vect
     double stopDistance = safetyFactor * (v_command * v_command) / (2 * stopping_acc) + 1.0; // Add 1.0, because the robot stops 1.0 meters before the last waypoint
     double minSpeed = 0.5;
     double remainingDistance = calculateTotal2DDistance(pose_vector);
-    if (dist_last_obj < stopDistance ) {
+    if (dist_last_obj <= 1.0) {
+        v_command = 0.0;
+        w_command = 0.0;
+    }
+    else if (dist_last_obj < stopDistance ) {
         std::cout<<"STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPmm " <<std::endl;
 
-       v_command = last_vx_sp - stopping_acc * this->dt;
-        if (v_command < 0.5) v_command = 0.5;        }
+    v_command = last_vx_sp - stopping_acc * this->dt;
+     if (v_command < this->min_speed) v_command = this->min_speed;        }
     last_wz_sp = w_command;
     last_vx_sp = v_command;
 

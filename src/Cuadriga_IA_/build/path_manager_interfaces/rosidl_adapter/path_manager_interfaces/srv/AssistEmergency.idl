@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from path_manager_interfaces/srv/AssistEmergency.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "nav_msgs/msg/Path.idl"
+
+module path_manager_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "AssistEmergency.srv" "\n"
+      "" "\n"
+      "Servicio para generar una ruta de asistencia/emergencia desde start -> goal." "\n"
+      "En la implementación actual puede devolver una ruta \"simple\" (línea recta)" "\n"
+      "convertida a lat/lon, o usar un planificador más complejo si se habilita." "\n"
+      "" "\n"
+      "Request:" "\n"
+      "  - start: punto inicial (coordenadas según implementación)" "\n"
+      "  - goal: punto objetivo" "\n"
+      "Response:" "\n"
+      "  - success: true si se generó ruta" "\n"
+      "  - path: nav_msgs/Path resultante")
+    struct AssistEmergency_Request {
+      geometry_msgs::msg::Point start;
+
+      geometry_msgs::msg::Point goal;
+    };
+    struct AssistEmergency_Response {
+      boolean success;
+
+      nav_msgs::msg::Path path;
+    };
+  };
+};

@@ -622,13 +622,14 @@ class RosSide(Node):
 
     def send_path(self, pts):
         path = Path()
-        path.header.frame_id = 'wgs84'
+        path.header.frame_id = 'll'
         path.header.stamp = self.get_clock().now().to_msg()
         for (lat, lon) in (pts or []):
             ps = PoseStamped()
-            ps.header.frame_id = 'wgs84'
-            ps.pose.position.x = float(lon)
-            ps.pose.position.y = float(lat)
+            ps.header.frame_id = 'll'
+            ps.pose.position.x = float(lat)
+            ps.pose.position.y = float(lon)
+            ps.pose.orientation.w = 1.0
             path.poses.append(ps)
 
         # Envío al cuadriga via servicio (RobotPath) soportado por GUI_pkg

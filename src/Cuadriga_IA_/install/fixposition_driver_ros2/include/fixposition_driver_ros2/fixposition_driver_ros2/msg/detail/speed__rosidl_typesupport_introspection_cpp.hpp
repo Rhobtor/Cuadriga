@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/rosidl_typesupport_introspection_cpp/fixposition_driver_ros2/msg/detail/speed__rosidl_typesupport_introspection_cpp.hpp

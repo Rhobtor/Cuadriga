@@ -1,0 +1,17 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/security_check_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/get_security_check_status__type_support_c.cpp.o"
+  "CMakeFiles/security_check_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/get_security_check_status__type_support_c.cpp.o.d"
+  "CMakeFiles/security_check_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/password_check__type_support_c.cpp.o"
+  "CMakeFiles/security_check_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/password_check__type_support_c.cpp.o.d"
+  "libsecurity_check_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libsecurity_check_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/get_security_check_status__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/get_security_check_status__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/password_check__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/security_check_interfaces/srv/detail/password_check__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/security_check_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

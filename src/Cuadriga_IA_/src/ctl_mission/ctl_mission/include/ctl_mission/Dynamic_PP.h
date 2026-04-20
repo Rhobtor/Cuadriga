@@ -20,12 +20,13 @@ public:
     } dynamic_pp_output;        
     void params_init( double look_ahead_distance, double max_speed, double max_ang_acc, double max_ang_dec, 
                                 double max_lin_acc, double max_lin_dec);
-    int find_goal_point(const nav_msgs::msg::Path& pose_vector);
-    void calc_dynamic_pp_actions(const nav_msgs::msg::Path& pose_vector);
+    int find_goal_point(const nav_msgs::msg::Path& pose_vector, int min_dist_idx);
+    void calc_dynamic_pp_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj);
     void control_init(double look_ahead_distance, double max_speed, double max_ang_acc, double max_ang_dec, 
                                 double max_lin_acc, double max_lin_dec, double dt, double min_speed);
     double calculateTotal2DDistance(const nav_msgs::msg::Path& path);
     double calculateCrossTrackError(const nav_msgs::msg::Path& path);
+    int get_idx_min_distance_to_path(const nav_msgs::msg::Path& path);
 
 };
 

@@ -2,6 +2,7 @@
 #define PATH_FOLLOWING_NODE_HPP_
 
 #include <chrono>
+#include <algorithm>
 #include <memory>
 #include <string>
 #include <thread>
@@ -48,6 +49,8 @@ public:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     void fix_callback(const sensor_msgs::msg::NavSatFix::SharedPtr msg);
     double calculateDistance(const geometry_msgs::msg::PoseStamped& p1, const geometry_msgs::msg::PoseStamped& p2);
+    double calculateDistanceToRobot(const geometry_msgs::msg::PoseStamped& pose, const nav_msgs::msg::Odometry& robot_odom);
+    double computeRemainingDistance(const nav_msgs::msg::Path& path_in, const nav_msgs::msg::Odometry& robot_odom, int start_idx);
 
     // Utility functions
     nav_msgs::msg::Path transform_path_to_robot_frame(const nav_msgs::msg::Path& path_in, const std::string output_frame);

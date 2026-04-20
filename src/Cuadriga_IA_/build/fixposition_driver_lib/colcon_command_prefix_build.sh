@@ -1,0 +1,2 @@
+# generated from colcon_core/shell/template/command_prefix.sh.em
+. "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/share/fixposition_gnss_tf/package.sh"

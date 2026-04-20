@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/rosidl_typesupport_introspection_c/fixposition_driver_ros2/msg/detail/vrtk__rosidl_typesupport_introspection_c.h

@@ -1,0 +1,7 @@
+{
+  "package_name": "fixposition_driver_ros2",
+  "non_idl_tuples": [
+    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2:msg/VRTK.msg",
+    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2:msg/Speed.msg"
+  ]
+}

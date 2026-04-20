@@ -106,13 +106,20 @@ cuadriga:
     node_frequency: 10.0
     
   controller_node:
+    # El controlador consume directamente la ruta local publicada por path_following.
+    local_trajectory_topic: "local_path"
+    # Odometría del Fixposition en el frame ENU local.
+    odometry_topic: "/fixposition/odometry_enu"
+    # Signo final aplicado a angular.z. 1.0 mantiene la convención ROS:
+    # positivo = antihorario, negativo = horario.
+    angular_direction_sign: 1.0
     # Controlador seleccionado (string). Debe coincidir con los controladores
     # soportados por ctl_mission (p.ej. "pure_pursuit", "stanley", variantes dynamic...).
-    type: "dynamic_la_pure_pursuit" 
+    type: "regulated_pure_pursuit" 
     # Frecuencia de control (Hz). Esta suele ser alta para control suave.
     controller_frequency: 100.0
     # Límites/seguridad.
-    min_speed: 0.5
+    min_speed: 0.2
     breaking_acc: 1.0
 
     # ------------------------------------------------------------------------
@@ -121,28 +128,28 @@ cuadriga:
     pure_pursuit:
       K_ang_err: 0.2
       K_linear_err: 0.2
-      v_forward: 1.0
-      l_ahead: 3.0
+      v_forward: 0.45
+      l_ahead: 2.0
       point_window_size: 40
     regulated_pure_pursuit:
-      v_forward: 0.5
-      l_ahead: 1.0
-      r_min: 3.0
+      v_forward: 0.35
+      l_ahead: 1.5
+      r_min: 4.5
     dynamic_pp:
       look_ahead_distance: 2.0
-      max_speed: 3.0
+      max_speed: 0.8
       max_ang_acc: 0.4
       max_ang_dec: 2.0
       max_lin_acc: 0.52
       max_lin_dec: 2.0
     dynamic_la_pp:
       look_ahead_v_gain: 2.0
-      max_speed: 3.0
+      max_speed: 0.8
       max_ang_acc: 0.4
       max_ang_dec: 2.0
       max_lin_acc: 0.52
       max_lin_dec: 2.0
-      min_speed: 0.5
+      min_speed: 0.2
 
   path_manager_node:
     # Fuente de localización usada para transformar/servir rutas.
@@ -162,6 +169,17 @@ cuadriga:
     node_frequency: 50.0
     # Odometría (Fixposition ENU). Nota: ruta absoluta.
     odometry_topic: "/fixposition/odometry_enu"
+
+  fixposition_driver_ros2:
+    fp_output:
+      formats: ["ODOMETRY", "LLH", "RAWIMU", "CORRIMU", "TF"]
+      type: "tcp"
+      ip: "192.168.2.113"
+      port: "21000"
+      rate: 200
+      reconnect_delay: 5.0
+    customer_input:
+      speed_topic: "/fixposition/speed"
 
   cuadriga_actuator_node:
     direct_cmd_vel_topic: "external_cmd_vel"
@@ -184,7 +202,7 @@ cuadriga:
     invert_turn_direction: false
     send_angular_first: false
     inter_command_delay_ms: 5
-    log_serial_commands: true
+    log_serial_commands: false
 
   security_check_node:
     # Nodo de seguridad basado en LiDAR/segmentación: comprueba distancias y

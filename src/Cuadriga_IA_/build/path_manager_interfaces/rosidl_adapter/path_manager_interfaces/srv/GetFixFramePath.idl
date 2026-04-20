@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from path_manager_interfaces/srv/GetFixFramePath.srv
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+
+module path_manager_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "GetFixFramePath.srv" "\n"
+      "" "\n"
+      "Devuelve la ruta actual del robot en el \"fixed frame\" usado por el controlador" "\n"
+      "(p.ej. ENU/local frame). El servicio no transporta el frame explícitamente: el" "\n"
+      "consumidor debe conocer/coordinar el frame_id esperado (normalmente viene en" "\n"
+      "`path.header.frame_id`)." "\n"
+      "" "\n"
+      "Request:" "\n"
+      "  - ask: flag para mantener compatibilidad (siempre true en la práctica)." "\n"
+      "Response:" "\n"
+      "  - path: nav_msgs/Path con la ruta solicitada.")
+    struct GetFixFramePath_Request {
+      boolean ask;
+    };
+    struct GetFixFramePath_Response {
+      nav_msgs::msg::Path path;
+    };
+  };
+};

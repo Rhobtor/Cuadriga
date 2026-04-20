@@ -88,11 +88,20 @@ double RegulatedPurePursuit::calculateTotal2DDistance(const nav_msgs::msg::Path&
 }
     void  RegulatedPurePursuit::calc_regulated_pure_pursuit_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj){
 
+        if (pose_vector.poses.empty()) {
+            this->regulated_pure_pursuit_output.angular_sp = 0.0;
+            this->regulated_pure_pursuit_output.linear_sp = 0.0;
+            this->regulated_pure_pursuit_output.goal_idx = 0;
+            this->regulated_pure_pursuit_output.cte = 0.0;
+            this->regulated_pure_pursuit_output.dist_last_obj = dist_last_obj;
+            return;
+        }
+
 
         int min_idx_point = get_idx_min_distance_to_path(pose_vector);
         geometry_msgs::msg::PoseStamped  min_dist_pose = pose_vector.poses[min_idx_point];  
         float cte = sqrt(pow(min_dist_pose.pose.position.x,2)+pow(min_dist_pose.pose.position.y,2));
-        int goal = find_goal_point(pose_vector, 1);
+        int goal = find_goal_point(pose_vector, min_idx_point);
         geometry_msgs::msg::PoseStamped  look_ahead_pose = pose_vector.poses[goal];
         float yaw_error= tf2::getYaw(look_ahead_pose.pose.orientation) ;
 	    float distance_to_look_ahead= sqrt(pow(look_ahead_pose.pose.position.x,2)+pow(look_ahead_pose.pose.position.y,2));
@@ -102,9 +111,11 @@ double RegulatedPurePursuit::calculateTotal2DDistance(const nav_msgs::msg::Path&
         double stopping_acc = 2.0;
         double stopDistance =  1.5 * (this->forward_speed * this->forward_speed) / (2 * stopping_acc) + 1.0;
         std::cout<<" stopDistance " << stopDistance<<std::endl;
-        double min_speed = 0.5;
         float curvature = look_ahead_pose.pose.position.y*2/(this->look_ahead_distance  * this->look_ahead_distance ); //Calculo w_obj para esa velocidad
-        float radius = fabs(1/curvature);
+        float radius = std::numeric_limits<float>::infinity();
+        if (std::fabs(curvature) > 1e-6f) {
+            radius = std::fabs(1.0f / curvature);
+        }
         float v_forward = this->forward_speed;
 
         //if (this->current_speed  > dist_last_obj * 0.25 ) {
@@ -141,10 +152,13 @@ double RegulatedPurePursuit::calculateTotal2DDistance(const nav_msgs::msg::Path&
         std::cout<<" lahead " << this->look_ahead_distance<<std::endl;
 
         double remainingDistance = calculateTotal2DDistance(pose_vector);
-        if (dist_last_obj < stopDistance ) {
+        if (dist_last_obj <= 1.0) {
+            this->current_speed = 0.0;
+        }
+        else if (dist_last_obj < stopDistance ) {
             std::cout<<"STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPmm " <<std::endl;
             this->current_speed = last_vx_sp - stopping_acc * this->dt;
-            if (this->current_speed < 0.5) this->current_speed = 0.5;       
+            if (this->current_speed < this->min_speed) this->current_speed = this->min_speed;       
          }
         last_vx_sp = this->current_speed;
         this->regulated_pure_pursuit_output.angular_sp = angular_speed;

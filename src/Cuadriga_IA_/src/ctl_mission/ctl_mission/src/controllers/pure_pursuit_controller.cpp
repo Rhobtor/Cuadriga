@@ -84,11 +84,20 @@ double PurePursuit::calculateTotal2DDistance(const nav_msgs::msg::Path& path) {
 }
     void  PurePursuit::calc_pure_pursuit_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj){
 
+        if (pose_vector.poses.empty()) {
+            this->pure_pursuit_output.angular_sp = 0.0;
+            this->pure_pursuit_output.linear_sp = 0.0;
+            this->pure_pursuit_output.goal_idx = 0;
+            this->pure_pursuit_output.cte = 0.0;
+            this->pure_pursuit_output.dist_last_obj = dist_last_obj;
+            return;
+        }
+
 
         int min_idx_point = get_idx_min_distance_to_path(pose_vector);
         geometry_msgs::msg::PoseStamped  min_dist_pose = pose_vector.poses[min_idx_point];  
         float cte = sqrt(pow(min_dist_pose.pose.position.x,2)+pow(min_dist_pose.pose.position.y,2));
-        int goal = find_goal_point(pose_vector, 1);
+        int goal = find_goal_point(pose_vector, min_idx_point);
         geometry_msgs::msg::PoseStamped  look_ahead_pose = pose_vector.poses[goal];
         float yaw_error= tf2::getYaw(look_ahead_pose.pose.orientation) ;
 	    float distance_to_look_ahead= sqrt(pow(look_ahead_pose.pose.position.x,2)+pow(look_ahead_pose.pose.position.y,2));
@@ -98,12 +107,13 @@ double PurePursuit::calculateTotal2DDistance(const nav_msgs::msg::Path& path) {
          double stopping_acc = 2.0;
         double safetyFactor = 1.0;  // Example safety factor
         double stopDistance = safetyFactor * (this->forward_speed * this->forward_speed) / (2 * stopping_acc) + 1.0; //Add 1.0, becuase the robot stops a 1.0 meters of last waypoint
-        double minSpeed = 0.5;
         double remainingDistance  = calculateTotal2DDistance(pose_vector) - 1.0; //minus 1, the robot stops at 1 m from last waypoint
         //double stopDistance =  (this->current_speed * this->current_speed) / (2 * this->breaking_acc);
         std::cout<<" stopDistance " << stopDistance<<std::endl;
-        double min_speed = 0.5;
-        if (dist_last_obj < stopDistance ) {
+        if (dist_last_obj <= 1.0) {
+            this->current_speed = 0.0;
+        }
+        else if (dist_last_obj < stopDistance ) {
            std::cout<<"STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPmm " <<std::endl;
             double targetSpeed =this->current_speed -  stopping_acc * this->dt;
              

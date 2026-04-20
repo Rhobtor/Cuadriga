@@ -71,13 +71,22 @@ PathFollowingNode::PathFollowingNode(const std::string &node_name, bool intra_pr
             //RCLCPP_INFO(this->get_logger(), "Following path!");
             nav_msgs::msg::Path path_robot_frame = transform_path_to_robot_frame(robot_path, robot_frame);
             nav_msgs::msg::Path path_local_frame = transform_path_to_robot_frame(robot_path, fixed_local_frame);
+            if (path_robot_frame.poses.empty() || path_local_frame.poses.empty()) {
+                RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
+                                    "Path is available but TF is not ready to transform it yet.");
+                return;
+            }
+
             distances_to_wp(path_local_frame, odometry_msg);
+            const int path_size = static_cast<int>(path_robot_frame.poses.size());
+            min_point_idx = std::clamp(min_point_idx, 0, path_size - 1);
             double accumulatedDistance = 0.0;
             int i = min_point_idx + 1; //We add 1, so the point is garanteed in front of the robot
             nav_msgs::msg::Path plannerpath;
             plannerpath.header.frame_id = fixed_local_frame;
             plannerpath.header.stamp = this->get_clock()->now();
-            for (; i < path_robot_frame.poses.size() -1 && accumulatedDistance < target_distance; ++i) {
+            plannerpath.poses.push_back(path_local_frame.poses[min_point_idx]);
+            for (; i < path_size -1 && accumulatedDistance < target_distance; ++i) {
                 accumulatedDistance += calculateDistance(path_robot_frame.poses[i], path_robot_frame.poses[i + 1]);
                 plannerpath.poses.push_back(path_local_frame.poses[i]);
                 if (accumulatedDistance >= target_distance) break;
@@ -89,17 +98,14 @@ PathFollowingNode::PathFollowingNode(const std::string &node_name, bool intra_pr
             wholepath = path_robot_frame;
             wholepath.header.frame_id = fixed_local_frame;
             wholepath.header.stamp = this->get_clock()->now();
-            for (i = 0; i < path_robot_frame.poses.size() -1 ; ++i) {
+            for (i = 0; i < path_size -1 ; ++i) {
                 wholepath.poses.push_back(wholepath.poses[i]);
             }
-            double lastGoalDistance = 0.0;
-            for (int m = min_point_idx;m < path_robot_frame.poses.size() -1; ++m) {
-                lastGoalDistance += calculateDistance(path_robot_frame.poses[m], path_robot_frame.poses[m + 1]);
-            }
+            double lastGoalDistance = computeRemainingDistance(path_local_frame, odometry_msg, min_point_idx);
             std_msgs::msg::Float32 dist_last_goal_msg;
             dist_last_goal_msg.data = lastGoalDistance;
             pub_dist_last_obj->publish(dist_last_goal_msg);
-            if (i == path_robot_frame.poses.size() - 1 && accumulatedDistance < target_distance) {
+            if (path_size > 1 && i == path_size - 1 && accumulatedDistance < target_distance) {
                 plannerpath.poses.push_back(path_local_frame.poses[i]); // Add the last point if needed
             }
 
@@ -179,6 +185,7 @@ void PathFollowingNode::checkFuture() {
 
         if (robot_path.poses.size() > 0) {
             got_path = true;
+            min_point_idx = 0;
             future_check_timer_->cancel();
 
             RCLCPP_INFO(this->get_logger(), "Received path");
@@ -309,11 +316,9 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PathFo
     LifecycleNode::on_activate(state);
     auto timer_period = std::chrono::duration<double>(1.0 / node_frequency);
     timer_transform = this->create_wall_timer(timer_period, [this]() { this->timer_transform_cb(); });
-    callGetFixFramePathService();
     min_point_idx = 0;
     got_path = false;
-    nav_msgs::msg::Path path_robot_frame = transform_path_to_robot_frame(robot_path, robot_frame);
-    min_point_idx = min_id_all_path(path_robot_frame);
+    callGetFixFramePathService();
     timer_path.reset();
 
     RCLCPP_INFO(get_logger(), "on_activate() is called.");
@@ -391,6 +396,33 @@ double PathFollowingNode::calculateDistance(const geometry_msgs::msg::PoseStampe
     double dx = p2.pose.position.x - p1.pose.position.x;
     double dy = p2.pose.position.y - p1.pose.position.y;
     return sqrt(dx * dx + dy * dy);
+}
+
+double PathFollowingNode::calculateDistanceToRobot(
+    const geometry_msgs::msg::PoseStamped& pose,
+    const nav_msgs::msg::Odometry& robot_odom) {
+    const double dx = pose.pose.position.x - robot_odom.pose.pose.position.x;
+    const double dy = pose.pose.position.y - robot_odom.pose.pose.position.y;
+    return std::sqrt(dx * dx + dy * dy);
+}
+
+double PathFollowingNode::computeRemainingDistance(
+    const nav_msgs::msg::Path& path_in,
+    const nav_msgs::msg::Odometry& robot_odom,
+    int start_idx) {
+    if (path_in.poses.empty()) {
+        return std::numeric_limits<double>::infinity();
+    }
+
+    const int last_idx = static_cast<int>(path_in.poses.size()) - 1;
+    start_idx = std::clamp(start_idx, 0, last_idx);
+
+    double remaining_distance = calculateDistanceToRobot(path_in.poses[start_idx], robot_odom);
+    for (int idx = start_idx; idx < last_idx; ++idx) {
+        remaining_distance += calculateDistance(path_in.poses[idx], path_in.poses[idx + 1]);
+    }
+
+    return remaining_distance;
 }
 
 nav_msgs::msg::Path PathFollowingNode::transform_path_to_robot_frame(const nav_msgs::msg::Path& path_in, 

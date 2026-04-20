@@ -11,6 +11,7 @@ DynamicPP::DynamicPP(){
      last_vx_sp = 0.0;
      dt = 0.02;
      min_speed = 0.5;
+    dynamic_pp_output.goal_idx = 0;
 }
 
     void DynamicPP::params_init( double look_ahead_distance, double max_speed, double max_ang_acc, double max_ang_dec, 
@@ -39,13 +40,13 @@ DynamicPP::DynamicPP(){
      this->min_speed = min_speed;
     }
 
-    int DynamicPP::find_goal_point(const nav_msgs::msg::Path& pose_vector ){
+    int DynamicPP::find_goal_point(const nav_msgs::msg::Path& pose_vector, int min_dist_idx ){
         geometry_msgs::msg::PoseStamped pose ;
         float distance;
         float  min_diff = std::numeric_limits<int>::max();
         int idx = -1;
         float diff;
-        for(unsigned int i = 0; i < pose_vector.poses.size(); i = i+1){
+        for(unsigned int i = min_dist_idx; i < pose_vector.poses.size(); i = i+1){
             pose = pose_vector.poses[i];
             distance = sqrt(pow(pose.pose.position.x,2)+pow(pose.pose.position.y,2));
             diff = fabs(distance - this->look_ahead_distance );
@@ -59,6 +60,22 @@ DynamicPP::DynamicPP(){
         }
     return idx;
   }
+
+    int DynamicPP::get_idx_min_distance_to_path(const nav_msgs::msg::Path& path) {
+        float min_dist = std::numeric_limits<float>::max();
+        int idx = 0;
+
+        for (unsigned int i = 0; i < path.poses.size(); i++) {
+            const auto& pose = path.poses[i];
+            float distance = std::sqrt(std::pow(pose.pose.position.x, 2) + std::pow(pose.pose.position.y, 2));
+            if (distance < min_dist) {
+                min_dist = distance;
+                idx = static_cast<int>(i);
+            }
+        }
+
+        return idx;
+    }
 
     double DynamicPP::calculateTotal2DDistance(const nav_msgs::msg::Path& path) {
         double total_distance = 0.0;
@@ -106,19 +123,30 @@ DynamicPP::DynamicPP(){
         return cross_track_error;
     }
 
-    void  DynamicPP::calc_dynamic_pp_actions(const nav_msgs::msg::Path& pose_vector){
+    void  DynamicPP::calc_dynamic_pp_actions(const nav_msgs::msg::Path& pose_vector, float dist_last_obj){
 
-        int goal = find_goal_point(pose_vector);
+        if (pose_vector.poses.empty()) {
+            this->dynamic_pp_output.angular_sp = 0.0;
+            this->dynamic_pp_output.linear_sp = 0.0;
+            this->dynamic_pp_output.goal_idx = 0;
+            this->dynamic_pp_output.dist_last_obj = dist_last_obj;
+            this->dynamic_pp_output.cte = 0.0;
+            return;
+        }
+
+        int min_idx_point = get_idx_min_distance_to_path(pose_vector);
+        int goal = find_goal_point(pose_vector, min_idx_point);
         double max_ang_dec = 2.0; //ToDO: CHECK THIS VAR
         geometry_msgs::msg::PoseStamped  look_ahead_pose = pose_vector.poses[goal];
         float yaw_error= tf2::getYaw(look_ahead_pose.pose.orientation);
         //float w_z_sp = - this->K_angle*yaw_error - this->K_position *look_ahead_pose.pose.position.y;
-        geometry_msgs::msg::PoseStamped last_objective = pose_vector.poses[pose_vector.poses.size() - 10];
+        const std::size_t last_objective_idx = pose_vector.poses.size() > 10 ? pose_vector.poses.size() - 10 : pose_vector.poses.size() - 1;
+        geometry_msgs::msg::PoseStamped last_objective = pose_vector.poses[last_objective_idx];
         float distance_to_last_obj = sqrt(pow(last_objective.pose.position.x,2)+pow(last_objective.pose.position.y,2));
         bool accelerate = true, keep = false, brake = false;
         double v_obj = last_vx_sp + this->max_lin_acc * this->dt; //Acelero
         if (v_obj > this->max_speed) v_obj = this->max_speed;
-        float w_z_sp = -look_ahead_pose.pose.position.y*2/(this->look_ahead_distance*this->look_ahead_distance) * v_obj; //Calculo w_obj para esa velocidad
+        float w_z_sp = look_ahead_pose.pose.position.y*2/(this->look_ahead_distance*this->look_ahead_distance) * v_obj; //Calculo w_obj para esa velocidad
         double v_command, w_command;
         double w_obj;
         std::cout<<"w_z_sp "<< w_z_sp<<std::endl;
@@ -143,7 +171,7 @@ DynamicPP::DynamicPP(){
 
         if (keep){
              v_obj = last_vx_sp ; //mantengo
-             w_z_sp = -look_ahead_pose.pose.position.y*2/(this->look_ahead_distance * this->look_ahead_distance) * v_obj;
+             w_z_sp = look_ahead_pose.pose.position.y*2/(this->look_ahead_distance * this->look_ahead_distance) * v_obj;
              w_obj = w_z_sp;
  
             if ((fabs(w_z_sp - last_wz_sp) > this->max_ang_acc * this->dt) && (fabs(w_z_sp) > fabs(last_wz_sp)) )
@@ -161,7 +189,7 @@ DynamicPP::DynamicPP(){
         if (brake){
 
             v_obj = last_vx_sp - this->max_lin_dec * this->dt; //tengo que frenar
-            w_z_sp = -look_ahead_pose.pose.position.y*2/(this->look_ahead_distance * this->look_ahead_distance) * v_obj;
+            w_z_sp = look_ahead_pose.pose.position.y*2/(this->look_ahead_distance * this->look_ahead_distance) * v_obj;
              
             if ((fabs(w_z_sp - last_wz_sp) > this->max_ang_acc * this->dt) )
             {
@@ -178,7 +206,7 @@ DynamicPP::DynamicPP(){
 
 
         }
-        if (v_command<0.5) v_command = 0.5;
+        if (v_command < this->min_speed) v_command = this->min_speed;
 
 
         double stopping_acc = 0.8;
@@ -188,11 +216,13 @@ DynamicPP::DynamicPP(){
         double remainingDistance  = calculateTotal2DDistance(pose_vector);
 
         bool start_decelerating, keep_decelerating;
-        //if (calculateTotal2DDistance(pose_vector) < stopDistance ) {
-        //    std::cout<<"STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPmm " <<std::endl;
-
-        //    v_command = last_vx_sp - stopping_acc * this->dt;
-        //    if (v_command < 0.5) v_command = 0.5;        }
+        if (dist_last_obj <= 1.0) {
+            v_command = 0.0;
+            w_command = 0.0;
+        } else if (dist_last_obj < stopDistance) {
+            v_command = last_vx_sp - stopping_acc * this->dt;
+            if (v_command < this->min_speed) v_command = this->min_speed;
+        }
         last_wz_sp = w_command; 
         last_vx_sp = v_command;
         this->dynamic_pp_output.angular_sp = w_command;

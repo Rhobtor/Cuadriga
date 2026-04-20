@@ -59,6 +59,8 @@ CtrlNode::CtrlNode(const std::string & node_name, bool intra_process_comms)
     this->declare_parameter("cmd_vel_topic_name", "cmd_vel_test");
     this->declare_parameter("robot_frame", "FP_POI");
     this->declare_parameter("local_fixed_frame", "FP_ENU0");
+    this->declare_parameter("odometry_topic", "/fixposition/odometry_enu");
+    this->declare_parameter("angular_direction_sign", 1.0);
     this->declare_parameter("type", "pure_pursuit");
     this->declare_parameter("controller_frequency", 50.0);
     this->declare_parameter("min_speed", 0.5);
@@ -164,6 +166,15 @@ void CtrlNode::publish() {
         auto path_transformed = transform_path_to_robot_frame(path_msg);
         std::cerr << "path size t." << path_msg.poses.size()<<std::endl;
 
+        if (path_transformed.poses.empty()) {
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
+                                 "Controller has a path, but it could not be transformed to robot frame yet.");
+            cmd_msg.linear.x = 0.0;
+            cmd_msg.angular.z = 0.0;
+            pub_cmd_vel->publish(cmd_msg);
+            return;
+        }
+
         // Calculate the cross-track error in the robot frame
         double cte = calculateCrossTrackErrorInRobotFrame(path_transformed);
         std_msgs::msg::Float32 cte_msg;
@@ -174,7 +185,7 @@ void CtrlNode::publish() {
             std::cout<<"pure"<<std::endl;
             pure_pursuit_controller.calc_pure_pursuit_actions(path_transformed, dist_last_obj);
             cmd_msg.linear.x = pure_pursuit_controller.pure_pursuit_output.linear_sp;
-            cmd_msg.angular.z = -pure_pursuit_controller.pure_pursuit_output.angular_sp;
+            cmd_msg.angular.z = angular_direction_sign * pure_pursuit_controller.pure_pursuit_output.angular_sp;
             std_msgs::msg::Int32 index_msg ;
             index_msg.data = pure_pursuit_controller.pure_pursuit_output.goal_idx;
             pub_look_ahead->publish(index_msg);
@@ -188,7 +199,7 @@ void CtrlNode::publish() {
             std::cout<<"regulated_pure_pursuit"<<std::endl;
             regulated_pure_pursuit_controller.calc_regulated_pure_pursuit_actions(path_transformed, dist_last_obj);
             cmd_msg.linear.x = regulated_pure_pursuit_controller.regulated_pure_pursuit_output.linear_sp;
-            cmd_msg.angular.z = -regulated_pure_pursuit_controller.regulated_pure_pursuit_output.angular_sp;
+            cmd_msg.angular.z = angular_direction_sign * regulated_pure_pursuit_controller.regulated_pure_pursuit_output.angular_sp;
             std_msgs::msg::Float32 distance_msg;
             distance_msg.data = regulated_pure_pursuit_controller.regulated_pure_pursuit_output.cte;
             pub_look_ahead_distance->publish(distance_msg);
@@ -196,9 +207,9 @@ void CtrlNode::publish() {
         }
         if (current_controler == "dynamic_pure_pursuit"){
             std::cout<<"dynamic_pure_pursuit"<<std::endl;
-            dynamic_pp_controller.calc_dynamic_pp_actions(path_transformed);
+            dynamic_pp_controller.calc_dynamic_pp_actions(path_transformed, dist_last_obj);
             cmd_msg.linear.x = dynamic_pp_controller.dynamic_pp_output.linear_sp;
-            cmd_msg.angular.z = dynamic_pp_controller.dynamic_pp_output.angular_sp;
+            cmd_msg.angular.z = angular_direction_sign * dynamic_pp_controller.dynamic_pp_output.angular_sp;
             std_msgs::msg::Int32 index_msg ;
             index_msg.data = dynamic_pp_controller.dynamic_pp_output.goal_idx;
             pub_look_ahead->publish(index_msg);
@@ -209,7 +220,7 @@ void CtrlNode::publish() {
             dynamic_la_pp_controller.calc_dynamic_lapp_actions(path_transformed, dist_last_obj,  v_x_odom,  w_z_odom);
             //std::cout<<"dynamic_la_pure_pursuit"<<std::endl;
             cmd_msg.linear.x = dynamic_la_pp_controller.dynamic_lapp_output.linear_sp;
-            cmd_msg.angular.z = dynamic_la_pp_controller.dynamic_lapp_output.angular_sp;
+            cmd_msg.angular.z = angular_direction_sign * dynamic_la_pp_controller.dynamic_lapp_output.angular_sp;
             std_msgs::msg::Int32 index_msg ;
             index_msg.data = dynamic_la_pp_controller.dynamic_lapp_output.goal_idx;
             pub_look_ahead->publish(index_msg);
@@ -315,6 +326,8 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtrlNo
     this->get_parameter("cmd_vel_topic_name", cmd_vel_name);
     this->get_parameter("robot_frame", robot_frame);
     this->get_parameter("local_fixed_frame", fixed_local_frame);
+    this->get_parameter("odometry_topic", odometry_topic_name);
+    this->get_parameter("angular_direction_sign", angular_direction_sign);
     this->get_parameter("regulated_pure_pursuit.l_ahead", regulated_pure_pursuit_l_ahead);
     this->get_parameter("regulated_pure_pursuit.v_forward", regulated_pure_pursuit_v_forward);
     this->get_parameter("regulated_pure_pursuit.r_min", regulated_pure_pursuit_r_min);
@@ -348,7 +361,7 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtrlNo
     ("dist_last_obj",10,std::bind(&CtrlNode::getDistLastObj, this,std::placeholders::_1));
     pub_look_ahead_distance  = this->create_publisher<std_msgs::msg::Float32>("look_ahead_distance", 10);
         odometry_sub = this->create_subscription<nav_msgs::msg::Odometry>
-    ("/fixposition/odometry",10,std::bind(&CtrlNode::getOdom, this,std::placeholders::_1));
+    (odometry_topic_name,10,std::bind(&CtrlNode::getOdom, this,std::placeholders::_1));
     current_controler = this->get_parameter("type").get_parameter_value().get<std::string>();
     pub_cmd_vel = this->create_publisher<geometry_msgs::msg::Twist>(cmd_vel_name, 10);
     pub_look_ahead = this->create_publisher<std_msgs::msg::Int32>("look_ahead_point", 10);
@@ -376,7 +389,7 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtrlNo
     pub_local_path = this->create_publisher<nav_msgs::msg::Path>("ctrl_local_path", 10);
 
     regulated_pure_pursuit_controller.params_init(timer_period, regulated_pure_pursuit_l_ahead, regulated_pure_pursuit_v_forward, 
-                                                  0.5, breaking_acc, regulated_pure_pursuit_r_min);
+                                                  min_speed, breaking_acc, regulated_pure_pursuit_r_min);
     //start pure pursuit controller
     pure_pursuit_controller.control_init(timer_period, pp_look_ahead_dist, pp_linear_speed, min_speed, breaking_acc);
     //start dynamic pp controller

@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py/ctl_mission_interfaces/srv/_config_dynamic_la_pure_ctrl_s.c

@@ -67,7 +67,7 @@ class CtrlNode : public rclcpp_lifecycle::LifecycleNode
 
   nav_msgs::msg::Path path_msg;
 
-  std::string robot_name, robot_frame, fixed_local_frame, fixed_global_frame, trajectory_topic_name, cmd_vel_name, current_controler, change_ctrl_srv_name, 
+      std::string robot_name, robot_frame, fixed_local_frame, fixed_global_frame, trajectory_topic_name, odometry_topic_name, cmd_vel_name, current_controler, change_ctrl_srv_name, 
               config_pp_srv_name, config_dynamic_pp_srv_name, config_dynamic_la_pp_srv_name, config_regulated_srv_name;
   bool got_path = false;
   std::shared_ptr<rclcpp::TimerBase> timer_;
@@ -84,6 +84,7 @@ class CtrlNode : public rclcpp_lifecycle::LifecycleNode
   int min_point_idx = 0, points_look_ahead, points_to_local_planner, stan_n_window_size, pp_n_window_size;
   float stan_K_linear_err = 0.2,  stan_K_ang_err = 1, stan_linear_speed, stan_look_ahead_dist, pp_look_ahead_dist;
   float pp_K_linear_err = 0.2,  pp_K_ang_err = 1, pp_linear_speed, controller_frequency, min_speed, breaking_acc, dist_last_obj;
+      double angular_direction_sign = 1.0;
   double v_x_odom, w_z_odom;
   std::vector<std::string> available_controller_types_ = {"pure_pursuit", "regulated_pure_pursuit", "dynamic_pure_pursuit", "dynamic_la_pure_pursuit"};
   float dyn_pp_look_ahead_distance, dyn_pp_max_speed, dyn_pp_max_ang_acc, dyn_pp_max_ang_dec, dyn_pp_max_lin_acc, dyn_pp_max_lin_dec;

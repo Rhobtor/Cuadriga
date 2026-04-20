@@ -28,6 +28,7 @@ from launch.actions import DeclareLaunchArgument, EmitEvent, ExecuteProcess, Log
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import LifecycleNode, Node
+from launch_ros.parameter_descriptions import ParameterValue
 from lifecycle_msgs.msg import Transition
 from ament_index_python.packages import PackageNotFoundError, get_package_share_directory
 from launch.events import matches_action
@@ -84,14 +85,41 @@ def generate_launch_description():
         return yaml_config['cuadriga'].get(node_name, {})
 
     actuator_params = dict(select_params('cuadriga_actuator_node'))
+    fixposition_params = dict(select_params('fixposition_driver_ros2'))
     serial_port = actuator_params.get('serial_port', '/dev/ttyUSB0')
     serial_baud_rate = actuator_params.get('baud_rate', 9600)
+
+    fixposition_fp_output = fixposition_params.get('fp_output', {})
+    fixposition_customer_input = fixposition_params.get('customer_input', {})
+    default_fixposition_ip = str(fixposition_fp_output.get('ip', '192.168.2.113'))
+    default_fixposition_port = str(fixposition_fp_output.get('port', '21000'))
+
+    ld.add_action(
+        DeclareLaunchArgument(
+            'fixposition_ip',
+            default_value=default_fixposition_ip,
+            description='IP address of the Fixposition TCP endpoint.',
+        )
+    )
+    ld.add_action(
+        DeclareLaunchArgument(
+            'fixposition_port',
+            default_value=default_fixposition_port,
+            description='TCP port of the Fixposition endpoint.',
+        )
+    )
 
     try:
         get_package_share_directory('serial_driver')
         use_serial_bridge = True
     except PackageNotFoundError:
         use_serial_bridge = False
+
+    try:
+        get_package_share_directory('fixposition_driver_ros2')
+        use_fixposition_driver = True
+    except PackageNotFoundError:
+        use_fixposition_driver = False
 
     actuator_runtime_params = dict(actuator_params)
     actuator_runtime_params['output_mode'] = 'topic' if use_serial_bridge else 'serial'
@@ -142,6 +170,20 @@ def generate_launch_description():
     joystickNode = LifecycleNode(
         package='joy', executable='joy_node', name='joy_node', namespace=robot_namespace, output='screen',
         parameters=[global_params])
+    fixpositionDriverNode = None
+    if use_fixposition_driver:
+        fixpositionDriverNode = Node(
+            package='fixposition_driver_ros2', executable='fixposition_driver_ros2_exec', name='fixposition_driver_ros2', output='screen',
+            respawn=True, respawn_delay=5.0,
+            parameters=[{
+                'fp_output.formats': fixposition_fp_output.get('formats', ['ODOMETRY', 'LLH', 'RAWIMU', 'CORRIMU', 'TF']),
+                'fp_output.type': ParameterValue(str(fixposition_fp_output.get('type', 'tcp')), value_type=str),
+                'fp_output.ip': ParameterValue(LaunchConfiguration('fixposition_ip'), value_type=str),
+                'fp_output.port': ParameterValue(LaunchConfiguration('fixposition_port'), value_type=str),
+                'fp_output.rate': int(fixposition_fp_output.get('rate', 200)),
+                'fp_output.reconnect_delay': float(fixposition_fp_output.get('reconnect_delay', 5.0)),
+                'customer_input.speed_topic': ParameterValue(str(fixposition_customer_input.get('speed_topic', '/fixposition/speed')), value_type=str),
+            }])
     cuadrigaActuatorNode = Node(
         package='cuadriga_actuator', executable='cuadriga_actuator_node', name='cuadriga_actuator_node', namespace=robot_namespace, output='screen',
         parameters=[global_params, actuator_runtime_params])
@@ -239,6 +281,10 @@ def generate_launch_description():
         ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="serial_driver found: using serial_bridge transport"))
     else:
         ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="serial_driver not found: falling back to direct serial transport in cuadriga_actuator"))
+    if use_fixposition_driver:
+        ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="fixposition_driver_ros2 found: GPS/Odometry driver enabled"))
+    else:
+        ld.add_action(LogInfo(condition=IfCondition(LaunchConfiguration('robot')), msg="fixposition_driver_ros2 not found: GPS/Odometry topics will be unavailable"))
 
     # Nodos comunes (se lanzan siempre; su activación depende de los eventos)
     for node in [controlmissionNode, controllerNode, pathfollowingNode, teleoperationNode, pathRecordNode, readyNode, followZEDNode, estopNode, backhomeNode, pathManagerNode, securityCheckNode, MPCPlannerNode, mppiSacRelayNode]:
@@ -247,6 +293,8 @@ def generate_launch_description():
     # Nodos exclusivos de robot real. Si serial_driver está disponible usamos
     # serial_bridge; en caso contrario el actuador vuelve a la ruta serie directa.
     robot_specific_nodes = [cuadrigaActuatorNode, tf_node_sick]
+    if fixpositionDriverNode is not None:
+        robot_specific_nodes.insert(0, fixpositionDriverNode)
     if serialBridgeNode is not None:
         robot_specific_nodes.insert(0, serialBridgeNode)
     for node in robot_specific_nodes:

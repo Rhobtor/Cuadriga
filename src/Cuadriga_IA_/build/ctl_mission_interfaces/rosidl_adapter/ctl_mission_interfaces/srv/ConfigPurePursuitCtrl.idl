@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv
+// generated code does not contain a copyright notice
+
+
+module ctl_mission_interfaces {
+  module srv {
+    struct ConfigPurePursuitCtrl_Request {
+      float v_forward;
+
+      float l_ahead_dist;
+    };
+    struct ConfigPurePursuitCtrl_Response {
+      boolean ack;
+    };
+  };
+};

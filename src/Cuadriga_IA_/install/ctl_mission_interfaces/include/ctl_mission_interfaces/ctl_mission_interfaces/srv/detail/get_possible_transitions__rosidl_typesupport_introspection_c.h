@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_c/ctl_mission_interfaces/srv/detail/get_possible_transitions__rosidl_typesupport_introspection_c.h

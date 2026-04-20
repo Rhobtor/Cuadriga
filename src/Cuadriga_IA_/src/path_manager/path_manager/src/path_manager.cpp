@@ -140,6 +140,12 @@ void PathManager::receivePath(const std::shared_ptr<path_manager_interfaces::srv
     // Servicio para inyectar directamente una ruta en memoria.
     robot_path.poses.clear();
     robot_path = req->path;
+    robot_path.header.frame_id = "ll";
+    robot_path.header.stamp = this->get_clock()->now();
+    for (auto & pose : robot_path.poses) {
+        pose.header = robot_path.header;
+        pose.pose.orientation.w = 1.0;
+    }
     res->ack = true;
 }
 

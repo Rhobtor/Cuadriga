@@ -1,0 +1,254 @@
+[0.011s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2
+[0.060s] -- The C compiler identification is GNU 11.4.0
+[0.110s] -- The CXX compiler identification is GNU 11.4.0
+[0.116s] -- Detecting C compiler ABI info
+[0.181s] -- Detecting C compiler ABI info - done
+[0.188s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.188s] -- Detecting C compile features
+[0.189s] -- Detecting C compile features - done
+[0.191s] -- Detecting CXX compiler ABI info
+[0.265s] -- Detecting CXX compiler ABI info - done
+[0.272s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.272s] -- Detecting CXX compile features
+[0.273s] -- Detecting CXX compile features - done
+[0.286s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: date_time 
+[0.295s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.424s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.476s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.513s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.578s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.588s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.605s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.633s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.661s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.749s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.774s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.789s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.864s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.870s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.917s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.933s] -- Looking for pthread.h
+[1.001s] -- Looking for pthread.h - found
+[1.001s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.069s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.070s] -- Found Threads: TRUE  
+[1.141s] -- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)
+[1.157s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.310s] -- Found tf2_eigen: 0.25.17 (/opt/ros/humble/share/tf2_eigen/cmake)
+[1.583s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.983s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.134s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.155s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.158s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.187s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.187s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.187s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.187s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.205s] -- Found PythonExtra: .so  
+[2.288s] -- Configuring done
+[2.342s] -- Generating done
+[2.357s] -- Build files have been written to: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2
+[2.367s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2' returned '0': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_driver-main/fixposition_driver_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2
+[2.368s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2 -- -j8 -l8
+[2.410s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.420s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.428s] [  4%] Built target ament_cmake_python_symlink_fixposition_driver_ros2
+[2.640s] running egg_info
+[2.641s] creating fixposition_driver_ros2.egg-info
+[2.641s] writing fixposition_driver_ros2.egg-info/PKG-INFO
+[2.641s] writing dependency_links to fixposition_driver_ros2.egg-info/dependency_links.txt
+[2.641s] writing top-level names to fixposition_driver_ros2.egg-info/top_level.txt
+[2.642s] writing manifest file 'fixposition_driver_ros2.egg-info/SOURCES.txt'
+[2.644s] reading manifest file 'fixposition_driver_ros2.egg-info/SOURCES.txt'
+[2.645s] writing manifest file 'fixposition_driver_ros2.egg-info/SOURCES.txt'
+[2.668s] [  4%] Built target ament_cmake_python_build_fixposition_driver_ros2_egg
+[2.818s] [  4%] Built target fixposition_driver_ros2__cpp
+[2.829s] [ 11%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.829s] [ 11%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.829s] [ 11%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.838s] [ 13%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_generator_c.dir/rosidl_generator_c/fixposition_driver_ros2/msg/detail/vrtk__functions.c.o[0m
+[2.841s] [ 16%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_generator_c.dir/rosidl_generator_c/fixposition_driver_ros2/msg/detail/speed__functions.c.o[0m
+[2.989s] [ 18%] [32m[1mLinking C shared library libfixposition_driver_ros2__rosidl_generator_c.so[0m
+[3.031s] [ 18%] Built target fixposition_driver_ros2__rosidl_generator_c
+[3.044s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.046s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.046s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.215s] [ 27%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/fixposition_driver_ros2/msg/vrtk__type_support.cpp.o[0m
+[3.215s] [ 30%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/fixposition_driver_ros2/msg/speed__type_support.cpp.o[0m
+[3.233s] [ 32%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/fixposition_driver_ros2/msg/detail/speed__type_support.cpp.o[0m
+[3.233s] [ 34%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/fixposition_driver_ros2/msg/detail/vrtk__type_support.cpp.o[0m
+[3.477s] [ 37%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/fixposition_driver_ros2/msg/detail/dds_fastrtps/vrtk__type_support.cpp.o[0m
+[3.626s] [ 39%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/fixposition_driver_ros2/msg/detail/dds_fastrtps/speed__type_support.cpp.o[0m
+[3.657s] [ 41%] [32m[1mLinking CXX shared library libfixposition_driver_ros2__rosidl_typesupport_cpp.so[0m
+[3.712s] [ 44%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/fixposition_driver_ros2/msg/vrtk__type_support.cpp.o[0m
+[3.729s] [ 44%] Built target fixposition_driver_ros2__rosidl_typesupport_cpp
+[3.741s] [ 46%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/fixposition_driver_ros2/msg/speed__type_support.cpp.o[0m
+[3.785s] [ 48%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2_exec.dir/src/fixposition_driver_node.cpp.o[0m
+[3.790s] [ 51%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/fixposition_driver_ros2/msg/detail/vrtk__type_support.c.o[0m
+[3.790s] [ 53%] [32m[1mLinking CXX shared library libfixposition_driver_ros2__rosidl_typesupport_c.so[0m
+[3.792s] [ 55%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/fixposition_driver_ros2/msg/detail/vrtk__type_support_c.cpp.o[0m
+[3.855s] [ 55%] Built target fixposition_driver_ros2__rosidl_typesupport_c
+[3.868s] [ 58%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2_exec.dir/src/params.cpp.o[0m
+[3.868s] [ 60%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/fixposition_driver_ros2/msg/detail/speed__type_support_c.cpp.o[0m
+[3.869s] [ 62%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/fixposition_driver_ros2/msg/detail/speed__type_support.c.o[0m
+[3.882s] [ 65%] [32m[1mLinking CXX shared library libfixposition_driver_ros2__rosidl_typesupport_introspection_cpp.so[0m
+[3.939s] [ 67%] [32m[1mLinking C shared library libfixposition_driver_ros2__rosidl_typesupport_introspection_c.so[0m
+[3.991s] [ 67%] Built target fixposition_driver_ros2__rosidl_typesupport_introspection_c
+[3.997s] [ 67%] Built target fixposition_driver_ros2__rosidl_typesupport_introspection_cpp
+[4.004s] [ 69%] [32mBuilding CXX object CMakeFiles/fixposition_driver_ros2_exec.dir/src/data_to_ros2.cpp.o[0m
+[4.316s] [ 72%] [32m[1mLinking CXX shared library libfixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.393s] [ 74%] [32m[1mLinking CXX shared library libfixposition_driver_ros2__rosidl_typesupport_fastrtps_c.so[0m
+[4.396s] [ 74%] Built target fixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp
+[4.468s] [ 74%] Built target fixposition_driver_ros2__rosidl_typesupport_fastrtps_c
+[4.490s] [ 74%] Built target fixposition_driver_ros2
+[4.512s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.147s] [ 76%] Built target fixposition_driver_ros2__py
+[5.168s] [ 79%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_generator_py.dir/rosidl_generator_py/fixposition_driver_ros2/msg/_vrtk_s.c.o[0m
+[5.172s] [ 81%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_generator_py.dir/rosidl_generator_py/fixposition_driver_ros2/msg/_speed_s.c.o[0m
+[5.378s] [ 83%] [32m[1mLinking C shared library rosidl_generator_py/fixposition_driver_ros2/libfixposition_driver_ros2__rosidl_generator_py.so[0m
+[5.423s] [ 83%] Built target fixposition_driver_ros2__rosidl_generator_py
+[5.446s] [ 86%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_c.c.o[0m
+[5.451s] [ 90%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.452s] [ 90%] [32mBuilding C object CMakeFiles/fixposition_driver_ros2__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.575s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.617s] [ 93%] Built target fixposition_driver_ros2__rosidl_typesupport_c__pyext
+[5.651s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.654s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.698s] [ 97%] Built target fixposition_driver_ros2__rosidl_typesupport_introspection_c__pyext
+[5.707s] [ 97%] Built target fixposition_driver_ros2__rosidl_typesupport_fastrtps_c__pyext
+[18.654s] [100%] [32m[1mLinking CXX executable fixposition_driver_ros2_exec[0m
+[18.917s] [100%] Built target fixposition_driver_ros2_exec
+[18.929s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2' returned '0': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake --build /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2 -- -j8 -l8
+[18.930s] Invoking command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2
+[18.938s] -- Install configuration: "Release"
+[18.938s] -- Execute custom install script
+[18.939s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/ament_index/resource_index/rosidl_interfaces/fixposition_driver_ros2
+[18.948s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__functions.h
+[18.956s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__struct.h
+[18.965s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__type_support.h
+[18.973s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__functions.h
+[18.981s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__struct.h
+[18.989s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__type_support.h
+[18.997s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/rosidl_generator_c__visibility_control.h
+[19.005s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/speed.h
+[19.014s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/vrtk.h
+[19.022s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/library_path.sh
+[19.030s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/library_path.dsv
+[19.039s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__rosidl_typesupport_fastrtps_c.h
+[19.047s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__rosidl_typesupport_fastrtps_c.h
+[19.056s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[19.065s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__builder.hpp
+[19.073s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__struct.hpp
+[19.081s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__traits.hpp
+[19.089s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__type_support.hpp
+[19.098s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__builder.hpp
+[19.106s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__struct.hpp
+[19.114s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__traits.hpp
+[19.122s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__type_support.hpp
+[19.131s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/rosidl_generator_cpp__visibility_control.hpp
+[19.139s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/speed.hpp
+[19.147s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/vrtk.hpp
+[19.156s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__rosidl_typesupport_fastrtps_cpp.hpp
+[19.164s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__rosidl_typesupport_fastrtps_cpp.hpp
+[19.173s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[19.181s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__rosidl_typesupport_introspection_c.h
+[19.189s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__rosidl_typesupport_introspection_c.h
+[19.197s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[19.205s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/speed__rosidl_typesupport_introspection_cpp.hpp
+[19.213s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/include/fixposition_driver_ros2/fixposition_driver_ros2/msg/detail/vrtk__rosidl_typesupport_introspection_cpp.hpp
+[19.221s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/pythonpath.sh
+[19.229s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/pythonpath.dsv
+[19.238s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2-5.0.0-py3.10.egg-info/PKG-INFO
+[19.246s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2-5.0.0-py3.10.egg-info/SOURCES.txt
+[19.255s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2-5.0.0-py3.10.egg-info/dependency_links.txt
+[19.263s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2-5.0.0-py3.10.egg-info/top_level.txt
+[19.272s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/__init__.py
+[19.280s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_c.c
+[19.288s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_fastrtps_c.c
+[19.297s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/_fixposition_driver_ros2_s.ep.rosidl_typesupport_introspection_c.c
+[19.305s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[19.313s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[19.322s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[19.330s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/libfixposition_driver_ros2__rosidl_generator_py.so
+[19.339s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/__init__.py
+[19.347s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_speed.py
+[19.355s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_speed_s.c
+[19.364s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_vrtk.py
+[19.371s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_vrtk_s.c
+[19.380s] -- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[19.380s] -- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[19.380s] -- Up-to-date symlink: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/fixposition_driver_ros2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[19.381s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/msg/VRTK.idl
+[19.389s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/msg/Speed.idl
+[19.397s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/msg/VRTK.msg
+[19.406s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/msg/Speed.msg
+[19.414s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/./fixposition_driver_ros2/data_to_ros2.hpp
+[19.422s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/./fixposition_driver_ros2/fixposition_driver_node.hpp
+[19.430s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/./fixposition_driver_ros2/params.hpp
+[19.439s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/fixposition_driver_ros2/fixposition_driver_ros2_exec
+[19.447s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2//launch/serial.launch
+[19.456s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2//launch/serial.yaml
+[19.464s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2//launch/tcp.launch
+[19.472s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2//launch/tcp.yaml
+[19.480s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/ament_index/resource_index/package_run_dependencies/fixposition_driver_ros2
+[19.488s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/ament_index/resource_index/parent_prefix_path/fixposition_driver_ros2
+[19.497s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/ament_prefix_path.sh
+[19.505s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/ament_prefix_path.dsv
+[19.513s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/path.sh
+[19.522s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/environment/path.dsv
+[19.530s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/local_setup.bash
+[19.538s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/local_setup.sh
+[19.546s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/local_setup.zsh
+[19.554s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/local_setup.dsv
+[19.563s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/package.dsv
+[19.571s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/ament_index/resource_index/packages/fixposition_driver_ros2
+[19.582s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/rosidl_cmake-extras.cmake
+[19.591s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.601s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[19.609s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/ament_cmake_export_libraries-extras.cmake
+[19.618s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/ament_cmake_export_targets-extras.cmake
+[19.628s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[19.637s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[19.646s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2Config.cmake
+[19.654s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2Config-version.cmake
+[19.663s] -- Symlinking: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/package.xml
+[19.671s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_generator_c.so
+[19.672s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_generator_c.so" to ""
+[19.672s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_fastrtps_c.so
+[19.672s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_fastrtps_c.so" to ""
+[19.672s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp.so
+[19.673s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_fastrtps_cpp.so" to ""
+[19.673s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_introspection_c.so
+[19.673s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_introspection_c.so" to ""
+[19.673s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_c.so
+[19.674s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_c.so" to ""
+[19.674s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_introspection_cpp.so
+[19.674s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_introspection_cpp.so" to ""
+[19.675s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_cpp.so
+[19.675s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_typesupport_cpp.so" to ""
+[19.706s] Listing '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2'...
+[19.706s] Compiling '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/__init__.py'...
+[19.706s] Listing '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg'...
+[19.706s] Compiling '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/__init__.py'...
+[19.706s] Compiling '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_speed.py'...
+[19.706s] Compiling '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/local/lib/python3.10/dist-packages/fixposition_driver_ros2/msg/_vrtk.py'...
+[19.710s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_generator_py.so
+[19.710s] -- Set runtime path of "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/lib/libfixposition_driver_ros2__rosidl_generator_py.so" to ""
+[19.710s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_generator_cExport.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_generator_cExport-release.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_typesupport_fastrtps_cExport.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_typesupport_fastrtps_cExport-release.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_generator_cppExport.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_typesupport_fastrtps_cppExport.cmake
+[19.711s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_introspection_cExport.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_introspection_cExport-release.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_cExport.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_cExport-release.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_introspection_cppExport.cmake
+[19.712s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_introspection_cppExport-release.cmake
+[19.713s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_cppExport.cmake
+[19.713s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/fixposition_driver_ros2__rosidl_typesupport_cppExport-release.cmake
+[19.713s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_generator_pyExport.cmake
+[19.713s] -- Installing: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_ros2/share/fixposition_driver_ros2/cmake/export_fixposition_driver_ros2__rosidl_generator_pyExport-release.cmake
+[19.716s] Invoked command in '/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2' returned '0': CMAKE_PREFIX_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/udp_driver:/home/cuadriga/tfgcuadriga/install/serial_driver:/home/cuadriga/tfgcuadriga/install/joy:/home/cuadriga/tfgcuadriga/install/io_context:/home/cuadriga/tfgcuadriga/install/fixposition_odometry_converter_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_ros2:/home/cuadriga/tfgcuadriga/install/fixposition_driver_lib:/home/cuadriga/tfgcuadriga/install/fixposition_gnss_tf:/home/cuadriga/tfgcuadriga/install/cuadriga:/home/cuadriga/tfgcuadriga/install/cuadriga_interfaces:/home/cuadriga/tfgcuadriga/install/asio_cmake_module:/home/cuadriga/tfgcuadriga/install/gpx_loader:/opt/ros/humble LD_LIBRARY_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_driver_lib/lib/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/x86_64-linux-gnu/pkgconfig:/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/fixposition_gnss_tf/lib/pkgconfig:${PKG_CONFIG_PATH} /usr/bin/cmake --install /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2

@@ -1,0 +1,1 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/read_path_from_file__rosidl_typesupport_introspection_cpp.hpp

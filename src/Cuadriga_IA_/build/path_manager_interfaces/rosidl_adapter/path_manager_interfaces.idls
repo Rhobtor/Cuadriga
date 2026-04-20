@@ -1,0 +1,8 @@
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/WritePathToFile.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/ReadPathFromFile.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/ReturnRobotPath.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/RobotPath.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/GetFixFramePath.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/GetLLPath.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/PlanPath.idl
+/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_adapter/path_manager_interfaces:srv/AssistEmergency.idl

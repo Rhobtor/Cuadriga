@@ -1,0 +1,17 @@
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kint PurePursuit::find_goal_point(const Path&, int)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:34:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   34 |     if ([01;35m[Klimit > path.poses.size()[m[K) limit = path.poses.size(); // This check is redundant, consider removing it
+      |         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:36:42:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kunsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   36 |     for(unsigned int i = min_dist_idx; [01;35m[Ki < limit[m[K; i++) {
+      |                                        [01;35m[K~~^~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::calc_pure_pursuit_actions(const Path&, float)[m[K’:
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:102:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kyaw_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  102 |         float [01;35m[Kyaw_error[m[K= tf2::getYaw(look_ahead_pose.pose.orientation) ;
+      |               [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:103:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance_to_look_ahead[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  103 |             float [01;35m[Kdistance_to_look_ahead[m[K= sqrt(pow(look_ahead_pose.pose.position.x,2)+pow(look_ahead_pose.pose.position.y,2));
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp:110:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KremainingDistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  110 |         double [01;35m[KremainingDistance[m[K  = calculateTotal2DDistance(pose_vector) - 1.0; //minus 1, the robot stops at 1 m from last waypoint
+      |                [01;35m[K^~~~~~~~~~~~~~~~~[m[K
