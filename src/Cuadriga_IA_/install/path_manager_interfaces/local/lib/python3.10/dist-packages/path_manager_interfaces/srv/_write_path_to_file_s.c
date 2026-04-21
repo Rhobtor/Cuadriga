@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_write_path_to_file_s.c
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_write_path_to_file_s.c

@@ -1,13 +1,13 @@
 {
   "package_name": "path_manager_interfaces",
   "non_idl_tuples": [
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/WritePathToFile.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/ReadPathFromFile.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/ReturnRobotPath.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/RobotPath.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/GetFixFramePath.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/GetLLPath.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/PlanPath.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/AssistEmergency.srv"
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/WritePathToFile.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/ReadPathFromFile.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/ReturnRobotPath.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/RobotPath.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/GetFixFramePath.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/GetLLPath.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/PlanPath.srv",
+    "/workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces:srv/AssistEmergency.srv"
   ]
 }

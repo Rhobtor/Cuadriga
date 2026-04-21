@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_gnss_tf",
-  "command": "/usr/bin/c++ -DEIGEN_DISABLE_UNALIGNED_ARRAY_ASSERT -Dfixposition_gnss_tf_EXPORTS -I/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main/include -I/usr/include/eigen3  -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Wno-unused-parameter -O3 -fPIC -std=gnu++14 -o CMakeFiles/fixposition_gnss_tf.dir/src/gnss_tf.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main/src/gnss_tf.cpp",
-  "file": "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/argo_drivers_pkgs/Fixposition_driver_pkg/fixposition_gnss_tf-main/src/gnss_tf.cpp"
-}
-]

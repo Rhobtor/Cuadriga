@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces
 
 # Utility rule file for ament_cmake_python_build_ctl_mission_interfaces_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/compi
 include CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces && /usr/bin/python3 setup.py egg_info
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_ctl_mission_interfaces_egg: CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg
 ament_cmake_python_build_ctl_mission_interfaces_egg: CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_build_ctl_mission_interfaces_egg.dir/depend
 

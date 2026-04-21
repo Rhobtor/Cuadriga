@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/rosidl_generator_cpp/fixposition_driver_ros2/msg/vrtk.hpp

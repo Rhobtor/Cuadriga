@@ -1,8 +1,8 @@
-# Install script for directory: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py
+# Install script for directory: /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/workspaces/Cuadriga_IA_/install/path_manager_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

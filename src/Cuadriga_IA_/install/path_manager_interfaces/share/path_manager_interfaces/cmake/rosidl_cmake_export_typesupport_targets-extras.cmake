@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

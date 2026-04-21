@@ -98,6 +98,7 @@ class ControlWidget(QWidget):
             'regulated_pure_pursuit',
             'dynamic_pure_pursuit',
             'dynamic_la_pure_pursuit',
+            'follow_the_carrot',
             'stanley',
         ])
         self.cmb_controller.currentTextChanged.connect(self._update_controller_fields_visibility)

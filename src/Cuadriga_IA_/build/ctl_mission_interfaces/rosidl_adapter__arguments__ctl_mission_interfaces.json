@@ -1,16 +1,16 @@
 {
   "package_name": "ctl_mission_interfaces",
   "non_idl_tuples": [
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeMode.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/GetMode.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeSpeed.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigSimpleCtl.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/GetPossibleTransitions.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeController.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigPurePursuitCtrl.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigStanleyCtrl.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigDynamicPureCtrl.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigDynamicLAPureCtrl.srv",
-    "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigRegulatedPureCtrl.srv"
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeMode.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/GetMode.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeSpeed.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigSimpleCtl.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/GetPossibleTransitions.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ChangeController.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigPurePursuitCtrl.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigStanleyCtrl.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigDynamicPureCtrl.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigDynamicLAPureCtrl.srv",
+    "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces:srv/ConfigRegulatedPureCtrl.srv"
   ]
 }

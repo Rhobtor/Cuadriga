@@ -1,0 +1,178 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ef2faed2fe92a65f7871.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ctl_mission",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_ctl_mission_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_ctl_mission_egg-dd53c479a0e0b30a42f6.json",
+					"name" : "ament_cmake_python_build_ctl_mission_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_ctl_mission::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_ctl_mission-e271a93ae03aee6a4542.json",
+					"name" : "ament_cmake_python_symlink_ctl_mission",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "back_home_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-back_home_node-de0006d90d711bed782c.json",
+					"name" : "back_home_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "controller_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-controller_node-9b064a5715a90c0f64ae.json",
+					"name" : "controller_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission-713fca1454060f643a66.json",
+					"name" : "ctl_mission",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_uninstall-7b567d052036955c2704.json",
+					"name" : "ctl_mission_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "estop_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-estop_node-a4269321078743833af5.json",
+					"name" : "estop_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_zed_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_zed_node-f7f1c5b888d21abea389.json",
+					"name" : "follow_zed_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mppi_sac_relay_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mppi_sac_relay_node-5853fc3a45b9c4983e7e.json",
+					"name" : "mppi_sac_relay_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "path_following::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-path_following-20d24bf0a6072802582f.json",
+					"name" : "path_following",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "path_record_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-path_record_node-48c69610f7cd73335bcf.json",
+					"name" : "path_record_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ready_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ready_node-9a89f22353d076acf6ae.json",
+					"name" : "ready_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "teleoperation_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-teleoperation_node-2cdd8dbd7f57d033a119.json",
+					"name" : "teleoperation_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-e6ec4056ddf0bf42ec74.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspaces/Cuadriga_IA_/build/ctl_mission",
+		"source" : "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

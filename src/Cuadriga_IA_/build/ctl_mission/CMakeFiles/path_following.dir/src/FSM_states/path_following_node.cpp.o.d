@@ -1,7 +1,7 @@
 CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o: \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp \
+ /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp \
  /usr/include/stdc-predef.h \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathFollowingNode.hpp \
+ /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathFollowingNode.hpp \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -386,6 +386,7 @@ CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o: \
  /opt/ros/humble/include/rmw/rmw/topic_endpoint_info_array.h \
  /opt/ros/humble/include/rmw/rmw/topic_endpoint_info.h \
  /opt/ros/humble/include/rclcpp/rclcpp/event.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/detail/node_interfaces_helpers.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
@@ -788,14 +789,14 @@ CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o: \
  /usr/include/kdl/utilities/utility.h \
  /usr/include/kdl/utilities/kdl-config.h /usr/include/kdl/frames.inl \
  /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/get_fix_frame_path.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__struct.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/get_fix_frame_path.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__struct.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__builder.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__traits.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__builder.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__traits.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.hpp \
+ /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
@@ -823,12 +824,12 @@ CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/change_mode.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__struct.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__builder.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__traits.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__type_support.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/change_mode.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__struct.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__builder.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__traits.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/change_mode__type_support.hpp \
+ /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \

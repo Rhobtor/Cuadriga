@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -55,6 +55,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
 
       # glob recursive files
       set(relative_files "")
@@ -123,7 +128,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +186,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +256,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/${destination}")
+      set(destination "/workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,245 +315,251 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_c/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.h")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_fastrtps_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_typesupport_introspection_cpp/ctl_mission_interfaces/" "DESTINATION" "include/ctl_mission_interfaces/ctl_mission_interfaces" "PATTERN" "*.hpp")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces/ctl_mission_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces-0.0.0-py3.10.egg-info")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces/ctl_mission_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces-0.0.0-py3.10.egg-info")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces/ctl_mission_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_python/ctl_mission_interfaces/ctl_mission_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces-0.0.0-py3.10.egg-info")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py/ctl_mission_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py/ctl_mission_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py/ctl_mission_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py/ctl_mission_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install("TARGETS" "ctl_mission_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces")
-include("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "ctl_mission_interfaces__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces")
-include("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "ctl_mission_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission_interfaces")
-include("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rust_packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rust_packages")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/rust_packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/rust_packages")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_rs/ctl_mission_interfaces/rust" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_rs/ctl_mission_interfaces/rust" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeSpeed.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeSpeed.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigSimpleCtl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigSimpleCtl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetMode.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetPossibleTransitions.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetPossibleTransitions.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeSpeed.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeSpeed.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeController.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeController.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigSimpleCtl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigSimpleCtl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetPossibleTransitions.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/GetPossibleTransitions.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigStanleyCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigStanleyCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeController.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ChangeController.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigStanleyCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigStanleyCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_adapter/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.idl" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetMode_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeSpeed_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigSimpleCtl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ChangeController_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigPurePursuitCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigStanleyCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Request.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/ConfigRegulatedPureCtrl_Response.msg" "DESTINATION" "share/ctl_mission_interfaces/srv")
+
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission_interfaces/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission_interfaces")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig.cmake" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig-version.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig.cmake" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig-version.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig.cmake" "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig-version.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig.cmake" "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ament_cmake_core/ctl_mission_interfacesConfig-version.cmake" "DESTINATION" "share/ctl_mission_interfaces/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/package.xml" "DESTINATION" "share/ctl_mission_interfaces")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/package.xml" "DESTINATION" "share/ctl_mission_interfaces")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/package.xml" "DESTINATION" "share/ctl_mission_interfaces")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/package.xml" "DESTINATION" "share/ctl_mission_interfaces")

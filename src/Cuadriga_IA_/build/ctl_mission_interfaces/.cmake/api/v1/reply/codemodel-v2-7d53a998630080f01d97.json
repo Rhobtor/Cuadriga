@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1ee92eaefd9287b7858b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "ctl_mission_interfaces__py",
+					"jsonFile" : "directory-ctl_mission_interfaces__py-c2bec3e7b12ff2e8d725.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "ctl_mission_interfaces__rs",
+					"jsonFile" : "directory-ctl_mission_interfaces__rs-61965b73f19aca52583c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "ctl_mission_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_ctl_mission_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_ctl_mission_interfaces_egg-d579c0f040a74ffb0b13.json",
+					"name" : "ament_cmake_python_build_ctl_mission_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_ctl_mission_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_ctl_mission_interfaces-b3cbb21b59c336bba8c2.json",
+					"name" : "ament_cmake_python_symlink_ctl_mission_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces-51a3fddf77ae0434e2a8.json",
+					"name" : "ctl_mission_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__cpp-1d0619a125573316c1c8.json",
+					"name" : "ctl_mission_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ctl_mission_interfaces__py::@4594c678cd0ed432d0d7",
+					"jsonFile" : "target-ctl_mission_interfaces__py-dba557ca92bc7a94ed9b.json",
+					"name" : "ctl_mission_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_generator_c-5ce0bf8420b024837c1b.json",
+					"name" : "ctl_mission_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_generator_py-20f06eac20022fb5f53b.json",
+					"name" : "ctl_mission_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_c-ce1271d6c0113749991f.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_c__pyext-34d2e6c776f22092f85d.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_cpp-3237f71360e67d76cde3.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_fastrtps_c-b9dd67becc724b18c4ce.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_fastrtps_c__pyext-f5cbc6b0e3d028f3cf56.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp-8029c27931bcd0e975c1.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_introspection_c-e7cbf7170d34e5735eb0.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_introspection_c__pyext-268b4aa7de780539f59c.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces__rosidl_typesupport_introspection_cpp-9d868ecf71a792690da5.json",
+					"name" : "ctl_mission_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ctl_mission_interfaces__rs::@328004ff5ceb518acf4b",
+					"jsonFile" : "target-ctl_mission_interfaces__rs-837589a34fa6113c8d84.json",
+					"name" : "ctl_mission_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ctl_mission_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ctl_mission_interfaces_uninstall-6e00ed4a3d5fc6b3b1bb.json",
+					"name" : "ctl_mission_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-328ba8b5d918f05b64fe.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces",
+		"source" : "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

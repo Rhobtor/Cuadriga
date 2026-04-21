@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/config_dynamic_la_pure_ctrl__builder.hpp
+/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/config_dynamic_la_pure_ctrl__builder.hpp

@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/config_stanley_ctrl__traits.hpp
+/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_cpp/ctl_mission_interfaces/srv/detail/config_stanley_ctrl__traits.hpp

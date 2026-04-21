@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ctl_mission_interfaces__rs",
+		"source" : "/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__rs"
+	}
+}

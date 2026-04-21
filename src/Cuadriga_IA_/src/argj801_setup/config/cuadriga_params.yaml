@@ -128,8 +128,8 @@ cuadriga:
     pure_pursuit:
       K_ang_err: 0.2
       K_linear_err: 0.2
-      v_forward: 0.45
-      l_ahead: 2.0
+      v_forward: 0.35
+      l_ahead: 1.0
       point_window_size: 40
     regulated_pure_pursuit:
       v_forward: 0.35
@@ -150,6 +150,15 @@ cuadriga:
       max_lin_acc: 0.52
       max_lin_dec: 2.0
       min_speed: 0.2
+    follow_the_carrot:
+      look_ahead_distance: 1.0
+      forward_speed: 0.2
+      min_turning_speed: 0.1
+      heading_gain: 0.9
+      max_angular_speed: 1.0
+      slow_turn_angle: 0.35
+      turn_in_place_angle: 0.75
+      goal_tolerance: 1.0
 
   path_manager_node:
     # Fuente de localización usada para transformar/servir rutas.

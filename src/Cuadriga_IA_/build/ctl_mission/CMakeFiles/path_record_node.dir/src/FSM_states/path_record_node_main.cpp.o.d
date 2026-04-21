@@ -1,5 +1,5 @@
 CMakeFiles/path_record_node.dir/src/FSM_states/path_record_node_main.cpp.o: \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node_main.cpp \
+ /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node_main.cpp \
  /usr/include/stdc-predef.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \
@@ -346,6 +346,7 @@ CMakeFiles/path_record_node.dir/src/FSM_states/path_record_node_main.cpp.o: \
  /opt/ros/humble/include/rmw/rmw/topic_endpoint_info_array.h \
  /opt/ros/humble/include/rmw/rmw/topic_endpoint_info.h \
  /opt/ros/humble/include/rclcpp/rclcpp/event.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/detail/node_interfaces_helpers.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
@@ -618,7 +619,7 @@ CMakeFiles/path_record_node.dir/src/FSM_states/path_record_node_main.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathRecordNode.hpp \
+ /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathRecordNode.hpp \
  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp \
  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp \
  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/transition.hpp \

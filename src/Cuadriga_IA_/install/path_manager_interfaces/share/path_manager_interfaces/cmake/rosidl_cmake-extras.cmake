@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake

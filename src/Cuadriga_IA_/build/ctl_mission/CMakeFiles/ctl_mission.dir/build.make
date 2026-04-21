@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/ctl_mission
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ctl_mission.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/ctl_mission.dir/progress.make
 include CMakeFiles/ctl_mission.dir/flags.make
 
 CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o: CMakeFiles/ctl_mission.dir/flags.make
-CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp
+CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp
 CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o: CMakeFiles/ctl_mission.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o -MF CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o.d -o CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o -MF CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o.d -o CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp
 
 CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp > CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp > CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.i
 
 CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp -o CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/cuadriga_FSM.cpp -o CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.s
 
 CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o: CMakeFiles/ctl_mission.dir/flags.make
-CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp
+CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp
 CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o: CMakeFiles/ctl_mission.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o -MF CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o.d -o CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o -MF CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o.d -o CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp
 
 CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp > CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp > CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.i
 
 CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp -o CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp -o CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.s
 
 # Object files for target ctl_mission
 ctl_mission_OBJECTS = \
@@ -120,12 +120,12 @@ ctl_mission: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp
 ctl_mission: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 ctl_mission: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 ctl_mission: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_c.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_c.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_cpp.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_cpp.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_py.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_c.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_c.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_cpp.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_cpp.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_py.so
 ctl_mission: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
 ctl_mission: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
 ctl_mission: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.5.4d
@@ -182,9 +182,9 @@ ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_cpp.so
 ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.so
 ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_cpp.so
 ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_py.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_c.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_c.so
 ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_c.so
-ctl_mission: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_c.so
+ctl_mission: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_c.so
 ctl_mission: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_c.so
 ctl_mission: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
 ctl_mission: /opt/ros/humble/lib/libtf2_ros.so
@@ -246,7 +246,7 @@ ctl_mission: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp
 ctl_mission: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 ctl_mission: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp.so
 ctl_mission: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-ctl_mission: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+ctl_mission: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 ctl_mission: /opt/ros/humble/lib/librmw.so
 ctl_mission: /opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_introspection_cpp.so
 ctl_mission: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
@@ -306,7 +306,7 @@ ctl_mission: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 ctl_mission: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 ctl_mission: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
 ctl_mission: CMakeFiles/ctl_mission.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ctl_mission"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ctl_mission"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ctl_mission.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -318,6 +318,6 @@ CMakeFiles/ctl_mission.dir/clean:
 .PHONY : CMakeFiles/ctl_mission.dir/clean
 
 CMakeFiles/ctl_mission.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles/ctl_mission.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles/ctl_mission.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ctl_mission.dir/depend
 

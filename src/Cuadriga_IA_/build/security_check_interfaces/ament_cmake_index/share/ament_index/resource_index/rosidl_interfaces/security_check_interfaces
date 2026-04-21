@@ -1,8 +1,0 @@
-srv/GetSecurityCheckStatus.idl
-srv/GetSecurityCheckStatus.srv
-srv/GetSecurityCheckStatus_Request.msg
-srv/GetSecurityCheckStatus_Response.msg
-srv/PasswordCheck.idl
-srv/PasswordCheck.srv
-srv/PasswordCheck_Request.msg
-srv/PasswordCheck_Response.msg

@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/fixposition_driver_ros2/ament_cmake_core/fixposition_driver_ros2Config-version.cmake

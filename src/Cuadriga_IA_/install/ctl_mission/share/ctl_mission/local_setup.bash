@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash
+/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash

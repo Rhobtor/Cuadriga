@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_fastrtps_c.h
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_fastrtps_c.h

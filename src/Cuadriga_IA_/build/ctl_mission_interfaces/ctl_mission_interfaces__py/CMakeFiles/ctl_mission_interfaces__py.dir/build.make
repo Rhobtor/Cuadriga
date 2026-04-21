@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces
 
 # Utility rule file for ctl_mission_interfaces__py.
 
@@ -191,8 +191,8 @@ rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_t
 rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ctl_mission_interfaces/_ctl_mission_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -304,10 +304,10 @@ ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/build: ctl_
 .PHONY : ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/build
 
 ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/clean:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/ctl_mission_interfaces__py.dir/cmake_clean.cmake
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/ctl_mission_interfaces__py.dir/cmake_clean.cmake
 .PHONY : ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/clean
 
 ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ctl_mission_interfaces__py/CMakeFiles/ctl_mission_interfaces__py.dir/depend
 

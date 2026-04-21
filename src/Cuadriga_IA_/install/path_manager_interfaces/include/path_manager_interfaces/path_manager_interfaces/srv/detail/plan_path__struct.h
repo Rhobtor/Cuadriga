@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_c/path_manager_interfaces/srv/detail/plan_path__struct.h
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_c/path_manager_interfaces/srv/detail/plan_path__struct.h

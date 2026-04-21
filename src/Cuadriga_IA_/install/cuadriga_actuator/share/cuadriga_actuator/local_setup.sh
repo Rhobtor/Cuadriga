@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_actuator/ament_cmake_environment_hooks/local_setup.sh

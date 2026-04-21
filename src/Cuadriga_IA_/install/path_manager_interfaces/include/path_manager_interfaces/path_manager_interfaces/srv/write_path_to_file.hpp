@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp

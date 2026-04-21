@@ -1,0 +1,40 @@
+# Separate image for Jetson <-> Cuadriga integration experiments.
+# It does not replace the main dockerfile used by the robot stack.
+#
+# Intended use:
+# - Keep the main Cuadriga container unchanged for the VPN/ZeroTier fleet.
+# - Run this image as an auxiliary container for local Jetson connectivity,
+#   topic bridging, or DDS/network debugging.
+# - Allow mounting an alternate CYCLONEDDS_URI without modifying the main image.
+
+FROM rhobtor/cuadriga_j8:latest
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    ROS_DOMAIN_ID=0 \
+    ROS_LOCALHOST_ONLY=0 \
+    RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      iproute2 \
+      iputils-ping \
+      net-tools \
+      tcpdump \
+      curl \
+      wget \
+      vim \
+      procps \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspaces/Cuadriga_IA_
+
+# Default command leaves the container ready for manual networking / ROS tests.
+# Suggested companion files in this repository:
+# - jetson_cyclonedds.xml
+# - run_jetson_listener.sh
+#
+# Typical runtime pattern:
+#   export LOCAL_DDS_IP=192.168.2.120
+#   docker build -f dockerfile.jetson.cuadriga -t rhobtor/cuadriga_j8:jetson-cuadriga .
+#   bash run_jetson_listener.sh
+CMD ["bash"]

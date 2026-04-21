@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/ament_cmake_environment_hooks/local_setup.zsh
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/ament_cmake_environment_hooks/local_setup.zsh

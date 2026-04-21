@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/test_gui_j8/src/cuadriga_gui/setup.py

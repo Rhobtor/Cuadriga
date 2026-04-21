@@ -1,0 +1,221 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+-- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found trajectory_msgs: 4.9.1 (/opt/ros/humble/share/trajectory_msgs/cmake)
+-- Found OpenCV: /usr (found version "4.5.4") 
+-- Found ctl_mission_interfaces: 0.0.0 (/workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/share/ctl_mission_interfaces/cmake)
+-- Found path_manager_interfaces: 0.0.0 (/workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake)
+-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found GeographicLib: /usr/lib/x86_64-linux-gnu  
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found launch_testing_ament_cmake: 1.0.14 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /workspaces/Cuadriga_IA_/build/ctl_mission
+[ 11%] [32mBuilding CXX object CMakeFiles/ctl_mission.dir/src/cuadriga_FSM.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/path_record_node.dir/src/FSM_states/path_record_node.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/estop_node.dir/src/FSM_states/estop_node.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/back_home_node.dir/src/FSM_states/back_home_node.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/teleoperation_node.dir/src/FSM_states/teleoperation_node.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/ready_node.dir/src/FSM_states/ready_node.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/ctl_mission.dir/src/argj08_ctl_node.cpp.o[0m
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:106:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+  106 |     ll_path.header.frame_id = [01;35m[K'll'[m[K;
+      |                               [01;35m[K^~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/estop_node.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn EstopNode::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/estop_node.cpp:69:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   69 | EstopNode::on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & state[m[K) {
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PathRecordNode::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:106:31:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K27756[m[K’ to ‘[01m[K'l'[m[K’ [[01;35m[K-Woverflow[m[K]
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PathRecordNode::on_cleanup(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:113:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  113 | PathRecordNode::on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & state[m[K) {
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PathRecordNode::on_shutdown(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_record_node.cpp:120:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  120 | PathRecordNode::on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & state[m[K) {
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::sendLifecycleStateRequest(const SharedPtr&, uint8_t)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:128:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Client<ServiceT>::FutureAndRequestId::operator rclcpp::Client<ServiceT>::SharedFuture() [with ServiceT = lifecycle_msgs::srv::ChangeState; rclcpp::Client<ServiceT>::SharedFuture = std::shared_future<std::shared_ptr<lifecycle_msgs::srv::ChangeState_Response_<std::allocator<void> > > >][m[K’ is deprecated: FutureAndRequestId: use .future.share() instead of an implicit conversion [[01;35m[K-Wdeprecated-declarations[m[K]
+  128 |     service_future_ = client->async_send_request(request[01;35m[K)[m[K;
+      |                                                         [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:50[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:415:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  415 |     [01;36m[Koperator[m[K SharedFuture() {return this->future.share();}
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::getMode(std::shared_ptr<ctl_mission_interfaces::srv::GetMode_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::GetMode_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:327:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  327 | void CtlMissionNode::getMode([01;35m[Kconst std::shared_ptr<ctl_mission_interfaces::srv::GetMode::Request> req[m[K,
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:[m[K In member function ‘[01m[Kvoid CtlMissionNode::handle_get_possible_transitions(std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/argj08_ctl_node.cpp:333:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  333 |     [01;35m[Kconst std::shared_ptr<ctl_mission_interfaces::srv::GetPossibleTransitions::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Kvoid PathFollowingNode::sendChangeModeRequest(const SharedPtr&, int)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:141:60:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Client<ServiceT>::FutureAndRequestId::operator rclcpp::Client<ServiceT>::SharedFuture() [with ServiceT = ctl_mission_interfaces::srv::ChangeMode; rclcpp::Client<ServiceT>::SharedFuture = std::shared_future<std::shared_ptr<ctl_mission_interfaces::srv::ChangeMode_Response_<std::allocator<void> > > >][m[K’ is deprecated: FutureAndRequestId: use .future.share() instead of an implicit conversion [[01;35m[K-Wdeprecated-declarations[m[K]
+  141 |     service_future_fsm = client->async_send_request(request[01;35m[K)[m[K;
+      |                                                            [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathFollowingNode.hpp:12[m[K,
+                 from [01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:52[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:415:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  415 |     [01;36m[Koperator[m[K SharedFuture() {return this->future.share();}
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Kvoid PathFollowingNode::callGetFixFramePathService()[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:177:65:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Client<ServiceT>::FutureAndRequestId::operator rclcpp::Client<ServiceT>::SharedFuture() [with ServiceT = path_manager_interfaces::srv::GetFixFramePath; rclcpp::Client<ServiceT>::SharedFuture = std::shared_future<std::shared_ptr<path_manager_interfaces::srv::GetFixFramePath_Response_<std::allocator<void> > > >][m[K’ is deprecated: FutureAndRequestId: use .future.share() instead of an implicit conversion [[01;35m[K-Wdeprecated-declarations[m[K]
+  177 |     service_future_ = getRPathClient->async_send_request(request[01;35m[K)[m[K;
+      |                                                                 [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/include/ctl_mission/PathFollowingNode.hpp:12[m[K,
+                 from [01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:52[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:415:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  415 |     [01;36m[Koperator[m[K SharedFuture() {return this->future.share();}
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Kvoid PathFollowingNode::first_not_negative(const Path&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:350:39:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  350 |         for (int i = min_point_idx; [01;35m[Ki < path_in.poses.size()[m[K; i++) {
+      |                                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:349:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmin_distance[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  349 |             double [01;35m[Kmin_distance[m[K = std::numeric_limits<double>::max();
+      |                    [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Kvoid PathFollowingNode::distances_to_wp(const Path&, const Odometry&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:365:17:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  365 |     if ([01;35m[Kmax_idx > path_in.poses.size()[m[K) max_idx = path_in.poses.size();
+      |         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Kint PathFollowingNode::min_id_all_path(const Path&)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:380:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  380 |         for (int i = 0; [01;35m[Ki < path_in.poses.size()[m[K; i++) {
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:[m[K In member function ‘[01m[Knav_msgs::msg::Path PathFollowingNode::transform_path_to_robot_frame(const Path&, std::string)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/path_following_node.cpp:438:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  438 |     for (int i = 0; [01;35m[Ki < path_in.poses.size()[m[K; i++) {
+      |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configPurePursuit(std::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:263:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  263 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configRegulatedPure(std::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:272:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  272 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigRegulatedPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configDynamic(std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:281:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  281 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:[m[K In member function ‘[01m[Kvoid CtrlNode::configDynamicLA(std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl_Request_<std::allocator<void> > >, std::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp:290:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  290 |         [01;35m[Kstd::shared_ptr<ctl_mission_interfaces::srv::ConfigDynamicLAPureCtrl::Response> response[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[ 29%] [32mBuilding CXX object CMakeFiles/estop_node.dir/src/FSM_states/estop_node_main.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/ready_node.dir/src/FSM_states/ready_node_main.cpp.o[0m
+[ 35%] [32m[1mLinking CXX executable back_home_node[0m
+[ 35%] Built target back_home_node
+[ 38%] [32mBuilding CXX object CMakeFiles/teleoperation_node.dir/src/FSM_states/teleoperation_node_main.cpp.o[0m
+[ 41%] [32m[1mLinking CXX executable ready_node[0m
+[ 44%] [32m[1mLinking CXX executable estop_node[0m
+[ 44%] Built target estop_node
+[ 47%] [32mBuilding CXX object CMakeFiles/path_following.dir/src/FSM_states/path_following_node_main.cpp.o[0m
+[ 47%] Built target ready_node
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o[0m
+[ 55%] [32m[1mLinking CXX executable ctl_mission[0m
+gmake[2]: *** Deleting file 'ctl_mission'
+gmake[2]: *** [CMakeFiles/path_following.dir/build.make:76: CMakeFiles/path_following.dir/src/FSM_states/path_following_node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:90: CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/path_following.dir/build.make:90: CMakeFiles/path_following.dir/src/FSM_states/path_following_node_main.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:104: CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/path_record_node.dir/build.make:76: CMakeFiles/path_record_node.dir/src/FSM_states/path_record_node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:76: CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:184: CMakeFiles/path_following.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:210: CMakeFiles/path_record_node.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/controller_node.dir/all] Interrupt
+gmake[2]: *** Deleting file 'CMakeFiles/teleoperation_node.dir/src/FSM_states/teleoperation_node.cpp.o'
+gmake[2]: *** [CMakeFiles/teleoperation_node.dir/build.make:76: CMakeFiles/teleoperation_node.dir/src/FSM_states/teleoperation_node.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:314: CMakeFiles/teleoperation_node.dir/all] Interrupt
+gmake[2]: *** [CMakeFiles/ctl_mission.dir/build.make:310: ctl_mission] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:158: CMakeFiles/ctl_mission.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

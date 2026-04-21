@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/cuadriga_actuator/include/cuadriga_actuator/cuadriga_actuator_node.hpp

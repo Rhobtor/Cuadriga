@@ -1,0 +1,1 @@
+/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_rs/ctl_mission_interfaces/rust/src/lib.rs

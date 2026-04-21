@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -55,6 +55,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
 
       # glob recursive files
       set(relative_files "")
@@ -123,7 +128,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +186,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/workspaces/Cuadriga_IA_/install/ctl_mission/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +256,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/${destination}")
+      set(destination "/workspaces/Cuadriga_IA_/install/ctl_mission/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,67 +316,67 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "ctl_mission" "path_following" "teleoperation_node" "path_record_node" "controller_node" "ready_node" "estop_node" "back_home_node" "follow_zed_node" "mppi_sac_relay_node" "DESTINATION" "lib/ctl_mission")
-include("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "include/" "DESTINATION" "include")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "include/" "DESTINATION" "include")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "include/" "DESTINATION" "include")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/ctl_mission/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/ctl_mission/environment")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_python/ctl_mission/ctl_mission.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission-0.20.3-py3.10.egg-info")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_python/ctl_mission/ctl_mission.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission-0.20.3-py3.10.egg-info")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_python/ctl_mission/ctl_mission.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission-0.20.3-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_python/ctl_mission/ctl_mission.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission-0.20.3-py3.10.egg-info")
 
-# install(DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/ctl_mission/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/ctl_mission/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/ctl_mission/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" DIRECTORY "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/ctl_mission/" "DESTINATION" "local/lib/python3.10/dist-packages/ctl_mission" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install(PROGRAMS "scripts/planner_node.py" "scripts/mpc_node.py" "DESTINATION" "lib/ctl_mission")
-ament_cmake_symlink_install_programs("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" PROGRAMS "scripts/planner_node.py" "scripts/mpc_node.py" "DESTINATION" "lib/ctl_mission")
+ament_cmake_symlink_install_programs("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" PROGRAMS "scripts/planner_node.py" "scripts/mpc_node.py" "DESTINATION" "lib/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ctl_mission" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ctl_mission" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/ctl_mission/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/ctl_mission/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/ctl_mission/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission/environment")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission/environment")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission/environment")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/ctl_mission/environment")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/ctl_mission")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_index/share/ament_index/resource_index/packages/ctl_mission" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/ctl_mission/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig.cmake" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake" "DESTINATION" "share/ctl_mission/cmake")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig.cmake" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake" "DESTINATION" "share/ctl_mission/cmake")
+# install(FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig.cmake" "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake" "DESTINATION" "share/ctl_mission/cmake")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig.cmake" "/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake" "DESTINATION" "share/ctl_mission/cmake")
 
-# install(FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/package.xml" "DESTINATION" "share/ctl_mission")
-ament_cmake_symlink_install_files("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/package.xml" "DESTINATION" "share/ctl_mission")
+# install(FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/package.xml" "DESTINATION" "share/ctl_mission")
+ament_cmake_symlink_install_files("/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission" FILES "/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/package.xml" "DESTINATION" "share/ctl_mission")

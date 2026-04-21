@@ -1,4 +1,0 @@
-source;share/cuadriga_actuator/local_setup.bash
-source;share/cuadriga_actuator/local_setup.dsv
-source;share/cuadriga_actuator/local_setup.sh
-source;share/cuadriga_actuator/local_setup.zsh

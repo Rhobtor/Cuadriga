@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/scripts/planner_node.py
+/workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/scripts/planner_node.py

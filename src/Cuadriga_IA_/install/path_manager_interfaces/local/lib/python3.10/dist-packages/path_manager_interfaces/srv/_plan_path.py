@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_plan_path.py
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_plan_path.py

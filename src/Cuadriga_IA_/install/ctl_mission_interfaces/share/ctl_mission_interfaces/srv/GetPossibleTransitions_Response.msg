@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg
+/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_cmake/srv/GetPossibleTransitions_Response.msg

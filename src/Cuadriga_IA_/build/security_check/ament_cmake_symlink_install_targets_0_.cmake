@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/security_check/security_check_node" "TARGETS" "security_check_node" "DESTINATION" "lib/security_check")

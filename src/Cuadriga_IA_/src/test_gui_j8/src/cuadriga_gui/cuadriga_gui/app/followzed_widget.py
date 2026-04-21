@@ -1,12 +1,13 @@
 from PySide6 import QtCore
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QCheckBox, QPlainTextEdit
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QCheckBox, QPlainTextEdit, QComboBox
 from PySide6.QtGui import QImage, QPixmap
 import math
 import numpy as np
 import rclpy
 from sensor_msgs.msg import Image, CompressedImage
-from std_msgs.msg import Float32, Int32
-from rclpy.qos import qos_profile_sensor_data, QoSProfile
+from std_msgs.msg import Float32, Int32, Float32MultiArray
+from geometry_msgs.msg import PoseArray
+from rclpy.qos import qos_profile_sensor_data, QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 try:
     from rosidl_runtime_py.utilities import get_message
@@ -16,23 +17,45 @@ except ImportError:
 
 
 class FollowZEDWidget(QWidget):
-    image_signal = QtCore.Signal(QImage)
+    image_signal = QtCore.Signal(object)
     leader_signal = QtCore.Signal(str, str)
+    detections_signal = QtCore.Signal(object)
 
     def __init__(self, node, topic_base='/follow_zed/image_for_gui'):
         super().__init__()
         self.node = node
         self.topic_raw = topic_base
         self.topic_comp = topic_base + '/compressed'
+        self._image_topics = {
+            'zed_rgb_original': '/zed/zed_node/left/image_rect_color/compressed',
+            'fanet_rgb_annotated': '/fanet/gui/rgb_annotated/compressed',
+            'fanet_thermal_annotated': '/fanet/gui/thermal_annotated/compressed',
+            'fanet_thermal_original': '/fanet/raw/thermal/compressed',
+        }
+        self._image_labels = {
+            'zed_rgb_original': 'ZED RGB original',
+            'fanet_rgb_annotated': 'RGB anotada',
+            'fanet_thermal_annotated': 'Térmica anotada',
+            'fanet_thermal_original': 'Térmica original',
+        }
+        self._selected_source = 'zed_rgb_original'
 
 
         lay = QVBoxLayout(self)
         hdr = QHBoxLayout()
-        self.status = QLabel('FollowZED: esperando…')
+        self.status = QLabel('Video: esperando…')
         self.fit = QCheckBox('Ajustar a panel')
         self.fit.setChecked(True)
+        self.cmb_source = QComboBox()
+        self.cmb_source.addItem('ZED RGB original', userData='zed_rgb_original')
+        self.cmb_source.addItem('RGB anotada', userData='fanet_rgb_annotated')
+        self.cmb_source.addItem('Térmica anotada', userData='fanet_thermal_annotated')
+        self.cmb_source.addItem('Térmica original', userData='fanet_thermal_original')
+        self.cmb_source.currentIndexChanged.connect(self._on_source_changed)
         hdr.addWidget(self.status)
         hdr.addStretch(1)
+        hdr.addWidget(QLabel('Fuente:'))
+        hdr.addWidget(self.cmb_source)
         hdr.addWidget(self.fit)
         lay.addLayout(hdr)
 
@@ -42,8 +65,8 @@ class FollowZEDWidget(QWidget):
         lay.addWidget(self.view)
 
         telemetry = QHBoxLayout()
-        self.person_id = QLabel('ID persona: --')
-        self.person_distance = QLabel('Distancia: --')
+        self.person_id = QLabel('Personas: 0')
+        self.person_distance = QLabel('Última distancia: --')
         telemetry.addWidget(self.person_id)
         telemetry.addStretch(1)
         telemetry.addWidget(self.person_distance)
@@ -65,7 +88,19 @@ class FollowZEDWidget(QWidget):
         self._leader_distance = math.nan
         self._leader_last_rendered = (None, None)
         self._subscriptions_started = False
-        self.status.setText('FollowZED: suscripciones diferidas hasta abrir la pestaña')
+        self._detection_subscriptions_started = False
+        self._sub_fanet_rgb = None
+        self._sub_fanet_thermal = None
+        self._sub_zed_rgb = None
+        self._sub_thermal_raw = None
+        self._sub_centroids = None
+        self._sub_positions = None
+        self._sub_distances = None
+        self._fanet_centroids = []
+        self._fanet_positions = []
+        self._fanet_distances = []
+        self._last_detection_signature = None
+        self.status.setText('Video: suscripciones diferidas hasta abrir la pestaña')
 
     def log(self, s):
         try:
@@ -77,21 +112,36 @@ class FollowZEDWidget(QWidget):
         if self._subscriptions_started:
             return
         self._subscriptions_started = True
+        self.ensure_detection_started()
         self._subscribe()
+
+    def ensure_detection_started(self):
+        if self._detection_subscriptions_started:
+            return
+        self._detection_subscriptions_started = True
+        self._subscribe_detections()
 
     def set_ros(self, node):
         self.node = node
 
     def _subscribe(self):
+        zed_qos = QoSProfile(
+            reliability=ReliabilityPolicy.RELIABLE,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
+        )
         try:
-            self._sub_raw = self.node.create_subscription(Image, self.topic_raw, self._on_raw, qos_profile_sensor_data)
-            self.status.setText(f'FollowZED: sub a {self.topic_raw}')
-        except Exception:
-            try:
-                self._sub_comp = self.node.create_subscription(CompressedImage, self.topic_comp, self._on_comp, qos_profile_sensor_data)
-                self.status.setText(f'FollowZED: sub a {self.topic_comp}')
-            except Exception as e:
-                self.status.setText(f'FollowZED: error sub ({e})')
+            self._sub_zed_rgb = self.node.create_subscription(
+                CompressedImage, self._image_topics['zed_rgb_original'], self._on_zed_rgb_compressed, zed_qos)
+            self._sub_fanet_rgb = self.node.create_subscription(
+                CompressedImage, self._image_topics['fanet_rgb_annotated'], self._on_fanet_rgb_compressed, qos_profile_sensor_data)
+            self._sub_fanet_thermal = self.node.create_subscription(
+                CompressedImage, self._image_topics['fanet_thermal_annotated'], self._on_fanet_thermal_compressed, qos_profile_sensor_data)
+            self._sub_thermal_raw = self.node.create_subscription(
+                CompressedImage, self._image_topics['fanet_thermal_original'], self._on_thermal_raw_compressed, qos_profile_sensor_data)
+            self.log('FANET -> sub a imágenes')
+        except Exception as e:
+            self.log(f'FANET -> error sub imágenes: {e}')
 
         self._leader_id_sub = self.node.create_subscription(Int32, '/follow_zed/leader_id', self._on_leader_id_msg, 10)
         self._leader_distance_sub = self.node.create_subscription(Float32, '/follow_zed/leader_distance_state_m', self._on_leader_distance_msg, 10)
@@ -100,39 +150,73 @@ class FollowZEDWidget(QWidget):
         if get_message is not None:
             self._leader_probe_timer = self.node.create_timer(1.0, self._ensure_leader_subscription)
 
-    def _on_raw(self, msg: Image):
+    def _subscribe_detections(self):
         try:
-            arr = np.frombuffer(msg.data, dtype=np.uint8).reshape(msg.height, msg.width, -1)
-            enc = msg.encoding.lower()
-            if enc == 'rgb8':
-                # QImage espera RGB, perfecto
-                qimg = QImage(arr.data, msg.width, msg.height, msg.width * arr.shape[2], QImage.Format_RGB888).copy()
-            elif enc == 'bgr8':
-                arr = arr[..., ::-1].copy() # BGR->RGB
-                qimg = QImage(arr.data, msg.width, msg.height, msg.width * arr.shape[2], QImage.Format_RGB888)
-            else:
-                self.status.setText(f'FollowZED: encoding no soportado {msg.encoding}')
-                return
-            self.image_signal.emit(qimg)
-            self.status.setText(f'FollowZED: frame {msg.width}x{msg.height}')
+            self._sub_centroids = self.node.create_subscription(
+                PoseArray, '/fanet/person_centroids', self._on_person_centroids, QoSProfile(depth=10))
+            self._sub_positions = self.node.create_subscription(
+                PoseArray, '/fanet/person_positions_robot', self._on_person_positions, QoSProfile(depth=10))
+            self._sub_distances = self.node.create_subscription(
+                Float32MultiArray, '/fanet/person_distances', self._on_person_distances, QoSProfile(depth=10))
+            self.log('FANET -> sub a detecciones')
         except Exception as e:
-            self.status.setText(f'FollowZED: error {e}')
+            self.log(f'FANET -> error sub detecciones: {e}')
 
-    def _on_comp(self, msg: CompressedImage):
+    def _on_source_changed(self, _index: int):
+        selected = self.cmb_source.currentData()
+        if selected:
+            self._selected_source = selected
+            self.status.setText(f'Video: fuente {self._image_labels.get(selected, selected)}')
+
+    def _on_fanet_rgb_compressed(self, msg: CompressedImage):
+        self._handle_compressed_image('fanet_rgb_annotated', msg)
+
+    def _on_fanet_thermal_compressed(self, msg: CompressedImage):
+        self._handle_compressed_image('fanet_thermal_annotated', msg)
+
+    def _on_thermal_raw_compressed(self, msg: CompressedImage):
+        self._handle_compressed_image('fanet_thermal_original', msg)
+
+    def _on_zed_rgb_compressed(self, msg: CompressedImage):
+        self._handle_compressed_image('zed_rgb_original', msg)
+
+    def _handle_compressed_image(self, source_key: str, msg: CompressedImage):
         try:
             import cv2
             np_arr = np.frombuffer(msg.data, np.uint8)
-            cv_bgr = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-            if cv_bgr is None:
+            decoded = cv2.imdecode(np_arr, cv2.IMREAD_UNCHANGED)
+            if decoded is None:
                 return
-            cv_rgb = cv_bgr[..., ::-1] # BGR->RGB
-            h, w, ch = cv_rgb.shape
-            qimg = QImage(cv_rgb.data, w, h, ch * w, QImage.Format_RGB888).copy()
-            self.image_signal.emit(qimg)
-        except Exception as e:
-            self.status.setText(f'FollowZED: error {e}')
 
-    def _on_qimage(self, qimg: QImage):
+            if len(decoded.shape) == 2:
+                gray = np.ascontiguousarray(decoded)
+                h, w = gray.shape
+                qimg = QImage(gray.data, w, h, w, QImage.Format_Grayscale8).copy()
+            elif decoded.shape[2] == 3:
+                rgb = np.ascontiguousarray(decoded[..., ::-1])
+                h, w, ch = rgb.shape
+                qimg = QImage(rgb.data, w, h, ch * w, QImage.Format_RGB888).copy()
+            elif decoded.shape[2] == 4:
+                rgba = np.ascontiguousarray(decoded[..., [2, 1, 0, 3]])
+                h, w, ch = rgba.shape
+                qimg = QImage(rgba.data, w, h, ch * w, QImage.Format_RGBA8888).copy()
+            else:
+                self.status.setText(f'Video: formato no soportado {decoded.shape}')
+                return
+
+            self._emit_image_if_selected(source_key, qimg, f'{self._image_labels.get(source_key, source_key)}: {w}x{h}')
+        except Exception as e:
+            self.status.setText(f'Video: error {e}')
+
+    def _emit_image_if_selected(self, source_key: str, qimg: QImage, status_text: str):
+        if self._selected_source != source_key:
+            return
+        self.image_signal.emit(qimg)
+        self.status.setText(status_text)
+
+    def _on_qimage(self, qimg):
+        if not isinstance(qimg, QImage):
+            return
         if self.fit.isChecked():
             pix = QPixmap.fromImage(qimg).scaled(self.view.size(), QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation)
         else:
@@ -152,6 +236,94 @@ class FollowZEDWidget(QWidget):
         person_id_text = '--' if self._leader_id is None else str(self._leader_id)
         distance_text = '--' if not math.isfinite(self._leader_distance) else f'{self._leader_distance:.2f} m'
         self.leader_signal.emit(person_id_text, distance_text)
+
+    def _on_person_centroids(self, msg: PoseArray):
+        self._fanet_centroids = list(msg.poses)
+        self._publish_fanet_snapshot()
+
+    def _on_person_positions(self, msg: PoseArray):
+        self._fanet_positions = list(msg.poses)
+        self._publish_fanet_snapshot()
+
+    def _on_person_distances(self, msg: Float32MultiArray):
+        self._fanet_distances = [float(value) for value in msg.data]
+        self._publish_fanet_snapshot()
+
+    def _build_fanet_detections(self):
+        detections = []
+        count = max(len(self._fanet_centroids), len(self._fanet_positions), len(self._fanet_distances))
+        for index in range(count):
+            centroid = self._fanet_centroids[index] if index < len(self._fanet_centroids) else None
+            position = self._fanet_positions[index] if index < len(self._fanet_positions) else None
+            distance = self._fanet_distances[index] if index < len(self._fanet_distances) else math.nan
+
+            detection = {
+                'id': index + 1,
+                'pixel_x': None,
+                'pixel_y': None,
+                'area_px': None,
+                'robot_x': None,
+                'robot_y': None,
+                'robot_z': None,
+                'distance_m': None,
+            }
+
+            if centroid is not None:
+                detection['pixel_x'] = float(centroid.position.x)
+                detection['pixel_y'] = float(centroid.position.y)
+                detection['area_px'] = float(centroid.position.z)
+
+            if position is not None:
+                detection['robot_x'] = float(position.position.x)
+                detection['robot_y'] = float(position.position.y)
+                detection['robot_z'] = float(position.position.z)
+
+            if math.isfinite(distance):
+                detection['distance_m'] = float(distance)
+
+            detections.append(detection)
+
+        return detections
+
+    def _publish_fanet_snapshot(self):
+        detections = self._build_fanet_detections()
+        self.person_id.setText(f'Personas: {len(detections)}')
+
+        last_distance = '--'
+        if detections:
+            for detection in detections:
+                distance = detection.get('distance_m', None)
+                if distance is not None and math.isfinite(distance):
+                    last_distance = f'{distance:.2f} m'
+                    break
+        self.person_distance.setText(f'Última distancia: {last_distance}')
+
+        signature = tuple(
+            (
+                detection['id'],
+                None if detection['pixel_x'] is None else round(float(detection['pixel_x']), 1),
+                None if detection['pixel_y'] is None else round(float(detection['pixel_y']), 1),
+                None if detection['robot_x'] is None else round(float(detection['robot_x']), 2),
+                None if detection['robot_y'] is None else round(float(detection['robot_y']), 2),
+                None if detection['distance_m'] is None else round(float(detection['distance_m']), 2),
+            )
+            for detection in detections
+        )
+
+        if signature != self._last_detection_signature:
+            self._last_detection_signature = signature
+            if not detections:
+                self.log('FANET -> sin personas detectadas')
+            else:
+                summary = []
+                for detection in detections:
+                    px = '--' if detection['pixel_x'] is None or detection['pixel_y'] is None else f"px=({detection['pixel_x']:.0f},{detection['pixel_y']:.0f})"
+                    robot = '--' if detection['robot_x'] is None or detection['robot_y'] is None else f"robot=({detection['robot_x']:.2f},{detection['robot_y']:.2f})"
+                    dist = '--' if detection['distance_m'] is None else f"dist={detection['distance_m']:.2f}m"
+                    summary.append(f"P{detection['id']}: {px} {robot} {dist}")
+                self.log('FANET -> ' + ' | '.join(summary))
+
+        self.detections_signal.emit(detections)
 
     def _on_leader_id_msg(self, msg: Int32):
         if msg.data < 0:

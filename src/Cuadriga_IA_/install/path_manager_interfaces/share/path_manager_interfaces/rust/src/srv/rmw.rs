@@ -1,0 +1,1 @@
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_rs/path_manager_interfaces/rust/src/srv/rmw.rs

@@ -1,0 +1,10 @@
+[0.017s] Invoking command in '/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake --build /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces -- -j8 -l8
+[0.074s] gmake[2]: *** [CMakeFiles/ctl_mission_interfaces__cpp.dir/build.make:459: CMakeFiles/ctl_mission_interfaces__cpp.dir/depend] Interrupt
+[0.074s] gmake[2]: *** [ctl_mission_interfaces__rs/CMakeFiles/ctl_mission_interfaces__rs.dir/build.make:216: ctl_mission_interfaces__rs/CMakeFiles/ctl_mission_interfaces__rs.dir/depend] Interrupt
+[0.074s] gmake[1]: *** [CMakeFiles/Makefile2:335: CMakeFiles/ctl_mission_interfaces__cpp.dir/all] Interrupt
+[0.075s] gmake[1]: *** [CMakeFiles/Makefile2:634: ctl_mission_interfaces__rs/CMakeFiles/ctl_mission_interfaces__rs.dir/all] Interrupt
+[0.076s] gmake[2]: *** [CMakeFiles/ctl_mission_interfaces__rosidl_generator_c.dir/build.make:591: CMakeFiles/ctl_mission_interfaces__rosidl_generator_c.dir/depend] Interrupt
+[0.077s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ctl_mission_interfaces.dir/build.make:85: CMakeFiles/ament_cmake_python_symlink_ctl_mission_interfaces.dir/depend] Interrupt
+[0.077s] gmake[1]: *** [CMakeFiles/Makefile2:231: CMakeFiles/ctl_mission_interfaces__rosidl_generator_c.dir/all] Interrupt
+[0.077s] gmake[1]: *** [CMakeFiles/Makefile2:439: CMakeFiles/ament_cmake_python_symlink_ctl_mission_interfaces.dir/all] Interrupt
+[0.078s] gmake: *** [Makefile:146: all] Interrupt

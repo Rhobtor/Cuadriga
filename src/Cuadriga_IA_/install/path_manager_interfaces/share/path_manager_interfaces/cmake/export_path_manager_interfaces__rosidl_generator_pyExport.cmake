@@ -54,6 +54,7 @@ endif()
 add_library(path_manager_interfaces::path_manager_interfaces__rosidl_generator_py SHARED IMPORTED)
 
 set_target_properties(path_manager_interfaces::path_manager_interfaces__rosidl_generator_py PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/local/lib/python3.10/dist-packages/numpy/core/include"
   INTERFACE_LINK_LIBRARIES "path_manager_interfaces::path_manager_interfaces__rosidl_generator_c;/usr/lib/x86_64-linux-gnu/libpython3.10.so;path_manager_interfaces::path_manager_interfaces__rosidl_typesupport_c;std_msgs::std_msgs__rosidl_generator_py;builtin_interfaces::builtin_interfaces__rosidl_generator_py;nav_msgs::nav_msgs__rosidl_generator_py;geometry_msgs::geometry_msgs__rosidl_generator_py"
 )
 

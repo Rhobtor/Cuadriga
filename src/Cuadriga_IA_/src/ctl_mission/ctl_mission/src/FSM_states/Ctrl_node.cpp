@@ -86,6 +86,14 @@ CtrlNode::CtrlNode(const std::string & node_name, bool intra_process_comms)
     this->declare_parameter("dynamic_la_pp.max_lin_acc", 0.52);
     this->declare_parameter("dynamic_la_pp.max_lin_dec", 2.0);
     this->declare_parameter("dynamic_la_pp.min_speed", 0.5);
+    this->declare_parameter("follow_the_carrot.look_ahead_distance", 1.0);
+    this->declare_parameter("follow_the_carrot.forward_speed", 0.35);
+    this->declare_parameter("follow_the_carrot.min_turning_speed", 0.1);
+    this->declare_parameter("follow_the_carrot.heading_gain", 0.9);
+    this->declare_parameter("follow_the_carrot.max_angular_speed", 1.0);
+    this->declare_parameter("follow_the_carrot.slow_turn_angle", 0.35);
+    this->declare_parameter("follow_the_carrot.turn_in_place_angle", 0.75);
+    this->declare_parameter("follow_the_carrot.goal_tolerance", 1.0);
     this->declare_parameter("services.config_simple_ctl_srv_name", "config_controller");
     this->declare_parameter("change_controller_srv_name", "change_controller_type");
     this->declare_parameter("pure_pursuit.config_pure_pursuit_ctrl_srv_name", "config_pure_pursuit");
@@ -229,6 +237,19 @@ void CtrlNode::publish() {
             pub_look_ahead_distance->publish(distance_msg);
             pub_la_pose->publish(dynamic_la_pp_controller.dynamic_lapp_output.look_ahead_pose);
         }
+
+        if (current_controler == "follow_the_carrot"){
+            follow_the_carrot_controller.calc_actions(path_transformed, dist_last_obj);
+            cmd_msg.linear.x = follow_the_carrot_controller.output.linear_sp;
+            cmd_msg.angular.z = angular_direction_sign * follow_the_carrot_controller.output.angular_sp;
+            std_msgs::msg::Int32 index_msg;
+            index_msg.data = follow_the_carrot_controller.output.goal_idx;
+            pub_look_ahead->publish(index_msg);
+            std_msgs::msg::Float32 distance_msg;
+            distance_msg.data = follow_the_carrot_controller.output.cte;
+            pub_look_ahead_distance->publish(distance_msg);
+            pub_la_pose->publish(follow_the_carrot_controller.output.look_ahead_pose);
+        }
         
         pub_cmd_vel->publish(cmd_msg);
     }
@@ -263,7 +284,8 @@ void CtrlNode::configPurePursuit(
         std::shared_ptr<ctl_mission_interfaces::srv::ConfigPurePursuitCtrl::Response> response)
     {
         RCLCPP_INFO(this->get_logger(), "Pure pursuit controller config");
-        pure_pursuit_controller.control_config(request->v_forward, request->l_ahead_dist);
+        pure_pursuit_controller.control_config(request->l_ahead_dist, request->v_forward);
+        follow_the_carrot_controller.control_config(request->l_ahead_dist, request->v_forward);
 
     }
 
@@ -347,6 +369,14 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtrlNo
     this->get_parameter("dynamic_la_pp.max_lin_acc", dyn_la_pp_max_lin_acc);
     this->get_parameter("dynamic_la_pp.max_lin_dec", dyn_la_pp_max_lin_dec);
     this->get_parameter("dynamic_la_pp.min_speed", dyn_la_pp_min_speed);
+    this->get_parameter("follow_the_carrot.look_ahead_distance", carrot_look_ahead_dist);
+    this->get_parameter("follow_the_carrot.forward_speed", carrot_forward_speed);
+    this->get_parameter("follow_the_carrot.min_turning_speed", carrot_min_turning_speed);
+    this->get_parameter("follow_the_carrot.heading_gain", carrot_heading_gain);
+    this->get_parameter("follow_the_carrot.max_angular_speed", carrot_max_angular_speed);
+    this->get_parameter("follow_the_carrot.slow_turn_angle", carrot_slow_turn_angle);
+    this->get_parameter("follow_the_carrot.turn_in_place_angle", carrot_turn_in_place_angle);
+    this->get_parameter("follow_the_carrot.goal_tolerance", carrot_goal_tolerance);
     this->get_parameter("min_speed", min_speed);
     this->get_parameter("breaking_acc", breaking_acc);
     this->get_parameter("change_controller_srv_name", change_ctrl_srv_name);
@@ -392,6 +422,15 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn CtrlNo
                                                   min_speed, breaking_acc, regulated_pure_pursuit_r_min);
     //start pure pursuit controller
     pure_pursuit_controller.control_init(timer_period, pp_look_ahead_dist, pp_linear_speed, min_speed, breaking_acc);
+    follow_the_carrot_controller.control_init(
+        carrot_look_ahead_dist,
+        carrot_forward_speed,
+        carrot_min_turning_speed,
+        carrot_heading_gain,
+        carrot_max_angular_speed,
+        carrot_slow_turn_angle,
+        carrot_turn_in_place_angle,
+        carrot_goal_tolerance);
     //start dynamic pp controller
     dynamic_pp_controller.control_init(dyn_pp_look_ahead_distance,  dyn_pp_max_speed,  dyn_pp_max_ang_acc,  dyn_pp_max_ang_dec, 
                                        dyn_pp_max_lin_acc,  dyn_pp_max_lin_dec, timer_period, min_speed); 

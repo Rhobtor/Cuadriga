@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/ctl_mission
 
 # Include any dependencies generated for this target.
 include CMakeFiles/controller_node.dir/depend.make
@@ -70,102 +70,102 @@ include CMakeFiles/controller_node.dir/progress.make
 include CMakeFiles/controller_node.dir/flags.make
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp
+CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o -MF CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o.d -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o -MF CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o.d -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp > CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp > CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.i
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node.cpp -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node.cpp.s
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp
+CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o -MF CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o.d -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o -MF CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o.d -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp > CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp > CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.i
 
 CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/FSM_states/Ctrl_node_main.cpp -o CMakeFiles/controller_node.dir/src/FSM_states/Ctrl_node_main.cpp.s
 
 CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp
+CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp
 CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp
 
 CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp > CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp > CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.i
 
 CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp -o CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/stanley_ctrl.cpp -o CMakeFiles/controller_node.dir/src/controllers/stanley_ctrl.cpp.s
 
 CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp
+CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp
 CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp
 
 CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.i
 
 CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/pure_pursuit_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/pure_pursuit_controller.cpp.s
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp
+CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp
 CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.i
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_pp_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/dynamic_pp_controller.cpp.s
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp
+CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp
 CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.i
 
 CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/dynamic_la_pp_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/dynamic_la_pp_controller.cpp.s
 
 CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o: CMakeFiles/controller_node.dir/flags.make
-CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp
+CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp
 CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o: CMakeFiles/controller_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o -c /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o -MF CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o.d -o CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.o -c /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp
 
 CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp > CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.i
 
 CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission/src/controllers/regulated_pure_pursuit_controller.cpp -o CMakeFiles/controller_node.dir/src/controllers/regulated_pure_pursuit_controller.cpp.s
 
 # Object files for target controller_node
 controller_node_OBJECTS = \
@@ -201,24 +201,24 @@ controller_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspe
 controller_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 controller_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 controller_node: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_py.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_fastrtps_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_introspection_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_py.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_c.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_cpp.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_py.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_cpp.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_py.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_cpp.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_py.so
 controller_node: /usr/lib/x86_64-linux-gnu/libGeographic.so
 controller_node: /opt/ros/humble/lib/librcl_lifecycle.so
 controller_node: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_c.so
@@ -298,8 +298,8 @@ controller_node: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_py.so
 controller_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
 controller_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_generator_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_typesupport_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/ctl_mission_interfaces/lib/libctl_mission_interfaces__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_typesupport_c.so
 controller_node: /opt/ros/humble/lib/libtrajectory_msgs__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_c.so
@@ -316,7 +316,7 @@ controller_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrt
 controller_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 controller_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 controller_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-controller_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+controller_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 controller_node: /opt/ros/humble/lib/librmw.so
 controller_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.so
 controller_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
@@ -332,11 +332,11 @@ controller_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 controller_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_py.so
 controller_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 controller_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_c.so
 controller_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_c.so
 controller_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 controller_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
-controller_node: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_c.so
+controller_node: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 controller_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
@@ -349,7 +349,7 @@ controller_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 controller_node: /opt/ros/humble/lib/librcpputils.so
 controller_node: /opt/ros/humble/lib/librcutils.so
 controller_node: CMakeFiles/controller_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable controller_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable controller_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controller_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -361,6 +361,6 @@ CMakeFiles/controller_node.dir/clean:
 .PHONY : CMakeFiles/controller_node.dir/clean
 
 CMakeFiles/controller_node.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/CMakeFiles/controller_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission /workspaces/Cuadriga_IA_/build/ctl_mission/CMakeFiles/controller_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/controller_node.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/path_manager_interfaces
 
 # Utility rule file for path_manager_interfaces__py.
 
@@ -182,8 +182,8 @@ rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl
 rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspaces/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -271,10 +271,10 @@ path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/build: pa
 .PHONY : path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/build
 
 path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/clean:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/path_manager_interfaces__py.dir/cmake_clean.cmake
+	cd /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/path_manager_interfaces__py.dir/cmake_clean.cmake
 .PHONY : path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/clean
 
 path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/path_manager_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py /workspaces/Cuadriga_IA_/build/path_manager_interfaces /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py /workspaces/Cuadriga_IA_/build/path_manager_interfaces/path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : path_manager_interfaces__py/CMakeFiles/path_manager_interfaces__py.dir/depend
 

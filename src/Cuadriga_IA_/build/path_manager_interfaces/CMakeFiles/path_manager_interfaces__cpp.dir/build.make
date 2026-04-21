@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/path_manager_interfaces
 
 # Utility rule file for path_manager_interfaces__cpp.
 
@@ -205,8 +205,8 @@ rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp: /opt/ro
 rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspaces/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/path_manager_interfaces/srv/detail/write_path_to_file__builder.hpp: rosidl_generator_cpp/path_manager_interfaces/srv/write_path_to_file.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/path_manager_interfaces/srv/detail/write_path_to_file__builder.hpp
@@ -378,6 +378,6 @@ CMakeFiles/path_manager_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/path_manager_interfaces__cpp.dir/clean
 
 CMakeFiles/path_manager_interfaces__cpp.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/path_manager/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles/path_manager_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/path_manager_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces /workspaces/Cuadriga_IA_/build/path_manager_interfaces /workspaces/Cuadriga_IA_/build/path_manager_interfaces /workspaces/Cuadriga_IA_/build/path_manager_interfaces/CMakeFiles/path_manager_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/path_manager_interfaces__cpp.dir/depend
 

@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager/path_manager_node" "TARGETS" "path_manager_node" "DESTINATION" "lib/path_manager")

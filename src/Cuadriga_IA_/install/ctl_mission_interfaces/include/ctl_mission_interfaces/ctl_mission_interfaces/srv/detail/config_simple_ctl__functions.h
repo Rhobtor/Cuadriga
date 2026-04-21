@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/srv/detail/config_simple_ctl__functions.h
+/workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/rosidl_generator_c/ctl_mission_interfaces/srv/detail/config_simple_ctl__functions.h

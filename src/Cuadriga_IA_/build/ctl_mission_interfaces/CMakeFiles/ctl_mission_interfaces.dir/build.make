@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
+CMAKE_SOURCE_DIR = /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces
+CMAKE_BINARY_DIR = /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces
 
 # Utility rule file for ctl_mission_interfaces.
 
@@ -66,37 +66,37 @@ include CMakeFiles/ctl_mission_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ctl_mission_interfaces.dir/progress.make
 
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeMode.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeMode_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeMode_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetMode.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/GetMode_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/GetMode_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeSpeed.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeSpeed_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeSpeed_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigSimpleCtl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigSimpleCtl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigSimpleCtl_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/GetPossibleTransitions.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/GetPossibleTransitions_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/GetPossibleTransitions_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ChangeController.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeController_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ChangeController_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigPurePursuitCtrl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigPurePursuitCtrl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigPurePursuitCtrl_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigStanleyCtrl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigStanleyCtrl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigStanleyCtrl_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicPureCtrl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigDynamicPureCtrl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigDynamicPureCtrl_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigDynamicLAPureCtrl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigDynamicLAPureCtrl_Response.msg
-CMakeFiles/ctl_mission_interfaces: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv
+CMakeFiles/ctl_mission_interfaces: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces/srv/ConfigRegulatedPureCtrl.srv
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigRegulatedPureCtrl_Request.msg
 CMakeFiles/ctl_mission_interfaces: rosidl_cmake/srv/ConfigRegulatedPureCtrl_Response.msg
 CMakeFiles/ctl_mission_interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -185,6 +185,6 @@ CMakeFiles/ctl_mission_interfaces.dir/clean:
 .PHONY : CMakeFiles/ctl_mission_interfaces.dir/clean
 
 CMakeFiles/ctl_mission_interfaces.dir/depend:
-	cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles/ctl_mission_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces /workspaces/Cuadriga_IA_/build/ctl_mission_interfaces/CMakeFiles/ctl_mission_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ctl_mission_interfaces.dir/depend
 

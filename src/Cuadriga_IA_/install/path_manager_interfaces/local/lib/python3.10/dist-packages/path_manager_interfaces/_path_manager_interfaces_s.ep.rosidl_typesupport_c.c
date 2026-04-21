@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_c.c
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_c.c

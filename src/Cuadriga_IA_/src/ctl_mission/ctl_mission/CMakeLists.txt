@@ -72,6 +72,7 @@ add_executable(controller_node
   src/FSM_states/Ctrl_node_main.cpp
   src/controllers/stanley_ctrl.cpp
   src/controllers/pure_pursuit_controller.cpp
+  src/controllers/follow_the_carrot_controller.cpp
   src/controllers/dynamic_pp_controller.cpp
   src/controllers/dynamic_la_pp_controller.cpp
   src/controllers/regulated_pure_pursuit_controller.cpp)

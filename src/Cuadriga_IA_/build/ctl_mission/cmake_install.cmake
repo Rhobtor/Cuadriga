@@ -1,8 +1,8 @@
-# Install script for directory: /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/src/ctl_mission/ctl_mission
+# Install script for directory: /workspaces/Cuadriga_IA_/src/ctl_mission/ctl_mission
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission")
+  set(CMAKE_INSTALL_PREFIX "/workspaces/Cuadriga_IA_/install/ctl_mission")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,14 +43,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/install/ctl_mission/local/lib/python3.10/dist-packages/ctl_mission"
+        "/workspaces/Cuadriga_IA_/install/ctl_mission/local/lib/python3.10/dist-packages/ctl_mission"
       )
 endif()
 
@@ -62,5 +62,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspaces/Cuadriga_IA_/build/ctl_mission/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

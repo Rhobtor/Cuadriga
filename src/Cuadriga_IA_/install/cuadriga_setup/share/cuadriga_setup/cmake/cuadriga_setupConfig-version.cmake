@@ -1,1 +1,0 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/cuadriga_setup/ament_cmake_core/cuadriga_setupConfig-version.cmake

@@ -25,6 +25,7 @@
 #include "ctl_mission/Pure_Pursuit.h"
 #include "ctl_mission/Dynamic_PP.h"
 #include "ctl_mission/Dynamic_LAPP.h"
+#include "ctl_mission/Follow_The_Carrot.h"
 #include "ctl_mission/Regulated_Pure_Pursuit.h"
 #include "ctl_mission_interfaces/srv/config_simple_ctl.hpp"
 #include "ctl_mission_interfaces/srv/config_pure_pursuit_ctrl.hpp"
@@ -86,16 +87,19 @@ class CtrlNode : public rclcpp_lifecycle::LifecycleNode
   float pp_K_linear_err = 0.2,  pp_K_ang_err = 1, pp_linear_speed, controller_frequency, min_speed, breaking_acc, dist_last_obj;
       double angular_direction_sign = 1.0;
   double v_x_odom, w_z_odom;
-  std::vector<std::string> available_controller_types_ = {"pure_pursuit", "regulated_pure_pursuit", "dynamic_pure_pursuit", "dynamic_la_pure_pursuit"};
+      std::vector<std::string> available_controller_types_ = {"pure_pursuit", "regulated_pure_pursuit", "dynamic_pure_pursuit", "dynamic_la_pure_pursuit", "follow_the_carrot"};
   float dyn_pp_look_ahead_distance, dyn_pp_max_speed, dyn_pp_max_ang_acc, dyn_pp_max_ang_dec, dyn_pp_max_lin_acc, dyn_pp_max_lin_dec;
   float dyn_la_pp_look_ahead_v_gain, dyn_la_pp_max_speed, dyn_la_pp_max_ang_acc, dyn_la_pp_max_ang_dec, 
   dyn_la_pp_max_lin_acc, dyn_la_pp_max_lin_dec, dyn_la_pp_min_speed;
   float regulated_pure_pursuit_l_ahead, regulated_pure_pursuit_r_min, regulated_pure_pursuit_v_forward;
+  float carrot_look_ahead_dist, carrot_forward_speed, carrot_min_turning_speed, carrot_heading_gain,
+        carrot_max_angular_speed, carrot_slow_turn_angle, carrot_turn_in_place_angle, carrot_goal_tolerance;
   rclcpp::Time path_msg_timestamp;
   Stanley_Ctrl stanley_controller;
   PurePursuit pure_pursuit_controller;
   DynamicPP dynamic_pp_controller;
   DynamicLAPP dynamic_la_pp_controller;
+  FollowTheCarrot follow_the_carrot_controller;
   RegulatedPurePursuit regulated_pure_pursuit_controller;
 
 nav_msgs::msg::Path transform_path_to_robot_frame(const nav_msgs::msg::Path& path_in);

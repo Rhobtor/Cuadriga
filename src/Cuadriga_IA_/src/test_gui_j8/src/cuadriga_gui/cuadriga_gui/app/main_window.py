@@ -98,6 +98,31 @@ def _haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2.0 * radius_m * math.atan2(math.sqrt(a), math.sqrt(1.0 - a))
 
 
+def _offset_latlon(lat_deg: float, lon_deg: float, east_m: float, north_m: float):
+    radius_m = 6378137.0
+    lat_rad = math.radians(float(lat_deg))
+    out_lat = float(lat_deg) + math.degrees(north_m / radius_m)
+    cos_lat = max(math.cos(lat_rad), 1e-9)
+    out_lon = float(lon_deg) + math.degrees(east_m / (radius_m * cos_lat))
+    return out_lat, out_lon
+
+
+def _latlon_to_local_offsets(robot_lat: float, robot_lon: float, target_lat: float, target_lon: float, heading_deg: float):
+    radius_m = 6378137.0
+    robot_lat_f = float(robot_lat)
+    robot_lon_f = float(robot_lon)
+    target_lat_f = float(target_lat)
+    target_lon_f = float(target_lon)
+    heading_rad = math.radians(float(heading_deg))
+
+    north_m = math.radians(target_lat_f - robot_lat_f) * radius_m
+    east_m = math.radians(target_lon_f - robot_lon_f) * radius_m * max(math.cos(math.radians(robot_lat_f)), 1e-9)
+
+    forward_m = east_m * math.sin(heading_rad) + north_m * math.cos(heading_rad)
+    left_m = -east_m * math.cos(heading_rad) + north_m * math.sin(heading_rad)
+    return forward_m, left_m
+
+
 def _resolve_html_path():
     try:
         share = get_package_share_directory('cuadriga_gui')
@@ -576,6 +601,8 @@ class RosSide(Node):
             ChangeController,
             ConfigPurePursuitCtrl,
             ConfigRegulatedPureCtrl,
+            ConfigDynamicPureCtrl,
+            ConfigDynamicLAPureCtrl,
             ConfigStanleyCtrl,
         )
 
@@ -584,16 +611,22 @@ class RosSide(Node):
         self._srv_ChangeController = ChangeController
         self._srv_ConfigPurePursuitCtrl = ConfigPurePursuitCtrl
         self._srv_ConfigRegulatedPureCtrl = ConfigRegulatedPureCtrl
+        self._srv_ConfigDynamicPureCtrl = ConfigDynamicPureCtrl
+        self._srv_ConfigDynamicLAPureCtrl = ConfigDynamicLAPureCtrl
         self._srv_ConfigStanleyCtrl = ConfigStanleyCtrl
 
         srv_change_ctrl = namespaced(self.namespace, self.get_parameter(p.change_controller_srv_name).value)
         srv_config_pp = namespaced(self.namespace, self.get_parameter(p.config_pure_pursuit_srv_name).value)
         srv_config_regulated = namespaced(self.namespace, self.get_parameter(p.config_regulated_pure_srv_name).value)
+        srv_config_dynamic = namespaced(self.namespace, self.get_parameter(p.config_dynamic_pure_srv_name).value)
+        srv_config_dynamic_la = namespaced(self.namespace, self.get_parameter(p.config_dynamic_la_pure_srv_name).value)
         srv_config_stanley = namespaced(self.namespace, self.get_parameter(p.config_stanley_srv_name).value)
 
         self.cli_change_controller = self.create_client(ChangeController, srv_change_ctrl)
         self.cli_config_pp = self.create_client(ConfigPurePursuitCtrl, srv_config_pp)
         self.cli_config_regulated = self.create_client(ConfigRegulatedPureCtrl, srv_config_regulated)
+        self.cli_config_dynamic = self.create_client(ConfigDynamicPureCtrl, srv_config_dynamic)
+        self.cli_config_dynamic_la = self.create_client(ConfigDynamicLAPureCtrl, srv_config_dynamic_la)
         self.cli_config_stanley = self.create_client(ConfigStanleyCtrl, srv_config_stanley)
 
     # NOTE: no /gui/* publishers. We talk to cuadriga via services (legacy GUI_pkg contract).
@@ -715,12 +748,7 @@ class RosSide(Node):
             self.get_logger().warn('send_cfg ignored: invalid v_forward/l_ahead_dist')
             return
 
-        # Pure pursuit controllers (including dynamic variants) share the PP config surface in this codebase
-        if controller_type in {
-            'pure_pursuit',
-            'dynamic_pure_pursuit',
-            'dynamic_la_pure_pursuit',
-        }:
+        if controller_type in {'pure_pursuit', 'follow_the_carrot'}:
             if self.cli_config_pp.service_is_ready():
                 try:
                     req = self._srv_ConfigPurePursuitCtrl.Request()
@@ -733,6 +761,68 @@ class RosSide(Node):
                     self.get_logger().warn(f"ConfigPurePursuitCtrl call failed: {e}")
             else:
                 self.get_logger().warn('ConfigPurePursuitCtrl service not ready')
+            return
+
+        if controller_type == 'dynamic_pure_pursuit':
+            try:
+                max_v_forward = float(cfg.get('lin_max', v_forward))
+                max_ang_acc = float(cfg.get('acc_ang'))
+                max_ang_dec = float(cfg.get('acc_ang'))
+                max_lin_acc = float(cfg.get('acc_lin'))
+                max_lin_dec = float(cfg.get('acc_lin'))
+            except Exception:
+                self.get_logger().warn('send_cfg ignored: invalid dynamic pure params')
+                return
+
+            if self.cli_config_dynamic.service_is_ready():
+                try:
+                    req = self._srv_ConfigDynamicPureCtrl.Request()
+                    req.look_ahead_dis = l_ahead_dist
+                    req.max_v_forward = max_v_forward
+                    req.max_ang_acc = max_ang_acc
+                    req.max_ang_dec = max_ang_dec
+                    req.max_lin_acc = max_lin_acc
+                    req.max_lin_dec = max_lin_dec
+                    self.cli_config_dynamic.call_async(req)
+                    self.get_logger().info(
+                        f"ConfigDynamicPureCtrl -> la={l_ahead_dist} v_max={max_v_forward} a_ang={max_ang_acc} a_lin={max_lin_acc}"
+                    )
+                except Exception as e:
+                    self.get_logger().warn(f"ConfigDynamicPureCtrl call failed: {e}")
+            else:
+                self.get_logger().warn('ConfigDynamicPureCtrl service not ready')
+            return
+
+        if controller_type == 'dynamic_la_pure_pursuit':
+            try:
+                max_v_forward = float(cfg.get('lin_max', v_forward))
+                max_ang_acc = float(cfg.get('acc_ang'))
+                max_ang_dec = float(cfg.get('acc_ang'))
+                max_lin_acc = float(cfg.get('acc_lin'))
+                max_lin_dec = float(cfg.get('acc_lin'))
+            except Exception:
+                self.get_logger().warn('send_cfg ignored: invalid dynamic LA params')
+                return
+
+            if self.cli_config_dynamic_la.service_is_ready():
+                try:
+                    req = self._srv_ConfigDynamicLAPureCtrl.Request()
+                    req.look_ahead_v_gain = 1.0
+                    req.max_v_forward = max_v_forward
+                    req.max_ang_acc = max_ang_acc
+                    req.max_ang_dec = max_ang_dec
+                    req.max_lin_acc = max_lin_acc
+                    req.max_lin_dec = max_lin_dec
+                    req.speed_pow = 1.0
+                    req.min_look_ahead_d = l_ahead_dist
+                    self.cli_config_dynamic_la.call_async(req)
+                    self.get_logger().info(
+                        f"ConfigDynamicLAPureCtrl -> la_min={l_ahead_dist} v_max={max_v_forward} a_ang={max_ang_acc} a_lin={max_lin_acc}"
+                    )
+                except Exception as e:
+                    self.get_logger().warn(f"ConfigDynamicLAPureCtrl call failed: {e}")
+            else:
+                self.get_logger().warn('ConfigDynamicLAPureCtrl service not ready')
             return
 
         if controller_type == 'regulated_pure_pursuit':
@@ -797,9 +887,10 @@ class MainWindow(QMainWindow):
         self._person_records = []
         self._next_person_id = 1
         self._person_match_threshold_m = 2.0
+        self._fanet_geo_smoothing_alpha = 0.25
         self._person_pending_distance_m = 20.0
         self._person_rescued_distance_m = 5.0
-        self._auto_person_tracking_enabled = True
+        self._auto_person_tracking_enabled = False
         self._ros = None
         self._defer_ros = defer_ros_start
         self._tile_proxy = None
@@ -810,6 +901,7 @@ class MainWindow(QMainWindow):
         self._robot_roles = {self._current_namespace: 'explorador'}
         self._pending_js_by_key = {}
         self._pending_js_generic = []
+        self._map_ready = False
         self._js_flush_timer = QTimer(self)
         self._js_flush_timer.setSingleShot(True)
         self._js_flush_timer.timeout.connect(self._flush_js_queue)
@@ -824,6 +916,7 @@ class MainWindow(QMainWindow):
         self._build_tab_mission()
         self._build_tab_control()
         self._build_tab_persons()
+        self._build_tab_follow()
         self.tabs.currentChanged.connect(self._on_tab_changed)
 
         right = QWidget()
@@ -898,20 +991,18 @@ class MainWindow(QMainWindow):
 
     def _build_tab_persons(self):
         self.persons_tab = PersonsWidget()
-        self.persons_tab.statusChangeRequested.connect(self._on_person_status_change)
         self.persons_tab.assignmentRequested.connect(self._on_person_assignment_change)
-        self.persons_tab.autoTrackingChanged.connect(self._on_auto_person_tracking_changed)
-        self.persons_tab.thresholdsChanged.connect(self._on_person_thresholds_changed)
         self.persons_tab.set_current_robot(self._current_namespace)
         self.persons_tab.set_current_role(self._robot_roles.get(self._current_namespace, 'explorador'))
-        self.persons_tab.set_auto_tracking(self._auto_person_tracking_enabled)
-        self.persons_tab.set_thresholds(self._person_pending_distance_m, self._person_rescued_distance_m)
         self.tabs.addTab(self.persons_tab, 'Personas')
 
 
     def _build_tab_follow(self):
         self.follow_tab = FollowZEDWidget(self._ros)
-        self.tabs.addTab(self.follow_tab, 'FollowZED')
+        self.follow_tab.detections_signal.connect(self._on_fanet_detections)
+        if self._ros is not None:
+            self.follow_tab.ensure_detection_started()
+        self.tabs.addTab(self.follow_tab, 'Video')
 
     def _refresh_follow_tab(self):
         if not hasattr(self, 'follow_tab'):
@@ -921,14 +1012,20 @@ class MainWindow(QMainWindow):
         index = self.tabs.indexOf(self.follow_tab)
         if index < 0:
             self.follow_tab = FollowZEDWidget(self._ros)
-            self.tabs.addTab(self.follow_tab, 'FollowZED')
+            self.follow_tab.detections_signal.connect(self._on_fanet_detections)
+            if self._ros is not None:
+                self.follow_tab.ensure_detection_started()
+            self.tabs.addTab(self.follow_tab, 'Video')
             return
 
         was_current = self.tabs.currentIndex() == index
         old_follow = self.follow_tab
         self.follow_tab = FollowZEDWidget(self._ros)
+        self.follow_tab.detections_signal.connect(self._on_fanet_detections)
+        if self._ros is not None:
+            self.follow_tab.ensure_detection_started()
         self.tabs.removeTab(index)
-        self.tabs.insertTab(index, self.follow_tab, 'FollowZED')
+        self.tabs.insertTab(index, self.follow_tab, 'Video')
         if was_current:
             self.tabs.setCurrentIndex(index)
         old_follow.deleteLater()
@@ -1072,12 +1169,11 @@ class MainWindow(QMainWindow):
         self.control_tab.set_ros(self._ros)
         self.persons_tab.set_current_robot(ns)
         self.persons_tab.set_current_role(self._robot_roles.get(ns, 'explorador'))
-        self.persons_tab.set_auto_tracking(self._auto_person_tracking_enabled)
-        self.persons_tab.set_thresholds(self._person_pending_distance_m, self._person_rescued_distance_m)
         self.persons_tab.set_records([])
         self._js_set_detected_persons([])
 
         if hasattr(self, 'follow_tab'):
+            self.follow_tab.set_ros(self._ros)
             self._refresh_follow_tab()
 
         if old_ros is not None:
@@ -1180,6 +1276,7 @@ class MainWindow(QMainWindow):
             pass
 
     def _on_map_load_finished(self, ok: bool):
+        self._map_ready = bool(ok)
         if not ok:
             return
         # 0,0 fallback marker (Greenwich + Equator) to confirm code path is alive.
@@ -1188,6 +1285,7 @@ class MainWindow(QMainWindow):
             self._js_update_vehicle(lat, lon, heading, pan=False, no_gps=True)
         else:
             self._js_update_vehicle(lat, lon, heading, pan=False)
+        self._flush_js_queue()
 
     def _on_gps_pose(self, lat: float, lon: float, heading_deg):
         """Update the vehicle marker on the embedded Leaflet map.
@@ -1207,7 +1305,50 @@ class MainWindow(QMainWindow):
 
         pan = bool(self.chk_follow_robot.isChecked())
         self._js_update_vehicle(lat_f, lon_f, heading_deg, pan=pan, no_gps=False)
+        self._georef_fanet_records()
         self._auto_update_person_statuses(lat_f, lon_f)
+
+    def _georef_fanet_records(self):
+        changed = False
+        for record in self._person_records:
+            if record.get('origin') != 'fanet':
+                continue
+
+            georef = self._current_robot_georef()
+            if georef is None:
+                continue
+
+            robot_lat, robot_lon, heading_deg = georef
+            record_lat = record.get('lat')
+            record_lon = record.get('lon')
+
+            if record_lat is not None and record_lon is not None:
+                forward_m, left_m = _latlon_to_local_offsets(robot_lat, robot_lon, record_lat, record_lon, heading_deg)
+                previous_local_x = record.get('local_x')
+                previous_local_y = record.get('local_y')
+                if previous_local_x is None or abs(float(previous_local_x) - float(forward_m)) >= 0.05:
+                    record['local_x'] = float(forward_m)
+                    changed = True
+                if previous_local_y is None or abs(float(previous_local_y) - float(left_m)) >= 0.05:
+                    record['local_y'] = float(left_m)
+                    changed = True
+                continue
+
+            if record.get('local_x') is None or record.get('local_y') is None:
+                continue
+
+            lat, lon = self._fanet_detection_to_latlon({
+                'robot_x': record.get('local_x'),
+                'robot_y': record.get('local_y'),
+            })
+            if lat is None or lon is None:
+                continue
+            if record.get('lat') != lat or record.get('lon') != lon:
+                record['lat'] = float(lat)
+                record['lon'] = float(lon)
+                changed = True
+        if changed:
+            self._refresh_person_records_view()
 
     def _js_update_vehicle(self, lat: float, lon: float, heading_deg, pan: bool = False, no_gps: bool = False):
         """Send vehicle update to map.
@@ -1247,12 +1388,109 @@ class MainWindow(QMainWindow):
         self._merge_detected_persons(points)
         self._refresh_person_records_view()
 
-    def _merge_detected_persons(self, points):
-        unmatched_records = {
-            record['id']
+    def _on_fanet_detections(self, detections):
+        if not isinstance(detections, list):
+            return
+        self._merge_fanet_detections(detections)
+        self._refresh_person_records_view()
+
+    def _current_robot_georef(self):
+        pose = getattr(self, '_last_vehicle', None)
+        if not pose or len(pose) != 3:
+            return None
+        lat, lon, heading_deg = pose
+        if not self._have_vehicle_gps:
+            return None
+        if heading_deg is None:
+            return None
+        try:
+            return float(lat), float(lon), float(heading_deg)
+        except Exception:
+            return None
+
+    def _fanet_detection_to_latlon(self, detection):
+        georef = self._current_robot_georef()
+        robot_x = detection.get('robot_x', None)
+        robot_y = detection.get('robot_y', None)
+        if georef is None or robot_x is None or robot_y is None:
+            return None, None
+
+        lat, lon, heading_deg = georef
+        heading_rad = math.radians(heading_deg)
+        forward_m = float(robot_x)
+        left_m = float(robot_y)
+        east_m = forward_m * math.sin(heading_rad) - left_m * math.cos(heading_rad)
+        north_m = forward_m * math.cos(heading_rad) + left_m * math.sin(heading_rad)
+        return _offset_latlon(lat, lon, east_m, north_m)
+
+    def _smooth_fanet_latlon(self, record_id: int, lat, lon, previous_records_by_id: dict):
+        if lat is None or lon is None:
+            return None, None
+
+        previous = previous_records_by_id.get(int(record_id))
+        if previous is None:
+            return float(lat), float(lon)
+
+        previous_lat = previous.get('lat')
+        previous_lon = previous.get('lon')
+        if previous_lat is None or previous_lon is None:
+            return float(lat), float(lon)
+
+        alpha = float(self._fanet_geo_smoothing_alpha)
+        smoothed_lat = (1.0 - alpha) * float(previous_lat) + alpha * float(lat)
+        smoothed_lon = (1.0 - alpha) * float(previous_lon) + alpha * float(lon)
+        return smoothed_lat, smoothed_lon
+
+    def _merge_fanet_detections(self, detections):
+        previous_records_by_id = {
+            int(record['id']): dict(record)
             for record in self._person_records
-            if record.get('status') != 'rescued'
+            if record.get('origin') == 'fanet'
         }
+        new_records = []
+
+        for index, detection in enumerate(detections, start=1):
+            if not isinstance(detection, dict):
+                continue
+
+            record_id = int(detection.get('id', index) or index)
+            lat, lon = self._fanet_detection_to_latlon(detection)
+            lat, lon = self._smooth_fanet_latlon(record_id, lat, lon, previous_records_by_id)
+            previous_record = previous_records_by_id.get(record_id, {})
+            local_x = detection.get('robot_x', None)
+            local_y = detection.get('robot_y', None)
+            record = {
+                'id': record_id,
+                'status': 'detected',
+                'origin': 'fanet',
+                'assigned_robot': str(previous_record.get('assigned_robot', '') or ''),
+                'distance_m': None,
+                'local_x': None,
+                'local_y': None,
+                'local_z': None,
+                'lat': None,
+                'lon': None,
+            }
+
+            if local_x is not None:
+                record['local_x'] = float(local_x)
+            if local_y is not None:
+                record['local_y'] = float(local_y)
+            if detection.get('robot_z') is not None:
+                record['local_z'] = float(detection['robot_z'])
+            if detection.get('distance_m') is not None:
+                record['distance_m'] = float(detection['distance_m'])
+            if lat is not None and lon is not None:
+                record['lat'] = float(lat)
+                record['lon'] = float(lon)
+
+            new_records.append(record)
+
+        self._person_records = sorted(new_records, key=lambda record: int(record['id']))
+        self._next_person_id = max([1] + [int(record['id']) + 1 for record in self._person_records])
+
+    def _merge_detected_persons(self, points):
+        unmatched_records = {record['id'] for record in self._person_records}
 
         for point in points:
             person_id = 0
@@ -1276,14 +1514,12 @@ class MainWindow(QMainWindow):
                     existing['lat'] = lat
                     existing['lon'] = lon
                     existing.setdefault('assigned_robot', '')
-                    existing.setdefault('status_source', 'auto')
+                    existing['status'] = 'detected'
                     continue
 
             best_record = None
             best_distance = None
             for record in self._person_records:
-                if record.get('status') == 'rescued':
-                    continue
                 if record['id'] not in unmatched_records:
                     continue
                 distance = _haversine_m(lat, lon, record['lat'], record['lon'])
@@ -1297,7 +1533,7 @@ class MainWindow(QMainWindow):
                 best_record['lat'] = lat
                 best_record['lon'] = lon
                 best_record.setdefault('assigned_robot', '')
-                best_record.setdefault('status_source', 'auto')
+                best_record['status'] = 'detected'
                 unmatched_records.discard(best_record['id'])
                 continue
 
@@ -1306,7 +1542,6 @@ class MainWindow(QMainWindow):
                 'lat': lat,
                 'lon': lon,
                 'status': 'detected',
-                'status_source': 'auto',
                 'assigned_robot': '',
                 'distance_m': None,
             })
@@ -1325,13 +1560,13 @@ class MainWindow(QMainWindow):
         self.persons_tab.set_records(self._person_records)
         points = []
         for record in self._person_records:
-            if record.get('status') == 'rescued':
+            if record.get('lat') is None or record.get('lon') is None:
                 continue
             points.append({
                 'id': int(record['id']),
                 'lat': float(record['lat']),
                 'lon': float(record['lon']),
-                'status': str(record.get('status', 'detected')),
+                'status': 'detected',
                 'assigned_robot': str(record.get('assigned_robot', '') or ''),
                 'distance_m': record.get('distance_m', None),
             })
@@ -1340,7 +1575,6 @@ class MainWindow(QMainWindow):
     def _auto_update_person_statuses(self, robot_lat: float, robot_lon: float):
         changed = False
         for record in self._person_records:
-            status = str(record.get('status', 'detected'))
             try:
                 distance = _haversine_m(robot_lat, robot_lon, record['lat'], record['lon'])
             except Exception:
@@ -1348,44 +1582,15 @@ class MainWindow(QMainWindow):
 
             previous_distance = record.get('distance_m', None)
             record['distance_m'] = float(distance)
+            record['status'] = 'detected'
             if previous_distance is None or abs(float(previous_distance) - float(distance)) >= 1.0:
                 changed = True
-
-            if status == 'rescued':
-                continue
-            if not self._auto_person_tracking_enabled:
-                continue
-
-            if distance <= self._person_rescued_distance_m:
-                if status != 'rescued':
-                    record['status'] = 'rescued'
-                    record['status_source'] = 'auto'
-                    if not record.get('assigned_robot'):
-                        record['assigned_robot'] = self._current_namespace
-                    changed = True
-            elif distance <= self._person_pending_distance_m and str(record.get('status_source', 'auto')) != 'manual':
-                if status == 'detected':
-                    record['status'] = 'pending'
-                    record['status_source'] = 'auto'
-                    if not record.get('assigned_robot'):
-                        record['assigned_robot'] = self._current_namespace
-                    changed = True
 
         if changed:
             self._refresh_person_records_view()
 
     def _on_person_status_change(self, person_id: int, status: str):
-        status_value = str(status or '').strip().lower()
-        if status_value not in {'detected', 'pending', 'rescued'}:
-            return
-        for record in self._person_records:
-            if int(record['id']) == int(person_id):
-                record['status'] = status_value
-                record['status_source'] = 'manual'
-                if status_value in {'pending', 'rescued'} and not record.get('assigned_robot'):
-                    record['assigned_robot'] = self._current_namespace
-                break
-        self._refresh_person_records_view()
+        return
 
     def _on_person_assignment_change(self, person_id: int, robot_name: str):
         robot_value = str(robot_name or '').strip()
@@ -1396,20 +1601,10 @@ class MainWindow(QMainWindow):
         self._refresh_person_records_view()
 
     def _on_auto_person_tracking_changed(self, enabled: bool):
-        self._auto_person_tracking_enabled = bool(enabled)
-        lat, lon, _ = self._last_vehicle
-        if self._have_vehicle_gps:
-            self._auto_update_person_statuses(lat, lon)
-        self._refresh_person_records_view()
+        return
 
     def _on_person_thresholds_changed(self, pending_m: float, rescued_m: float):
-        self._person_pending_distance_m = max(float(pending_m), 1.0)
-        self._person_rescued_distance_m = max(min(float(rescued_m), self._person_pending_distance_m), 1.0)
-        self.persons_tab.set_thresholds(self._person_pending_distance_m, self._person_rescued_distance_m)
-        lat, lon, _ = self._last_vehicle
-        if self._have_vehicle_gps:
-            self._auto_update_person_statuses(lat, lon)
-        self._refresh_person_records_view()
+        return
 
     def _js_set_detected_persons(self, points):
         safe_points = []
@@ -1455,6 +1650,9 @@ class MainWindow(QMainWindow):
             self._pending_js_generic.clear()
             return
 
+        if not self._map_ready:
+            return
+
         ordered_keys = ['mission', 'persons', 'vehicle', 'pan']
         for key in ordered_keys:
             js = self._pending_js_by_key.pop(key, None)
@@ -1472,21 +1670,19 @@ class MainWindow(QMainWindow):
             if not rclpy.ok():
                 rclpy.init(args=None)
             if self._exec is None:
-                self._exec = rclpy.executors.SingleThreadedExecutor()
+                self._exec = rclpy.executors.MultiThreadedExecutor(num_threads=2)
                 self._th = threading.Thread(target=self._spin_executor, daemon=True)
                 self._th.start()
             self._connect_robot_namespace(self._current_namespace)
             if not self._namespace_refresh_timer.isActive():
                 self._namespace_refresh_timer.start()
-            if not hasattr(self, 'follow_tab'):
-                self._build_tab_follow()
         except Exception as e:
             print(f"[GUI] no se pudo iniciar ROS: {e}")
 
     def _spin_executor(self):
         while rclpy.ok():
             try:
-                self._exec.spin_once(timeout_sec=0.25)
+                self._exec.spin_once(timeout_sec=0.02)
             except RuntimeError as e:
                 print(f"[GUI] executor runtime error: {e}")
                 time.sleep(0.1)
@@ -1596,7 +1792,7 @@ class MainWindow(QMainWindow):
         else:
             self._pending_js_by_key[key] = js
 
-        if not self._js_flush_timer.isActive():
+        if self._map_ready and not self._js_flush_timer.isActive():
             self._js_flush_timer.start(33)
 
     def _js_set_mission(self):

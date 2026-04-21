@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake
+/workspaces/Cuadriga_IA_/build/ctl_mission/ament_cmake_core/ctl_missionConfig-version.cmake

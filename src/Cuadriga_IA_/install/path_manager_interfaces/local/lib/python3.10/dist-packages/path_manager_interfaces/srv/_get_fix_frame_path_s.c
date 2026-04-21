@@ -1,1 +1,1 @@
-/home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_get_fix_frame_path_s.c
+/workspaces/Cuadriga_IA_/build/path_manager_interfaces/rosidl_generator_py/path_manager_interfaces/srv/_get_fix_frame_path_s.c

@@ -1,0 +1,407 @@
+[0.012s] Invoking command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/Cuadriga_IA_/install/path_manager_interfaces
+[0.219s] -- The C compiler identification is GNU 11.4.0
+[0.392s] -- The CXX compiler identification is GNU 11.4.0
+[0.405s] -- Detecting C compiler ABI info
+[0.483s] -- Detecting C compiler ABI info - done
+[0.490s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.490s] -- Detecting C compile features
+[0.491s] -- Detecting C compile features - done
+[0.494s] -- Detecting CXX compiler ABI info
+[0.578s] -- Detecting CXX compiler ABI info - done
+[0.585s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.586s] -- Detecting CXX compile features
+[0.586s] -- Detecting CXX compile features - done
+[0.593s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.756s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.826s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.915s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.924s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.942s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.028s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.104s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[1.154s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.545s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.829s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.189s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.213s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.217s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.245s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.245s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.245s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.245s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.267s] -- Found PythonExtra: .so  
+[2.553s] -- Using numpy include directory: /usr/local/lib/python3.10/dist-packages/numpy/core/include
+[2.696s] -- Configuring done
+[2.751s] -- Generating done
+[2.766s] -- Build files have been written to: /workspaces/Cuadriga_IA_/build/path_manager_interfaces
+[2.777s] Invoked command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake /workspaces/Cuadriga_IA_/src/path_manager/path_manager_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/Cuadriga_IA_/install/path_manager_interfaces
+[2.778s] Invoking command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake --build /workspaces/Cuadriga_IA_/build/path_manager_interfaces -- -j8 -l8
+[2.828s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.844s] [  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.844s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.855s] [  3%] Built target ament_cmake_python_symlink_path_manager_interfaces
+[3.203s] running egg_info
+[3.205s] creating path_manager_interfaces.egg-info
+[3.227s] writing path_manager_interfaces.egg-info/PKG-INFO
+[3.229s] writing dependency_links to path_manager_interfaces.egg-info/dependency_links.txt
+[3.230s] writing top-level names to path_manager_interfaces.egg-info/top_level.txt
+[3.230s] writing manifest file 'path_manager_interfaces.egg-info/SOURCES.txt'
+[3.296s] reading manifest file 'path_manager_interfaces.egg-info/SOURCES.txt'
+[3.298s] writing manifest file 'path_manager_interfaces.egg-info/SOURCES.txt'
+[3.339s] [  3%] Built target ament_cmake_python_build_path_manager_interfaces_egg
+[3.607s] [  3%] Built target path_manager_interfaces__rs
+[4.065s] [  3%] Built target path_manager_interfaces__cpp
+[4.077s] [  4%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.081s] [  6%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.081s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.457s] [  7%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/write_path_to_file__functions.c.o[0m
+[4.467s] [  9%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/read_path_from_file__functions.c.o[0m
+[4.471s] [ 10%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/return_robot_path__functions.c.o[0m
+[4.489s] [ 11%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/get_fix_frame_path__functions.c.o[0m
+[4.490s] [ 12%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/robot_path__functions.c.o[0m
+[4.629s] [ 13%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/get_ll_path__functions.c.o[0m
+[4.650s] [ 14%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/assist_emergency__functions.c.o[0m
+[4.660s] [ 15%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_c.dir/rosidl_generator_c/path_manager_interfaces/srv/detail/plan_path__functions.c.o[0m
+[4.825s] [ 17%] [32m[1mLinking C shared library libpath_manager_interfaces__rosidl_generator_c.so[0m
+[4.891s] [ 17%] Built target path_manager_interfaces__rosidl_generator_c
+[4.916s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.931s] [ 19%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.934s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.662s] [ 21%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/write_path_to_file__type_support.cpp.o[0m
+[5.668s] [ 22%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/return_robot_path__type_support.cpp.o[0m
+[5.668s] [ 23%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/read_path_from_file__type_support.cpp.o[0m
+[6.259s] [ 25%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/write_path_to_file__type_support.cpp.o[0m
+[6.391s] [ 26%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/read_path_from_file__type_support.cpp.o[0m
+[6.548s] [ 27%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/return_robot_path__type_support.cpp.o[0m
+[6.569s] [ 28%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/robot_path__type_support.cpp.o[0m
+[7.068s] [ 29%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/write_path_to_file__type_support.cpp.o[0m
+[7.108s] [ 30%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/write_path_to_file__type_support.cpp.o[0m
+[7.188s] [ 31%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/read_path_from_file__type_support.cpp.o[0m
+[7.278s] [ 32%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/return_robot_path__type_support.cpp.o[0m
+[7.396s] [ 34%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/robot_path__type_support.cpp.o[0m
+[7.416s] [ 35%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/write_path_to_file__type_support.c.o[0m
+[7.431s] [ 36%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/get_fix_frame_path__type_support.cpp.o[0m
+[7.462s] [ 37%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/get_fix_frame_path__type_support.cpp.o[0m
+[7.512s] [ 38%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/read_path_from_file__type_support.c.o[0m
+[7.516s] [ 39%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/get_ll_path__type_support.cpp.o[0m
+[7.558s] [ 40%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/plan_path__type_support.cpp.o[0m
+[7.575s] [ 42%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/get_ll_path__type_support.cpp.o[0m
+[7.617s] [ 43%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/robot_path__type_support.cpp.o[0m
+[7.636s] [ 44%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/return_robot_path__type_support.c.o[0m
+[7.658s] [ 45%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/path_manager_interfaces/srv/assist_emergency__type_support.cpp.o[0m
+[7.665s] [ 46%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/plan_path__type_support.cpp.o[0m
+[7.764s] [ 47%] [32m[1mLinking CXX shared library libpath_manager_interfaces__rosidl_typesupport_c.so[0m
+[7.764s] [ 48%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/robot_path__type_support.c.o[0m
+[7.895s] [ 50%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.c.o[0m
+[7.924s] [ 50%] Built target path_manager_interfaces__rosidl_typesupport_c
+[7.951s] [ 51%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/path_manager_interfaces/srv/assist_emergency__type_support.cpp.o[0m
+[7.976s] [ 52%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/write_path_to_file__type_support_c.cpp.o[0m
+[8.038s] [ 53%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/get_ll_path__type_support.c.o[0m
+[8.164s] [ 54%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/plan_path__type_support.c.o[0m
+[8.230s] [ 55%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/read_path_from_file__type_support_c.cpp.o[0m
+[8.292s] [ 56%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/path_manager_interfaces/srv/detail/assist_emergency__type_support.c.o[0m
+[8.322s] [ 57%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/read_path_from_file__type_support.cpp.o[0m
+[8.393s] [ 59%] [32m[1mLinking C shared library libpath_manager_interfaces__rosidl_typesupport_introspection_c.so[0m
+[8.461s] [ 60%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/return_robot_path__type_support_c.cpp.o[0m
+[8.520s] [ 60%] Built target path_manager_interfaces__rosidl_typesupport_introspection_c
+[8.549s] [ 61%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/return_robot_path__type_support.cpp.o[0m
+[8.718s] [ 62%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/robot_path__type_support_c.cpp.o[0m
+[8.902s] [ 63%] [32m[1mLinking CXX shared library libpath_manager_interfaces__rosidl_typesupport_cpp.so[0m
+[8.966s] [ 64%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.cpp.o[0m
+[9.077s] [ 65%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/get_ll_path__type_support.cpp.o[0m
+[9.094s] [ 65%] Built target path_manager_interfaces__rosidl_typesupport_cpp
+[9.145s] [ 67%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/plan_path__type_support.cpp.o[0m
+[9.325s] [ 68%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support_c.cpp.o[0m
+[9.348s] [ 69%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/robot_path__type_support.cpp.o[0m
+[9.510s] [ 70%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/get_ll_path__type_support_c.cpp.o[0m
+[9.665s] [ 71%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/path_manager_interfaces/srv/detail/assist_emergency__type_support.cpp.o[0m
+[9.979s] [ 72%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/get_fix_frame_path__type_support.cpp.o[0m
+[10.045s] [ 73%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/plan_path__type_support_c.cpp.o[0m
+[10.080s] [ 75%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/get_ll_path__type_support.cpp.o[0m
+[10.438s] [ 76%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/path_manager_interfaces/srv/detail/assist_emergency__type_support_c.cpp.o[0m
+[10.539s] [ 77%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/plan_path__type_support.cpp.o[0m
+[10.665s] [ 78%] [32mBuilding CXX object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/path_manager_interfaces/srv/detail/dds_fastrtps/assist_emergency__type_support.cpp.o[0m
+[10.884s] [ 79%] [32m[1mLinking CXX shared library libpath_manager_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[11.074s] [ 79%] Built target path_manager_interfaces__rosidl_typesupport_introspection_cpp
+[11.361s] [ 80%] [32m[1mLinking CXX shared library libpath_manager_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[11.458s] [ 81%] [32m[1mLinking CXX shared library libpath_manager_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[11.555s] [ 81%] Built target path_manager_interfaces__rosidl_typesupport_fastrtps_c
+[11.623s] [ 81%] Built target path_manager_interfaces__rosidl_typesupport_fastrtps_cpp
+[11.659s] [ 81%] Built target path_manager_interfaces
+[11.693s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.723s] [ 82%] Built target path_manager_interfaces__py
+[13.751s] [ 87%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_robot_path_s.c.o[0m
+[13.751s] [ 87%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_return_robot_path_s.c.o[0m
+[13.751s] [ 87%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_get_fix_frame_path_s.c.o[0m
+[13.751s] [ 87%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_read_path_from_file_s.c.o[0m
+[13.751s] [ 88%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_get_ll_path_s.c.o[0m
+[13.754s] [ 89%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_plan_path_s.c.o[0m
+[13.757s] [ 90%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_write_path_to_file_s.c.o[0m
+[13.757s] [ 92%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_generator_py.dir/rosidl_generator_py/path_manager_interfaces/srv/_assist_emergency_s.c.o[0m
+[14.013s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/path_manager_interfaces/libpath_manager_interfaces__rosidl_generator_py.so[0m
+[14.062s] [ 93%] Built target path_manager_interfaces__rosidl_generator_py
+[14.085s] [ 96%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[14.086s] [ 96%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.086s] [ 96%] [32mBuilding C object CMakeFiles/path_manager_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[14.262s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[14.263s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[14.273s] [100%] [32m[1mLinking C shared library rosidl_generator_py/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[14.315s] [100%] Built target path_manager_interfaces__rosidl_typesupport_c__pyext
+[14.315s] [100%] Built target path_manager_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[14.326s] [100%] Built target path_manager_interfaces__rosidl_typesupport_introspection_c__pyext
+[14.341s] Invoked command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake --build /workspaces/Cuadriga_IA_/build/path_manager_interfaces -- -j8 -l8
+[14.352s] Invoking command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake --install /workspaces/Cuadriga_IA_/build/path_manager_interfaces
+[14.360s] -- Install configuration: ""
+[14.361s] -- Execute custom install script
+[14.361s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/ament_index/resource_index/rosidl_interfaces/path_manager_interfaces
+[14.372s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/msg/rosidl_generator_c__visibility_control.h
+[14.382s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/assist_emergency.h
+[14.392s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__functions.h
+[14.402s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__struct.h
+[14.412s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__type_support.h
+[14.422s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__functions.h
+[14.431s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__struct.h
+[14.441s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.h
+[14.451s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__functions.h
+[14.461s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__struct.h
+[14.471s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__type_support.h
+[14.480s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__functions.h
+[14.490s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__struct.h
+[14.500s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__type_support.h
+[14.510s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__functions.h
+[14.519s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__struct.h
+[14.529s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__type_support.h
+[14.538s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__functions.h
+[14.548s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__struct.h
+[14.558s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__type_support.h
+[14.567s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__functions.h
+[14.577s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__struct.h
+[14.587s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__type_support.h
+[14.596s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__functions.h
+[14.606s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__struct.h
+[14.615s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__type_support.h
+[14.625s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/get_fix_frame_path.h
+[14.634s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/get_ll_path.h
+[14.643s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/plan_path.h
+[14.653s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/read_path_from_file.h
+[14.662s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/return_robot_path.h
+[14.671s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/robot_path.h
+[14.685s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/write_path_to_file.h
+[14.699s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/library_path.sh
+[14.712s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/library_path.dsv
+[14.724s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[14.733s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__rosidl_typesupport_fastrtps_c.h
+[14.743s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__rosidl_typesupport_fastrtps_c.h
+[14.755s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__rosidl_typesupport_fastrtps_c.h
+[14.769s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__rosidl_typesupport_fastrtps_c.h
+[14.800s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__rosidl_typesupport_fastrtps_c.h
+[14.830s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__rosidl_typesupport_fastrtps_c.h
+[14.859s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__rosidl_typesupport_fastrtps_c.h
+[14.886s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_fastrtps_c.h
+[14.905s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.919s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__rosidl_typesupport_introspection_c.h
+[14.938s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__rosidl_typesupport_introspection_c.h
+[14.957s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__rosidl_typesupport_introspection_c.h
+[14.972s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__rosidl_typesupport_introspection_c.h
+[14.987s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__rosidl_typesupport_introspection_c.h
+[15.003s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__rosidl_typesupport_introspection_c.h
+[15.014s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__rosidl_typesupport_introspection_c.h
+[15.024s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_introspection_c.h
+[15.036s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[15.047s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/assist_emergency.hpp
+[15.057s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__builder.hpp
+[15.068s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__struct.hpp
+[15.079s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__traits.hpp
+[15.089s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__type_support.hpp
+[15.098s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__builder.hpp
+[15.108s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__struct.hpp
+[15.119s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__traits.hpp
+[15.129s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__type_support.hpp
+[15.139s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__builder.hpp
+[15.149s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__struct.hpp
+[15.159s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__traits.hpp
+[15.169s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__type_support.hpp
+[15.179s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__builder.hpp
+[15.189s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__struct.hpp
+[15.199s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__traits.hpp
+[15.209s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__type_support.hpp
+[15.219s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__builder.hpp
+[15.229s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__struct.hpp
+[15.240s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__traits.hpp
+[15.250s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__type_support.hpp
+[15.260s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__builder.hpp
+[15.271s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__struct.hpp
+[15.281s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__traits.hpp
+[15.291s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__type_support.hpp
+[15.301s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__builder.hpp
+[15.312s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__struct.hpp
+[15.322s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__traits.hpp
+[15.332s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__type_support.hpp
+[15.342s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__builder.hpp
+[15.353s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__struct.hpp
+[15.363s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__traits.hpp
+[15.373s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__type_support.hpp
+[15.384s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/get_fix_frame_path.hpp
+[15.394s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/get_ll_path.hpp
+[15.404s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/plan_path.hpp
+[15.415s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/read_path_from_file.hpp
+[15.425s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/return_robot_path.hpp
+[15.435s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/robot_path.hpp
+[15.445s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/write_path_to_file.hpp
+[15.456s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.466s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__rosidl_typesupport_fastrtps_cpp.hpp
+[15.476s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__rosidl_typesupport_fastrtps_cpp.hpp
+[15.487s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__rosidl_typesupport_fastrtps_cpp.hpp
+[15.497s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__rosidl_typesupport_fastrtps_cpp.hpp
+[15.508s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__rosidl_typesupport_fastrtps_cpp.hpp
+[15.518s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__rosidl_typesupport_fastrtps_cpp.hpp
+[15.528s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__rosidl_typesupport_fastrtps_cpp.hpp
+[15.538s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_fastrtps_cpp.hpp
+[15.548s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/assist_emergency__rosidl_typesupport_introspection_cpp.hpp
+[15.557s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_fix_frame_path__rosidl_typesupport_introspection_cpp.hpp
+[15.567s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/get_ll_path__rosidl_typesupport_introspection_cpp.hpp
+[15.577s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/plan_path__rosidl_typesupport_introspection_cpp.hpp
+[15.587s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/read_path_from_file__rosidl_typesupport_introspection_cpp.hpp
+[15.597s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/return_robot_path__rosidl_typesupport_introspection_cpp.hpp
+[15.607s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/robot_path__rosidl_typesupport_introspection_cpp.hpp
+[15.616s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/include/path_manager_interfaces/path_manager_interfaces/srv/detail/write_path_to_file__rosidl_typesupport_introspection_cpp.hpp
+[15.626s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/pythonpath.sh
+[15.636s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/pythonpath.dsv
+[15.647s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[15.656s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[15.666s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[15.676s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[15.687s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/__init__.py
+[15.696s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_c.c
+[15.705s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[15.715s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/_path_manager_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[15.724s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/libpath_manager_interfaces__rosidl_generator_py.so
+[15.733s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.742s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.752s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.761s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/__init__.py
+[15.770s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_assist_emergency.py
+[15.779s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_assist_emergency_s.c
+[15.789s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_fix_frame_path.py
+[15.798s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_fix_frame_path_s.c
+[15.807s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_ll_path.py
+[15.816s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_ll_path_s.c
+[15.826s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_plan_path.py
+[15.835s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_plan_path_s.c
+[15.844s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_read_path_from_file.py
+[15.853s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_read_path_from_file_s.c
+[15.863s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_return_robot_path.py
+[15.872s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_return_robot_path_s.c
+[15.882s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_robot_path.py
+[15.891s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_robot_path_s.c
+[15.901s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_write_path_to_file.py
+[15.910s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_write_path_to_file_s.c
+[15.920s] -- Up-to-date symlink: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.921s] -- Up-to-date symlink: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.921s] -- Up-to-date symlink: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/path_manager_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.921s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/ament_index/resource_index/rust_packages/path_manager_interfaces
+[15.930s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/rust/Cargo.toml
+[15.939s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/rust/build.rs
+[15.948s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/rust/src/lib.rs
+[15.957s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/rust/src/srv.rs
+[15.967s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/rust/src/srv/rmw.rs
+[15.976s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/WritePathToFile.idl
+[15.986s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReadPathFromFile.idl
+[15.995s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReturnRobotPath.idl
+[16.005s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/RobotPath.idl
+[16.014s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetFixFramePath.idl
+[16.024s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetLLPath.idl
+[16.034s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/PlanPath.idl
+[16.043s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/AssistEmergency.idl
+[16.054s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/WritePathToFile.srv
+[16.064s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/WritePathToFile_Request.msg
+[16.074s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/WritePathToFile_Response.msg
+[16.083s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReadPathFromFile.srv
+[16.093s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReadPathFromFile_Request.msg
+[16.103s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReadPathFromFile_Response.msg
+[16.112s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReturnRobotPath.srv
+[16.122s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReturnRobotPath_Request.msg
+[16.131s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/ReturnRobotPath_Response.msg
+[16.140s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/RobotPath.srv
+[16.150s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/RobotPath_Request.msg
+[16.160s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/RobotPath_Response.msg
+[16.170s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetFixFramePath.srv
+[16.180s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetFixFramePath_Request.msg
+[16.190s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetFixFramePath_Response.msg
+[16.199s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetLLPath.srv
+[16.209s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetLLPath_Request.msg
+[16.218s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/GetLLPath_Response.msg
+[16.228s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/PlanPath.srv
+[16.238s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/PlanPath_Request.msg
+[16.247s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/PlanPath_Response.msg
+[16.257s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/AssistEmergency.srv
+[16.266s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/AssistEmergency_Request.msg
+[16.276s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/srv/AssistEmergency_Response.msg
+[16.286s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/ament_index/resource_index/package_run_dependencies/path_manager_interfaces
+[16.295s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/ament_index/resource_index/parent_prefix_path/path_manager_interfaces
+[16.304s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/ament_prefix_path.sh
+[16.314s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/ament_prefix_path.dsv
+[16.323s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/path.sh
+[16.333s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/environment/path.dsv
+[16.342s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/local_setup.bash
+[16.352s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/local_setup.sh
+[16.361s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/local_setup.zsh
+[16.371s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/local_setup.dsv
+[16.380s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.dsv
+[16.390s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/ament_index/resource_index/packages/path_manager_interfaces
+[16.399s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/rosidl_cmake-extras.cmake
+[16.408s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.418s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.428s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[16.437s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[16.447s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[16.456s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[16.466s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfacesConfig.cmake
+[16.475s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfacesConfig-version.cmake
+[16.484s] -- Symlinking: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/package.xml
+[16.494s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_c.so
+[16.495s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_c.so" to ""
+[16.495s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_c.so
+[16.495s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[16.496s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_c.so
+[16.496s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[16.496s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_c.so
+[16.497s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_c.so" to ""
+[16.497s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[16.498s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[16.498s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_cpp.so
+[16.498s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[16.498s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_cpp.so
+[16.499s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_typesupport_cpp.so" to ""
+[16.545s] Listing '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/__init__.py'...
+[16.545s] Listing '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/__init__.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_assist_emergency.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_fix_frame_path.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_get_ll_path.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_plan_path.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_read_path_from_file.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_return_robot_path.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_robot_path.py'...
+[16.545s] Compiling '/workspaces/Cuadriga_IA_/install/path_manager_interfaces/local/lib/python3.10/dist-packages/path_manager_interfaces/srv/_write_path_to_file.py'...
+[16.549s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_py.so
+[16.550s] -- Set runtime path of "/workspaces/Cuadriga_IA_/install/path_manager_interfaces/lib/libpath_manager_interfaces__rosidl_generator_py.so" to ""
+[16.550s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_generator_cExport.cmake
+[16.550s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_generator_cExport-noconfig.cmake
+[16.550s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[16.550s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[16.551s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[16.551s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[16.551s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_cExport.cmake
+[16.551s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[16.551s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_generator_cppExport.cmake
+[16.552s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[16.552s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[16.552s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[16.552s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[16.553s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_cppExport.cmake
+[16.553s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/path_manager_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[16.553s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_generator_pyExport.cmake
+[16.553s] -- Installing: /workspaces/Cuadriga_IA_/install/path_manager_interfaces/share/path_manager_interfaces/cmake/export_path_manager_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[16.556s] Invoked command in '/workspaces/Cuadriga_IA_/build/path_manager_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/cuadriga_gui:/opt/ros/humble /usr/bin/cmake --install /workspaces/Cuadriga_IA_/build/path_manager_interfaces
