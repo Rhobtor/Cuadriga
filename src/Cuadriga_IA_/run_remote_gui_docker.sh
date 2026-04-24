@@ -3,17 +3,15 @@
 set -euo pipefail
 
 IMAGE_NAME="${CUADRIGA_IMAGE:-cuadriga-cuadriga}"
-SERIAL_DEVICE="${SERIAL_DEVICE:-/dev/ttyUSB0}"
-FIXPOSITION_IP="${FIXPOSITION_IP:-192.168.2.113}"
-FIXPOSITION_PORT="${FIXPOSITION_PORT:-21000}"
-USE_GUI="${USE_GUI:-false}"
-IMAGE_RELAY_BASE_URL="${IMAGE_RELAY_BASE_URL:-}"
-XAUTH_FILE="${XAUTHORITY:-${HOME}/.Xauthority}"
 ZT_INTERFACE="${ZT_INTERFACE:-ztpp6e24bc}"
+XAUTH_FILE="${XAUTHORITY:-${HOME}/.Xauthority}"
+IMAGE_RELAY_PORT="${IMAGE_RELAY_PORT:-8080}"
+IMAGE_RELAY_HOST="${IMAGE_RELAY_HOST:-${ROBOT_ZT_IP:-}}"
+IMAGE_RELAY_BASE_URL="${IMAGE_RELAY_BASE_URL:-}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMPLATE_XML="${ROOT_DIR}/local_cyclonedds_vpn_lan.xml"
-GENERATED_XML="$(mktemp /tmp/cuadriga_dual_dds.XXXXXX.xml)"
+GENERATED_XML="$(mktemp /tmp/cuadriga_gui_dual_dds.XXXXXX.xml)"
 
 cleanup() {
   rm -f "${GENERATED_XML}"
@@ -35,17 +33,10 @@ if ! command -v docker >/dev/null 2>&1; then
   exit 1
 fi
 
-if [[ ! -e "${SERIAL_DEVICE}" ]]; then
-  echo "serial device not found: ${SERIAL_DEVICE}" >&2
-  exit 1
-fi
-
 if [[ ! -f "${TEMPLATE_XML}" ]]; then
   echo "DDS template not found: ${TEMPLATE_XML}" >&2
   exit 1
 fi
-
-: "${LOCAL_DDS_IP:?Export LOCAL_DDS_IP with this PC IP on the Jetson LAN, e.g. 192.168.2.120}"
 
 ZT_IP="$(pick_zt_ip)"
 if [[ -z "${ZT_IP}" ]]; then
@@ -53,33 +44,34 @@ if [[ -z "${ZT_IP}" ]]; then
   exit 1
 fi
 
+LOCAL_DDS_IP="${LOCAL_DDS_IP:-${ZT_IP}}"
+
+if [[ -z "${IMAGE_RELAY_BASE_URL}" ]]; then
+  : "${IMAGE_RELAY_HOST:?Export IMAGE_RELAY_HOST or ROBOT_ZT_IP with the robot VPN IP, e.g. 10.142.47.160}"
+  IMAGE_RELAY_BASE_URL="http://${IMAGE_RELAY_HOST}:${IMAGE_RELAY_PORT}"
+fi
+
 sed \
   -e "s|\${ZT_IP}|${ZT_IP}|g" \
   -e "s|\${LOCAL_DDS_IP}|${LOCAL_DDS_IP}|g" \
   "${TEMPLATE_XML}" > "${GENERATED_XML}"
 
-echo "[dual-dds] ZeroTier IP: ${ZT_IP}"
-echo "[dual-dds] Local DDS IP: ${LOCAL_DDS_IP}"
-echo "[dual-dds] Generated DDS XML: ${GENERATED_XML}"
-if [[ -n "${IMAGE_RELAY_BASE_URL}" ]]; then
-  echo "[dual-dds] GUI relay HTTP: ${IMAGE_RELAY_BASE_URL}"
-fi
+echo "[remote-gui] ZeroTier IP local: ${ZT_IP}"
+echo "[remote-gui] Local DDS IP: ${LOCAL_DDS_IP}"
+echo "[remote-gui] Relay HTTP remoto: ${IMAGE_RELAY_BASE_URL}"
+echo "[remote-gui] Generated DDS XML: ${GENERATED_XML}"
 
 docker_args=(
   run --rm -it
   --net=host
   --ipc=host
-  --device="${SERIAL_DEVICE}:${SERIAL_DEVICE}"
   -e "ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}"
   -e "ROS_LOCALHOST_ONLY=0"
   -e "RMW_IMPLEMENTATION=rmw_cyclonedds_cpp"
   -e "CYCLONEDDS_URI=file:///dds/local_cyclonedds_vpn_lan.xml"
+  -e "IMAGE_RELAY_BASE_URL=${IMAGE_RELAY_BASE_URL}"
   -v "${GENERATED_XML}:/dds/local_cyclonedds_vpn_lan.xml:ro"
 )
-
-if [[ -n "${IMAGE_RELAY_BASE_URL}" ]]; then
-  docker_args+=( -e "IMAGE_RELAY_BASE_URL=${IMAGE_RELAY_BASE_URL}" )
-fi
 
 if [[ -n "${DISPLAY:-}" ]]; then
   docker_args+=( -e "DISPLAY=${DISPLAY}" )
@@ -97,8 +89,4 @@ fi
 
 exec docker "${docker_args[@]}" \
   "${IMAGE_NAME}" \
-  ros2 launch cuadriga_setup cuadriga_launch.py \
-    robot:=true \
-    use_gui:="${USE_GUI}" \
-    fixposition_ip:="${FIXPOSITION_IP}" \
-    fixposition_port:="${FIXPOSITION_PORT}"
+  /bin/bash -lc "source /opt/ros/humble/setup.bash && source /ros2_ws/install/setup.bash && ros2 run cuadriga_gui gui"

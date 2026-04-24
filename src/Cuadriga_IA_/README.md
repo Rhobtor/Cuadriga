@@ -182,6 +182,32 @@ You can also use the helper script:
 ./run_robot_docker.sh
 ```
 
+### Remote GUI over VPN
+
+If the robot runs on its own LAN and you only want to open the GUI from your laptop through ZeroTier/VPN, run the image relay on the robot and point the GUI to the robot VPN IP instead of `127.0.0.1`.
+
+Detailed step-by-step instructions are available in `README_REMOTE_GUI_VPN.md`.
+
+On the robot:
+
+```sh
+cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_
+export LOCAL_DDS_IP=192.168.2.115
+bash run_image_relay_server.sh
+```
+
+On your laptop:
+
+```sh
+cd /home/cuadriga/cuadriga_ws/Cuadriga/src/Cuadriga_IA_
+export ROBOT_ZT_IP=10.142.47.160
+bash run_remote_gui_docker.sh
+```
+
+If your laptop is also connected to the robot LAN, you can additionally export `LOCAL_DDS_IP` to advertise that interface.
+
+If you need to keep using the full robot launcher with GUI enabled, you can also export `IMAGE_RELAY_BASE_URL=http://10.142.47.160:8080` before `bash run_robot_docker_dual_dds.sh`.
+
 To start RViz from the same image once the stack is running:
 
 ```sh
