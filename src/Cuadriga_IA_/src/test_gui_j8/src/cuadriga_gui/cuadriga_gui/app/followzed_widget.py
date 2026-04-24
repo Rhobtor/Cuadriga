@@ -1,3 +1,8 @@
+import os
+import threading
+import time
+
+import requests
 from PySide6 import QtCore
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QCheckBox, QPlainTextEdit, QComboBox
 from PySide6.QtGui import QImage, QPixmap
@@ -17,7 +22,6 @@ except ImportError:
 
 
 class FollowZEDWidget(QWidget):
-    image_signal = QtCore.Signal(object)
     leader_signal = QtCore.Signal(str, str)
     detections_signal = QtCore.Signal(object)
 
@@ -26,11 +30,12 @@ class FollowZEDWidget(QWidget):
         self.node = node
         self.topic_raw = topic_base
         self.topic_comp = topic_base + '/compressed'
+        self._relay_base_url = os.environ.get('IMAGE_RELAY_BASE_URL', 'http://127.0.0.1:8080').rstrip('/')
         self._image_topics = {
-            'zed_rgb_original': '/zed/zed_node/left/image_rect_color/compressed',
-            'fanet_rgb_annotated': '/fanet/gui/rgb_annotated/compressed',
-            'fanet_thermal_annotated': '/fanet/gui/thermal_annotated/compressed',
-            'fanet_thermal_original': '/fanet/raw/thermal/compressed',
+            'zed_rgb_original': self._relay_base_url + '/snapshot/rgb_original',
+            'fanet_rgb_annotated': self._relay_base_url + '/snapshot/rgb_overlay',
+            'fanet_thermal_annotated': self._relay_base_url + '/snapshot/thermal_overlay',
+            'fanet_thermal_original': self._relay_base_url + '/snapshot/thermal',
         }
         self._image_labels = {
             'zed_rgb_original': 'ZED RGB original',
@@ -76,8 +81,6 @@ class FollowZEDWidget(QWidget):
         self.logs = QPlainTextEdit(); self.logs.setReadOnly(True); self.logs.setMaximumHeight(120)
         lay.addWidget(self.logs)
 
-
-        self.image_signal.connect(self._on_qimage)
         self.leader_signal.connect(self._on_leader_snapshot)
         self._sub_raw = None
         self._sub_comp = None
@@ -100,6 +103,15 @@ class FollowZEDWidget(QWidget):
         self._fanet_positions = []
         self._fanet_distances = []
         self._last_detection_signature = None
+        self._latest_qimage = None
+        self._latest_status_text = None
+        self._http_session = requests.Session()
+        self._http_thread = None
+        self._http_stop_event = threading.Event()
+        self._frame_timer = QtCore.QTimer(self)
+        self._frame_timer.setInterval(50)
+        self._frame_timer.timeout.connect(self._flush_latest_image)
+        self._frame_timer.start()
         self.status.setText('Video: suscripciones diferidas hasta abrir la pestaña')
 
     def log(self, s):
@@ -113,7 +125,13 @@ class FollowZEDWidget(QWidget):
             return
         self._subscriptions_started = True
         self.ensure_detection_started()
-        self._subscribe()
+        self._start_http_polling()
+        self._leader_id_sub = self.node.create_subscription(Int32, '/follow_zed/leader_id', self._on_leader_id_msg, 10)
+        self._leader_distance_sub = self.node.create_subscription(Float32, '/follow_zed/leader_distance_state_m', self._on_leader_distance_msg, 10)
+        self._leader_distance_fallback_sub = self.node.create_subscription(Float32, '/follow_zed/leader_distance_m', self._on_leader_distance_msg, 10)
+
+        if get_message is not None:
+            self._leader_probe_timer = self.node.create_timer(1.0, self._ensure_leader_subscription)
 
     def ensure_detection_started(self):
         if self._detection_subscriptions_started:
@@ -124,31 +142,54 @@ class FollowZEDWidget(QWidget):
     def set_ros(self, node):
         self.node = node
 
-    def _subscribe(self):
-        zed_qos = QoSProfile(
-            reliability=ReliabilityPolicy.RELIABLE,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=1,
-        )
-        try:
-            self._sub_zed_rgb = self.node.create_subscription(
-                CompressedImage, self._image_topics['zed_rgb_original'], self._on_zed_rgb_compressed, zed_qos)
-            self._sub_fanet_rgb = self.node.create_subscription(
-                CompressedImage, self._image_topics['fanet_rgb_annotated'], self._on_fanet_rgb_compressed, qos_profile_sensor_data)
-            self._sub_fanet_thermal = self.node.create_subscription(
-                CompressedImage, self._image_topics['fanet_thermal_annotated'], self._on_fanet_thermal_compressed, qos_profile_sensor_data)
-            self._sub_thermal_raw = self.node.create_subscription(
-                CompressedImage, self._image_topics['fanet_thermal_original'], self._on_thermal_raw_compressed, qos_profile_sensor_data)
-            self.log('FANET -> sub a imágenes')
-        except Exception as e:
-            self.log(f'FANET -> error sub imágenes: {e}')
+    def _start_http_polling(self):
+        if self._http_thread is not None and self._http_thread.is_alive():
+            return
+        self._http_stop_event.clear()
+        self._http_thread = threading.Thread(target=self._http_poll_loop, daemon=True)
+        self._http_thread.start()
+        self.log(f'Video -> relay HTTP {self._relay_base_url}')
 
-        self._leader_id_sub = self.node.create_subscription(Int32, '/follow_zed/leader_id', self._on_leader_id_msg, 10)
-        self._leader_distance_sub = self.node.create_subscription(Float32, '/follow_zed/leader_distance_state_m', self._on_leader_distance_msg, 10)
-        self._leader_distance_fallback_sub = self.node.create_subscription(Float32, '/follow_zed/leader_distance_m', self._on_leader_distance_msg, 10)
+    def _http_poll_loop(self):
+        while not self._http_stop_event.is_set():
+            source_key = self._selected_source
+            url = self._image_topics.get(source_key)
+            if not url:
+                time.sleep(0.2)
+                continue
+            try:
+                response = self._http_session.get(url, timeout=(0.5, 1.0))
+                if response.status_code == 200:
+                    qimg = QImage.fromData(response.content)
+                    if not qimg.isNull():
+                        self._emit_image_if_selected(
+                            source_key,
+                            qimg,
+                            self._build_relay_status_text(source_key, response.headers),
+                        )
+                elif response.status_code != 503:
+                    self._latest_status_text = f'Video: relay HTTP {response.status_code}'
+            except Exception:
+                self._latest_status_text = 'Video: esperando relay HTTP'
+            time.sleep(0.08)
 
-        if get_message is not None:
-            self._leader_probe_timer = self.node.create_timer(1.0, self._ensure_leader_subscription)
+    def _build_relay_status_text(self, source_key: str, headers) -> str:
+        label = self._image_labels.get(source_key, source_key)
+        age_ms_raw = headers.get('X-Relay-Age-Ms')
+        sequence = headers.get('X-Relay-Sequence')
+
+        suffix = 'relay'
+        if age_ms_raw is not None:
+            try:
+                age_ms = int(age_ms_raw)
+                suffix = f'relay {age_ms} ms'
+            except ValueError:
+                suffix = 'relay'
+
+        if sequence:
+            suffix = f'{suffix} seq {sequence}'
+
+        return f'{label}: {suffix}'
 
     def _subscribe_detections(self):
         try:
@@ -168,51 +209,20 @@ class FollowZEDWidget(QWidget):
             self._selected_source = selected
             self.status.setText(f'Video: fuente {self._image_labels.get(selected, selected)}')
 
-    def _on_fanet_rgb_compressed(self, msg: CompressedImage):
-        self._handle_compressed_image('fanet_rgb_annotated', msg)
-
-    def _on_fanet_thermal_compressed(self, msg: CompressedImage):
-        self._handle_compressed_image('fanet_thermal_annotated', msg)
-
-    def _on_thermal_raw_compressed(self, msg: CompressedImage):
-        self._handle_compressed_image('fanet_thermal_original', msg)
-
-    def _on_zed_rgb_compressed(self, msg: CompressedImage):
-        self._handle_compressed_image('zed_rgb_original', msg)
-
-    def _handle_compressed_image(self, source_key: str, msg: CompressedImage):
-        try:
-            import cv2
-            np_arr = np.frombuffer(msg.data, np.uint8)
-            decoded = cv2.imdecode(np_arr, cv2.IMREAD_UNCHANGED)
-            if decoded is None:
-                return
-
-            if len(decoded.shape) == 2:
-                gray = np.ascontiguousarray(decoded)
-                h, w = gray.shape
-                qimg = QImage(gray.data, w, h, w, QImage.Format_Grayscale8).copy()
-            elif decoded.shape[2] == 3:
-                rgb = np.ascontiguousarray(decoded[..., ::-1])
-                h, w, ch = rgb.shape
-                qimg = QImage(rgb.data, w, h, ch * w, QImage.Format_RGB888).copy()
-            elif decoded.shape[2] == 4:
-                rgba = np.ascontiguousarray(decoded[..., [2, 1, 0, 3]])
-                h, w, ch = rgba.shape
-                qimg = QImage(rgba.data, w, h, ch * w, QImage.Format_RGBA8888).copy()
-            else:
-                self.status.setText(f'Video: formato no soportado {decoded.shape}')
-                return
-
-            self._emit_image_if_selected(source_key, qimg, f'{self._image_labels.get(source_key, source_key)}: {w}x{h}')
-        except Exception as e:
-            self.status.setText(f'Video: error {e}')
-
     def _emit_image_if_selected(self, source_key: str, qimg: QImage, status_text: str):
         if self._selected_source != source_key:
             return
-        self.image_signal.emit(qimg)
-        self.status.setText(status_text)
+        self._latest_qimage = qimg
+        self._latest_status_text = status_text
+
+    def _flush_latest_image(self):
+        qimg = self._latest_qimage
+        if not isinstance(qimg, QImage):
+            return
+        self._latest_qimage = None
+        self._on_qimage(qimg)
+        if self._latest_status_text:
+            self.status.setText(self._latest_status_text)
 
     def _on_qimage(self, qimg):
         if not isinstance(qimg, QImage):
@@ -431,6 +441,14 @@ class FollowZEDWidget(QWidget):
             self._leader_distance = float(distance)
 
         self._publish_leader_snapshot()
+
+    def closeEvent(self, ev):
+        self._http_stop_event.set()
+        try:
+            self._http_session.close()
+        except Exception:
+            pass
+        super().closeEvent(ev)
 
 
     def resizeEvent(self, ev):

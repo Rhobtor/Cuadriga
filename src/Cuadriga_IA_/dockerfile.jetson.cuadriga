@@ -34,7 +34,7 @@ WORKDIR /workspaces/Cuadriga_IA_
 # - run_jetson_listener.sh
 #
 # Typical runtime pattern:
-#   export LOCAL_DDS_IP=192.168.2.120
+#   export LOCAL_DDS_IP=192.168.2.115
 #   docker build -f dockerfile.jetson.cuadriga -t rhobtor/cuadriga_j8:jetson-cuadriga .
 #   bash run_jetson_listener.sh
 CMD ["bash"]

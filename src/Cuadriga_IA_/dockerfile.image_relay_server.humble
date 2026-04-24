@@ -1,0 +1,21 @@
+FROM rhobtor/cuadriga_j8:latest
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    ROS_DOMAIN_ID=0 \
+    ROS_LOCALHOST_ONLY=0 \
+    SETUPTOOLS_USE_DISTUTILS=local
+
+RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    python3 -m pip install --no-cache-dir fastapi 'uvicorn[standard]'
+
+WORKDIR /ros2_ws
+COPY src/image_relay_server /ros2_ws/src/image_relay_server
+
+RUN rm -rf /ros2_ws/build/image_relay_server \
+    /ros2_ws/install/image_relay_server \
+    /ros2_ws/log/latest_build/image_relay_server \
+    /ros2_ws/log/latest_test/image_relay_server
+
+RUN python3 -m pip install --no-cache-dir /ros2_ws/src/image_relay_server
+
+CMD ["/bin/bash", "-lc", "source /opt/ros/humble/setup.bash && python3 -m image_relay_server.relay_server"]
