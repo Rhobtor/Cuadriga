@@ -102,6 +102,7 @@ class FollowZEDWidget(QWidget):
         self._fanet_centroids = []
         self._fanet_positions = []
         self._fanet_distances = []
+        self._fanet_frame_count = 0
         self._last_detection_signature = None
         self._latest_qimage = None
         self._latest_status_text = None
@@ -249,19 +250,31 @@ class FollowZEDWidget(QWidget):
 
     def _on_person_centroids(self, msg: PoseArray):
         self._fanet_centroids = list(msg.poses)
+        self._set_fanet_frame_count(len(self._fanet_centroids))
         self._publish_fanet_snapshot()
 
     def _on_person_positions(self, msg: PoseArray):
         self._fanet_positions = list(msg.poses)
+        self._set_fanet_frame_count(len(self._fanet_positions))
         self._publish_fanet_snapshot()
 
     def _on_person_distances(self, msg: Float32MultiArray):
         self._fanet_distances = [float(value) for value in msg.data]
+        self._set_fanet_frame_count(len(self._fanet_distances))
         self._publish_fanet_snapshot()
+
+    def _set_fanet_frame_count(self, count: int):
+        self._fanet_frame_count = max(0, int(count))
+        if len(self._fanet_centroids) > self._fanet_frame_count:
+            self._fanet_centroids = self._fanet_centroids[:self._fanet_frame_count]
+        if len(self._fanet_positions) > self._fanet_frame_count:
+            self._fanet_positions = self._fanet_positions[:self._fanet_frame_count]
+        if len(self._fanet_distances) > self._fanet_frame_count:
+            self._fanet_distances = self._fanet_distances[:self._fanet_frame_count]
 
     def _build_fanet_detections(self):
         detections = []
-        count = max(len(self._fanet_centroids), len(self._fanet_positions), len(self._fanet_distances))
+        count = self._fanet_frame_count
         for index in range(count):
             centroid = self._fanet_centroids[index] if index < len(self._fanet_centroids) else None
             position = self._fanet_positions[index] if index < len(self._fanet_positions) else None

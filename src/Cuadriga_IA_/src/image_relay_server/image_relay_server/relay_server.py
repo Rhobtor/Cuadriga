@@ -75,7 +75,7 @@ class ImageRelayServerNode(Node):
 
         self.declare_parameter('thermal_topic', '/fanet/raw/thermal')
         self.declare_parameter('thermal_overlay_topic', '/fanet/raw/rgb')
-        self.declare_parameter('rgb_overlay_topic', '/fanet/segmentation/overlay')
+        self.declare_parameter('rgb_overlay_topic', '/fanet/gui/rgb_annotated')
         self.declare_parameter('rgb_original_topic', '/zed/zed_node/left/image_rect_color')
         self.declare_parameter('host', '0.0.0.0')
         self.declare_parameter('port', 8080)
